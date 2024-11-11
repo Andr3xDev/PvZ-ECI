@@ -35,7 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project focuses on the use of the Object-Oriented Programming (OOP) paradigm. Using these principles, we developed a graphic representation inspired by the Plants vs. Zombies game. This simulation aims to recreate the interactions between plants and zombies on a board, implementing the game logic through OOP. To achieve this, we incorporated various types of plants, zombies, obstacles, and special terrains on the board. These elements work together to help us understand and effectively apply OOP concepts.
+This project focuses on the use of the Object-Oriented Programming (OOP) paradigm. Using these principles, we developed a graphic representation inspired by the Plants vs. Zombies game. This simulation aims to recreate the interactions between plants and zombies on a board, implementing the game logic through the main pilars of this way to programm. To achieve this, we incorporated various types of plants, zombies, obstacles, and special terrains on the board. These elements work together to help us understand and effectively apply OOP concepts.
 
 This project was developed as part of the Object-Oriented Programming (POOB) course at the Escuela Colombiana de Ingeniería Julio Garavito (ECI).
 
