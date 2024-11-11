@@ -112,7 +112,7 @@ Andrés Felipe Chavarro Plazas -- andres.chavarro-p@mail.escuelaing.edu.co
 
 David Santiago Espinosa Rojas -- david.espinosa-r@mail.escuelaing.edu.co
 
-Project Link: https://github.com/Andr3xDev/Tilting-Tiles
+Project Link: https://github.com/Andr3xDev/Plantas-vs-ZombiECI
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
