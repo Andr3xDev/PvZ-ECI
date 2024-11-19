@@ -12,15 +12,14 @@ import java.io.FileInputStream;
 public class GameGUI extends JFrame {
 
     //*  Attributes  *//
-    // Initial Screen
-    private JPanel panel;
-    private JButton PLAYButton;
-    private JButton OPTIONSButton;
-    private JButton EXITButton;
 
-    private CardLayout layout;
-    private JPanel principal;
-    private StartScreen initial;
+    // buttons of the main menu
+    private JPanel buttonPanel;
+    private JButton playButton;
+    private JButton tutorialButton;
+    private JButton exitButton;
+
+
 
     public GameGUI() {
         prepareElements();
@@ -28,19 +27,31 @@ public class GameGUI extends JFrame {
     }
 
     private void prepareElements() {
-        panel = new JPanel();
-        PLAYButton = new JButton("PLAY");
-        OPTIONSButton = new JButton("OPTIONS");
-        EXITButton = new JButton("EXIT");
-        setSize(new Dimension(1080, 720));
-        initial = new StartScreen();
-        startSound();
+        // Buttons
+        buttonPanel = new JPanel();
+        playButton = new JButton("PLAY");
+        tutorialButton = new JButton("TUTORIAL");
+        exitButton = new JButton("EXIT");
+
+        buttonPanel.setLayout(new FlowLayout());
+        buttonPanel.add(playButton);
+        buttonPanel.add(tutorialButton);
+        buttonPanel.add(exitButton);
+
+        add(buttonPanel, BorderLayout.SOUTH);
     }
 
     private void prepareActions() {
+        // Window actions
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // Window properties
         setTitle("Plants vs Zombies");
+        setSize(1080, 720);
+        setLocationRelativeTo(null);
+        // General properties
+        startSound();
+        setLayout(new BorderLayout());
     }
 
 
