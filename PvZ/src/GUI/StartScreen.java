@@ -34,9 +34,9 @@ public class StartScreen extends JFrame{
         frame.setVisible(true);
     }
 
-    private void setBackgroundImage(String root) {
+    private void setBackgroundImage() {
         try {
-            backgroundImage = ImageIO.read(new File());
+            backgroundImage = ImageIO.read(new File("PvZ/assets/background/start.jpeg"));
         }catch(IOException e){
             e.printStackTrace();
         }
