@@ -6,6 +6,8 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 
@@ -27,6 +29,18 @@ public class GameGUI extends JFrame {
     }
 
     private void prepareElements() {
+        // Window actions
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // Window properties
+        setTitle("Plants vs Zombies");
+        setSize(1080, 720);
+        setLocationRelativeTo(null);
+        // General properties
+        startSound();
+        setLayout(new BorderLayout());
+
+
         // Buttons
         buttonPanel = new JPanel();
         playButton = new JButton("PLAY");
@@ -42,16 +56,8 @@ public class GameGUI extends JFrame {
     }
 
     private void prepareActions() {
-        // Window actions
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // Window properties
-        setTitle("Plants vs Zombies");
-        setSize(1080, 720);
-        setLocationRelativeTo(null);
-        // General properties
-        startSound();
-        setLayout(new BorderLayout());
+
+        exitButton.addActionListener(e -> System.exit(0));
     }
 
 
