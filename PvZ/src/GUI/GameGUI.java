@@ -1,9 +1,18 @@
 package GUI;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
 import javax.swing.*;
-import java.awt.font.GlyphMetrics;
+import java.awt.*;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 
 public class GameGUI extends JFrame {
+
+    //*  Attributes  *//
+    // Initial Screen
     private JPanel panel;
     private JButton PLAYButton;
     private JButton OPTIONSButton;
@@ -19,6 +28,10 @@ public class GameGUI extends JFrame {
         PLAYButton = new JButton("PLAY");
         OPTIONSButton = new JButton("OPTIONS");
         EXITButton = new JButton("EXIT");
+        setSize(new Dimension(1080, 720));
+        StartScreen start = new StartScreen();
+        add(start);
+        startSound();
     }
 
     private void prepareActions() {
@@ -27,6 +40,24 @@ public class GameGUI extends JFrame {
         setTitle("Plants vs Zombies");
     }
 
+
+    //*  Methods  *//
+
+    private void startSound() {
+        try {
+            FileInputStream is = new FileInputStream("/assets/sounds/LoonBoon.mp4");
+            AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(is));
+            DataLine.Info info = new DataLine.Info(Clip.class, ais.getFormat());
+            Clip ini = (Clip) AudioSystem.getLine(info);
+            ini.open();
+            ini.start();
+            ini.loop(Clip.LOOP_CONTINUOUSLY);
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //* Main *//
     public static void main(String[] args) {
         GameGUI gui = new GameGUI();
         gui.setVisible(true);
