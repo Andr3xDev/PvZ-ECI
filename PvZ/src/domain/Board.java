@@ -5,4 +5,7 @@ public class Board {
     public Board() {
         unit = new Unit[8][5];
     }
+    public Unit[][] getUnit() {
+        return unit;
+    }
 }
