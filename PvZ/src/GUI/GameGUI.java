@@ -2,13 +2,18 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
 
 public class GameGUI extends JFrame {
 
-    //*  Attributes  *//
+    //** Attributes **//
 
-    // buttons of the main menu
+    // Dimensions
+    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    int menuSize = screenSize.width / 4;
+    int buttonsWSize = screenSize.width / 5;
+    int buttonsHSize = screenSize.height / 9;
+
+    // Buttons of the main menu
     private JPanel buttonPanel;
     private JButton playButton;
     private JButton tutorialButton;
@@ -18,6 +23,8 @@ public class GameGUI extends JFrame {
     private BackgroundImage backgroundImage;
     private BackgroundSound backgroundSound;
 
+
+
     public GameGUI() {
         prepareElements();
         prepareActions();
@@ -26,32 +33,53 @@ public class GameGUI extends JFrame {
     private void prepareElements() {
         // Window actions
         setExtendedState(JFrame.MAXIMIZED_BOTH);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         // Window properties
         setTitle("Plants vs Zombies");
-        setSize(1080, 720);
+        setSize(screenSize);
         setLocationRelativeTo(null);
 
-        // Background Elements
-        backgroundSound = new BackgroundSound("PvZ/assets/sound/LoonBoon.wav");
+        // Set layout
         setLayout(new BorderLayout());
+
+        // Background Image
         backgroundImage = new BackgroundImage("PvZ/assets/background/start.jpeg");
+        backgroundSound = new BackgroundSound("PvZ/assets/sound/LoonBoon.wav");
 
-
+        // Buttons Panel
+        buttonPanel = new JPanel();
+        buttonPanel.setLayout(new GridBagLayout());
+        buttonPanel.setOpaque(false);
+        buttonPanel.setBounds(
+                screenSize.width/2 - menuSize/2,
+                screenSize.height/2 - menuSize/6,
+                menuSize,
+                menuSize
+        );
 
         // Buttons
-        buttonPanel = new JPanel();
         playButton = new JButton("PLAY");
         tutorialButton = new JButton("TUTORIAL");
         exitButton = new JButton("EXIT");
 
-        buttonPanel.setLayout(new FlowLayout());
-        buttonPanel.add(playButton);
-        buttonPanel.add(tutorialButton);
-        buttonPanel.add(exitButton);
+        playButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
+        tutorialButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
+        exitButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
 
-        add(buttonPanel, BorderLayout.SOUTH);
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.NONE;
+        gbc.insets = new Insets(5, 0, 10, 0);
+        gbc.gridx = 0;
+        gbc.gridy = GridBagConstraints.RELATIVE;
+        gbc.anchor = GridBagConstraints.CENTER;
+
+        buttonPanel.add(playButton, gbc);
+        buttonPanel.add(tutorialButton, gbc);
+        buttonPanel.add(exitButton, gbc);
+
+        // Add components
+        add(buttonPanel, BorderLayout.CENTER);
         add(backgroundImage);
     }
 
@@ -60,11 +88,7 @@ public class GameGUI extends JFrame {
         exitButton.addActionListener(e -> System.exit(0));
     }
 
-
-    //*  Methods  *//
-
-
-    //* Main *//
+    // Main
     public static void main(String[] args) {
         GameGUI gui = new GameGUI();
         gui.setVisible(true);

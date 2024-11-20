@@ -2,7 +2,6 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
 
 public class BackgroundImage extends JPanel {
     private final Image backgroundImage;
@@ -18,6 +17,6 @@ public class BackgroundImage extends JPanel {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(backgroundImage, 0, 0, null);
+        g.drawImage(backgroundImage, 0, 0, getWidth()+10, getHeight(), this);
     }
 }
