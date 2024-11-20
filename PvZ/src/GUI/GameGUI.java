@@ -1,15 +1,10 @@
 package GUI;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.DataLine;
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
+import java.io.File;
+import java.io.IOException;
 
 public class GameGUI extends JFrame {
 
@@ -21,7 +16,8 @@ public class GameGUI extends JFrame {
     private JButton tutorialButton;
     private JButton exitButton;
 
-
+    // Background elements
+    private BackgroundImage backgroundImage;
 
     public GameGUI() {
         prepareElements();
@@ -32,13 +28,20 @@ public class GameGUI extends JFrame {
         // Window actions
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         // Window properties
         setTitle("Plants vs Zombies");
         setSize(1080, 720);
         setLocationRelativeTo(null);
+
         // General properties
         startSound();
         setLayout(new BorderLayout());
+        try {
+            backgroundImage = new BackgroundImage("PvZ/assets/background/start.jpeg");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
         // Buttons
@@ -53,10 +56,11 @@ public class GameGUI extends JFrame {
         buttonPanel.add(exitButton);
 
         add(buttonPanel, BorderLayout.SOUTH);
+        add(backgroundImage);
     }
 
     private void prepareActions() {
-
+        // Exit button
         exitButton.addActionListener(e -> System.exit(0));
     }
 
@@ -65,14 +69,13 @@ public class GameGUI extends JFrame {
 
     private void startSound() {
         try {
-            FileInputStream is = new FileInputStream("PvZ/assets/sounds/LoonBoon.mp4");
-            AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(is));
-            DataLine.Info info = new DataLine.Info(Clip.class, ais.getFormat());
-            Clip ini = (Clip) AudioSystem.getLine(info);
-            ini.open();
-            ini.start();
-            ini.loop(Clip.LOOP_CONTINUOUSLY);
-        }catch(Exception e) {
+            File audioFile = new File("PvZ/assets/sound/LoonBoon.mp4");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioStream);
+
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
             e.printStackTrace();
         }
     }
