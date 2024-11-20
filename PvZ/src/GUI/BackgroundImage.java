@@ -1,6 +1,5 @@
 package GUI;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
@@ -8,9 +7,13 @@ import java.io.IOException;
 public class BackgroundImage extends JPanel {
     private final Image backgroundImage;
 
-    public BackgroundImage(String fileName) throws IOException {
-        ImageIcon image = new ImageIcon(fileName);
-        backgroundImage = image.getImage();
+    public BackgroundImage(String fileName) {
+        try {
+            ImageIcon image = new ImageIcon(fileName);
+            backgroundImage = image.getImage();
+        } catch (Exception e) {
+            throw new RuntimeException("Image not found");
+        }
     }
 
     public void paintComponent(Graphics g) {

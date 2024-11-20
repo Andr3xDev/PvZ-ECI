@@ -1,9 +1,7 @@
 package GUI;
 
-import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
 import java.io.IOException;
 
 public class GameGUI extends JFrame {
@@ -18,6 +16,7 @@ public class GameGUI extends JFrame {
 
     // Background elements
     private BackgroundImage backgroundImage;
+    private BackgroundSound backgroundSound;
 
     public GameGUI() {
         prepareElements();
@@ -34,14 +33,11 @@ public class GameGUI extends JFrame {
         setSize(1080, 720);
         setLocationRelativeTo(null);
 
-        // General properties
-        startSound();
+        // Background Elements
+        backgroundSound = new BackgroundSound("PvZ/assets/sound/LoonBoon.wav");
         setLayout(new BorderLayout());
-        try {
-            backgroundImage = new BackgroundImage("PvZ/assets/background/start.jpeg");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        backgroundImage = new BackgroundImage("PvZ/assets/background/start.jpeg");
+
 
 
         // Buttons
@@ -67,18 +63,6 @@ public class GameGUI extends JFrame {
 
     //*  Methods  *//
 
-    private void startSound() {
-        try {
-            File audioFile = new File("PvZ/assets/sound/LoonBoon.mp4");
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioStream);
-
-            clip.loop(Clip.LOOP_CONTINUOUSLY);
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            e.printStackTrace();
-        }
-    }
 
     //* Main *//
     public static void main(String[] args) {
