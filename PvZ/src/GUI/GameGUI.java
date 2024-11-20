@@ -84,6 +84,15 @@ public class GameGUI extends JFrame {
     }
 
     private void prepareActions() {
+        // Play button
+        playButton.addActionListener(e -> {
+            PlayScreen playScreen = new PlayScreen();
+            playScreen.setVisible(true);
+            this.dispose();
+        });
+
+        // Tutorial button
+
         // Exit button
         exitButton.addActionListener(e -> System.exit(0));
     }
