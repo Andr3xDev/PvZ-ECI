@@ -7,12 +7,20 @@ public abstract class Plant implements Unit {
     protected int cost;
     protected int positionX;
     protected int positionY;
-    protected Board board;
+    protected Game game;
 
 
     public Plant(String name ) {
         this.name = name;
     }
+    @Override
+    public void takeDamage(int dmg) {
+        this.life -= dmg;
+        if (this.life < 0) {
+            this.life = 0;
+        }
+    }
+
 
     @Override
     public int getLife() {
@@ -29,13 +37,8 @@ public abstract class Plant implements Unit {
         return cost;
     }
 
-    @Override
-    public void takeDamage(int dmg) {
-        this.life -= dmg;
-        if (this.life < 0) {
-            this.life = 0;
-        }
-    }
+
+
     public String getName() {
         return name;
     }

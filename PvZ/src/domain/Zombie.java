@@ -7,7 +7,7 @@ public abstract class Zombie implements Unit {
     protected int cost;
     protected int positionX;
     protected int positionY;
-    protected Board board;
+    protected Game game;
 
     public Zombie(String name){
         this.name = name;
@@ -35,9 +35,9 @@ public abstract class Zombie implements Unit {
         }
     }
     public void makeDamage(){
-        if (this.positionX-1 >= 0 && this.board.getUnit()[positionX-1][positionY] != null){
-            while (this.board.getUnit()[positionX-1][positionY].getLife() > 0) {
-                this.board.getUnit()[positionX-1][positionY].takeDamage(this.damage);
+        if (this.positionX-1 >= 0 && this.game.getUnit()[positionX-1][positionY] != null){
+            while (this.game.getUnit()[positionX-1][positionY].getLife() > 0) {
+                this.game.getUnit()[positionX-1][positionY].takeDamage(this.damage);
             }
         }
     }
