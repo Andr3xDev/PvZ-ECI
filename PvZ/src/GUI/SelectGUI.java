@@ -3,14 +3,14 @@ package GUI;
 import javax.swing.*;
 import java.awt.*;
 
-public class PlayScreen extends JFrame {
+public class SelectGUI extends JPanel {
 
     //** Attributes **//
 
     // Dimensions
-    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    int buttonsWSize = screenSize.width / 5;
-    int buttonsHSize = screenSize.height / 9;
+    private Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    private int buttonsWSize = screenSize.width / 5;
+    private int buttonsHSize = screenSize.height / 9;
 
     // Background elements
     private BackgroundImage backgroundImage;
@@ -20,8 +20,8 @@ public class PlayScreen extends JFrame {
     private JPanel selectPanel;
 
     // Action buttons
-    private JButton backButton;
-    private JButton continueButton;
+    protected JButton backButton;
+    protected JButton continueButton;
 
     // Select buttons
     private JButton Select1;
@@ -39,7 +39,7 @@ public class PlayScreen extends JFrame {
      * 3. IA vs IA
      * Also can go back to the main menu or continue to the game settings.
      */
-    public PlayScreen() {
+    public SelectGUI() {
         prepareElements();
         prepareActions();
     }
@@ -48,14 +48,6 @@ public class PlayScreen extends JFrame {
      * Prepares all elements of the PlayScreen GUI.
      */
     private void prepareElements() {
-        // Window actions
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
-        setUndecorated(true);
-
-        // Window properties
-        setTitle("Plants vs Zombies");
-        setSize(screenSize);
-        setLocationRelativeTo(null);
 
         // Set layout
         setLayout(null);
@@ -121,17 +113,12 @@ public class PlayScreen extends JFrame {
     }
 
     private void prepareActionsBottom(){
-        backButton.addActionListener(_ -> {
-            homeGUI gui = new homeGUI();
-            gui.setVisible(true);
-            dispose();
-        });
 
         continueButton.addActionListener(_ -> {
             //! Missing set the initial configuration of the game
-            GameGUI gameGUI = new GameGUI();
-            gameGUI.setVisible(true);
-            dispose();
+            //GameGUI gameGUI = new GameGUI();
+            //gameGUI.setVisible(true);
+            //dispose();
         });
     }
 

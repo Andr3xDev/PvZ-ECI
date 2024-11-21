@@ -3,20 +3,20 @@ package GUI;
 import javax.swing.*;
 import java.awt.*;
 
-public class homeGUI extends JFrame {
+public class HomeGUI extends JPanel {
 
     //** Attributes **//
 
     // Dimensions
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    int menuSize = screenSize.width / 4;
-    int buttonsWSize = screenSize.width / 5;
-    int buttonsHSize = screenSize.height / 9;
+    private int menuSize = screenSize.width / 4;
+    private int buttonsWSize = screenSize.width / 5;
+    private int buttonsHSize = screenSize.height / 9;
 
     // Buttons of the main menu
     private JPanel buttonPanel;
-    private JButton playButton;
-    private JButton tutorialButton;
+    protected JButton playButton;
+    protected JButton tutorialButton;
     private JButton exitButton;
 
     // Background elements
@@ -25,20 +25,12 @@ public class homeGUI extends JFrame {
 
 
 
-    public homeGUI() {
+    public HomeGUI() {
         prepareElements();
         prepareActions();
     }
 
     private void prepareElements() {
-        // Window actions
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
-        setUndecorated(true);
-
-        // Window properties
-        setTitle("Plants vs Zombies");
-        setSize(screenSize);
-        setLocationRelativeTo(null);
 
         // Set layout
         setLayout(new BorderLayout());
@@ -83,23 +75,12 @@ public class homeGUI extends JFrame {
         add(backgroundImage);
     }
 
+    /**
+     * Prepares the actions of the buttons.
+     * Only those buttons that doesn't change screen.
+     */
     private void prepareActions() {
-        // Play button
-        playButton.addActionListener(e -> {
-            PlayScreen playScreen = new PlayScreen();
-            playScreen.setVisible(true);
-            this.dispose();
-        });
-
-        // Tutorial button
-
         // Exit button
-        exitButton.addActionListener(e -> System.exit(0));
-    }
-
-    // Main
-    public static void main(String[] args) {
-        homeGUI gui = new homeGUI();
-        gui.setVisible(true);
+        exitButton.addActionListener(_ -> System.exit(0));
     }
 }

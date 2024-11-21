@@ -10,8 +10,12 @@ public class GameGUI extends JFrame {
     // Dimensions
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
-    // Background elements
-    private BackgroundImage backgroundImage;
+    // Panel
+    private JPanel panels;
+    private CardLayout cl;
+    private HomeGUI home;
+    private SelectGUI select;
+    private GameGUI game;
 
 
     public GameGUI() {
@@ -29,15 +33,39 @@ public class GameGUI extends JFrame {
         setSize(screenSize);
         setLocationRelativeTo(null);
 
-        // Background Elements
-        backgroundImage = new BackgroundImage("PvZ/assets/background/start.jpeg");
-        backgroundImage.setBounds(0, 0, screenSize.width, screenSize.height);
+        // panels
+        panels = new JPanel(new CardLayout());
+        home = new HomeGUI();
+        select = new SelectGUI();
 
-        // Add background image
-        add(backgroundImage);
+        // Add Cart Interfaces
+
+        panels.add(home, "homePanel");
+        panels.add(select, "selectPanel");
+        cl = (CardLayout) panels.getLayout();
+
+        // Add panels to the frame
+        add(panels);
     }
 
     private void prepareActions() {
+        prepareActionsHome();
+        prepareActionsSelect();
+    }
 
+    private void prepareActionsHome() {
+        home.playButton.addActionListener(_ -> {
+            cl.show(panels, "selectPanel");
+        });
+    }
+
+    private void prepareActionsSelect() {
+        select.backButton.addActionListener(_ -> {
+            cl.show(panels, "homePanel");
+        });
+    }
+
+    public static void main(String[] args) {
+        new GameGUI().setVisible(true);
     }
 }
