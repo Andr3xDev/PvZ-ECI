@@ -1,5 +1,8 @@
 package GUI;
 
+import GUI.extras.BackgroundImage;
+import GUI.extras.BackgroundSound;
+
 import javax.swing.*;
 import java.awt.*;
 
