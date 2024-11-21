@@ -41,7 +41,6 @@ public class SelectGUI extends JPanel {
      */
     public SelectGUI() {
         prepareElements();
-        prepareActions();
     }
 
     /**
@@ -107,22 +106,4 @@ public class SelectGUI extends JPanel {
 
     }
 
-    private void prepareActions() {
-        prepareActionsBottom();
-        prepareActionsSplitPanel();
-    }
-
-    private void prepareActionsBottom(){
-
-        continueButton.addActionListener(_ -> {
-            //! Missing set the initial configuration of the game
-            //GameGUI gameGUI = new GameGUI();
-            //gameGUI.setVisible(true);
-            //dispose();
-        });
-    }
-
-    private void prepareActionsSplitPanel(){
-
-    }
 }
