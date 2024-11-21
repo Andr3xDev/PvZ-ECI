@@ -18,7 +18,6 @@ public class PlayScreen extends JFrame {
     // Panels
     private JPanel actionPanel;
     private JPanel selectPanel;
-    private JTextArea textoArea;
 
     // Action buttons
     private JButton backButton;
@@ -114,49 +113,6 @@ public class PlayScreen extends JFrame {
      */
     private void prepareElementsSelect() {
 
-        // Select panel
-        selectPanel = new JPanel();
-        selectPanel.setLayout(new GridLayout(3, 1, 10, 10));
-        selectPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        selectPanel.setOpaque(false);
-
-        // Select buttons
-        Select1 = new JButton("P1 vs P2");
-        Select2 = new JButton("P1 vs IA");
-        Select3 = new JButton("AI vs AI");
-
-        Select1.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
-        Select2.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
-        Select3.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
-
-        // Add buttons to the select panel
-        selectPanel.add(Select1);
-        selectPanel.add(Select2);
-        selectPanel.add(Select3);
-
-        // Text Area
-        textoArea = new JTextArea("Select an option to play the game.");
-        textoArea.setFont(new Font("Arial", Font.PLAIN, 16));
-        textoArea.setLineWrap(true);
-        textoArea.setWrapStyleWord(true);
-        textoArea.setEditable(false);
-        JScrollPane scrollPane = new JScrollPane(textoArea);
-
-        // Div panel
-        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, selectPanel, scrollPane);
-        splitPane.setDividerLocation(200);
-        splitPane.setResizeWeight(0.3); // Prioridad de redimensionado (30% botones, 70% texto)
-
-        // Position of the split panel
-        splitPane.setBounds(
-                screenSize.width / 2 - buttonsWSize,
-                screenSize.height / 2 - buttonsHSize * 2,
-                screenSize.width / 2,
-                buttonsHSize * 3
-        );
-
-        // Add the select panel to the frame
-        add(splitPane);
     }
 
     private void prepareActions() {
@@ -180,8 +136,6 @@ public class PlayScreen extends JFrame {
     }
 
     private void prepareActionsSplitPanel(){
-        Select1.addActionListener(e -> textoArea.setText("P1 vs P2"));
-        Select2.addActionListener(e -> textoArea.setText("P1 vs AI"));
-        Select3.addActionListener(e -> textoArea.setText("AI vs AI"));
+
     }
 }
