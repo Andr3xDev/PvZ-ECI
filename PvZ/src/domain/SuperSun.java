@@ -1,5 +1,6 @@
 package domain;
 
 public class SuperSun extends Sun{
-    int value = 75;
+    int value = 50;
+    public SuperSun() {}
 }

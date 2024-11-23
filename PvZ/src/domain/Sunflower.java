@@ -9,6 +9,9 @@ public class Sunflower extends Plant{
         this.game = game;
         this.positionY = y;
         this.positionX = x;
-
+    }
+    public void GenerateSun() {
+        Sun sun = new Sun();
+        this.game.addSuns(sun);
     }
 }

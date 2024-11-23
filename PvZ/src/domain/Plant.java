@@ -13,6 +13,7 @@ public abstract class Plant implements Unit {
     public Plant(String name ) {
         this.name = name;
     }
+
     @Override
     public void takeDamage(int dmg) {
         this.life -= dmg;
@@ -20,8 +21,6 @@ public abstract class Plant implements Unit {
             this.life = 0;
         }
     }
-
-
     @Override
     public int getLife() {
         return life;
