@@ -20,6 +20,16 @@ public class Game {
             brains -= zombie.getCost();
         }
     }
+    public void deletePlant(int posX,int posY) {
+        if (unit[posX][posY] != null){
+            unit[posX][posY] = null;
+        }
+    }
+    public void deleteZombie(int posX,int posY) {
+        if (unit[posX][posY] != null){
+            unit[posX][posY] = null;
+        }
+    }
 
     public void addSuns(Sun sun) {
         this.suns += sun.getValue();
