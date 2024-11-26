@@ -1,4 +1,7 @@
-package domain;
+package domain.zombies;
+
+import domain.Game;
+import domain.Unit;
 
 public abstract class Zombie implements Unit {
     private String name;

@@ -1,4 +1,6 @@
-package domain;
+package domain.zombies;
+
+import domain.Game;
 
 public class ECIZombie extends Zombie {
     private static final String name = "ECIZombie";

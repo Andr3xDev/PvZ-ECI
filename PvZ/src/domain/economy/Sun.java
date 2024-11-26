@@ -1,6 +1,6 @@
-package domain;
+package domain.economy;
 
-public class Sun implements Coin{
+public class Sun implements Coin {
     int value = 25;
     public Sun(){
     }

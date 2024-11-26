@@ -1,6 +1,8 @@
-package domain;
+package domain.plants;
 
-public class Peashooter extends Plant{
+import domain.Game;
+
+public class Peashooter extends Plant {
     private static final String name = "Peashooter";
     public Peashooter(int x, int y, Game game) {
         super(name);

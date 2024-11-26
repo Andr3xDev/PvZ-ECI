@@ -1,6 +1,8 @@
-package domain;
+package domain.zombies;
 
-public class BucketHead extends Zombie{
+import domain.Game;
+
+public class BucketHead extends Zombie {
     private static final String name = "BucketHead";
     public BucketHead(int y, Game game) {
         super(name);

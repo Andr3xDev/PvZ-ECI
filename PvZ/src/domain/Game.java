@@ -1,5 +1,10 @@
 package domain;
 
+import domain.economy.Brain;
+import domain.economy.Sun;
+import domain.plants.Plant;
+import domain.zombies.Zombie;
+
 public class Game {
     private Unit[][] unit;
     private int brains = 50;
@@ -8,13 +13,13 @@ public class Game {
         unit = new Unit[8][5];
     }
 
-    public void addPlant(Plant plant,int posX,int posY) {
+    public void addPlant(Plant plant, int posX, int posY) {
         if (unit[posX][posY] == null){
             unit[posX][posY] = plant;
             suns -= plant.getCost();
         }
     }
-    public void addZombie(Zombie zombie,int posX,int posY) {
+    public void addZombie(Zombie zombie, int posX, int posY) {
         if (unit[posX][posY] == null){
             unit[posX][posY] = zombie;
             brains -= zombie.getCost();

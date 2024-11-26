@@ -1,6 +1,6 @@
-package domain;
+package domain.economy;
 
-public class Brain implements Coin{
+public class Brain implements Coin {
     int value = 25;
     public int getValue() {
         return value;

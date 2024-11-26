@@ -1,6 +1,9 @@
-package domain;
+package domain.plants;
 
-public class Sunflower extends Plant{
+import domain.Game;
+import domain.economy.Sun;
+
+public class Sunflower extends Plant {
     private static final String name = "Sunflower";
     public Sunflower(int x, int y, Game game) {
         super(name);

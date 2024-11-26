@@ -1,6 +1,8 @@
-package domain;
+package domain.zombies;
 
-public class Basic extends Zombie{
+import domain.Game;
+
+public class Basic extends Zombie {
     private static final String name = "Basic";
     public Basic(int y, Game game) {
         super(name);

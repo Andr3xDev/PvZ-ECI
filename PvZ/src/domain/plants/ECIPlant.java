@@ -1,6 +1,9 @@
-package domain;
+package domain.plants;
 
-public class ECIPlant extends Plant{
+import domain.Game;
+import domain.economy.SuperSun;
+
+public class ECIPlant extends Plant {
     private static final String name = "ECIPlant";
     public ECIPlant(int x, int y, Game game) {
         super(name);

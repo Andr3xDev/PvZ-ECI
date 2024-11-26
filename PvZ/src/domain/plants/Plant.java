@@ -1,4 +1,7 @@
-package domain;
+package domain.plants;
+
+import domain.Game;
+import domain.Unit;
 
 public abstract class Plant implements Unit {
     private String name;

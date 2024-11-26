@@ -1,9 +1,11 @@
-package domain;
+package domain.plants;
+import domain.Game;
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class PotatoMine extends Plant{
+public class PotatoMine extends Plant {
     private boolean active;
     private static final String name = "PotatoMine";
     private static final int ACTIVATION_DELAY = 14;

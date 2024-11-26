@@ -1,4 +1,6 @@
-package domain;
+package domain.zombies;
+
+import domain.Game;
 
 public class ConeHead extends Zombie {
     private static final String name = "ConeHead";
