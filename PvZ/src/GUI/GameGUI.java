@@ -95,6 +95,11 @@ public class GameGUI extends JFrame {
         select.backButton.addActionListener(_ -> cl.show(panels, "homePanel"));
         //! missing continue button
         //select.continueButton.addActionListener(_ -> cl.show(panels, "gamePanel"));
+        select.continueButton.addActionListener(_ -> {
+            BoardGUI board = new BoardGUI();
+            board.setVisible(true);
+            this.dispose();
+        });
     }
 
 
