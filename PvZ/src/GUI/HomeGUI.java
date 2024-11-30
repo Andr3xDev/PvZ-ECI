@@ -3,6 +3,7 @@ package GUI;
 import GUI.extras.BackgroundImage;
 import GUI.extras.BackgroundSound;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 
@@ -53,15 +54,33 @@ public class HomeGUI extends JPanel {
                 menuSize
         );
 
+        prepareElementsButtons();
+
+        // Add components
+        add(buttonPanel, BorderLayout.CENTER);
+        add(backgroundImage);
+    }
+
+    private void prepareElementsButtons() {
         // Buttons
         playButton = new JButton("PLAY");
         tutorialButton = new JButton("TUTORIAL");
         exitButton = new JButton("EXIT");
 
+        // Set buttons properties
         playButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
         tutorialButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
         exitButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
 
+        // Set buttons images
+        ImageIcon buttonPlay = new ImageIcon("PvZ/assets/button_play.png");
+        ImageIcon buttonTutorial = new ImageIcon("ruta/de/tu/imagen.png");
+        ImageIcon buttonExit = new ImageIcon("ruta/de/tu/imagen.png");
+
+        playButton.setIcon(buttonPlay);
+
+
+        // Set buttons possition
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.NONE;
         gbc.insets = new Insets(5, 0, 10, 0);
@@ -69,13 +88,10 @@ public class HomeGUI extends JPanel {
         gbc.gridy = GridBagConstraints.RELATIVE;
         gbc.anchor = GridBagConstraints.CENTER;
 
+        // Add buttons to the panel
         buttonPanel.add(playButton, gbc);
         buttonPanel.add(tutorialButton, gbc);
         buttonPanel.add(exitButton, gbc);
-
-        // Add components
-        add(buttonPanel, BorderLayout.CENTER);
-        add(backgroundImage);
     }
 
     /**

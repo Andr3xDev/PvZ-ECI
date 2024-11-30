@@ -2,12 +2,10 @@ package GUI;
 
 import GUI.extras.BackgroundImage;
 import GUI.extras.BackgroundSound;
-import GUI.extras.Board;
-import GUI.extras.Sprite;
+import GUI.extras.BoardBox;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 
 /**
@@ -15,37 +13,48 @@ import java.util.ArrayList;
  * the plants, zombies, bullets, etc.
  */
 public class BoardGUI extends JFrame implements Runnable {
-    //! Missing keylistener
+    //! Missing keylistener and this attributes
+    private BoardBox boardBox;           // Singleton que maneja la lógica del juego
 
     //** Attributes **//
 
     // Dimensions
-    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    private final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    private static final int ROWS = 5;
+    private static final int COLS = 10;
 
     // Panels
     JPanel plantsPanel = new JPanel();
     JPanel zombiesPanel = new JPanel();
     JPanel boardPanel = new JPanel();
+    JPanel infoPanel = new JPanel();
 
     // Background elements
     private BackgroundImage backgroundImage;
+    private BackgroundImage backgroundBoard;
     private BackgroundSound backgroundSound;
 
     // Game elements
-    private Board board;
-    private ArrayList<Sprite> bullets;
-    private ArrayList<Sprite> plants;
-    private ArrayList<Sprite> players;
-    private ArrayList<Sprite> zombies;
-    private ArrayList<Sprite> suns;
-    private ArrayList<Sprite> brains;
+    private GameAPP app;
+    private String gameMode;
+    private BoardBox[][] boxes;
+    private JLabel timerLabel;
+    private int remainingTime;
+    private boolean shovelMode;
+    private JLabel sunsLabel;
+    private JLabel brainLabel;
+    private String selectedPlant;
+    private String selectedZombie;
+
 
 
 
     /**
      * Constructor, creates the Game's elements and actions.
      */
-    public BoardGUI() {
+    public BoardGUI(GameAPP app) {
+        this.app = app;
+        this.boxes = new BoardBox[ROWS][COLS];
         prepareElements();
     }
 
@@ -63,28 +72,73 @@ public class BoardGUI extends JFrame implements Runnable {
         setUndecorated(true);
 
         // Window properties
-        setTitle("Plants vs Zombies");
+        setTitle("POOB vs Zombies");
         setSize(screenSize);
         setLocationRelativeTo(null);
+        setLayout(new BorderLayout());
 
         // Background Elements
-        backgroundImage = new BackgroundImage("PvZ/assets/background/start.jpeg");
         //! Menu sound doesn't stop and the audio duplicates
         //backgroundSound = new BackgroundSound("PvZ/assets/sound/LoonBoon.wav");
+
+        // Panels organization
+
 
         // Prepare all Elements
         prepareElementsBoard();
         prepareElementsPlayers();
 
         // Add Panels
-        add(backgroundImage);
+        add(boardPanel, BorderLayout.CENTER);
+        add(plantsPanel, BorderLayout.WEST);
+        add(zombiesPanel, BorderLayout.EAST);
+        add(infoPanel, BorderLayout.SOUTH);
     }
 
 
     private void prepareElementsBoard() {
+        boardPanel.setLayout(new GridLayout(ROWS, COLS));
+        backgroundBoard = new BackgroundImage("PvZ/assets/background/board.webp");
+        boardPanel.add(backgroundBoard);
     }
 
     private void prepareElementsPlayers() {
+
+        plantsPanel.setBackground(Color.GREEN);
+        zombiesPanel.setBackground(Color.RED);
+        infoPanel.setBackground(Color.BLUE);
+        boardPanel.setBackground(Color.YELLOW);
+
+        //Plants Panel
+        plantsPanel.setLayout(new GridLayout(7, 1));
+        plantsPanel.add(new JLabel("Plants"));
+        plantsPanel.add(new JLabel("Suns"));
+        plantsPanel.add(new JButton("Sunflower"));
+        plantsPanel.add(new JButton("Peashooter"));
+        plantsPanel.add(new JButton("Wallnut"));
+        plantsPanel.add(new JButton("Cherrybomb"));
+        plantsPanel.add(new JButton("Snowpea"));
+
+        //Zombies Panel
+        zombiesPanel.setLayout(new GridLayout(7, 1));
+        zombiesPanel.add(new JLabel("Zombies"));
+        zombiesPanel.add(new JLabel("Brains"));
+        zombiesPanel.add(new JButton("Zombie"));
+        zombiesPanel.add(new JButton("Conehead"));
+        zombiesPanel.add(new JButton("Buckethead"));
+        zombiesPanel.add(new JButton("Brainstain"));
+        zombiesPanel.add(new JButton("Football"));
+
+    }
+
+    private void prepareElementsInfo() {
+        infoPanel.setLayout(new GridLayout(1, 3));
+        timerLabel = new JLabel("Time: 0");
+        sunsLabel = new JLabel("Points: 0");
+        brainLabel = new JLabel("points: 0");
+        infoPanel.add(timerLabel);
+        infoPanel.add(sunsLabel);
+        infoPanel.add(brainLabel);
     }
 
 
@@ -92,16 +146,6 @@ public class BoardGUI extends JFrame implements Runnable {
 
 
     //** Update Elements **//
-
-    private void update() {
-        // Update all elements
-        updatePlayers();
-        updateZombies();
-        updateBullets();
-        updateSuns();
-        updateBrains();
-        //board.repaint();
-    }
 
     private void updatePlayers() {
     }

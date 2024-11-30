@@ -9,7 +9,7 @@ import java.awt.*;
  * Also controls the transitions between the different screens of the game,
  * it includes the Home Screen, Select Screen, tutorial screen and game screen.
  */
-public class GameGUI extends JFrame {
+public class GameAPP extends JFrame {
 
     //** Attributes **//
 
@@ -22,14 +22,14 @@ public class GameGUI extends JFrame {
 
     private HomeGUI home;
     private SelectGUI select;
-    private GameGUI game;
+    private GameAPP game;
     private TutorialGUI tutorial;
 
 
     /**
      * Constructor, creates the Game's elements and actions.
      */
-    public GameGUI() {
+    public GameAPP() {
         prepareElements();
         prepareActions();
     }
@@ -45,7 +45,7 @@ public class GameGUI extends JFrame {
         setUndecorated(true);
 
         // Window properties
-        setTitle("Plants vs Zombies");
+        setTitle("POOB vs Zombies");
         setSize(screenSize);
         setLocationRelativeTo(null);
 
@@ -96,7 +96,7 @@ public class GameGUI extends JFrame {
         //! missing continue button
         //select.continueButton.addActionListener(_ -> cl.show(panels, "gamePanel"));
         select.continueButton.addActionListener(_ -> {
-            BoardGUI board = new BoardGUI();
+            BoardGUI board = new BoardGUI(this);
             board.setVisible(true);
             this.dispose();
         });
@@ -106,6 +106,6 @@ public class GameGUI extends JFrame {
 
     //* Main Method *//
     public static void main(String[] args) {
-        new GameGUI().setVisible(true);
+        new GameAPP().setVisible(true);
     }
 }
