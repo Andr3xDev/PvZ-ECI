@@ -3,6 +3,7 @@ package GUI;
 import GUI.extras.BackgroundImage;
 import GUI.extras.BackgroundSound;
 import GUI.extras.BoardBox;
+import GUI.extras.BoardConf;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,7 +27,7 @@ public class BoardGUI extends JFrame implements Runnable {
     // Panels
     JPanel plantsPanel = new JPanel();
     JPanel zombiesPanel = new JPanel();
-    JPanel boardPanel = new JPanel();
+    JPanel boardPanel = new BoardConf("PvZ/assets/background/board.webp");
     JPanel infoPanel = new JPanel();
 
     // Background elements
@@ -92,14 +93,17 @@ public class BoardGUI extends JFrame implements Runnable {
         add(boardPanel, BorderLayout.CENTER);
         add(plantsPanel, BorderLayout.WEST);
         add(zombiesPanel, BorderLayout.EAST);
-        add(infoPanel, BorderLayout.SOUTH);
+        add(infoPanel, BorderLayout.NORTH);
     }
 
 
     private void prepareElementsBoard() {
-        boardPanel.setLayout(new GridLayout(ROWS, COLS));
-        backgroundBoard = new BackgroundImage("PvZ/assets/background/board.webp");
-        boardPanel.add(backgroundBoard);
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = 0; j < COLS; j++) {
+                boxes[i][j] = new BoardBox(i,j);
+                boardPanel.add(boxes[i][j]);
+            }
+        }
     }
 
     private void prepareElementsPlayers() {

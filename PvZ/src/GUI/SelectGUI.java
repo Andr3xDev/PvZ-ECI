@@ -122,7 +122,7 @@ public class SelectGUI extends JPanel {
         ImageIcon buttonPvA = new ImageIcon("ruta/de/tu/imagen.png");
         ImageIcon buttonAvA = new ImageIcon("ruta/de/tu/imagen.png");
 
-        pvpButton.setIcon(buttonPvP);
+        //pvpButton.setIcon(buttonPvP);
 
         // Set buttons possition
         GridBagConstraints gbc = new GridBagConstraints();
