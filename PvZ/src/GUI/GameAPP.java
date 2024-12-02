@@ -44,7 +44,7 @@ public class GameAPP extends JFrame {
         // Panels
         JPanel panels = new JPanel(new CardLayout());
         HomeGUI home = new HomeGUI();
-        SelectGUI select = new SelectGUI();
+        SelectGUI select = new SelectGUI(this);
         TutorialGUI tutorial = new TutorialGUI();
 
         // Add Cart Interfaces

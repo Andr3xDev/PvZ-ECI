@@ -98,7 +98,7 @@ public class TutorialGUI extends JPanel {
     private void prepareElementsInfo() {
         JPanel info = new JPanel();
         //info.setOpaque(false);
-        info.setBackground(Color.WHITE);    //! Temporal until we have the info image in PNG
+        info.setBackground(Color.BLACK);    //! Temporal until we have the info image in PNG
         infoPanel.add(info, BorderLayout.CENTER);
     }
 
