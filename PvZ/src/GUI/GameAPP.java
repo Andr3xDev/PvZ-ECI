@@ -6,8 +6,6 @@ import java.awt.*;
 /**
  * Class that represents the Game GUI.
  * This class is the main class of the game, it contains all the elements of the game.
- * Also controls the transitions between the different screens of the game,
- * it includes the Home Screen, Select Screen, tutorial screen and game screen.
  */
 public class GameAPP extends JFrame {
 
@@ -16,14 +14,9 @@ public class GameAPP extends JFrame {
     // Dimensions
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
-    // Panel
-    private JPanel panels;
+    // Utilities
     private CardLayout cl;
-
-    private HomeGUI home;
-    private SelectGUI select;
     private GameAPP game;
-    private TutorialGUI tutorial;
 
 
     /**
@@ -31,7 +24,6 @@ public class GameAPP extends JFrame {
      */
     public GameAPP() {
         prepareElements();
-        prepareActions();
     }
 
     /**
@@ -49,57 +41,21 @@ public class GameAPP extends JFrame {
         setSize(screenSize);
         setLocationRelativeTo(null);
 
-        // panels
-        panels = new JPanel(new CardLayout());
-        home = new HomeGUI();
-        select = new SelectGUI();
+        // Panels
+        JPanel panels = new JPanel(new CardLayout());
+        HomeGUI home = new HomeGUI();
+        SelectGUI select = new SelectGUI();
+        TutorialGUI tutorial = new TutorialGUI();
 
         // Add Cart Interfaces
 
         panels.add(home, "homePanel");          // Initial menu
-        //panels.add(tutorial, "tutorialPanel");  // Tutorial screen
+        panels.add(tutorial, "tutorialPanel");  // Tutorial screen
         panels.add(select, "selectPanel");      // Select screen
         cl = (CardLayout) panels.getLayout();
 
         // Add panels to the frame
         add(panels);
-    }
-
-    /**
-     * Prepares the actions of the GUI.
-     * It includes the actions of the Home Screen, Select Screen, tutorial screen and game screen.
-     */
-    private void prepareActions() {
-        prepareActionsHome();
-        prepareActionsSelect();
-    }
-
-
-    /**
-     * Prepares the actions of the Home Screen.
-     * This screen allows the players to start the game or go to the tutorial.
-     * The exit button is not implemented here, but it closes the game.
-     */
-    private void prepareActionsHome() {
-        home.playButton.addActionListener(_ -> cl.show(panels, "selectPanel"));
-        home.tutorialButton.addActionListener(_ -> cl.show(panels, "tutorialPanel"));
-    }
-
-
-    /**
-     * Prepares the actions of the Select Screen.
-     * This screen allows the players select what kind of game they want to play.
-     * Then start the game or go back to the main menu.
-     */
-    private void prepareActionsSelect() {
-        select.backButton.addActionListener(_ -> cl.show(panels, "homePanel"));
-        //! missing continue button
-        //select.continueButton.addActionListener(_ -> cl.show(panels, "gamePanel"));
-        select.continueButton.addActionListener(_ -> {
-            BoardGUI board = new BoardGUI(this);
-            board.setVisible(true);
-            this.dispose();
-        });
     }
 
 
