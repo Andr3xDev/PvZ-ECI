@@ -12,6 +12,10 @@ public class RoundedButton extends JButton {
         this.cornerRadius = cornerRadius;
         setContentAreaFilled(false);
         setFocusPainted(false);
+        setRolloverEnabled(false);
+        setPressedIcon(null);
+        setContentAreaFilled(false);
+        setBorderPainted(false);
         setBackground(new Color(252, 250, 227));
         setFont(new Font("Arial", Font.BOLD, 40));
     }
