@@ -16,9 +16,6 @@ public class SelectGUI extends JPanel {
     private final int buttonsWSize = screenSize.width / 5;
     private final int buttonsHSize = screenSize.height / 9;
 
-    // Background elements
-    private BackgroundImage backgroundImage;
-
     // Panels
     private JPanel actionPanel;
     private JPanel buttonPanel;
@@ -55,7 +52,7 @@ public class SelectGUI extends JPanel {
         setLayout(null);
 
         // Background Elements
-        backgroundImage = new BackgroundImage("PvZ/assets/background/backSelect.png");
+        BackgroundImage backgroundImage = new BackgroundImage("PvZ/assets/background/backSelect.png");
         backgroundImage.setBounds(0, 0, screenSize.width, screenSize.height);
         add(backgroundImage);
 
@@ -117,16 +114,9 @@ public class SelectGUI extends JPanel {
         pvAIButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
         AIvAIButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
 
-        // Set buttons images
-        ImageIcon buttonPvP = new ImageIcon("PvZ/assets/button_play.png");
-        ImageIcon buttonPvA = new ImageIcon("ruta/de/tu/imagen.png");
-        ImageIcon buttonAvA = new ImageIcon("ruta/de/tu/imagen.png");
-
-        //pvpButton.setIcon(buttonPvP);
-
-        // Set buttons possition
+        // Set buttons position
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.fill = GridBagConstraints.HORIZONTAL; // Asegura que los botones se expandan en ancho
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(5, 0, 10, 0);
         gbc.gridx = 0;
         gbc.gridy = GridBagConstraints.RELATIVE;

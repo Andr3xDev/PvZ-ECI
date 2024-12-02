@@ -4,6 +4,7 @@ import GUI.extras.BackgroundImage;
 import GUI.extras.RoundedButton;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class TutorialGUI extends JPanel {
@@ -13,16 +14,9 @@ public class TutorialGUI extends JPanel {
     // Dimensions
     private final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
-    // Panels
-    private JPanel actionPanel;
-    private JPanel buttonPanel;
-
-    // Action buttons
+    // Elements
+    private JPanel infoPanel;
     protected RoundedButton backButton;
-
-    // Information
-    private JLabel infoLabel;
-
 
 
     public TutorialGUI() {
@@ -40,6 +34,7 @@ public class TutorialGUI extends JPanel {
         add(backgroundImage);
 
         // Panels
+        prepareElementsGeneral();
         prepareElementsBottom();
         prepareElementsInfo();
 
@@ -48,21 +43,41 @@ public class TutorialGUI extends JPanel {
     }
 
 
-    private void prepareElementsBottom() {
-        // Back button
-        JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
-        buttonPanel.setBounds(0, screenSize.height - 100, screenSize.width, 200);
+    private void prepareElementsGeneral() {
+        // Panels
+        infoPanel = new JPanel(new BorderLayout());
+        infoPanel.setBounds(150, 100, screenSize.width-300, screenSize.height-200);
+        infoPanel.setBackground(new Color(2, 0, 51, 200));
+        infoPanel.setBorder(new LineBorder(new Color(2, 0, 51), 8));
 
+        add(infoPanel);
+    }
+
+    private void prepareElementsBottom() {
+        // Button panel
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setBounds(0, screenSize.height-100, screenSize.width, 200);
+        bottomPanel.setOpaque(false);
+
+        // Back button
         backButton = new RoundedButton("¡Okay!", 30);
-        buttonPanel.add(backButton, BorderLayout.CENTER);
-        add(buttonPanel);
+        backButton.setPreferredSize(new Dimension(300, 100));
+
+        // Add components
+        bottomPanel.add(backButton);
+        infoPanel.add(bottomPanel, BorderLayout.SOUTH);
     }
 
     private void prepareElementsInfo() {
+        JPanel info = new JPanel();
+        //info.setOpaque(false);
+        info.setBackground(Color.WHITE);    //! Temporal until we have the info image in PNG
+        infoPanel.add(info, BorderLayout.CENTER);
     }
 
+
     private void prepareActions() {
+        // Back button
         backButton.addActionListener(_ -> {
             CardLayout cl = (CardLayout) getParent().getLayout();
             cl.show(getParent(), "homePanel");
