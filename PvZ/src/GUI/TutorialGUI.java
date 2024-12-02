@@ -7,6 +7,11 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 
+
+/**
+ * Class that represents the Tutorial GUI of the game. It contains basic information of the game,
+ * like how to play, the rules and controls.
+ */
 public class TutorialGUI extends JPanel {
 
     //** Attributes **//
@@ -19,11 +24,19 @@ public class TutorialGUI extends JPanel {
     protected RoundedButton backButton;
 
 
+
+    /**
+     * Constructor, creates the Tutorial GUI and its elements.
+     */
     public TutorialGUI() {
         prepareElements();
         prepareActions();
     }
 
+
+    /**
+     * Prepares all elements of the Tutorial GUI, the background and the elements are added here.
+     */
     private void prepareElements() {
         // Set layout
         setLayout(null);
@@ -43,6 +56,10 @@ public class TutorialGUI extends JPanel {
     }
 
 
+    /**
+     * Prepares the general panel of the Tutorial GUI.
+     * This panel contains the information of the tutorial and the exit button.
+     */
     private void prepareElementsGeneral() {
         // Panels
         infoPanel = new JPanel(new BorderLayout());
@@ -53,6 +70,11 @@ public class TutorialGUI extends JPanel {
         add(infoPanel);
     }
 
+
+    /**
+     * Prepares the bottom panel of the Tutorial GUI.
+     * This panel contains the back button to return to the main menu.
+     */
     private void prepareElementsBottom() {
         // Button panel
         JPanel bottomPanel = new JPanel();
@@ -68,6 +90,11 @@ public class TutorialGUI extends JPanel {
         infoPanel.add(bottomPanel, BorderLayout.SOUTH);
     }
 
+
+    /**
+     * Prepares the info panel of the Tutorial GUI.
+     * This panel contains the information of the tutorial.
+     */
     private void prepareElementsInfo() {
         JPanel info = new JPanel();
         //info.setOpaque(false);
@@ -76,6 +103,9 @@ public class TutorialGUI extends JPanel {
     }
 
 
+    /**
+     * Prepares the only action of the Tutorial GUI, it is the back button to return to main screen.
+     */
     private void prepareActions() {
         // Back button
         backButton.addActionListener(_ -> {
