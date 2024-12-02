@@ -2,9 +2,10 @@ package GUI;
 
 import GUI.extras.BackgroundImage;
 import GUI.extras.BackgroundSound;
+import GUI.extras.RoundedButton;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class HomeGUI extends JPanel {
@@ -12,21 +13,16 @@ public class HomeGUI extends JPanel {
     //** Attributes **//
 
     // Dimensions
-    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    private int menuSize = screenSize.width / 4;
-    private int buttonsWSize = screenSize.width / 5;
-    private int buttonsHSize = screenSize.height / 9;
+    private final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    private final int menuSize = screenSize.width / 4;
+    private final int buttonsWSize = screenSize.width / 5;
+    private final int buttonsHSize = screenSize.height / 9;
 
     // Buttons of the main menu
     private JPanel buttonPanel;
     protected JButton playButton;
     protected JButton tutorialButton;
     private JButton exitButton;
-
-    // Background elements
-    private BackgroundImage backgroundImage;
-    private BackgroundSound backgroundSound;
-
 
 
     public HomeGUI() {
@@ -40,21 +36,11 @@ public class HomeGUI extends JPanel {
         setLayout(new BorderLayout());
 
         // Background Elements
-        //backgroundImage = new BackgroundImage("PvZ/assets/background/start.jpeg");
-        backgroundImage = new BackgroundImage("PvZ/assets/background/backHome.png");
-        backgroundSound = new BackgroundSound("PvZ/assets/sound/LoonBoon.wav");
+        BackgroundImage backgroundImage = new BackgroundImage("PvZ/assets/background/backHome.png");
+        new BackgroundSound("PvZ/assets/sound/LoonBoon.wav");
 
-        // Buttons Panel
-        buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridBagLayout());
-        buttonPanel.setOpaque(false);
-        buttonPanel.setBounds(
-                screenSize.width/2 - menuSize/2,
-                screenSize.height/2 - menuSize/6,
-                menuSize,
-                menuSize
-        );
-
+        // buttons panel
+        prepareElementsButtonsPanel();
         prepareElementsButtons();
 
         // Add components
@@ -62,26 +48,32 @@ public class HomeGUI extends JPanel {
         add(backgroundImage);
     }
 
+    private void prepareElementsButtonsPanel() {
+        // Buttons Panel
+        buttonPanel = new JPanel();
+        buttonPanel.setLayout(new GridBagLayout());
+        buttonPanel.setBounds(
+                screenSize.width/2 - menuSize/2,
+                screenSize.height/2 - menuSize/6,
+                menuSize,
+                menuSize
+        );
+        buttonPanel.setBackground(new Color(2, 0, 51, 200));
+        buttonPanel.setBorder(new LineBorder(new Color(2, 0, 51), 8));
+    }
+
     private void prepareElementsButtons() {
         // Buttons
-        playButton = new JButton("PLAY");
-        tutorialButton = new JButton("TUTORIAL");
-        exitButton = new JButton("EXIT");
+        playButton = new RoundedButton("PLAY", 20);
+        tutorialButton = new RoundedButton("TUTORIAL", 20);
+        exitButton = new RoundedButton("EXIT", 20);
 
         // Set buttons properties
         playButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
         tutorialButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
         exitButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
 
-        // Set buttons images
-        ImageIcon buttonPlay = new ImageIcon("PvZ/assets/button_play.png");
-        ImageIcon buttonTutorial = new ImageIcon("ruta/de/tu/imagen.png");
-        ImageIcon buttonExit = new ImageIcon("ruta/de/tu/imagen.png");
-
-        playButton.setIcon(buttonPlay);
-
-
-        // Set buttons possition
+        // Set buttons position
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.NONE;
         gbc.insets = new Insets(5, 0, 10, 0);
