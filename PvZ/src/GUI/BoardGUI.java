@@ -27,7 +27,8 @@ public class BoardGUI extends JFrame implements Runnable {
     // Panels
     JPanel plantsPanel = new JPanel();
     JPanel zombiesPanel = new JPanel();
-    JPanel boardPanel = new BoardConf("PvZ/assets/background/board.webp");
+    JPanel boardPanel = new BoardConf("PvZ/assets/background/board.jpg");
+
     JPanel infoPanel = new JPanel();
 
     // Background elements
@@ -98,6 +99,7 @@ public class BoardGUI extends JFrame implements Runnable {
 
 
     private void prepareElementsBoard() {
+        boardPanel.setLayout(new GridLayout(ROWS, COLS));
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLS; j++) {
                 boxes[i][j] = new BoardBox(i,j);
@@ -111,7 +113,7 @@ public class BoardGUI extends JFrame implements Runnable {
         plantsPanel.setBackground(Color.GREEN);
         zombiesPanel.setBackground(Color.RED);
         infoPanel.setBackground(Color.BLUE);
-        boardPanel.setBackground(Color.YELLOW);
+
 
         //Plants Panel
         plantsPanel.setLayout(new GridLayout(7, 1));

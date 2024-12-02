@@ -55,7 +55,7 @@ public class SelectGUI extends JPanel {
         setLayout(null);
 
         // Background Elements
-        backgroundImage = new BackgroundImage("PvZ/assets/background/start.jpeg");
+        backgroundImage = new BackgroundImage("PvZ/assets/background/backSelect.png");
         backgroundImage.setBounds(0, 0, screenSize.width, screenSize.height);
         add(backgroundImage);
 

@@ -40,7 +40,8 @@ public class HomeGUI extends JPanel {
         setLayout(new BorderLayout());
 
         // Background Elements
-        backgroundImage = new BackgroundImage("PvZ/assets/background/start.jpeg");
+        //backgroundImage = new BackgroundImage("PvZ/assets/background/start.jpeg");
+        backgroundImage = new BackgroundImage("PvZ/assets/background/backHome.png");
         backgroundSound = new BackgroundSound("PvZ/assets/sound/LoonBoon.wav");
 
         // Buttons Panel
