@@ -1,10 +1,10 @@
 package GUI;
 
 import GUI.extras.BackgroundImage;
+import GUI.extras.RoundedButton;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 
 public class SelectGUI extends JPanel {
 
@@ -12,27 +12,23 @@ public class SelectGUI extends JPanel {
 
     // Dimensions & information
     private final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    private final int buttonsWSize = screenSize.width / 5;
-    private final int buttonsHSize = screenSize.height / 9;
-    private int gameMode;
-
-    // Background elements
-    private BackgroundImage backgroundImage;
+    private final int buttonsWSize = screenSize.width / 8;
+    private final int buttonsHSize = screenSize.height / 14;
+    private final GameAPP game;
 
     // Panels
-    private JPanel actionPanel;
-    private JPanel selectPanel;
-    private JPanel buttonPanel;
-    private JPanel descriptionPanel;
+    private JPanel optionsPanel;
+    private JPanel pvpPanel;
+    private JPanel pvAIPanel;
+    private JPanel AIvAIPanel;
 
     // Action buttons
-    protected JButton backButton;
-    protected JButton continueButton;
+    protected RoundedButton backButton;
 
-    // Select buttons
-    protected JButton pvpButton;
-    protected JButton pvAIButton;
-    protected JButton AIvAIButton;
+    // Buttons
+    protected RoundedButton pvpButton;
+    protected RoundedButton pvAIButton;
+    protected RoundedButton AIvAIButton;
 
 
 
@@ -45,122 +41,142 @@ public class SelectGUI extends JPanel {
      * 3. IA vs IA
      * Also can go back to the main menu or continue to the game settings.
      */
-    public SelectGUI() {
+    public SelectGUI(GameAPP game) {
+        this.game = game;
         prepareElements();
         prepareActions();
     }
+
 
     /**
      * Prepares all elements of the PlayScreen GUI.
      */
     private void prepareElements() {
-        this.gameMode = 0;
         // Set layout
         setLayout(null);
 
         // Background Elements
-        backgroundImage = new BackgroundImage("PvZ/assets/background/start.jpeg");
+        BackgroundImage backgroundImage = new BackgroundImage("PvZ/assets/background/backSelect.png");
         backgroundImage.setBounds(0, 0, screenSize.width, screenSize.height);
-        add(backgroundImage);
 
-        // Buttons bottom panel
-        prepareElementsBottom();
-
-        // Select Panel
+        // Elements
+        prepareElementsOptions();
         prepareElementsSelect();
+        prepareElementsBack();
 
-        backgroundImage.setLayout(null);
-        backgroundImage.add(actionPanel);
-        backgroundImage.add(selectPanel);
+        // Add components
+        add(optionsPanel);
+        add(backgroundImage);
     }
+
 
     /**
      * Prepares the elements of the bottom panel. It contains the back and continue buttons.
      */
-    private void prepareElementsBottom() {
-        actionPanel = new JPanel();
-        actionPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 100, 10));
-        actionPanel.setOpaque(false);
-        actionPanel.setBounds(
-                screenSize.width / 2 - buttonsWSize * 5 / 2,
-                screenSize.height - buttonsHSize * 2,
-                screenSize.width,
-                buttonsHSize + 20
-        );
+    private void prepareElementsOptions() {
+        // General config
+        optionsPanel = new JPanel(new GridLayout(1, 3, 40, 40));
+        optionsPanel.setOpaque(false);
+        optionsPanel.setBounds(150, (int) (screenSize.height/2.5), screenSize.width - 300, screenSize.height/3);
 
-        // Action buttons
-        backButton = new JButton("B");
-        continueButton = new JButton("Let's Play!");
-        backButton.setPreferredSize(new Dimension(buttonsHSize, buttonsHSize));
-        continueButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
+        // Panels
+        pvpPanel = new JPanel();
+        pvAIPanel = new JPanel();
+        AIvAIPanel = new JPanel();
 
-        actionPanel.add(backButton);
-        actionPanel.add(continueButton);
+        // Set panels properties
+        pvpPanel.setBackground(new Color(2, 0, 51, 200));
+        pvpPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+        pvAIPanel.setBackground(new Color(2, 0, 51, 200));
+        pvAIPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+        AIvAIPanel.setBackground(new Color(2, 0, 51, 200));
+        AIvAIPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+
+        // Add panels to the options panel
+        optionsPanel.add(pvpPanel);
+        optionsPanel.add(pvAIPanel);
+        optionsPanel.add(AIvAIPanel);
     }
 
+
     /**
-     * Prepares the elements of the select panel.
+     * Prepares the elements of the bottom panel. It contains the back and continue buttons.
      */
     private void prepareElementsSelect() {
-        selectPanel = new JPanel(new BorderLayout());
-        selectPanel.setOpaque(false);
-        selectPanel.setBounds(
-                screenSize.width / 4,
-                screenSize.height / 4,
-                screenSize.width / 2,
-                screenSize.height / 2
-        );
+        // Buttons
+        pvpButton = new RoundedButton("P1 vs P2", 35);
+        pvAIButton = new RoundedButton("P1 vs AI", 35);
+        AIvAIButton = new RoundedButton("AI vs AI", 35);
 
-        // Buttons panel
-        buttonPanel = new JPanel(new GridLayout(3, 1, 10, 10));
-        buttonPanel.setOpaque(false);
+        // Set buttons properties
+        pvpButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
+        pvAIButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
+        AIvAIButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
 
-        // Add buttons
-        pvpButton = new JButton("P1 vs P2");
-        pvAIButton = new JButton("P1 vs Bot");
-        AIvAIButton = new JButton("Bot vs Bot");
-        buttonPanel.add(pvpButton);
-        buttonPanel.add(pvAIButton);
-        buttonPanel.add(AIvAIButton);
-
-        // Description panel
-        descriptionPanel = new JPanel();
-        descriptionPanel.setOpaque(false);
-        descriptionPanel.setLayout(new FlowLayout());
-
-        // Add components to selectPanel
-        selectPanel.add(buttonPanel, BorderLayout.WEST);
-        selectPanel.add(descriptionPanel, BorderLayout.CENTER);
+        // Add buttons to the panel
+        pvpPanel.add(pvpButton);
+        pvAIPanel.add(pvAIButton);
+        AIvAIPanel.add(AIvAIButton);
     }
 
+
     /**
-     * Prepares the actions of the buttons.
-     * It allows the player select the game mode and see the description of the game mode.
-     * Then save the game mode to continue to the game settings.
+     * Prepares the elements of the bottom panel. It contains only the back button.
+     */
+    private void prepareElementsBack() {
+        // Back panel
+        JPanel backPanel = new JPanel();
+        backPanel.setBackground(new Color(2, 0, 51, 200));
+        backPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+
+        // Back button
+        backButton = new RoundedButton("Back", 35);
+        backButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
+
+        backPanel.add(backButton);
+        backPanel.setBounds(screenSize.width/2 - buttonsWSize/2 - 50,
+                screenSize.height-2*buttonsHSize,
+                buttonsWSize + 100,
+                buttonsHSize + 30
+        );
+        add(backPanel);
+    }
+
+
+    /**
+     * Prepares the only action of the Tutorial GUI, it is the back button to return to main screen
+     * and the game mode selectors: "P1 vs P2", "P1 vs AI" and "AI vs AI".
      */
     private void prepareActions() {
-        pvpButton.addActionListener(setGameMode(0));
-        pvAIButton.addActionListener(setGameMode(1));
-        AIvAIButton.addActionListener(setGameMode(2));
-    }
 
+        //! All buttons are creating the same game. Just for testing purposes.
+        //! Change this to create different games when ConfigGUI is implemented.
 
-    /**
-     * Set the game mode to the configuration in the game creation.
-     *
-     * @param mode the game mode. 0 for P1 vs P2, 1 for P1 vs Bot, 2 for Bot vs Bot.
-     * @return the action listener.
-     */
-    private ActionListener setGameMode(int mode) {
-        this.gameMode = mode;
-        return null;
-    }
+        // P1 vs P2 button
+        pvpButton.addActionListener(_ -> {
+            BoardGUI board = new BoardGUI(game);
+            board.setVisible(true);
+            game.dispose();
+        });
 
-    /**
-     * Get the game mode to config the game.
-     * @return the game mode. 0 for P1 vs P2, 1 for P1 vs Bot, 2 for Bot vs Bot.
-     */
-    public int getGameMode() {
-        return this.gameMode;
+        // P1 vs AI button
+        pvAIButton.addActionListener(_ -> {
+            BoardGUI board = new BoardGUI(game);
+            board.setVisible(true);
+            game.dispose();
+        });
+
+        // AI vs AI button
+        AIvAIButton.addActionListener(_ -> {
+            BoardGUI board = new BoardGUI(game);
+            board.setVisible(true);
+            game.dispose();
+        });
+
+        // Back button
+        backButton.addActionListener(_ -> {
+            CardLayout cl = (CardLayout) getParent().getLayout();
+            cl.show(getParent(), "homePanel");
+        });
     }
 }
