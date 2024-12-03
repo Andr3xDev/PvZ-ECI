@@ -9,7 +9,9 @@ public class Game {
     private Unit[][] unit;
     private int brains = 50;
     private int suns = 50;
+    private Bullet[][] bullets;
     public Game() {
+        bullets = new Bullet[8][5];
         unit = new Unit[8][5];
     }
 

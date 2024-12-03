@@ -7,4 +7,5 @@ public interface Unit {
     int getDamage();
     int getCost();
     void takeDamage(int dmg);
+    void die();
 }
