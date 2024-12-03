@@ -4,8 +4,6 @@ import GUI.extras.BackgroundImage;
 import GUI.extras.RoundedButton;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.MatteBorder;
 import java.awt.*;
 
 public class SelectGUI extends JPanel {
@@ -14,9 +12,8 @@ public class SelectGUI extends JPanel {
 
     // Dimensions & information
     private final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    private final int menuSize = screenSize.width / 4;
-    private final int buttonsWSize = screenSize.width / 10;
-    private final int buttonsHSize = screenSize.height / 16;
+    private final int buttonsWSize = screenSize.width / 8;
+    private final int buttonsHSize = screenSize.height / 14;
     private final GameAPP game;
 
     // Panels
@@ -80,15 +77,25 @@ public class SelectGUI extends JPanel {
         // General config
         optionsPanel = new JPanel(new GridLayout(1, 3, 40, 40));
         optionsPanel.setOpaque(false);
-        optionsPanel.setBounds(50, 150, screenSize.width - 100, screenSize.height-300);
+        optionsPanel.setBounds(150, (int) (screenSize.height/2.5), screenSize.width - 300, screenSize.height/3);
 
         // Panels
         pvpPanel = new JPanel();
         pvAIPanel = new JPanel();
         AIvAIPanel = new JPanel();
 
+        // Set panels properties
+        pvpPanel.setBackground(new Color(2, 0, 51, 200));
+        pvpPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+        pvAIPanel.setBackground(new Color(2, 0, 51, 200));
+        pvAIPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+        AIvAIPanel.setBackground(new Color(2, 0, 51, 200));
+        AIvAIPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+
+        // Add panels to the options panel
         optionsPanel.add(pvpPanel);
         optionsPanel.add(pvAIPanel);
+        optionsPanel.add(AIvAIPanel);
     }
 
 
@@ -101,8 +108,6 @@ public class SelectGUI extends JPanel {
         pvAIButton = new RoundedButton("P1 vs AI", 35);
         AIvAIButton = new RoundedButton("AI vs AI", 35);
 
-        pvpButton.setBackground(new Color(2, 0, 51, 200));
-
         // Set buttons properties
         pvpButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
         pvAIButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
@@ -110,8 +115,8 @@ public class SelectGUI extends JPanel {
 
         // Add buttons to the panel
         pvpPanel.add(pvpButton);
-        //optionsPanel.add(pvAIButton);
-        //optionsPanel.add(AIvAIButton);
+        pvAIPanel.add(pvAIButton);
+        AIvAIPanel.add(AIvAIButton);
     }
 
 
