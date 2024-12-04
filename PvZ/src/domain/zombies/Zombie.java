@@ -2,6 +2,7 @@ package domain.zombies;
 
 import domain.Game;
 import domain.Unit;
+import domain.plants.Plant;
 
 public abstract class Zombie implements Unit, Runnable {
     private String name;
@@ -24,21 +25,6 @@ public abstract class Zombie implements Unit, Runnable {
     }
 
     @Override
-    public int getLife() {
-        return life;
-    }
-
-    @Override
-    public int getDamage() {
-        return damage;
-    }
-
-    @Override
-    public int getCost() {
-        return cost;
-    }
-
-    @Override
     public void takeDamage(int dmg) {
         this.life -= dmg;
         if (this.life <= 0) {
@@ -46,45 +32,72 @@ public abstract class Zombie implements Unit, Runnable {
         }
     }
 
-    public void makeDamage() {
-        if (positionX - 1 >= 0 && game.getUnit()[positionX - 1][positionY] != null) {
-            Unit target = game.getUnit()[positionX - 1][positionY];
-            target.takeDamage(this.damage);
-
-            if (target.getLife() <= 0) {
-                game.getUnit()[positionX - 1][positionY] = null;
+    public void move() {
+        if (isActive && positionX > 0) {
+            // Si no hay una planta delante, avanza
+            if (!(game.getUnit()[positionX - 1][positionY] instanceof Plant)) {
+                game.getUnit()[positionX][positionY] = null;
+                positionX--;
+                game.getUnit()[positionX][positionY] = this;
             }
         }
     }
 
-    public void move() {
-        if (isActive) {
-            if (positionX - 1 >= 0 && game.getUnit()[positionX - 1][positionY] == null) {
-                game.getUnit()[positionX][positionY] = null;
-                positionX--;
-                game.getUnit()[positionX][positionY] = this;
-            } else {
-                makeDamage();
+    public void attack() {
+        if (positionX > 0 && game.getUnit()[positionX - 1][positionY] instanceof Plant) {
+            Plant plant = (Plant) game.getUnit()[positionX - 1][positionY];
+            plant.takeDamage(this.damage); // La planta recibe daño
+            if (plant.getLife() <= 0) {
+                game.deletePlant(positionX - 1, positionY); // Elimina la planta si muere
             }
         }
     }
 
     @Override
     public void run() {
+        Thread attackThread = new Thread(() -> {
+            while (isActive) {
+                try {
+                    Thread.sleep(500); // Golpea cada 0.5 segundos
+                    attack();
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    break;
+                }
+            }
+        });
+
+        attackThread.start();
+
         while (isActive) {
             try {
-                Thread.sleep(2500);
+                Thread.sleep(2500); // Mueve cada 2.5 segundos
                 move();
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
             }
         }
+
+        // Detener el hilo de ataque cuando el zombie ya no esté activo
+        attackThread.interrupt();
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public int getLife() {
+        return this.life;
+    }
+
+    @Override
+    public int getDamage() {
+        return this.damage;
+    }
+
+    @Override
+    public int getCost() {
+        return this.cost;
     }
 }
+
 
 

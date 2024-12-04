@@ -2,30 +2,33 @@ package domain;
 
 import domain.economy.Brain;
 import domain.economy.Sun;
-import domain.plants.Plant;
-import domain.zombies.Zombie;
+import domain.economy.SuperSun;
+import domain.plants.*;
+import domain.zombies.*;
 
 public class Game {
     private Unit[][] unit;
     private int brains = 50;
-    private int suns = 50;
+    private int suns;
     private Bullet[][] bullets;
     public Game() {
-        bullets = new Bullet[8][5];
-        unit = new Unit[8][5];
+        bullets = new Bullet[11][5];
+        unit = new Unit[11][5];
+        this.suns = 50;
+        System.out.println(getSuns());
     }
 
-    public void addPlant(Plant plant, int posX, int posY) {
+    public void addPlant(String plantName, int posX, int posY) {
         if (unit[posX][posY] == null){
+            Plant plant = searchPlant(plantName,posX,posY);
             unit[posX][posY] = plant;
             suns -= plant.getCost();
         }
     }
-    public void addZombie(Zombie zombie, int posX, int posY) {
-        if (unit[posX][posY] == null){
-            unit[posX][posY] = zombie;
-            brains -= zombie.getCost();
-        }
+    public void addZombie(String zombieName, int posY) {
+        Zombie zombie = searchZombie(zombieName,posY);
+        unit[10][posY] = zombie;
+        brains -= zombie.getCost();
     }
     public void deletePlant(int posX,int posY) {
         if (unit[posX][posY] != null){
@@ -41,11 +44,81 @@ public class Game {
     public void addSuns(Sun sun) {
         this.suns += sun.getValue();
     }
+    public void addSuperSuns(SuperSun sun) {
+        this.suns += sun.getValue();
+    }
     public void addBrains(Brain brain) {
         this.brains += brain.getValue();
     }
 
+    public Bullet[][] getBullets() {
+        return bullets;
+    }
+
+    public void printBoard() {
+        System.out.println("Game Board:");
+        for (int y = 0; y < 5; y++) {
+            for (int x = 0; x < 11; x++) {
+                if (unit[x][y] != null) {
+                    System.out.print(unit[x][y].getClass().getSimpleName().charAt(0) + " ");
+                } else {
+                    System.out.print(". ");
+                }
+            }
+            System.out.println();
+        }
+
+        System.out.println("Bullets:");
+        for (int y = 0; y < bullets[0].length; y++) {
+            for (int x = 0; x < bullets.length; x++) {
+                if (bullets[x][y] != null) {
+                    System.out.print("B ");
+                } else {
+                    System.out.print(". ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    public Plant searchPlant(String plant,int posX,int posY){
+        switch (plant){
+            case "peashooter":
+                return new Peashooter(posX,posY,this);
+            case "sunflower":
+                return new Sunflower(posX,posY,this);
+            case "wallnut":
+                return new WallNut(posX,posY,this);
+            case "potatomine":
+                return new PotatoMine(posX,posY,this);
+            case "eciplant":
+                return new ECIPlant(posX,posY,this);
+            default:
+                System.out.println("nonas");
+                break;
+        }
+        return null;
+    }
+    public Zombie searchZombie(String zombie,int posY){
+        switch (zombie){
+            case "basic":
+                return new Basic(posY,this);
+            case "brainstein":
+                return new Brainstein(posY,this);
+            case "conehead":
+                return new ConeHead(posY,this);
+            case "buckethead":
+                return new BucketHead(posY,this);
+            case "ecizombie":
+                return new ECIZombie(posY,this);
+            default:
+                System.out.println("nonas");
+                break;
+        }
+        return null;
+    }
     public Unit[][] getUnit() {
         return unit;
     }
+    public int getSuns(){return this.suns;}
 }
