@@ -11,6 +11,6 @@ public class BucketHead extends Zombie {
         this.cost = 200;
         this.game = game;
         this.positionY = y;
-        this.positionX = 7;
+        this.positionX = 10;
     }
 }

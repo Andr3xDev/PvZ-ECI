@@ -11,6 +11,6 @@ public class ConeHead extends Zombie {
         this.cost = 125;
         this.game = game;
         this.positionY = y;
-        this.positionX = 7;
+        this.positionX = 10;
     }
 }

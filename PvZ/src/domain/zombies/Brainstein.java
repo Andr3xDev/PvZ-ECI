@@ -11,7 +11,7 @@ public class Brainstein extends Zombie {
         this.cost = 50;
         this.game = game;
         this.positionY = y;
-        this.positionX = 7;
+        this.positionX = 10;
     }
     public void generateBrains() {
         Brain brain = new Brain();

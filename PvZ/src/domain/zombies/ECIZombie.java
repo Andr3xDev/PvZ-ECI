@@ -11,6 +11,6 @@ public class ECIZombie extends Zombie {
         this.cost = 250;
         this.game = game;
         this.positionY = y;
-        this.positionX = 7;
+        this.positionX = 10;
     }
 }
