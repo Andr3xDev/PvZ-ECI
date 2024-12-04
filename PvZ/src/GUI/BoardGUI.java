@@ -109,11 +109,11 @@ public class BoardGUI extends JFrame implements Runnable {
         // Elements
         plantsPanel.add(new RoundedLabel("Plants"));
         plantsPanel.add(new RoundedLabel("Suns"));
-        plantsPanel.add(new JButton("Sunflower"));
-        plantsPanel.add(new JButton("Peashooter"));
-        plantsPanel.add(new JButton("Wallnut"));
-        plantsPanel.add(new JButton("Cherrybomb"));
-        plantsPanel.add(new JButton("Snowpea"));
+        plantsPanel.add(new SelectButton("PvZ/assets/plants/peashooter.png"));
+        plantsPanel.add(new SelectButton("PvZ/assets/plants/sunflower.png"));
+        plantsPanel.add(new SelectButton("PvZ/assets/plants/wallnut.png"));
+        plantsPanel.add(new SelectButton("PvZ/assets/plants/potatomine.png"));
+        plantsPanel.add(new SelectButton("PvZ/assets/plants/eciplant.png"));
         add(plantsPanel, BorderLayout.WEST);
 
 
@@ -126,11 +126,11 @@ public class BoardGUI extends JFrame implements Runnable {
         // Elements
         zombiesPanel.add(new RoundedLabel("Zombies"));
         zombiesPanel.add(new RoundedLabel("Brains"));
-        zombiesPanel.add(new JButton("Zombie"));
-        zombiesPanel.add(new JButton("Conehead"));
-        zombiesPanel.add(new JButton("Buckethead"));
-        zombiesPanel.add(new JButton("Brainstain"));
-        zombiesPanel.add(new JButton("Football"));
+        zombiesPanel.add(new SelectButton("PvZ/assets/zombies/basic.png"));
+        zombiesPanel.add(new SelectButton("PvZ/assets/zombies/buckethead.png"));
+        zombiesPanel.add(new SelectButton("PvZ/assets/zombies/conehead.png"));
+        zombiesPanel.add(new SelectButton("PvZ/assets/zombies/brainstein.png"));
+        zombiesPanel.add(new SelectButton("PvZ/assets/zombies/ecizombie.png"));
         add(zombiesPanel, BorderLayout.EAST);
     }
 
