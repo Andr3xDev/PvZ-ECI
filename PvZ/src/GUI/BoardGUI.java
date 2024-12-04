@@ -1,11 +1,9 @@
 package GUI;
 
-import GUI.extras.BackgroundImage;
-import GUI.extras.BackgroundSound;
-import GUI.extras.BoardBox;
-import GUI.extras.BoardConf;
+import GUI.extras.*;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 
@@ -22,19 +20,13 @@ public class BoardGUI extends JFrame implements Runnable {
     // Dimensions
     private final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     private static final int ROWS = 5;
-    private static final int COLS = 10;
+    private static final int COLS = 11;
 
     // Panels
     JPanel plantsPanel = new JPanel();
     JPanel zombiesPanel = new JPanel();
     JPanel boardPanel = new BoardConf("PvZ/assets/background/board.jpg");
-
     JPanel infoPanel = new JPanel();
-
-    // Background elements
-    private BackgroundImage backgroundImage;
-    private BackgroundImage backgroundBoard;
-    private BackgroundSound backgroundSound;
 
     // Game elements
     private GameAPP app;
@@ -43,8 +35,8 @@ public class BoardGUI extends JFrame implements Runnable {
     private JLabel timerLabel;
     private int remainingTime;
     private boolean shovelMode;
-    private JLabel sunsLabel;
-    private JLabel brainLabel;
+    private JLabel plantPoints;
+    private JLabel zombiesPoints;
     private String selectedPlant;
     private String selectedZombie;
 
@@ -79,22 +71,11 @@ public class BoardGUI extends JFrame implements Runnable {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // Background Elements
-        //! Menu sound doesn't stop and the audio duplicates
-        //backgroundSound = new BackgroundSound("PvZ/assets/sound/LoonBoon.wav");
-
-        // Panels organization
-
-
         // Prepare all Elements
         prepareElementsBoard();
         prepareElementsPlayers();
-
-        // Add Panels
-        add(boardPanel, BorderLayout.CENTER);
-        add(plantsPanel, BorderLayout.WEST);
-        add(zombiesPanel, BorderLayout.EAST);
-        add(infoPanel, BorderLayout.NORTH);
+        prepareElementsInfo();
+        prepareElementsOthers();
     }
 
 
@@ -106,45 +87,76 @@ public class BoardGUI extends JFrame implements Runnable {
                 boardPanel.add(boxes[i][j]);
             }
         }
+
+        boardPanel.setBorder(new EmptyBorder(
+                screenSize.height/9,
+                screenSize.width/8 + 5,
+                screenSize.height/19,
+                screenSize.width/8
+        ));
+
+        add(boardPanel, BorderLayout.CENTER);
     }
 
     private void prepareElementsPlayers() {
 
-        plantsPanel.setBackground(Color.GREEN);
-        zombiesPanel.setBackground(Color.RED);
-        infoPanel.setBackground(Color.BLUE);
-
-
-        //Plants Panel
+        //* Plants Panel
         plantsPanel.setLayout(new GridLayout(7, 1));
-        plantsPanel.add(new JLabel("Plants"));
-        plantsPanel.add(new JLabel("Suns"));
+        plantsPanel.setPreferredSize(new Dimension(screenSize.width/9, screenSize.height/2));
+        plantsPanel.setBackground(new Color(2, 0, 51, 200));
+        plantsPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+
+        // Elements
+        plantsPanel.add(new RoundedLabel("Plants"));
+        plantsPanel.add(new RoundedLabel("Suns"));
         plantsPanel.add(new JButton("Sunflower"));
         plantsPanel.add(new JButton("Peashooter"));
         plantsPanel.add(new JButton("Wallnut"));
         plantsPanel.add(new JButton("Cherrybomb"));
         plantsPanel.add(new JButton("Snowpea"));
+        add(plantsPanel, BorderLayout.WEST);
 
-        //Zombies Panel
+
+        //* Zombies Panel
         zombiesPanel.setLayout(new GridLayout(7, 1));
-        zombiesPanel.add(new JLabel("Zombies"));
-        zombiesPanel.add(new JLabel("Brains"));
+        zombiesPanel.setPreferredSize(new Dimension(screenSize.width/9, screenSize.height/2));
+        zombiesPanel.setBackground(new Color(2, 0, 51, 200));
+        zombiesPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+
+        // Elements
+        zombiesPanel.add(new RoundedLabel("Zombies"));
+        zombiesPanel.add(new RoundedLabel("Brains"));
         zombiesPanel.add(new JButton("Zombie"));
         zombiesPanel.add(new JButton("Conehead"));
         zombiesPanel.add(new JButton("Buckethead"));
         zombiesPanel.add(new JButton("Brainstain"));
         zombiesPanel.add(new JButton("Football"));
+        add(zombiesPanel, BorderLayout.EAST);
+    }
 
+    private void prepareElementsOthers() {
+        JPanel refillPanel = new JPanel();
+        refillPanel.setPreferredSize(new Dimension(screenSize.width, screenSize.height/7));
+        refillPanel.setBackground(new Color(2, 0, 51, 200));
+        refillPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+        add(refillPanel, BorderLayout.SOUTH);
     }
 
     private void prepareElementsInfo() {
-        infoPanel.setLayout(new GridLayout(1, 3));
-        timerLabel = new JLabel("Time: 0");
-        sunsLabel = new JLabel("Points: 0");
-        brainLabel = new JLabel("points: 0");
+        infoPanel.setLayout(new GridLayout(1, 3, 300, 50));
+        infoPanel.setPreferredSize(new Dimension(screenSize.width, screenSize.height/7));
+        infoPanel.setBackground(new Color(2, 0, 51, 200));
+        infoPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+
+        // Elements
+        plantPoints = new RoundedLabel("Points: ");
+        timerLabel = new RoundedLabel("Time: ");
+        zombiesPoints = new RoundedLabel("Points: ");
+        infoPanel.add(plantPoints);
         infoPanel.add(timerLabel);
-        infoPanel.add(sunsLabel);
-        infoPanel.add(brainLabel);
+        infoPanel.add(zombiesPoints);
+
+        add(infoPanel, BorderLayout.NORTH);
     }
 
 
