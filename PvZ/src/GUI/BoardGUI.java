@@ -1,9 +1,6 @@
 package GUI;
 
-import GUI.extras.BackgroundImage;
-import GUI.extras.BackgroundSound;
-import GUI.extras.BoardBox;
-import GUI.extras.BoardConf;
+import GUI.extras.*;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -38,8 +35,8 @@ public class BoardGUI extends JFrame implements Runnable {
     private JLabel timerLabel;
     private int remainingTime;
     private boolean shovelMode;
-    private JLabel sunsLabel;
-    private JLabel brainLabel;
+    private JLabel plantPoints;
+    private JLabel zombiesPoints;
     private String selectedPlant;
     private String selectedZombie;
 
@@ -79,11 +76,6 @@ public class BoardGUI extends JFrame implements Runnable {
         prepareElementsPlayers();
         prepareElementsInfo();
         prepareElementsOthers();
-
-        // Add Panels
-        add(plantsPanel, BorderLayout.WEST);
-        add(zombiesPanel, BorderLayout.EAST);
-        add(infoPanel, BorderLayout.NORTH);
     }
 
 
@@ -102,6 +94,7 @@ public class BoardGUI extends JFrame implements Runnable {
                 screenSize.height/19,
                 screenSize.width/8
         ));
+
         add(boardPanel, BorderLayout.CENTER);
     }
 
@@ -114,8 +107,8 @@ public class BoardGUI extends JFrame implements Runnable {
         plantsPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
 
         // Elements
-        plantsPanel.add(new JLabel("Plants"));
-        plantsPanel.add(new JLabel("Suns"));
+        plantsPanel.add(new RoundedLabel("Plants"));
+        plantsPanel.add(new RoundedLabel("Suns"));
         plantsPanel.add(new JButton("Sunflower"));
         plantsPanel.add(new JButton("Peashooter"));
         plantsPanel.add(new JButton("Wallnut"));
@@ -131,8 +124,8 @@ public class BoardGUI extends JFrame implements Runnable {
         zombiesPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
 
         // Elements
-        zombiesPanel.add(new JLabel("Zombies"));
-        zombiesPanel.add(new JLabel("Brains"));
+        zombiesPanel.add(new RoundedLabel("Zombies"));
+        zombiesPanel.add(new RoundedLabel("Brains"));
         zombiesPanel.add(new JButton("Zombie"));
         zombiesPanel.add(new JButton("Conehead"));
         zombiesPanel.add(new JButton("Buckethead"));
@@ -150,18 +143,20 @@ public class BoardGUI extends JFrame implements Runnable {
     }
 
     private void prepareElementsInfo() {
-        infoPanel.setLayout(new GridLayout(1, 3));
+        infoPanel.setLayout(new GridLayout(1, 3, 300, 50));
         infoPanel.setPreferredSize(new Dimension(screenSize.width, screenSize.height/7));
         infoPanel.setBackground(new Color(2, 0, 51, 200));
         infoPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
 
         // Elements
-        timerLabel = new JLabel("Time: 0");
-        sunsLabel = new JLabel("Points: 0");
-        brainLabel = new JLabel("points: 0");
+        plantPoints = new RoundedLabel("Points: ");
+        timerLabel = new RoundedLabel("Time: ");
+        zombiesPoints = new RoundedLabel("Points: ");
+        infoPanel.add(plantPoints);
         infoPanel.add(timerLabel);
-        infoPanel.add(sunsLabel);
-        infoPanel.add(brainLabel);
+        infoPanel.add(zombiesPoints);
+
+        add(infoPanel, BorderLayout.NORTH);
     }
 
 
