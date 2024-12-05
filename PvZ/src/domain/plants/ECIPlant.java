@@ -1,7 +1,7 @@
 package domain.plants;
 
 import domain.Game;
-import domain.economy.SuperSun;
+import domain.economy.Sun;
 
 public class ECIPlant extends Plant implements Runnable{
     private static final String name = "ECIPlant";
@@ -13,10 +13,13 @@ public class ECIPlant extends Plant implements Runnable{
         this.game = game;
         this.positionY = y;
         this.positionX = x;
+
+        Thread thread = new Thread(this);
+        thread.start();
     }
     public void generateSun() {
-        SuperSun sun = new SuperSun();
-        this.game.addSuperSuns(sun);
+        Sun sun = new Sun(50);
+        this.game.addSuns(sun);
     }
     @Override
     public void run() {
@@ -30,4 +33,9 @@ public class ECIPlant extends Plant implements Runnable{
             }
         }
     };
+    @Override
+    public void die() {
+        super.die();
+        isActive = false;
+    }
 }
