@@ -1,12 +1,13 @@
 package domain.economy;
 
-public class Sun implements Coin {
-    int value = 25;
-    public Sun(){
+public class Sun implements Coin{
+    private int value;
+
+    public Sun(int value) {
+        this.value = value;
     }
 
     public int getValue() {
         return value;
     }
-
 }
