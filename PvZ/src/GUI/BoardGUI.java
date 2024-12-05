@@ -1,6 +1,7 @@
 package GUI;
 
 import GUI.extras.*;
+import domain.Game;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -12,8 +13,6 @@ import java.awt.*;
  * the plants, zombies, bullets, etc.
  */
 public class BoardGUI extends JFrame implements Runnable {
-    //! Missing keylistener and this attributes
-    private BoardBox boardBox;           // Singleton que maneja la lógica del juego
 
     //** Attributes **//
 
@@ -28,12 +27,25 @@ public class BoardGUI extends JFrame implements Runnable {
     JPanel boardPanel = new BoardConf("PvZ/assets/background/board.jpg");
     JPanel infoPanel = new JPanel();
 
+    // Buttons
+    SelectButton basicButton;
+    SelectButton bucketButton;
+    SelectButton coneButton;
+    SelectButton brainButton;
+    SelectButton eciZombieButton;
+
+    SelectButton peaButton;
+    SelectButton sunflowerButton;
+    SelectButton wallNutButton;
+    SelectButton potatoButton;
+    SelectButton eciPlantButton;
+
     // Game elements
     private GameAPP app;
+    private Game game;
     private String gameMode;
     private BoardBox[][] boxes;
     private JLabel timerLabel;
-    private int remainingTime;
     private boolean shovelMode;
     private JLabel plantPoints;
     private JLabel zombiesPoints;
@@ -50,6 +62,7 @@ public class BoardGUI extends JFrame implements Runnable {
         this.app = app;
         this.boxes = new BoardBox[ROWS][COLS];
         prepareElements();
+        prepareActions();
     }
 
 
@@ -73,12 +86,16 @@ public class BoardGUI extends JFrame implements Runnable {
 
         // Prepare all Elements
         prepareElementsBoard();
-        prepareElementsPlayers();
+        prepareElementsPlayerZombies();
+        prepareElementsPlayerPlants();
         prepareElementsInfo();
         prepareElementsOthers();
+        prepareElementsMowers();
     }
 
-
+    /**
+     * Prepares the Board elements like the boxes and their functionality.
+     */
     private void prepareElementsBoard() {
         boardPanel.setLayout(new GridLayout(ROWS, COLS));
         for (int i = 0; i < ROWS; i++) {
@@ -87,36 +104,19 @@ public class BoardGUI extends JFrame implements Runnable {
                 boardPanel.add(boxes[i][j]);
             }
         }
-
         boardPanel.setBorder(new EmptyBorder(
                 screenSize.height/9,
                 screenSize.width/8 + 5,
                 screenSize.height/19,
                 screenSize.width/8
         ));
-
         add(boardPanel, BorderLayout.CENTER);
     }
 
-    private void prepareElementsPlayers() {
-
-        //* Plants Panel
-        plantsPanel.setLayout(new GridLayout(7, 1));
-        plantsPanel.setPreferredSize(new Dimension(screenSize.width/9, screenSize.height/2));
-        plantsPanel.setBackground(new Color(2, 0, 51, 200));
-        plantsPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
-
-        // Elements
-        plantsPanel.add(new RoundedLabel("Plants"));
-        plantsPanel.add(new RoundedLabel("Suns"));
-        plantsPanel.add(new SelectButton("PvZ/assets/plants/peashooter.png"));
-        plantsPanel.add(new SelectButton("PvZ/assets/plants/sunflower.png"));
-        plantsPanel.add(new SelectButton("PvZ/assets/plants/wallnut.png"));
-        plantsPanel.add(new SelectButton("PvZ/assets/plants/potatomine.png"));
-        plantsPanel.add(new SelectButton("PvZ/assets/plants/eciplant.png"));
-        add(plantsPanel, BorderLayout.WEST);
-
-
+    /**
+     * Prepares the buttons and labels of the Player Zombies Panel.
+     */
+    private void prepareElementsPlayerZombies() {
         //* Zombies Panel
         zombiesPanel.setLayout(new GridLayout(7, 1));
         zombiesPanel.setPreferredSize(new Dimension(screenSize.width/9, screenSize.height/2));
@@ -126,14 +126,49 @@ public class BoardGUI extends JFrame implements Runnable {
         // Elements
         zombiesPanel.add(new RoundedLabel("Zombies"));
         zombiesPanel.add(new RoundedLabel("Brains"));
-        zombiesPanel.add(new SelectButton("PvZ/assets/zombies/basic.png"));
-        zombiesPanel.add(new SelectButton("PvZ/assets/zombies/buckethead.png"));
-        zombiesPanel.add(new SelectButton("PvZ/assets/zombies/conehead.png"));
-        zombiesPanel.add(new SelectButton("PvZ/assets/zombies/brainstein.png"));
-        zombiesPanel.add(new SelectButton("PvZ/assets/zombies/ecizombie.png"));
+        basicButton = new SelectButton("PvZ/assets/zombies/basic.png");
+        zombiesPanel.add(basicButton);
+        bucketButton = new SelectButton("PvZ/assets/zombies/buckethead.png");
+        zombiesPanel.add(bucketButton);
+        coneButton = new SelectButton("PvZ/assets/zombies/conehead.png");
+        zombiesPanel.add(coneButton);
+        brainButton = new SelectButton("PvZ/assets/zombies/brainstein.png");
+        zombiesPanel.add(brainButton);
+        eciZombieButton = new SelectButton("PvZ/assets/zombies/ecizombie.png");
+        zombiesPanel.add(eciZombieButton);
+
         add(zombiesPanel, BorderLayout.EAST);
     }
 
+    /**
+     * Prepares the buttons and labels of the Player Plants Panel.
+     */
+    private void prepareElementsPlayerPlants() {
+        plantsPanel.setLayout(new GridLayout(7, 1));
+        plantsPanel.setPreferredSize(new Dimension(screenSize.width/9, screenSize.height/2));
+        plantsPanel.setBackground(new Color(2, 0, 51, 200));
+        plantsPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
+
+        // Elements
+        plantsPanel.add(new RoundedLabel("Plants"));
+        plantsPanel.add(new RoundedLabel("Suns"));
+        sunflowerButton = new SelectButton("PvZ/assets/plants/sunflower.png");
+        plantsPanel.add(sunflowerButton);
+        peaButton = new SelectButton("PvZ/assets/plants/peashooter.png");
+        plantsPanel.add(peaButton);
+        wallNutButton = new SelectButton("PvZ/assets/plants/wallnut.png");
+        plantsPanel.add(wallNutButton);
+        potatoButton = new SelectButton("PvZ/assets/plants/potatomine.png");
+        plantsPanel.add(potatoButton);
+        eciPlantButton = new SelectButton("PvZ/assets/plants/eciplant.png");
+        plantsPanel.add(eciPlantButton);
+
+        add(plantsPanel, BorderLayout.WEST);
+    }
+
+    /**
+     * Prepares elements that have no importance in the game, like the refill panel.
+     */
     private void prepareElementsOthers() {
         JPanel refillPanel = new JPanel();
         refillPanel.setPreferredSize(new Dimension(screenSize.width, screenSize.height/7));
@@ -142,6 +177,9 @@ public class BoardGUI extends JFrame implements Runnable {
         add(refillPanel, BorderLayout.SOUTH);
     }
 
+    /**
+     * Prepares the elements of the Info Panel, like the points and the timer.
+     */
     private void prepareElementsInfo() {
         infoPanel.setLayout(new GridLayout(1, 3, 300, 50));
         infoPanel.setPreferredSize(new Dimension(screenSize.width, screenSize.height/7));
@@ -159,7 +197,129 @@ public class BoardGUI extends JFrame implements Runnable {
         add(infoPanel, BorderLayout.NORTH);
     }
 
+    /**
+     * Prepares the mower elements of the game.
+     */
+    private void prepareElementsMowers() {
+        for (int i = 0; i < 5; i++) {
+            boxes[i][0].addLawnMower();
+        }
+    }
 
+
+
+    //** Prepare Actions **//
+
+    /**
+     * Prepares all the actions of the Game GUI.
+     */
+    private void prepareActions() {
+        prepareActionsSelect();
+        prepareActionsPlants();
+        prepareActionsZombies();
+    }
+
+    /**
+     * Prepares the actions of the Select Buttons from the panels.
+     */
+    private void prepareActionsSelect() {
+        basicButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedZombie = "basic";
+            }
+        });
+        bucketButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedZombie = "buckethead";
+            }
+        });
+        coneButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedZombie = "conehead";
+            }
+        });
+        brainButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedZombie = "brainstein";
+            }
+        });
+        eciZombieButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedZombie = "ecizombie";
+            }
+        });
+        peaButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedPlant = "peashooter";
+            }
+        });
+        sunflowerButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedPlant = "sunflower";
+            }
+        });
+        wallNutButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedPlant = "wallnut";
+            }
+        });
+        potatoButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedPlant = "potatomine";
+            }
+        });
+        eciPlantButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedPlant = "eciplant";
+            }
+        });
+    }
+
+    /**
+     * Prepares the actions of the Plant Boxes from the board to allow select or plant.
+     */
+    private void prepareActionsPlants() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 10; j++) {
+                int finalI = i;
+                int finalJ = j;
+                boxes[i][j].addMouseListener(new java.awt.event.MouseAdapter() {
+                    public void mouseClicked(java.awt.event.MouseEvent evt) {
+                        if (selectedPlant == null) {
+                            System.out.println("Select a plant first");
+                        } else if (shovelMode) {
+                            boxes[finalI][finalJ].remove();
+                        } else {
+                            boxes[finalI][finalJ].addPlant(selectedPlant);
+                            //boardBox.addPlant(finalI, finalJ, selectedPlant);
+                        }
+                    }
+                });
+            }
+        }
+    }
+
+    /**
+     * Prepares the actions of the Zombie Boxes from the board to allow select or put zombies.
+     */
+    private void prepareActionsZombies() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 9; j < 11; j++) {
+                int finalI = i;
+                int finalJ = j;
+                boxes[i][j].addMouseListener(new java.awt.event.MouseAdapter() {
+                    public void mouseClicked(java.awt.event.MouseEvent evt) {
+                        if (selectedZombie == null) {
+                            System.out.println("Select a zombie first");
+                        } else {
+                            //game.addZombie(selectedZombie, finalJ);
+                            boxes[finalI][finalJ].addZombie(selectedZombie);
+                        }
+                    }
+                });
+            }
+        }
+    }
 
 
 

@@ -59,27 +59,11 @@ public class BoardBox extends JButton {
         return next;
     }
 
-
-    public void addPlant(String plantType) {
-        this.currentPlantType = plantType;
-        /*// Map plant types to their respective image paths
-        Map<String, String> plantImages = Map.of(
-                "SunFlower", "images/SunFlower.png",
-                "PeasShooter", "images/PeasShooter.png",
-                "WallNut", "images/WallNut.png",
-                "PotatoMine", "images/PotatoMine.png",
-                "EciPlant", "images/EciPlant.png"
-        );
-
-        // Set the background image if the plant type exists, otherwise null
-        setBackgroundImage(plantImages.getOrDefault(plantType, null));*/
+    public void addLawnMower(){
+        setBackgroundImage("PvZ/assets/Others/mower.png");
     }
 
-    public void addLawnMower(int row ){
-        setBackgroundImage("images/Mower.png");
-    }
-
-    public void removePlant() {
+    public void remove() {
         if (currentPlantType != null) {
             this.currentPlantType = null;
             this.backgroundImage = null;
@@ -109,17 +93,20 @@ public class BoardBox extends JButton {
 
     public void addZombie(String zombieType) {
         switch (zombieType) {
-            case "ZombieBasic":
-                setBackgroundImage("images/basic.webp");
+            case "basic":
+                setBackgroundImage("PvZ/assets/zombies/basic.png");
                 break;
-            case "ConeheadZombie":
-                setBackgroundImage("images/conehead.webp");
+            case "conehead":
+                setBackgroundImage("PvZ/assets/zombies/conehead.png");
                 break;
-            case "BucketheadZombie":
-                setBackgroundImage("images/buckethead.webp");
+            case "buckethead":
+                setBackgroundImage("PvZ/assets/zombies/buckethead.png");
                 break;
-            case "FlagZombie":
-                setBackgroundImage("images/flag.webp");
+            case "brainstein":
+                setBackgroundImage("PvZ/assets/zombies/brainstein.png");
+                break;
+            case "ecizombie":
+                setBackgroundImage("PvZ/assets/zombies/ecizombie.png");
                 break;
             default:
                 setBackgroundImage(null);
@@ -127,4 +114,26 @@ public class BoardBox extends JButton {
         repaint();
     }
 
+    public void addPlant(String plantType) {
+        switch (plantType) {
+            case "sunflower":
+                setBackgroundImage("PvZ/assets/plants/sunflower.png");
+                break;
+            case "peashooter":
+                setBackgroundImage("PvZ/assets/plants/peashooter.png");
+                break;
+            case "wallnut":
+                setBackgroundImage("PvZ/assets/plants/wallNut.png");
+                break;
+            case "potatomine":
+                setBackgroundImage("PvZ/assets/plants/potatomine.png");
+                break;
+            case "eciplant":
+                setBackgroundImage("PvZ/assets/plants/eciplant.png");
+                break;
+            default:
+                setBackgroundImage(null);
+        }
+        repaint();
+    }
 }
