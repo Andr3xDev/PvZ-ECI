@@ -1,7 +1,7 @@
 package domain.plants;
 
 import domain.Game;
-import domain.Pea;
+import domain.Bullet;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -24,8 +24,8 @@ public class Peashooter extends Plant {
     }
 
     private void shoot() {
-        Pea pea = new Pea(this.damage, this.positionX, this.positionY, this.game);
-        Thread bulletThread = new Thread(pea);
+        Bullet bullet = new Bullet(this.damage, this.positionX, this.positionY, this.game);
+        Thread bulletThread = new Thread(bullet);
         bulletThread.start();
     }
 

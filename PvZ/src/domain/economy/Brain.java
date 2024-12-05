@@ -1,10 +1,7 @@
 package domain.economy;
 
 public class Brain implements Coin {
-    private int value;
-    public Brain(int value){
-        this.value = value;
-    }
+    int value = 25;
     public int getValue() {
         return value;
     }
