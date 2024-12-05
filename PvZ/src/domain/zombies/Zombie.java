@@ -16,9 +16,6 @@ public abstract class Zombie implements Unit, Runnable {
 
     public Zombie(String name) {
         this.name = name;
-
-        Thread thread = new Thread(this);
-        thread.start();
     }
 
     @Override
@@ -46,7 +43,7 @@ public abstract class Zombie implements Unit, Runnable {
         }
     }
 
-    protected void attack() {
+    public void attack() {
         if (positionX > 0 && game.getUnit()[positionX - 1][positionY] instanceof Plant) {
             Plant plant = (Plant) game.getUnit()[positionX - 1][positionY];
             plant.takeDamage(this.damage); // La planta recibe daño

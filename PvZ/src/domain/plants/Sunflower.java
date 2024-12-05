@@ -14,13 +14,10 @@ public class Sunflower extends Plant implements Runnable {
         this.game = game;
         this.positionY = y;
         this.positionX = x;
-
-        Thread thread = new Thread(this);
-        thread.start();
     }
 
     public void generateSun() {
-        Sun sun = new Sun(25);
+        Sun sun = new Sun();
         this.game.addSuns(sun);
     }
 
@@ -28,19 +25,13 @@ public class Sunflower extends Plant implements Runnable {
     public void run() {
         while (isActive) {
             try {
-                generateSun();
-                Thread.sleep(3000);
+                generateSun(); // Generar un sol
+                Thread.sleep(3000); // Esperar 3 segundos
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
             }
         }
-    }
-
-    @Override
-    public void die() {
-        super.die();
-        isActive = false;
-    }
+    };
 }
 
