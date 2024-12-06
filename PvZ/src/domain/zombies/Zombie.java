@@ -100,6 +100,8 @@ public abstract class Zombie implements Unit, Runnable {
     public int getCost() {
         return this.cost;
     }
+
+    public String getName(){return this.name;}
 }
 
 

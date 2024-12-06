@@ -5,6 +5,8 @@ import domain.economy.Sun;
 import domain.plants.*;
 import domain.zombies.*;
 
+import java.io.*;
+
 public class Game {
     private Unit[][] unit;
     private int brains;
@@ -126,6 +128,38 @@ public class Game {
         return null;
     }
 
+    public void save(String nameFile)throws PvZExceptions{
+        ObjectOutputStream salida = null;
+        try {
+            salida = new ObjectOutputStream(new FileOutputStream(nameFile));
+            salida.writeObject(this);
+            salida.flush();
+            System.out.println("Partida guardada con éxito. Ruta: " + new File(nameFile).getAbsolutePath());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new PvZExceptions(PvZExceptions.SAVE_EXCEPTION);
+        } finally {
+            if (salida != null) {
+                try {
+                    salida.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    public static Game open(String nameFile) throws PvZExceptions{
+        Game partidaCargada = null;
+        try {
+            ObjectInputStream entrada = new ObjectInputStream(new FileInputStream(nameFile));
+            partidaCargada = (Game) entrada.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+            throw new PvZExceptions(PvZExceptions.OPEN_EXCEPTION);
+        }
+        return partidaCargada;
+    }
+
     public Unit[][] getUnit() {
         return unit;
     }
@@ -133,5 +167,37 @@ public class Game {
 
     public int getBrains() {
         return brains;
+    }
+
+    public void updateZombies() {
+        for (int i = 0; i < unit.length; i++) {
+            for (int j = 0; j < unit[i].length; j++) {
+                if (unit[i][j] instanceof Zombie) {
+                    Zombie zombie = (Zombie) unit[i][j];
+
+                    // Si el zombie no está activo (por ejemplo, murió)
+                    if (zombie.getLife() <= 0) {
+                        unit[i][j] = null; // Elimina el zombie del tablero
+                    }
+                }
+            }
+        }
+    }
+
+
+    public Plant getPlant(int i, int j) {
+        Unit unit = getUnit()[i][j];
+        if (unit instanceof Plant) {
+            return (Plant) unit;
+        }
+        return null;
+    }
+
+    public Zombie getZombie(int i, int j) {
+        Unit unit = getUnit()[i][j];
+        if(unit instanceof Zombie) {
+            return (Zombie) unit;
+        }
+        return null;
     }
 }
