@@ -10,11 +10,13 @@ public class Game {
     private int brains;
     private int suns;
     private Bullet[][] bullets;
+    private boolean isActive = true;
     public Game() {
         bullets = new Bullet[11][5];
         unit = new Unit[11][5];
         this.suns = 50;
         this.brains = 50;
+
     }
 
     public void addPlant(String plantName, int posX, int posY) {
@@ -123,6 +125,7 @@ public class Game {
         }
         return null;
     }
+
     public Unit[][] getUnit() {
         return unit;
     }
