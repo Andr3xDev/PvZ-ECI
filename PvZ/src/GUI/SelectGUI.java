@@ -2,8 +2,10 @@ package GUI;
 
 import GUI.extras.BackgroundImage;
 import GUI.extras.RoundedButton;
+import domain.Game;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 
 public class SelectGUI extends JPanel {
@@ -31,9 +33,6 @@ public class SelectGUI extends JPanel {
     protected RoundedButton pvAIButton;
     protected RoundedButton AIvAIButton;
 
-    //Panel menu
-    private JMenuItem optionOpen;
-    private JMenuItem optionSave;
 
 
     /**
@@ -201,31 +200,21 @@ public class SelectGUI extends JPanel {
         // });
     }
 
+
     //! Missing to implement the load file functionality.
-
-    //    private JMenuBar prepareElementsMenu() {
-//        JMenuBar menuBar = new JMenuBar();
-//        JMenu menuFile = new JMenu("File");
-//        optionOpen = new JMenuItem("Open");
-//        optionSave = new JMenuItem("Save");
-//        menuFile.add(optionOpen);
-//        menuFile.add(optionSave);
-//        return menuBar;
-//    }
-
-////    private void optionOpenAction() {
-////        try{
-////            JFileChooser fileChooser = new JFileChooser();
-////            FileNameExtensionFilter filter = new FileNameExtensionFilter("Garden files", "dat");
-////            fileChooser.setFileFilter(filter);
-////            int returnVal = fileChooser.showOpenDialog(null);
-////            if (returnVal == JFileChooser.APPROVE_OPTION) {
-////                JOptionPane.showMessageDialog(null, "Open file: " + fileChooser.getSelectedFile().getName());
-////                gameBack = Game.open(fileChooser.getSelectedFile().getAbsolutePath());
-//////                photo.repaint();
-////            }
-////        }catch (Exception e) {
-////            JOptionPane.showMessageDialog(null, "Error open file");
-////        }
-////    }
+    /*private void optionOpenAction() {
+        try{
+            JFileChooser fileChooser = new JFileChooser();
+            FileNameExtensionFilter filter = new FileNameExtensionFilter("Garden files", "dat");
+            fileChooser.setFileFilter(filter);
+            int returnVal = fileChooser.showOpenDialog(null);
+            if (returnVal == JFileChooser.APPROVE_OPTION) {
+                JOptionPane.showMessageDialog(null, "Open file: " + fileChooser.getSelectedFile().getName());
+                gameBack = Game.open(fileChooser.getSelectedFile().getAbsolutePath());
+                photo.repaint();
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error open file");
+        }
+    }*/
 }
