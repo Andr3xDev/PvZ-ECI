@@ -9,12 +9,12 @@ import domain.zombies.Zombie;
 
 public class gameTest {
     public static void main(String[] args) {
-        //Test01();
+        Test01();
         //Test02();
         //Test03();
         //Test04();
         //Test05();
-        Test06();
+        //Test06();
     }
     public static void Test01(){
         Game game = new Game();
