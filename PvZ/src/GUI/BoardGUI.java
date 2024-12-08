@@ -9,6 +9,8 @@ import domain.zombies.Zombie;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -199,7 +201,22 @@ public class BoardGUI extends JFrame implements Runnable {
         infoPanel.add(timerLabel);
         infoPanel.add(zombiesPoints);
 
+        prepareElementsTimer();
+
         add(infoPanel, BorderLayout.NORTH);
+    }
+
+    private void prepareElementsTimer() {
+        Timer timer = new Timer(1000, new ActionListener() {
+            int seconds = 0;
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                seconds++;
+                timerLabel.setText("Time: " + (120 - seconds) + " S");
+            }
+        });
+        timer.start();
     }
 
     /**
@@ -353,13 +370,14 @@ public class BoardGUI extends JFrame implements Runnable {
         scheduler.scheduleAtFixedRate(() -> {
             try {
                 System.out.println("Updating zombies...");
-                game.updateZombies(); // Lógica del backend para mover los zombies
-                SwingUtilities.invokeLater(this::updateBoard); // Actualizar el tablero en el GUI
+                game.updateZombies();
+                SwingUtilities.invokeLater(this::updateBoard);
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }, 0, 500, TimeUnit.MILLISECONDS); // Actualización cada 500ms
+        }, 0, 500, TimeUnit.MILLISECONDS);
     }
+
 
     /**
      * Updates the board GUI to reflect the current state of the game.
@@ -367,8 +385,8 @@ public class BoardGUI extends JFrame implements Runnable {
     private void updateBoard() {
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLS; j++) {
-                System.out.println("Checking position: " + i + ", " + j);  // Agrega este log
-                boxes[i][j].clear();  // Borrar cualquier imagen previa
+                System.out.println("Checking position: " + i + ", " + j);
+                boxes[i][j].clear();
 
                 // Plantas
                 if (game.getPlant(j, i) != null) {
@@ -391,7 +409,3 @@ public class BoardGUI extends JFrame implements Runnable {
         }
     }
 }
-
-
-
-
