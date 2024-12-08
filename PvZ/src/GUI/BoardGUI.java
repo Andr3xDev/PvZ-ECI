@@ -344,7 +344,7 @@ public class BoardGUI extends JFrame implements Runnable {
      */
     private void prepareActionsPlants() {
         for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 10; j++) {
+            for (int j = 0; j < 9; j++) {
                 int finalI = i;
                 int finalJ = j;
                 boxes[i][j].addMouseListener(new java.awt.event.MouseAdapter() {
@@ -382,7 +382,7 @@ public class BoardGUI extends JFrame implements Runnable {
                             System.out.println("Select a zombie first");
                         } else {
                             try {
-                                game.addZombie(selectedZombie, finalI, finalJ);
+                                game.addZombie(selectedZombie, finalJ, finalI);
                                 boxes[finalI][finalJ].addZombie(selectedZombie);
                             } catch (Exception e) {
                                 e.printStackTrace();

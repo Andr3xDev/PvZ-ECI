@@ -285,11 +285,13 @@ public class Game {
      * @return true if the position is valid, false otherwise
      */
     private boolean validatePosition(String unit, int posX, int posY) {
+        System.out.println(posX + " " + posY);
         if (unit.equals("plant")) {
-            return posX >= 1 && posX < 9 && posY >= 0 && posY <= 5;
-        } else {
-            return posX >= 10 && posX < 12 && posY >= 0 && posY <= 5;
+            return posX >= 1 && posX <= 8;
+        } else if (unit.equals("zombie")) {
+            return posX >= 9 && posX < 11;
         }
+        return false;
     }
 
 
