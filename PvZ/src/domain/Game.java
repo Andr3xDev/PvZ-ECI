@@ -8,19 +8,37 @@ import domain.zombies.*;
 import java.io.*;
 
 public class Game {
+
+    //* Attributes *//
+
     private Unit[][] unit;
     private int brains;
     private int suns;
     private Bullet[][] bullets;
     private boolean isActive = true;
+
+
+    //* Constructors *//
+
+    /**
+     * Constructor for the Game, here we initialize the board and the economy of the game
+     */
     public Game() {
         bullets = new Bullet[11][5];
         unit = new Unit[11][5];
         this.suns = 50;
         this.brains = 50;
-
     }
 
+
+    //* Methods *//
+
+    /**
+     * Method to add a plant to the board in the given position.
+     * @param plantName the name of the plant to add
+     * @param posX x position of the plant
+     * @param posY y position of the plant
+     */
     public void addPlant(String plantName, int posX, int posY) {
         if (unit[posX][posY] == null){
             Plant plant = searchPlant(plantName,posX,posY);
@@ -33,6 +51,13 @@ public class Game {
             }
         }
     }
+
+
+    /**
+     * Method to add a zombie to the board in the given position.
+     * @param zombieName the name of the zombie to add
+     * @param posY y position of the zombie
+     */
     public void addZombie(String zombieName, int posY) {
         Zombie zombie = searchZombie(zombieName,posY);
         if (zombie.getCost() <= this.brains) {
@@ -43,28 +68,62 @@ public class Game {
             zombie.die();
         }
     }
+
+
+    /**
+     * Method to delete a plant from the board in the given position.
+     * @param posX x position of the plant
+     * @param posY y position of the plant
+     */
     public void deletePlant(int posX,int posY) {
         if (unit[posX][posY] != null){
             unit[posX][posY] = null;
         }
     }
+
+
+    /**
+     * Method to delete a zombie from the board in the given position.
+     * @param posX x position of the zombie
+     * @param posY y position of the zombie
+     */
     public void deleteZombie(int posX,int posY) {
         if (unit[posX][posY] != null){
             unit[posX][posY] = null;
         }
     }
 
+
+    /**
+     * Method to add suns to the economy of the game
+     * @param sun Quantity of suns to add
+     */
     public void addSuns(Sun sun) {
         this.suns += sun.getValue();
     }
+
+
+    /**
+     * Method to add brains to the economy of the game
+     * @param brain Quantity of brains to add
+     */
     public void addBrains(Brain brain) {
         this.brains += brain.getValue();
     }
 
+
+    /**
+     * Method to get the bullets in the board
+     * @return matrix of bullets
+     */
     public Bullet[][] getBullets() {
         return bullets;
     }
 
+
+    /**
+     * Method to get the status of the game as a matrix printed in the console
+     */
     public void printBoard() {
         System.out.println("Game Board:");
         for (int y = 0; y < 5; y++) {
@@ -91,6 +150,11 @@ public class Game {
         }
         System.out.println();
     }
+
+
+    /**
+     * Method to get a plant from the board in the given position to added to the board
+     */
     public Plant searchPlant(String plant,int posX,int posY){
         switch (plant){
             case "peashooter":
@@ -109,6 +173,11 @@ public class Game {
         }
         return null;
     }
+
+
+    /**
+     * Method to get a zombie from the board in the given position to added to the board
+     */
     public Zombie searchZombie(String zombie,int posY){
         switch (zombie){
             case "basic":
@@ -128,6 +197,10 @@ public class Game {
         return null;
     }
 
+
+    /**
+     * Method to update the game status
+     */
     public void save(String nameFile)throws PvZExceptions{
         ObjectOutputStream salida = null;
         try {
@@ -148,6 +221,11 @@ public class Game {
             }
         }
     }
+
+
+    /**
+     * Method to open a game from a file
+     */
     public static Game open(String nameFile) throws PvZExceptions{
         Game partidaCargada = null;
         try {
@@ -160,24 +238,18 @@ public class Game {
         return partidaCargada;
     }
 
-    public Unit[][] getUnit() {
-        return unit;
-    }
-    public int getSuns(){return this.suns;}
 
-    public int getBrains() {
-        return brains;
-    }
-
+    /**
+     * Method to update the game board for every time unit
+     */
     public void updateZombies() {
         for (int i = 0; i < unit.length; i++) {
             for (int j = 0; j < unit[i].length; j++) {
                 if (unit[i][j] instanceof Zombie) {
                     Zombie zombie = (Zombie) unit[i][j];
 
-                    // Si el zombie no está activo (por ejemplo, murió)
                     if (zombie.getLife() <= 0) {
-                        unit[i][j] = null; // Elimina el zombie del tablero
+                        unit[i][j] = null;
                     }
                 }
             }
@@ -185,6 +257,9 @@ public class Game {
     }
 
 
+    /**
+     * Method to get a unit plant from the board in the given position
+     */
     public Plant getPlant(int i, int j) {
         Unit unit = getUnit()[i][j];
         if (unit instanceof Plant) {
@@ -193,11 +268,27 @@ public class Game {
         return null;
     }
 
+
+    /**
+     * Method to get a unit zombie from the board in the given position
+     */
     public Zombie getZombie(int i, int j) {
         Unit unit = getUnit()[i][j];
         if(unit instanceof Zombie) {
             return (Zombie) unit;
         }
         return null;
+    }
+
+
+    //* Getters and Setters *//
+
+    public Unit[][] getUnit() {
+        return unit;
+    }
+    public int getSuns(){return this.suns;}
+
+    public int getBrains() {
+        return brains;
     }
 }

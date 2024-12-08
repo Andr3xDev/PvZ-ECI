@@ -75,6 +75,7 @@ public class BoardGUI extends JFrame implements Runnable {
     }
 
 
+
     //** Prepare Elements **//
 
     /**
@@ -100,6 +101,7 @@ public class BoardGUI extends JFrame implements Runnable {
         prepareElementsMowers();
     }
 
+
     /**
      * Prepares the Board elements like the boxes and their functionality.
      */
@@ -119,6 +121,7 @@ public class BoardGUI extends JFrame implements Runnable {
         ));
         add(boardPanel, BorderLayout.CENTER);
     }
+
 
     /**
      * Prepares the buttons and labels of the Player Zombies Panel.
@@ -147,6 +150,7 @@ public class BoardGUI extends JFrame implements Runnable {
         add(zombiesPanel, BorderLayout.EAST);
     }
 
+
     /**
      * Prepares the buttons and labels of the Player Plants Panel.
      */
@@ -173,6 +177,7 @@ public class BoardGUI extends JFrame implements Runnable {
         add(plantsPanel, BorderLayout.WEST);
     }
 
+
     /**
      * Prepares elements that have no importance in the game, like the refill panel.
      */
@@ -183,6 +188,7 @@ public class BoardGUI extends JFrame implements Runnable {
         refillPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
         add(refillPanel, BorderLayout.SOUTH);
     }
+
 
     /**
      * Prepares the elements of the Info Panel, like the points and the timer.
@@ -206,6 +212,10 @@ public class BoardGUI extends JFrame implements Runnable {
         add(infoPanel, BorderLayout.NORTH);
     }
 
+
+    /**
+     * Prepares the timer of the game. It changes depending the game.
+     */
     private void prepareElementsTimer() {
         Timer timer = new Timer(1000, new ActionListener() {
             int seconds = 0;
@@ -219,6 +229,7 @@ public class BoardGUI extends JFrame implements Runnable {
         timer.start();
     }
 
+
     /**
      * Prepares the mower elements of the game.
      */
@@ -227,6 +238,7 @@ public class BoardGUI extends JFrame implements Runnable {
             boxes[i][0].addLawnMower();
         }
     }
+
 
 
     //** Prepare Actions **//
@@ -239,6 +251,7 @@ public class BoardGUI extends JFrame implements Runnable {
         prepareActionsPlants();
         prepareActionsZombies();
     }
+
 
     /**
      * Prepares the actions of the Select Buttons from the panels.
@@ -296,6 +309,7 @@ public class BoardGUI extends JFrame implements Runnable {
         });
     }
 
+
     /**
      * Prepares the actions of the Plant Boxes from the board to allow select or plant.
      */
@@ -320,6 +334,7 @@ public class BoardGUI extends JFrame implements Runnable {
         }
     }
 
+
     /**
      * Prepares the actions of the Zombie Boxes from the board to allow select or put zombies.
      */
@@ -343,6 +358,7 @@ public class BoardGUI extends JFrame implements Runnable {
     }
 
 
+
     //** Update Elements **//
 
     private void updatePlayers() {
@@ -359,6 +375,7 @@ public class BoardGUI extends JFrame implements Runnable {
 
     private void updateBrains() {
     }
+
 
 
     //** Paint Elements **//
