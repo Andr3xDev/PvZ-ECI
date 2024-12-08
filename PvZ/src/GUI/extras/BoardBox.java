@@ -136,4 +136,9 @@ public class BoardBox extends JButton {
         }
         repaint();
     }
+
+
+    public void clear() {
+        this.setIcon(null);
+    }
 }

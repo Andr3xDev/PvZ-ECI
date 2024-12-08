@@ -1,7 +1,12 @@
 package GUI;
 
+import domain.Game;
+
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Class that represents the Game GUI.
@@ -15,15 +20,21 @@ public class GameAPP extends JFrame {
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
     // Utilities
+    private Game gameBack;
     private CardLayout cl;
     private GameAPP game;
 
+    //Panel menu
+    private JMenuItem optionOpen;
+    private JMenuItem optionSave;
 
     /**
      * Constructor, creates the Game's elements and actions.
      */
     public GameAPP() {
+        gameBack = new Game();
         prepareElements();
+//        prepareActionsMenu();
     }
 
     /**
@@ -56,7 +67,61 @@ public class GameAPP extends JFrame {
 
         // Add panels to the frame
         add(panels);
+//        prepareElementsMenu();
     }
+//    private JMenuBar prepareElementsMenu() {
+//        JMenuBar menuBar = new JMenuBar();
+//        JMenu menuFile = new JMenu("File");
+//        optionOpen = new JMenuItem("Open");
+//        optionSave = new JMenuItem("Save");
+//        menuFile.add(optionOpen);
+//        menuFile.add(optionSave);
+//        return menuBar;
+//    }
+//    private void prepareActionsMenu() {
+////        optionOpen.addActionListener(
+////                new ActionListener() {
+////                    public void actionPerformed(ActionEvent e) {
+////                        optionOpenAction();
+////                    }
+////                });
+//        optionSave.addActionListener(
+//                new ActionListener() {
+//                    public void actionPerformed(ActionEvent e) {
+//                        optionSaveAction();
+//                    }
+//                });
+//
+//    }
+////    private void optionOpenAction() {
+////        try{
+////            JFileChooser fileChooser = new JFileChooser();
+////            FileNameExtensionFilter filter = new FileNameExtensionFilter("Garden files", "dat");
+////            fileChooser.setFileFilter(filter);
+////            int returnVal = fileChooser.showOpenDialog(null);
+////            if (returnVal == JFileChooser.APPROVE_OPTION) {
+////                JOptionPane.showMessageDialog(null, "Open file: " + fileChooser.getSelectedFile().getName());
+////                gameBack = Game.open(fileChooser.getSelectedFile().getAbsolutePath());
+//////                photo.repaint();
+////            }
+////        }catch (Exception e) {
+////            JOptionPane.showMessageDialog(null, "Error open file");
+////        }
+////    }
+//    private void optionSaveAction() {
+//        try {
+//            JFileChooser fileChooser = new JFileChooser();
+//            FileNameExtensionFilter filter = new FileNameExtensionFilter("Garden files", "dat");
+//            fileChooser.setFileFilter(filter);
+//            int returnVal = fileChooser.showSaveDialog(null);
+//            if (returnVal == JFileChooser.APPROVE_OPTION) {
+//                JOptionPane.showMessageDialog(null, "Save file: " + fileChooser.getSelectedFile().getName());
+//                gameBack.save(fileChooser.getSelectedFile().getAbsolutePath()+".garden");
+//            }
+//        }catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, "Error save file");
+//        }
+//    }
 
 
 
