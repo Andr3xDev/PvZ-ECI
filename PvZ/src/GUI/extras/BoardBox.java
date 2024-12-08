@@ -10,14 +10,14 @@ public class BoardBox extends JButton {
 
     //** Attributes **//
 
-    private int row;
-    private int column;
+    private final int row;
+    private final int column;
 
     // Links to the previous and next cells
     private BoardBox previous;
     private BoardBox next;
 
-    private ArrayList<String> ocupants;
+    private ArrayList<String> occupants;
     private List<ImageIcon> overlayImages;
     private ImageIcon backgroundImage;
     private String currentPlantType;
@@ -43,24 +43,12 @@ public class BoardBox extends JButton {
         return column;
     }
 
-    public void setPrevious(BoardBox previous) {
-        this.previous = previous;
-    }
-
-    public BoardBox getPrevious() {
-        return previous;
-    }
-
-    public void setNext(BoardBox next) {
-        this.next = next;
-    }
-
-    public BoardBox getNext() {
-        return next;
-    }
-
+    /**
+     * Set the initial mower image to the cell
+     */
     public void addLawnMower(){
         setBackgroundImage("PvZ/assets/Others/mower.png");
+        repaint();
     }
 
     public void remove() {
@@ -69,9 +57,12 @@ public class BoardBox extends JButton {
             this.backgroundImage = null;
             repaint();
         }
-
     }
 
+    /**
+     * Set the background image of the cell to the given image
+     * @param imagePath the path to the image
+     */
     public void setBackgroundImage(String imagePath) {
         if (imagePath != null) {
             this.backgroundImage = new ImageIcon(imagePath);
@@ -81,6 +72,10 @@ public class BoardBox extends JButton {
         repaint();
     }
 
+    /**
+     * Paint the component with the background image
+     * @param g the Graphics object to protect
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -91,6 +86,10 @@ public class BoardBox extends JButton {
         }
     }
 
+    /**
+     * Add a zombie to the cell with the given zombie type
+     * @param zombieType the type of zombie to add
+     */
     public void addZombie(String zombieType) {
         switch (zombieType) {
             case "basic":
@@ -114,6 +113,10 @@ public class BoardBox extends JButton {
         repaint();
     }
 
+    /**
+     * Add a plant to the cell with the given plant type
+     * @param plantType the type of plant to add
+     */
     public void addPlant(String plantType) {
         switch (plantType) {
             case "sunflower":
@@ -137,7 +140,9 @@ public class BoardBox extends JButton {
         repaint();
     }
 
-
+    /**
+     * Remove the unit from the box
+     */
     public void clear() {
         this.setIcon(null);
     }

@@ -388,7 +388,7 @@ public class BoardGUI extends JFrame implements Runnable {
                 System.out.println("Checking position: " + i + ", " + j);
                 boxes[i][j].clear();
 
-                // Plantas
+                // Plants
                 if (game.getPlant(j, i) != null) {
                     boxes[i][j].addPlant(game.getPlant(j, i).getName());
                 }
