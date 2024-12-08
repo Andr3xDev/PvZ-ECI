@@ -2,8 +2,10 @@ package GUI;
 
 import GUI.extras.BackgroundImage;
 import GUI.extras.RoundedButton;
+import domain.Game;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 
 public class SelectGUI extends JPanel {
@@ -24,12 +26,12 @@ public class SelectGUI extends JPanel {
 
     // Action buttons
     protected RoundedButton backButton;
+    protected RoundedButton loadButton;
 
     // Buttons
     protected RoundedButton pvpButton;
     protected RoundedButton pvAIButton;
     protected RoundedButton AIvAIButton;
-
 
 
 
@@ -133,11 +135,19 @@ public class SelectGUI extends JPanel {
         backButton = new RoundedButton("Back", 35);
         backButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
 
+        // Load button
+        loadButton = new RoundedButton("Load", 35);
+        loadButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
+
+        // Add buttons to the panel
+        backPanel.setLayout(new GridLayout(1, 2, 40, 40));
         backPanel.add(backButton);
-        backPanel.setBounds(screenSize.width/2 - buttonsWSize/2 - 50,
-                screenSize.height-2*buttonsHSize,
-                buttonsWSize + 100,
-                buttonsHSize + 30
+        backPanel.add(loadButton);
+        backPanel.setBounds(
+                screenSize.width - buttonsWSize * 5,
+                screenSize.height - 2 * buttonsHSize,
+                buttonsWSize * 2,
+                buttonsHSize + 40
         );
         add(backPanel);
     }
@@ -178,5 +188,33 @@ public class SelectGUI extends JPanel {
             CardLayout cl = (CardLayout) getParent().getLayout();
             cl.show(getParent(), "homePanel");
         });
+
+        //! Missing to implement the load file functionality.
+        // Load button
+        //loadButton.addActionListener(
+        //    new ActionListener() {
+        //        public void actionPerformed(ActionEvent e) {
+        //            optionOpenAction();
+        //        }
+        //    });
+        // });
     }
+
+
+    //! Missing to implement the load file functionality.
+    /*private void optionOpenAction() {
+        try{
+            JFileChooser fileChooser = new JFileChooser();
+            FileNameExtensionFilter filter = new FileNameExtensionFilter("Garden files", "dat");
+            fileChooser.setFileFilter(filter);
+            int returnVal = fileChooser.showOpenDialog(null);
+            if (returnVal == JFileChooser.APPROVE_OPTION) {
+                JOptionPane.showMessageDialog(null, "Open file: " + fileChooser.getSelectedFile().getName());
+                gameBack = Game.open(fileChooser.getSelectedFile().getAbsolutePath());
+                photo.repaint();
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error open file");
+        }
+    }*/
 }

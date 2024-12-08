@@ -14,10 +14,6 @@ public class GameAPP extends JFrame {
     // Dimensions
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
-    // Utilities
-    private CardLayout cl;
-    private GameAPP game;
-
 
     /**
      * Constructor, creates the Game's elements and actions.
@@ -52,7 +48,6 @@ public class GameAPP extends JFrame {
         panels.add(home, "homePanel");          // Initial menu
         panels.add(tutorial, "tutorialPanel");  // Tutorial screen
         panels.add(select, "selectPanel");      // Select screen
-        cl = (CardLayout) panels.getLayout();
 
         // Add panels to the frame
         add(panels);
