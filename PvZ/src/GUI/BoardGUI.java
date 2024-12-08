@@ -28,33 +28,37 @@ public class BoardGUI extends JFrame implements Runnable {
     private static final int COLS = 11;
 
     // Panels
-    JPanel plantsPanel = new JPanel();
-    JPanel zombiesPanel = new JPanel();
-    JPanel boardPanel = new BoardConf("PvZ/assets/background/board.jpg");
-    JPanel infoPanel = new JPanel();
+    private final JPanel plantsPanel = new JPanel();
+    private final JPanel zombiesPanel = new JPanel();
+    private final JPanel boardPanel = new BoardConf("PvZ/assets/background/board.jpg");
+    private final JPanel infoPanel = new JPanel();
 
     // Buttons
-    SelectButton basicButton;
-    SelectButton bucketButton;
-    SelectButton coneButton;
-    SelectButton brainButton;
-    SelectButton eciZombieButton;
+    private SelectButton basicButton;
+    private SelectButton bucketButton;
+    private SelectButton coneButton;
+    private SelectButton brainButton;
+    private SelectButton eciZombieButton;
 
-    SelectButton peaButton;
-    SelectButton sunflowerButton;
-    SelectButton wallNutButton;
-    SelectButton potatoButton;
-    SelectButton eciPlantButton;
+    private SelectButton peaButton;
+    private SelectButton sunflowerButton;
+    private SelectButton wallNutButton;
+    private SelectButton potatoButton;
+    private SelectButton eciPlantButton;
+
+    // Labels
+    private JLabel plantPoints;
+    private JLabel timerLabel;
+    private JLabel zombiesPoints;
+    private JLabel brainsLabel;
+    private JLabel sunsLabel;
 
     // Game elements
     private GameAPP app;
     private Game game;
     private String gameMode;
     private BoardBox[][] boxes;
-    private JLabel timerLabel;
     private boolean shovelMode;
-    private JLabel plantPoints;
-    private JLabel zombiesPoints;
     private String selectedPlant;
     private String selectedZombie;
 
@@ -131,24 +135,29 @@ public class BoardGUI extends JFrame implements Runnable {
      */
     private void prepareElementsPlayerZombies() {
         //* Zombies Panel
-        zombiesPanel.setLayout(new GridLayout(7, 2));
-        zombiesPanel.setPreferredSize(new Dimension(screenSize.width / 9, screenSize.height / 2));
+        zombiesPanel.setLayout(new GridLayout(6, 2));
+        zombiesPanel.setPreferredSize(new Dimension(screenSize.width / 7, screenSize.height / 2));
         zombiesPanel.setBackground(new Color(2, 0, 51, 200));
         zombiesPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
 
         // Elements
         zombiesPanel.add(new RoundedLabel("Zombies"));
-        zombiesPanel.add(new RoundedLabel("Brains"));
+        zombiesPanel.add(brainsLabel = new RoundedLabel("Brains"));
         basicButton = new SelectButton("PvZ/assets/zombies/basic.png");
         zombiesPanel.add(basicButton);
-        bucketButton = new SelectButton("PvZ/assets/zombies/buckethead.png");
-        zombiesPanel.add(bucketButton);
+        zombiesPanel.add(new RoundedLabel(": 100"));
         coneButton = new SelectButton("PvZ/assets/zombies/conehead.png");
         zombiesPanel.add(coneButton);
+        zombiesPanel.add(new RoundedLabel(": 150"));
+        bucketButton = new SelectButton("PvZ/assets/zombies/buckethead.png");
+        zombiesPanel.add(bucketButton);
+        zombiesPanel.add(new RoundedLabel(": 200"));
         brainButton = new SelectButton("PvZ/assets/zombies/brainstein.png");
         zombiesPanel.add(brainButton);
+        zombiesPanel.add(new RoundedLabel(": 50"));
         eciZombieButton = new SelectButton("PvZ/assets/zombies/ecizombie.png");
         zombiesPanel.add(eciZombieButton);
+        zombiesPanel.add(new RoundedLabel(": 250"));
 
         add(zombiesPanel, BorderLayout.EAST);
     }
@@ -158,24 +167,29 @@ public class BoardGUI extends JFrame implements Runnable {
      * Prepares the buttons and labels of the Player Plants Panel.
      */
     private void prepareElementsPlayerPlants() {
-        plantsPanel.setLayout(new GridLayout(7, 2));
-        plantsPanel.setPreferredSize(new Dimension(screenSize.width / 9, screenSize.height / 2));
+        plantsPanel.setLayout(new GridLayout(6, 2));
+        plantsPanel.setPreferredSize(new Dimension(screenSize.width / 7, screenSize.height / 2));
         plantsPanel.setBackground(new Color(2, 0, 51, 200));
         plantsPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
 
         // Elements
         plantsPanel.add(new RoundedLabel("Plants"));
-        plantsPanel.add(new RoundedLabel("Suns"));
+        plantsPanel.add(sunsLabel = new RoundedLabel("Suns"));
         sunflowerButton = new SelectButton("PvZ/assets/plants/sunflower.png");
         plantsPanel.add(sunflowerButton);
+        plantsPanel.add(new RoundedLabel(": 50"));
         peaButton = new SelectButton("PvZ/assets/plants/peashooter.png");
         plantsPanel.add(peaButton);
+        plantsPanel.add(new RoundedLabel(": 100"));
         wallNutButton = new SelectButton("PvZ/assets/plants/wallnut.png");
         plantsPanel.add(wallNutButton);
+        plantsPanel.add(new RoundedLabel(": 50"));
         potatoButton = new SelectButton("PvZ/assets/plants/potatomine.png");
         plantsPanel.add(potatoButton);
+        plantsPanel.add(new RoundedLabel(": 25"));
         eciPlantButton = new SelectButton("PvZ/assets/plants/eciplant.png");
         plantsPanel.add(eciPlantButton);
+        plantsPanel.add(new RoundedLabel(": 75"));
 
         add(plantsPanel, BorderLayout.WEST);
     }
@@ -217,7 +231,7 @@ public class BoardGUI extends JFrame implements Runnable {
 
 
     /**
-     * Prepares the timer of the game. It changes depending on the game.
+     * Prepares the timer of the game. It changes depending on the game. Also updates the brains and suns.
      */
     private void prepareElementsTimer() {
         Timer timer = new Timer(1000, new ActionListener() {
@@ -395,10 +409,14 @@ public class BoardGUI extends JFrame implements Runnable {
     private void updateBullets() {
     }
 
-    private void updateSuns() {
-    }
+    private void updateEconomy() {
+        // brains
+        int brains = game.getBrains();
+        brainsLabel.setText("Brains: " + brains);
 
-    private void updateBrains() {
+        // suns
+        int suns = game.getSuns();
+        sunsLabel.setText("Suns: " + suns);
     }
 
 
@@ -412,6 +430,7 @@ public class BoardGUI extends JFrame implements Runnable {
         scheduler.scheduleAtFixedRate(() -> {
             try {
                 game.updateZombies();
+                updateEconomy();
                 SwingUtilities.invokeLater(this::updateBoard);
             } catch (Exception e) {
                 e.printStackTrace();
