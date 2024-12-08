@@ -395,13 +395,12 @@ public class BoardGUI extends JFrame implements Runnable {
     }
 
     private void prepareActionsMenu(){
-
+        //! Missing implementation of the menu
     }
+
+
 
     //** Update Elements **//
-
-    private void updatePlayers() {
-    }
 
     private void updateZombies() {
     }

@@ -67,7 +67,9 @@ public class BoardBox extends JButton {
         if (imagePath != null) {
             this.backgroundImage = new ImageIcon(imagePath);
         } else {
-            System.out.println("Not found"); //! This have to be an exception
+            //System.out.println("Not found");
+            // ! This have to be an exception
+            // ? Why this make the program crash without this?
         }
         repaint();
     }
