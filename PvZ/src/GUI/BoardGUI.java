@@ -97,6 +97,7 @@ public class BoardGUI extends JFrame implements Runnable {
         prepareElementsInfo();
         prepareElementsOthers();
         prepareElementsMowers();
+        prepareElementsMenu();
     }
 
 
@@ -126,7 +127,7 @@ public class BoardGUI extends JFrame implements Runnable {
      */
     private void prepareElementsPlayerZombies() {
         //* Zombies Panel
-        zombiesPanel.setLayout(new GridLayout(7, 1));
+        zombiesPanel.setLayout(new GridLayout(7, 2));
         zombiesPanel.setPreferredSize(new Dimension(screenSize.width / 9, screenSize.height / 2));
         zombiesPanel.setBackground(new Color(2, 0, 51, 200));
         zombiesPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
@@ -153,7 +154,7 @@ public class BoardGUI extends JFrame implements Runnable {
      * Prepares the buttons and labels of the Player Plants Panel.
      */
     private void prepareElementsPlayerPlants() {
-        plantsPanel.setLayout(new GridLayout(7, 1));
+        plantsPanel.setLayout(new GridLayout(7, 2));
         plantsPanel.setPreferredSize(new Dimension(screenSize.width / 9, screenSize.height / 2));
         plantsPanel.setBackground(new Color(2, 0, 51, 200));
         plantsPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
@@ -238,6 +239,17 @@ public class BoardGUI extends JFrame implements Runnable {
     }
 
 
+    /**
+     * Prepares the elements of the Menu from ESC key.
+     */
+    private void prepareElementsMenu(){
+        MenuGame menu = new MenuGame();
+        menu.setVisible(false);
+        //add(menu);
+    }
+
+
+
 
     //** Prepare Actions **//
 
@@ -248,6 +260,7 @@ public class BoardGUI extends JFrame implements Runnable {
         prepareActionsSelect();
         prepareActionsPlants();
         prepareActionsZombies();
+        prepareActionsMenu();
     }
 
 
@@ -363,7 +376,9 @@ public class BoardGUI extends JFrame implements Runnable {
         }
     }
 
+    private void prepareActionsMenu(){
 
+    }
 
     //** Update Elements **//
 
