@@ -8,7 +8,7 @@ public class Shovel {
         this.game = game;
         this.positionX = positionX;
         this.positionY = positionY;
-        this.game.deletePlant(positionX, positionY);
+        this.game.deleteUnit(positionX, positionY);
     }
 
 }

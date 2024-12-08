@@ -9,7 +9,7 @@ public class LawnMower {
     }
     public void kill() {
         for (int i = 0;i < 5;i++){
-            this.game.deleteZombie(i,this.positionY);
+            this.game.deleteUnit(i,this.positionY);
         }
     }
     public int getPositionY() {

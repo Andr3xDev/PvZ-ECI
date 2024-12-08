@@ -2,9 +2,7 @@ package GUI;
 
 import GUI.extras.*;
 import domain.Game;
-import domain.Unit;
-import domain.plants.Plant;
-import domain.zombies.Zombie;
+
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -325,8 +323,12 @@ public class BoardGUI extends JFrame implements Runnable {
                         } else if (shovelMode) {
                             boxes[finalI][finalJ].remove();
                         } else {
-                            boxes[finalI][finalJ].addPlant(selectedPlant);
-                            game.addPlant(selectedPlant, finalJ, finalI);
+                            try {
+                                game.addPlant(selectedPlant, finalJ, finalI);
+                                boxes[finalI][finalJ].addPlant(selectedPlant);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
                         }
                     }
                 });
@@ -348,8 +350,12 @@ public class BoardGUI extends JFrame implements Runnable {
                         if (selectedZombie == null) {
                             System.out.println("Select a zombie first");
                         } else {
-                            game.addZombie(selectedZombie, finalI);
-                            boxes[finalI][finalJ].addZombie(selectedZombie);
+                            try {
+                                game.addZombie(selectedZombie, finalI, finalJ);
+                                boxes[finalI][finalJ].addZombie(selectedZombie);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
                         }
                     }
                 });
@@ -386,7 +392,6 @@ public class BoardGUI extends JFrame implements Runnable {
         ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
         scheduler.scheduleAtFixedRate(() -> {
             try {
-                System.out.println("Updating zombies...");
                 game.updateZombies();
                 SwingUtilities.invokeLater(this::updateBoard);
             } catch (Exception e) {
@@ -402,7 +407,6 @@ public class BoardGUI extends JFrame implements Runnable {
     private void updateBoard() {
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLS; j++) {
-                System.out.println("Checking position: " + i + ", " + j);
                 boxes[i][j].clear();
 
                 // Plants
@@ -415,7 +419,7 @@ public class BoardGUI extends JFrame implements Runnable {
                     boxes[i][j].addZombie(game.getZombie(j, i).getName());
                 }
 
-                game.printBoard();
+                //game.printBoard();
             }
         }
         for (int i = 0; i < ROWS; i++) {

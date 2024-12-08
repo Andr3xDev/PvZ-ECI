@@ -36,7 +36,7 @@ public class PotatoMine extends Plant {
             zombie.takeDamage(9999);
             System.out.println("POW :D");
         }
-        this.game.deletePlant(this.positionX, this.positionY);
+        this.game.deleteUnit(this.positionX, this.positionY);
         this.life = 0;
 
     }
