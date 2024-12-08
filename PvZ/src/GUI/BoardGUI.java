@@ -59,6 +59,9 @@ public class BoardGUI extends JFrame implements Runnable {
     private String selectedZombie;
 
 
+
+    //** Constructors **//
+
     /**
      * Constructor, creates the Game's elements and actions.
      */
@@ -71,6 +74,7 @@ public class BoardGUI extends JFrame implements Runnable {
         Thread guiThread = new Thread(this);
         guiThread.start();
     }
+
 
 
 
@@ -213,7 +217,7 @@ public class BoardGUI extends JFrame implements Runnable {
 
 
     /**
-     * Prepares the timer of the game. It changes depending the game.
+     * Prepares the timer of the game. It changes depending on the game.
      */
     private void prepareElementsTimer() {
         Timer timer = new Timer(1000, new ActionListener() {

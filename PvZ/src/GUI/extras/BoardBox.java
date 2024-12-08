@@ -126,7 +126,7 @@ public class BoardBox extends JButton {
                 setBackgroundImage("PvZ/assets/plants/peashooter.png");
                 break;
             case "wallnut":
-                setBackgroundImage("PvZ/assets/plants/wallNut.png");
+                setBackgroundImage("PvZ/assets/plants/wallnut.png");
                 break;
             case "potatomine":
                 setBackgroundImage("PvZ/assets/plants/potatomine.png");
