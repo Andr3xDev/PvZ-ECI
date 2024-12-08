@@ -11,10 +11,10 @@ public class Game {
 
     //* Attributes *//
 
-    private Unit[][] unit;
+    private final Unit[][] unit;
     private int brains;
     private int suns;
-    private Bullet[][] bullets;
+    private final Bullet[][] bullets;
     private boolean isActive = true;
 
 
@@ -31,6 +31,7 @@ public class Game {
     }
 
 
+
     //* Methods *//
 
     /**
@@ -38,17 +39,22 @@ public class Game {
      * @param plantName the name of the plant to add
      * @param posX x position of the plant
      * @param posY y position of the plant
+     * @throws PvZExceptions if the position is out of range for the plant or if there is already
+     * a unit in the cell or if there are not enough suns to buy the plant
      */
-    public void addPlant(String plantName, int posX, int posY) {
-        if (unit[posX][posY] == null){
+    public void addPlant(String plantName, int posX, int posY) throws PvZExceptions {
+        if (validatePosition("plant", posX, posY)) {
+            isPositionEmpty(posX,posY);
             Plant plant = searchPlant(plantName,posX,posY);
             if (plant.getCost() <= this.suns) {
                 unit[posX][posY] = plant;
                 suns -= plant.getCost();
             }else {
-                System.out.println("no hay suficientes soles");
                 plant.die();
+                throw new PvZExceptions(PvZExceptions.NO_SUNS_EXCEPTION);
             }
+        } else {
+            throw new PvZExceptions(PvZExceptions.PLANT_OUT_RANGE_EXCEPTION);
         }
     }
 
@@ -56,16 +62,22 @@ public class Game {
     /**
      * Method to add a zombie to the board in the given position.
      * @param zombieName the name of the zombie to add
+     * @param posX x position of the zombie
      * @param posY y position of the zombie
+     * @throws PvZExceptions if the position is out of range for the zombie or if there is already
      */
-    public void addZombie(String zombieName, int posY) {
-        Zombie zombie = searchZombie(zombieName,posY);
-        if (zombie.getCost() <= this.brains) {
-            unit[10][posY] = zombie;
-            brains -= zombie.getCost();
-        }else{
-            System.out.println("no hay suficientes cerebros");
-            zombie.die();
+    public void addZombie(String zombieName, int posX, int posY) throws PvZExceptions {
+        if (validatePosition("zombie", posX, posY)) {
+            Zombie zombie = searchZombie(zombieName,posY);
+            if (zombie.getCost() <= this.brains) {
+                unit[posX][posY] = zombie;
+                brains -= zombie.getCost();
+            }else{
+                zombie.die();
+                throw new PvZExceptions(PvZExceptions.NO_BRAINS_EXCEPTION);
+            }
+        } else {
+            throw new PvZExceptions(PvZExceptions.ZOMBIE_OUT_RANGE_EXCEPTION);
         }
     }
 
@@ -75,19 +87,7 @@ public class Game {
      * @param posX x position of the plant
      * @param posY y position of the plant
      */
-    public void deletePlant(int posX,int posY) {
-        if (unit[posX][posY] != null){
-            unit[posX][posY] = null;
-        }
-    }
-
-
-    /**
-     * Method to delete a zombie from the board in the given position.
-     * @param posX x position of the zombie
-     * @param posY y position of the zombie
-     */
-    public void deleteZombie(int posX,int posY) {
+    public void deleteUnit(int posX, int posY) {
         if (unit[posX][posY] != null){
             unit[posX][posY] = null;
         }
@@ -245,12 +245,8 @@ public class Game {
     public void updateZombies() {
         for (int i = 0; i < unit.length; i++) {
             for (int j = 0; j < unit[i].length; j++) {
-                if (unit[i][j] instanceof Zombie) {
-                    Zombie zombie = (Zombie) unit[i][j];
-
-                    if (zombie.getLife() <= 0) {
-                        unit[i][j] = null;
-                    }
+                if (unit[i][j] instanceof Zombie zombie && zombie.getLife() <= 0) {
+                    unit[i][j] = null;
                 }
             }
         }
@@ -278,6 +274,35 @@ public class Game {
             return (Zombie) unit;
         }
         return null;
+    }
+
+
+    /**
+     * Method to validate the position of the unit in the board from the given position
+     * @param unit the unit type to validate
+     * @param posX x position of the unit
+     * @param posY y position of the unit
+     * @return true if the position is valid, false otherwise
+     */
+    private boolean validatePosition(String unit, int posX, int posY) {
+        if (unit.equals("plant")) {
+            return posX >= 1 && posX < 9 && posY >= 0 && posY <= 5;
+        } else {
+            return posX >= 10 && posX < 12 && posY >= 0 && posY <= 5;
+        }
+    }
+
+
+    /**
+     * Method to validate if the position is empty
+     * @param posX x position of the unit
+     * @param posY y position of the unit
+     * @throws PvZExceptions if the position is not empty
+     */
+    private void isPositionEmpty(int posX, int posY) throws PvZExceptions {
+        if (unit[posX][posY] != null) {
+            throw new PvZExceptions(PvZExceptions.EXISTENT_UNIT_EXCEPTION);
+        }
     }
 
 

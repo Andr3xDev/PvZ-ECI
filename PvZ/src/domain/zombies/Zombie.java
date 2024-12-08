@@ -51,7 +51,7 @@ public abstract class Zombie implements Unit, Runnable {
             Plant plant = (Plant) game.getUnit()[positionX - 1][positionY];
             plant.takeDamage(this.damage); // La planta recibe daño
             if (plant.getLife() <= 0) {
-                game.deletePlant(positionX - 1, positionY); // Elimina la planta si muere
+                game.deleteUnit(positionX - 1, positionY); // Elimina la planta si muere
             }
         }
     }

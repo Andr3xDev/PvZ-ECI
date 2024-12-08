@@ -18,14 +18,16 @@ public class gameTest {
     }
     public static void Test01(){
         Game game = new Game();
+        try {
+            game.addPlant("wallnut",4,2);
+            game.addPlant("peashooter", 0, 2);
+            game.addZombie("basic",11,2);
+        } catch (PvZExceptions e) {
+            e.printStackTrace();
+        }
 
-        game.addPlant("wallnut",4,2);
-        game.addPlant("peashooter", 0, 2);
-
-        game.addZombie("basic",2);
         Basic zombie1 = (Basic) game.getUnit()[10][2];
 
-        // Simulación del juego
         while (zombie1.getLife() > 0) {
             try {
                 game.printBoard();
@@ -41,7 +43,11 @@ public class gameTest {
     }
     public static void Test02(){
         Game game = new Game();
-        game.addPlant("sunflower",0,2);
+        try {
+            game.addPlant("sunflower",0,2);
+        } catch (PvZExceptions e) {
+            e.printStackTrace();
+        }
 
         while (game.getSuns() != 125) {
             try {
@@ -60,9 +66,11 @@ public class gameTest {
         Game game = new Game();
         Sun sun = new Sun(25);
         game.addSuns(sun);
-        game.addPlant("eciplant",0,2);
-
-        // Simulación del juego
+        try {
+            game.addPlant("eciplant",0,2);
+        } catch (PvZExceptions e) {
+            e.printStackTrace();
+        }
         while (game.getSuns() != 250) {
             try {
                 System.out.println(game.getSuns());
@@ -77,8 +85,12 @@ public class gameTest {
 }
     public static void Test04(){
         Game game = new Game();
-        game.addPlant("potatomine",0,0);
-        game.addZombie("basic",0);
+        try {
+            game.addPlant("potatomine",0,0);
+            game.addZombie("basic",11, 0);
+        } catch (PvZExceptions e) {
+            e.printStackTrace();
+        }
         Basic zombie1 = (Basic) game.getUnit()[10][0];
 
         // Simulación del juego
@@ -99,11 +111,14 @@ public class gameTest {
         Game game = new Game();
         Brain brain = new Brain(150);
         game.addBrains(brain);
-        game.addPlant("wallnut",0,0);
-        game.addZombie("ecizombie",0);
+        try {
+            game.addPlant("wallnut",0,0);
+            game.addZombie("ecizombie",11, 0);
+        } catch (PvZExceptions e) {
+            e.printStackTrace();
+        }
         Plant wall = (WallNut) game.getUnit()[0][0];
 
-        // Simulación del juego
         while (wall.getLife() > 0) {
             try {
                 game.printBoard();
@@ -119,7 +134,11 @@ public class gameTest {
     }
     public static void Test06(){
         Game game = new Game();
-        game.addZombie("brainstein",0);
+        try {
+            game.addZombie("brainstein",11, 0);
+        } catch (PvZExceptions e) {
+            e.printStackTrace();
+        }
 
         // Simulación del juego
         while (game.getBrains() != 125) {
