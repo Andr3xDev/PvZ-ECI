@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class RoundedLabel extends JLabel {
 
-    private int cornerRadius;
+    private final int cornerRadius;
 
     public RoundedLabel(String text) {
         super(text);

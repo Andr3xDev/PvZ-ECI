@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class BoardConf extends JPanel {
-    private Image backgroundImage;
+    private final Image backgroundImage;
 
     public BoardConf(String imagePath) {
         this.backgroundImage = new ImageIcon(imagePath).getImage();

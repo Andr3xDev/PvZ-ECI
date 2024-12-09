@@ -53,6 +53,10 @@ public class BoardGUI extends JFrame implements Runnable {
     private JLabel brainsLabel;
     private JLabel sunsLabel;
 
+    // Menu
+    private JMenuBar menuBar;
+
+
     // Game elements
     private GameAPP app;
     private Game game;
@@ -89,7 +93,8 @@ public class BoardGUI extends JFrame implements Runnable {
      */
     private void prepareElements() {
         // Window actions
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setUndecorated(true);
 
         // Window properties
@@ -260,10 +265,13 @@ public class BoardGUI extends JFrame implements Runnable {
     /**
      * Prepares the elements of the Menu from ESC key.
      */
-    private void prepareElementsMenu(){
-        MenuGame menu = new MenuGame();
-        menu.setVisible(false);
-        //add(menu);
+    private void prepareElementsMenu() {
+        menuBar = new JMenuBar();
+        JMenu saveGame = new JMenu("Save");
+        JMenu loadGame = new JMenu("Load");
+        JMenu exit = new JMenu("Exit");
+
+        add(menuBar);
     }
 
 
@@ -278,7 +286,7 @@ public class BoardGUI extends JFrame implements Runnable {
         prepareActionsSelect();
         prepareActionsPlants();
         prepareActionsZombies();
-        prepareActionsMenu();
+        //prepareActionsMenu();
     }
 
 
@@ -394,9 +402,6 @@ public class BoardGUI extends JFrame implements Runnable {
         }
     }
 
-    private void prepareActionsMenu(){
-        //! Missing implementation of the menu
-    }
 
 
 
@@ -461,7 +466,6 @@ public class BoardGUI extends JFrame implements Runnable {
                 if (game.getZombie(j, i) != null) {
                     boxes[i][j].addZombie(game.getZombie(j, i).getName());
                 }
-
                 boxes[i][j].repaint();
             }
         }
