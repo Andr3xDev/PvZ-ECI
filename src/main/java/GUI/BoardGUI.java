@@ -2,13 +2,17 @@ package GUI;
 
 import GUI.extras.*;
 import domain.Game;
+import domain.PvZExceptions;
 
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -293,8 +297,78 @@ public class BoardGUI extends JFrame implements Runnable {
         prepareActionsSelect();
         prepareActionsPlants();
         prepareActionsZombies();
-        //prepareActionsMenu();
+        prepareActionsMenu();
     }
+
+    private void prepareActionsMenu() {
+        open.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        try {
+                            OpenAction();
+                        } catch (PvZExceptions ex) {
+                            throw new RuntimeException(ex);
+                        }
+                    }
+                });
+        save.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        try {
+                            SaveAction();
+                        } catch (PvZExceptions ex) {
+                            throw new RuntimeException(ex);
+                        }
+                    }
+                });
+        exit.addActionListener(
+                new ActionListener(){
+                    public void actionPerformed(ActionEvent e){
+                        ExitAction();
+                    }
+                });
+
+    }
+    private void ExitAction() {
+        System.exit(0);
+    }
+    private void SaveAction() throws PvZExceptions {
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("PvZ Save Files (*.PvZ)", "PvZ");
+        fileChooser.setFileFilter(filter);
+        int returnVal = fileChooser.showSaveDialog(null);
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            String filePath = selectedFile.getAbsolutePath();
+
+            // Asegurarse de que el archivo termine con la extensión .PvZ
+            if (!filePath.endsWith(".PvZ")) {
+                filePath += ".PvZ";
+            }
+
+            // Guardar el juego
+            game.save(filePath);
+            JOptionPane.showMessageDialog(null, "Game saved: " + filePath);
+        }
+    }
+
+    private void OpenAction() throws PvZExceptions {
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("PvZ Save Files (*.PvZ)", "PvZ");
+        fileChooser.setFileFilter(filter);
+        int returnVal = fileChooser.showOpenDialog(null);
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+
+            // Cargar el juego
+            game.open(selectedFile.getAbsolutePath());
+            JOptionPane.showMessageDialog(null, "Game loaded: " + selectedFile.getName());
+        }
+    }
+
+
 
 
     /**
