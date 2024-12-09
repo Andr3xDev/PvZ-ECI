@@ -1,5 +1,6 @@
 package domain.zombies;
 
+import domain.PvZExceptions;
 import domain.economy.Brain;
 import domain.Game;
 
@@ -21,14 +22,14 @@ public class Brainstein extends Zombie implements Runnable{
             try {
                 Thread.sleep(1000); // Mueve cada 2.5 segundos
                 move();
-            } catch (InterruptedException e) {
+            } catch (InterruptedException | PvZExceptions e) {
                 Thread.currentThread().interrupt();
                 break;
             }
         }
 }
     @Override
-    public void move() {
+    public void move() throws PvZExceptions {
         if (isActive && positionX > 7){
             game.getUnit()[positionX][positionY] = null;
             positionX--;

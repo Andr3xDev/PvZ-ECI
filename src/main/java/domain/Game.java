@@ -87,9 +87,11 @@ public class Game {
      * @param posX x position of the plant
      * @param posY y position of the plant
      */
-    public void deleteUnit(int posX, int posY) {
+    public void deleteUnit(int posX, int posY) throws PvZExceptions {
         if (unit[posX][posY] != null){
             unit[posX][posY] = null;
+        } else {
+            throw new PvZExceptions(PvZExceptions.NO_UNIT_EXCEPTION);
         }
     }
 
@@ -107,7 +109,10 @@ public class Game {
      * Method to add brains to the economy of the game
      * @param brain Quantity of brains to add
      */
-    public void addBrains(Brain brain) {
+    public void addBrains(Brain brain) throws PvZExceptions {
+        if (brain.getValue() < 0) {
+            throw new PvZExceptions(PvZExceptions.NEGATIVE_COIN_EXCEPTION);
+        }
         this.brains += brain.getValue();
     }
 

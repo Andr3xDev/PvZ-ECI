@@ -1,5 +1,6 @@
 package domain.plants;
 import domain.Game;
+import domain.PvZExceptions;
 import domain.zombies.Zombie;
 
 import java.util.concurrent.Executors;
@@ -30,16 +31,19 @@ public class PotatoMine extends Plant {
         }, ACTIVATION_DELAY, TimeUnit.SECONDS);
     }
     public void explode(int zombieX, int zombieY) {
-
-        if (game.getUnit()[zombieX][zombieY] instanceof Zombie) {
-            Zombie zombie = (Zombie) game.getUnit()[zombieX][zombieY];
-            zombie.takeDamage(9999);
-            System.out.println("POW :D");
+        try {
+            if (game.getUnit()[zombieX][zombieY] instanceof Zombie) {
+                Zombie zombie = (Zombie) game.getUnit()[zombieX][zombieY];
+                zombie.takeDamage(9999);
+                System.out.println("POW :D");
+            }
+            this.game.deleteUnit(this.positionX, this.positionY);
+            this.life = 0;
+        } catch (PvZExceptions e) {
+            System.out.println(e.getMessage());
         }
-        this.game.deleteUnit(this.positionX, this.positionY);
-        this.life = 0;
-
     }
+
     @Override
     public void die() {
         super.die();

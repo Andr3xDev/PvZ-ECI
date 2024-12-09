@@ -1,6 +1,7 @@
 package domain.plants;
 
 import domain.Game;
+import domain.PvZExceptions;
 import domain.economy.Sun;
 
 public class Sunflower extends Plant implements Runnable {
@@ -19,7 +20,7 @@ public class Sunflower extends Plant implements Runnable {
         thread.start();
     }
 
-    public void generateSun() {
+    public void generateSun() throws PvZExceptions {
         Sun sun = new Sun(25);
         this.game.addSuns(sun);
     }
@@ -33,6 +34,8 @@ public class Sunflower extends Plant implements Runnable {
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
+            } catch (PvZExceptions e) {
+                throw new RuntimeException(e);
             }
         }
     }

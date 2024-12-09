@@ -7,9 +7,11 @@ public class LawnMower {
         this.game = game;
         this.positionY = positionY;
     }
-    public void kill() {
-        for (int i = 0;i < 5;i++){
-            this.game.deleteUnit(i,this.positionY);
+    public void kill() throws PvZExceptions {
+        for (int i = 0;i < 11;i++){
+            if (this.game.getZombie(i,this.positionY) != null){
+                this.game.deleteUnit(i,this.positionY);
+            }
         }
     }
     public int getPositionY() {

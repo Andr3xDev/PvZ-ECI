@@ -1,7 +1,13 @@
 
+import domain.Game;
+import domain.PvZExceptions;
+import domain.economy.Brain;
+import domain.economy.Sun;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * The test class to approve all test.
@@ -67,33 +73,81 @@ public class GameTest {
     // Add plants
     @Test
     public void shouldAddPlant(){
-
+        Game game = new Game();
+        assertDoesNotThrow(() -> {
+            Sun sun = new Sun(10000);
+            game.addSuns(sun);
+            game.addPlant("wallnut", 4, 2);
+            game.addPlant("sunflower", 3, 2);
+            game.addPlant("eciplant", 2, 2);
+            game.addPlant("potatomine", 5, 2);
+            game.addPlant("peashooter", 6, 2);
+        });
     }
     @Test
     public void shouldNotAddPlant(){
-
+        assertThrows(PvZExceptions.class, () -> {
+            Game game = new Game();
+            Sun sun = new Sun(10000);
+            game.addSuns(sun);
+            game.addPlant("wallnut", 4, 2);
+            game.addPlant("sunflower", 4, 2);
+            game.addPlant("eciplant", 2, 2);
+            game.addPlant("potatomine", 5, 2);
+            game.addPlant("peashooter", 6, 2);
+        });
     }
 
 
     // Add zombies
     @Test
     public void shouldAddZombie(){
-
+        assertDoesNotThrow(() -> {
+            Game game = new Game();
+            Brain brain = new Brain(10000);
+            game.addBrains(brain);
+            game.addZombie("basic", 10, 0);
+            game.addZombie("brainstein", 10, 1);
+            game.addZombie("buckethead", 10, 2);
+            game.addZombie("conehead", 10, 3);
+            game.addZombie("ecizombie", 10, 4);
+        });
     }
     @Test
     public void shouldNotAddZombie(){
-
+        assertThrows(PvZExceptions.class, () -> {
+            Game game = new Game();
+            game.addZombie("basic", 1, 0);
+        });
     }
 
 
     // Remove plants
     @Test
     public void shouldRemovePlant(){
-
+        assertDoesNotThrow(() -> {
+            Game game = new Game();
+            Sun sun = new Sun(10000);
+            game.addSuns(sun);
+            game.addPlant("wallnut", 4, 2);
+            game.deleteUnit(4, 2);
+            game.addPlant("sunflower", 4, 2);
+            game.deleteUnit(4, 2);
+            game.addPlant("eciplant", 4, 2);
+            game.deleteUnit(4, 2);
+            game.addPlant("potatomine", 4, 2);
+            game.deleteUnit(4, 2);
+            game.addPlant("peashooter", 4, 2);
+            game.deleteUnit(4, 2);
+        });
     }
     @Test
     public void shouldNotRemovePlant(){
-
+        assertThrows(PvZExceptions.class, () -> {
+            Game game = new Game();
+            game.addPlant("wallnut", 4, 2);
+            game.deleteUnit(0, 2);
+        });
     }
 
 
@@ -122,30 +176,92 @@ public class GameTest {
     // Economic system
     @Test
     public void shouldAddSun(){
-
+        Game game = new Game();
+        try {
+            Sun sun = new Sun(10000);
+            game.addSuns(sun);
+        } catch (PvZExceptions e) {
+            e.printStackTrace();
+        }
+        assertEquals(10050, game.getSuns());
     }
     @Test
     public void shouldNotAddSun(){
-
+        assertThrows(PvZExceptions.class, () -> {
+            Game game = new Game();
+            Sun sun = new Sun(-1000);
+            game.addSuns(sun);
+        });
     }
     @Test
     public void shouldRemoveSun(){
-
+        Game game = new Game();
+        try {
+            Sun sun = new Sun(9975);
+            game.addSuns(sun);
+            game.addPlant("wallnut", 1, 2);
+        } catch (PvZExceptions e) {
+            e.printStackTrace();
+        }
+        assertEquals(9975, game.getSuns());
     }
     @Test
     public void shouldNotRemoveSun(){
-
+        assertThrows(PvZExceptions.class, () -> {
+            Game game = new Game();
+            Sun sun = new Sun(-1000);
+            game.addSuns(sun);
+        });
     }
     @Test
     public void shouldAddBrain(){
-
+        Game game = new Game();
+        try {
+            Brain brain = new Brain(10000);
+            game.addBrains(brain);
+        } catch (PvZExceptions e) {
+            e.printStackTrace();
+        }
+        assertEquals(10050, game.getBrains());
     }
     @Test
     public void shouldNotAddBrain(){
-
+        assertThrows(PvZExceptions.class, () -> {
+            Game game = new Game();
+            Brain brain= new Brain(-1000);
+            game.addBrains(brain);
+        });
     }
     @Test
     public void shouldRemoveBrain(){
+        Game game = new Game();
+        try {
+            Brain brain = new Brain(1000);
+            game.addBrains(brain);
+            game.addZombie("basic", 10, 2);
+        } catch (PvZExceptions e) {
+            e.printStackTrace();
+        }
+        assertEquals (1000, game.getBrains());
+    }
+    @Test
+    public void shouldNotRemoveBrain(){
+        assertThrows(PvZExceptions.class, () -> {
+            Game game = new Game();
+            Brain brain = new Brain(10000);
+            game.addBrains(brain);
+            game.addZombie("basic", 2, 6);
+        });
+    }
+
+
+    // Mower
+    @Test
+    public void shouldActivateMower(){
+
+    }
+    @Test
+    public void shouldNotActivateMower(){
 
     }
 
