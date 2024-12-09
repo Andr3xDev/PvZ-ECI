@@ -8,18 +8,16 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class SelectButton extends JButton {
-    private BufferedImage imagen;
+    private BufferedImage image;
 
     // Constructor
-    public SelectButton(String rutaImagen) {
+    public SelectButton(String imagePath) {
         try {
-            // Cargar la imagen desde la ruta especificada
-            imagen = ImageIO.read(new File(rutaImagen));
+            image = ImageIO.read(new File(imagePath));
         } catch (IOException e) {
-            System.err.println("Error al cargar la imagen: " + e.getMessage());
+            System.err.println("Error: " + e.getMessage());
         }
 
-        // Hacer que el botón no tenga bordes ni contenido extra
         setContentAreaFilled(false);
         setFocusPainted(false);
         setBorderPainted(false);
@@ -29,11 +27,10 @@ public class SelectButton extends JButton {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        if (imagen != null) {
-            // Escalar la imagen al tamaño del botón
+        if (image != null) {
             int ancho = getWidth();
             int alto = getHeight();
-            g.drawImage(imagen, 0, 0, ancho, alto, this);
+            g.drawImage(image, 0, 0, ancho, alto, this);
         }
     }
 }

@@ -195,32 +195,6 @@ public class SelectGUI extends JPanel {
             cl.show(getParent(), "homePanel");
         });
 
-        //! Missing to implement the load file functionality.
-        // Load button
-        //loadButton.addActionListener(
-        //    new ActionListener() {
-        //        public void actionPerformed(ActionEvent e) {
-        //            optionOpenAction();
-        //        }
-        //    });
-        // });
     }
 
-
-    //! Missing to implement the load file functionality.
-    /*private void optionOpenAction() {
-        try{
-            JFileChooser fileChooser = new JFileChooser();
-            FileNameExtensionFilter filter = new FileNameExtensionFilter("Garden files", "dat");
-            fileChooser.setFileFilter(filter);
-            int returnVal = fileChooser.showOpenDialog(null);
-            if (returnVal == JFileChooser.APPROVE_OPTION) {
-                JOptionPane.showMessageDialog(null, "Open file: " + fileChooser.getSelectedFile().getName());
-                gameBack = Game.open(fileChooser.getSelectedFile().getAbsolutePath());
-                photo.repaint();
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error open file");
-        }
-    }*/
 }

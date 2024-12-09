@@ -2,13 +2,17 @@ package GUI;
 
 import GUI.extras.*;
 import domain.Game;
+import domain.PvZExceptions;
 
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -53,6 +57,13 @@ public class BoardGUI extends JFrame implements Runnable {
     private JLabel brainsLabel;
     private JLabel sunsLabel;
 
+    // Menu
+    private JMenuBar menuBar;
+    private JMenu menu;
+    private JMenuItem open;
+    private JMenuItem save;
+    private JMenuItem exit;
+
     // Game elements
     private GameAPP app;
     private Game game;
@@ -90,7 +101,8 @@ public class BoardGUI extends JFrame implements Runnable {
     private void prepareElements() {
         // Window actions
         setExtendedState(JFrame.MAXIMIZED_BOTH);
-        setUndecorated(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        //setUndecorated(true);
 
         // Window properties
         setTitle("POOB vs Zombies");
@@ -260,10 +272,17 @@ public class BoardGUI extends JFrame implements Runnable {
     /**
      * Prepares the elements of the Menu from ESC key.
      */
-    private void prepareElementsMenu(){
-        MenuGame menu = new MenuGame();
-        menu.setVisible(false);
-        //add(menu);
+    private void prepareElementsMenu() {
+        menuBar = new JMenuBar();
+        menu = new JMenu("Menu");
+        save = new JMenuItem("Save");
+        open = new JMenuItem("Load");
+        exit = new JMenuItem("Exit");
+        menu.add(save);
+        menu.add(open);
+        menu.add(exit);
+        menuBar.add(menu);
+        setJMenuBar(menuBar);
     }
 
 
@@ -280,6 +299,76 @@ public class BoardGUI extends JFrame implements Runnable {
         prepareActionsZombies();
         prepareActionsMenu();
     }
+
+    private void prepareActionsMenu() {
+        open.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        try {
+                            OpenAction();
+                        } catch (PvZExceptions ex) {
+                            throw new RuntimeException(ex);
+                        }
+                    }
+                });
+        save.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        try {
+                            SaveAction();
+                        } catch (PvZExceptions ex) {
+                            throw new RuntimeException(ex);
+                        }
+                    }
+                });
+        exit.addActionListener(
+                new ActionListener(){
+                    public void actionPerformed(ActionEvent e){
+                        ExitAction();
+                    }
+                });
+
+    }
+    private void ExitAction() {
+        System.exit(0);
+    }
+    private void SaveAction() throws PvZExceptions {
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("PvZ Save Files (*.PvZ)", "PvZ");
+        fileChooser.setFileFilter(filter);
+        int returnVal = fileChooser.showSaveDialog(null);
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            String filePath = selectedFile.getAbsolutePath();
+
+            // Asegurarse de que el archivo termine con la extensión .PvZ
+            if (!filePath.endsWith(".PvZ")) {
+                filePath += ".PvZ";
+            }
+
+            // Guardar el juego
+            game.save(filePath);
+            JOptionPane.showMessageDialog(null, "Game saved: " + filePath);
+        }
+    }
+
+    private void OpenAction() throws PvZExceptions {
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("PvZ Save Files (*.PvZ)", "PvZ");
+        fileChooser.setFileFilter(filter);
+        int returnVal = fileChooser.showOpenDialog(null);
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+
+            // Cargar el juego
+            game.open(selectedFile.getAbsolutePath());
+            JOptionPane.showMessageDialog(null, "Game loaded: " + selectedFile.getName());
+        }
+    }
+
+
 
 
     /**
@@ -394,9 +483,6 @@ public class BoardGUI extends JFrame implements Runnable {
         }
     }
 
-    private void prepareActionsMenu(){
-        //! Missing implementation of the menu
-    }
 
 
 
@@ -440,7 +526,7 @@ public class BoardGUI extends JFrame implements Runnable {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }, 3000, 1000, TimeUnit.MILLISECONDS);
+        }, 0, 1000, TimeUnit.MILLISECONDS);
     }
 
 
@@ -461,7 +547,6 @@ public class BoardGUI extends JFrame implements Runnable {
                 if (game.getZombie(j, i) != null) {
                     boxes[i][j].addZombie(game.getZombie(j, i).getName());
                 }
-
                 boxes[i][j].repaint();
             }
         }

@@ -5,14 +5,14 @@ import java.awt.*;
 
 public class RoundedLabel extends JLabel {
 
-    private int cornerRadius;
+    private final int cornerRadius;
 
     public RoundedLabel(String text) {
         super(text);
         this.cornerRadius = 40;
 
         setOpaque(false);
-        setFont(new Font("Arial", Font.BOLD, 20));
+        setFont(new Font("Arial", Font.BOLD, 15));
         setHorizontalAlignment(SwingConstants.CENTER);
         setVerticalAlignment(SwingConstants.CENTER);
         setForeground(Color.BLACK);
