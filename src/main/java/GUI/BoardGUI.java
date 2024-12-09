@@ -55,7 +55,10 @@ public class BoardGUI extends JFrame implements Runnable {
 
     // Menu
     private JMenuBar menuBar;
-
+    private JMenu menu;
+    private JMenuItem open;
+    private JMenuItem save;
+    private JMenuItem exit;
 
     // Game elements
     private GameAPP app;
@@ -93,9 +96,9 @@ public class BoardGUI extends JFrame implements Runnable {
      */
     private void prepareElements() {
         // Window actions
-        //setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setUndecorated(true);
+        //setUndecorated(true);
 
         // Window properties
         setTitle("POOB vs Zombies");
@@ -267,11 +270,15 @@ public class BoardGUI extends JFrame implements Runnable {
      */
     private void prepareElementsMenu() {
         menuBar = new JMenuBar();
-        JMenu saveGame = new JMenu("Save");
-        JMenu loadGame = new JMenu("Load");
-        JMenu exit = new JMenu("Exit");
-
-        add(menuBar);
+        menu = new JMenu("Menu");
+        save = new JMenuItem("Save");
+        open = new JMenuItem("Load");
+        exit = new JMenuItem("Exit");
+        menu.add(save);
+        menu.add(open);
+        menu.add(exit);
+        menuBar.add(menu);
+        setJMenuBar(menuBar);
     }
 
 

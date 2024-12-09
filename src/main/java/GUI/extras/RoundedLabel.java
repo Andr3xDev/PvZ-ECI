@@ -12,7 +12,7 @@ public class RoundedLabel extends JLabel {
         this.cornerRadius = 40;
 
         setOpaque(false);
-        setFont(new Font("Arial", Font.BOLD, 20));
+        setFont(new Font("Arial", Font.BOLD, 15));
         setHorizontalAlignment(SwingConstants.CENTER);
         setVerticalAlignment(SwingConstants.CENTER);
         setForeground(Color.BLACK);
