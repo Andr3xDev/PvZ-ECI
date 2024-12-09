@@ -5,7 +5,7 @@ import domain.PvZExceptions;
 import domain.economy.Sun;
 
 public class Sunflower extends Plant implements Runnable {
-    private static final String name = "Sunflower";
+    private static final String name = "sunflower";
     private boolean isActive = true;
 
     public Sunflower(int x, int y, Game game) {

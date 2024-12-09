@@ -8,13 +8,13 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class Peashooter extends Plant {
-    private static final String name = "Peashooter";
+    private static final String name = "peashooter";
     private ScheduledExecutorService scheduler;
 
     public Peashooter(int x, int y, Game game) {
         super(name);
         this.life = 300;
-        this.damage = 20;
+        this.damage = 150;
         this.cost = 100;
         this.game = game;
         this.positionY = y;

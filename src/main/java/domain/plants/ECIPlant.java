@@ -5,7 +5,7 @@ import domain.PvZExceptions;
 import domain.economy.Sun;
 
 public class ECIPlant extends Plant implements Runnable{
-    private static final String name = "ECIPlant";
+    private static final String name = "eciplant";
     private boolean isActive = true;
     public ECIPlant(int x, int y, Game game) {
         super(name);
