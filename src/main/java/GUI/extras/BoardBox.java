@@ -47,7 +47,7 @@ public class BoardBox extends JButton {
      * Set the initial mower image to the cell
      */
     public void addLawnMower(){
-        setBackgroundImage("PvZ/assets/Others/mower.png");
+        setBackgroundImage("src/main/resources/Others/mower.png");
         repaint();
     }
 
@@ -95,19 +95,19 @@ public class BoardBox extends JButton {
     public void addZombie(String zombieType) {
         switch (zombieType) {
             case "basic":
-                setBackgroundImage("PvZ/assets/zombies/basic.png");
+                setBackgroundImage("src/main/resources/zombies/basic.png");
                 break;
             case "conehead":
-                setBackgroundImage("PvZ/assets/zombies/conehead.png");
+                setBackgroundImage("src/main/resources/zombies/conehead.png");
                 break;
             case "buckethead":
-                setBackgroundImage("PvZ/assets/zombies/buckethead.png");
+                setBackgroundImage("src/main/resources/zombies/buckethead.png");
                 break;
             case "brainstein":
-                setBackgroundImage("PvZ/assets/zombies/brainstein.png");
+                setBackgroundImage("src/main/resources/zombies/brainstein.png");
                 break;
             case "ecizombie":
-                setBackgroundImage("PvZ/assets/zombies/ecizombie.png");
+                setBackgroundImage("src/main/resources/zombies/ecizombie.png");
                 break;
             default:
                 setBackgroundImage(null);
@@ -122,19 +122,19 @@ public class BoardBox extends JButton {
     public void addPlant(String plantType) {
         switch (plantType) {
             case "sunflower":
-                setBackgroundImage("PvZ/assets/plants/sunflower.png");
+                setBackgroundImage("src/main/resources/plants/sunflower.png");
                 break;
             case "peashooter":
-                setBackgroundImage("PvZ/assets/plants/peashooter.png");
+                setBackgroundImage("src/main/resources/plants/peashooter.png");
                 break;
             case "wallnut":
-                setBackgroundImage("PvZ/assets/plants/wallnut.png");
+                setBackgroundImage("src/main/resources/plants/wallnut.png");
                 break;
             case "potatomine":
-                setBackgroundImage("PvZ/assets/plants/potatomine.png");
+                setBackgroundImage("src/main/resources/plants/potatomine.png");
                 break;
             case "eciplant":
-                setBackgroundImage("PvZ/assets/plants/eciplant.png");
+                setBackgroundImage("src/main/resources/plants/eciplant.png");
                 break;
             default:
                 setBackgroundImage(null);
