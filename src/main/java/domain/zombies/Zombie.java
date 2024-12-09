@@ -1,6 +1,7 @@
 package domain.zombies;
 
 import domain.Game;
+import domain.PvZExceptions;
 import domain.Unit;
 import domain.plants.Plant;
 
@@ -35,7 +36,7 @@ public abstract class Zombie implements Unit, Runnable {
         }
     }
 
-    public void move() {
+    public void move() throws PvZExceptions {
         if (isActive && positionX > 0) {
             // Si no hay una planta delante, avanza
             if (!(game.getUnit()[positionX - 1][positionY] instanceof Plant)) {
@@ -46,12 +47,12 @@ public abstract class Zombie implements Unit, Runnable {
         }
     }
 
-    protected void attack() {
+    protected void attack() throws PvZExceptions {
         if (positionX > 0 && game.getUnit()[positionX - 1][positionY] instanceof Plant) {
             Plant plant = (Plant) game.getUnit()[positionX - 1][positionY];
             plant.takeDamage(this.damage); // La planta recibe daño
             if (plant.getLife() <= 0) {
-                game.deleteUnit(positionX - 1, positionY); // Elimina la planta si muere
+                game.deleteUnit(positionX - 1, positionY);
             }
         }
     }
@@ -61,11 +62,13 @@ public abstract class Zombie implements Unit, Runnable {
         Thread attackThread = new Thread(() -> {
             while (isActive) {
                 try {
-                    Thread.sleep(500); // Golpea cada 0.5 segundos
+                    Thread.sleep(500);
                     attack();
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                     break;
+                } catch (PvZExceptions e) {
+                    throw new RuntimeException(e);
                 }
             }
         });
@@ -74,15 +77,16 @@ public abstract class Zombie implements Unit, Runnable {
 
         while (isActive) {
             try {
-                Thread.sleep(2500); // Mueve cada 2.5 segundos
+                Thread.sleep(2500);
                 move();
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
+            } catch (PvZExceptions e) {
+                throw new RuntimeException(e);
             }
         }
 
-        // Detener el hilo de ataque cuando el zombie ya no esté activo
         attackThread.interrupt();
     }
 

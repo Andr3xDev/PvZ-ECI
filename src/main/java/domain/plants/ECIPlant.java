@@ -1,6 +1,7 @@
 package domain.plants;
 
 import domain.Game;
+import domain.PvZExceptions;
 import domain.economy.Sun;
 
 public class ECIPlant extends Plant implements Runnable{
@@ -17,7 +18,7 @@ public class ECIPlant extends Plant implements Runnable{
         Thread thread = new Thread(this);
         thread.start();
     }
-    public void generateSun() {
+    public void generateSun () throws PvZExceptions {
         Sun sun = new Sun(50);
         this.game.addSuns(sun);
     }
@@ -25,9 +26,9 @@ public class ECIPlant extends Plant implements Runnable{
     public void run() {
         while (isActive) {
             try {
-                generateSun(); // Generar un sol
-                Thread.sleep(3000); // Esperar 3 segundos
-            } catch (InterruptedException e) {
+                generateSun();
+                Thread.sleep(3000);
+            } catch (InterruptedException | PvZExceptions e) {
                 Thread.currentThread().interrupt();
                 break;
             }

@@ -60,11 +60,11 @@ public class gameTest {
         System.out.println("¡Alcanzo la meta de soles!");
         System.out.println(game.getSuns());
     }
-    public static void Test03(){
+    public static void Test03() {
         Game game = new Game();
-        Sun sun = new Sun(25);
-        game.addSuns(sun);
         try {
+            Sun sun = new Sun(25);
+            game.addSuns(sun);
             game.addPlant("eciplant",0,2);
         } catch (PvZExceptions e) {
             e.printStackTrace();
@@ -107,9 +107,9 @@ public class gameTest {
     }
     public static void Test05(){
         Game game = new Game();
-        Brain brain = new Brain(150);
-        game.addBrains(brain);
         try {
+            Brain brain = new Brain(150);
+            game.addBrains(brain);
             game.addPlant("wallnut",0,0);
             game.addZombie("ecizombie",11, 0);
         } catch (PvZExceptions e) {
