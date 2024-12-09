@@ -6,6 +6,14 @@ import GUI.extras.RoundedButton;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Class that represents the Select GUI of the game. It contains the game mode selection screen.
+ * This screen allows the players select what kind of game they want to play.
+ * 1. Player vs Player
+ * 2. Player vs IA
+ * 3. IA vs IA
+ * Also can go back to the main menu or continue to the game settings.
+ */
 public class SelectGUI extends JPanel {
 
     //** Attributes **//

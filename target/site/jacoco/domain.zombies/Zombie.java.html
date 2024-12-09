@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Zombie.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PvZ-ECI</a> &gt; <a href="index.source.html" class="el_package">domain.zombies</a> &gt; <span class="el_source">Zombie.java</span></div><h1>Zombie.java</h1><pre class="source lang-java linenums">package domain.zombies;
+
+import domain.Game;
+import domain.PvZExceptions;
+import domain.Unit;
+import domain.plants.Plant;
+
+public abstract class Zombie implements Unit, Runnable {
+    private String name;
+    protected int life;
+    protected int damage;
+    protected int cost;
+    protected int positionX;
+    protected int positionY;
+    protected Game game;
+<span class="fc" id="L16">    private boolean isActive = true;</span>
+
+<span class="fc" id="L18">    public Zombie(String name) {</span>
+<span class="fc" id="L19">        this.name = name;</span>
+
+<span class="fc" id="L21">        Thread thread = new Thread(this);</span>
+<span class="fc" id="L22">        thread.start();</span>
+<span class="fc" id="L23">    }</span>
+
+    @Override
+    public void die() {
+<span class="fc" id="L27">        this.game.getUnit()[positionX][positionY] = null;</span>
+<span class="fc" id="L28">        this.isActive = false;</span>
+<span class="fc" id="L29">    }</span>
+
+    @Override
+    public void takeDamage(int dmg) {
+<span class="fc" id="L33">        this.life -= dmg;</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        if (this.life &lt;= 0) {</span>
+<span class="fc" id="L35">            this.die();</span>
+        }
+<span class="fc" id="L37">    }</span>
+
+    public void move() throws PvZExceptions {
+<span class="pc bpc" id="L40" title="1 of 4 branches missed.">        if (isActive &amp;&amp; positionX &gt; 0) {</span>
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">            if (!(game.getUnit()[positionX - 1][positionY] instanceof Plant)) {</span>
+<span class="fc" id="L42">                game.getUnit()[positionX][positionY] = null;</span>
+<span class="fc" id="L43">                positionX--;</span>
+<span class="fc" id="L44">                game.getUnit()[positionX][positionY] = this;</span>
+            }
+        }
+<span class="fc" id="L47">    }</span>
+
+    protected void attack() throws PvZExceptions {
+<span class="pc bpc" id="L50" title="1 of 4 branches missed.">        if (positionX &gt; 0 &amp;&amp; game.getUnit()[positionX - 1][positionY] instanceof Plant) {</span>
+<span class="fc" id="L51">            Plant plant = (Plant) game.getUnit()[positionX - 1][positionY];</span>
+<span class="fc" id="L52">            plant.takeDamage(this.damage);</span>
+        }
+<span class="fc" id="L54">    }</span>
+
+    @Override
+    public void run() {
+//        Thread attackThread = new Thread(() -&gt; {
+//            while (isActive) {
+//                try {
+//                    Thread.sleep(500);
+//                    attack();
+//                } catch (InterruptedException e) {
+//                    Thread.currentThread().interrupt();
+//                    break;
+//                } catch (PvZExceptions e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
+//        });
+//
+//        attackThread.start();
+
+<span class="fc bfc" id="L74" title="All 2 branches covered.">        while (isActive) {</span>
+
+            try {
+<span class="fc" id="L77">                Thread.sleep(2500);</span>
+<span class="fc" id="L78">                move();</span>
+<span class="fc" id="L79">                attack();</span>
+<span class="fc" id="L80">                Thread.sleep(500);</span>
+<span class="nc" id="L81">            } catch (InterruptedException e) {</span>
+<span class="nc" id="L82">                Thread.currentThread().interrupt();</span>
+<span class="nc" id="L83">                break;</span>
+<span class="nc" id="L84">            } catch (PvZExceptions e) {</span>
+<span class="nc" id="L85">                throw new RuntimeException(e);</span>
+<span class="fc" id="L86">            }</span>
+        }
+
+//        attackThread.interrupt();
+<span class="fc" id="L90">    }</span>
+
+    @Override
+    public int getLife() {
+<span class="fc" id="L94">        return this.life;</span>
+    }
+
+    @Override
+    public int getDamage() {
+<span class="fc" id="L99">        return this.damage;</span>
+    }
+
+    @Override
+    public int getCost() {
+<span class="fc" id="L104">        return this.cost;</span>
+    }
+
+<span class="fc" id="L107">    public String getName(){return this.name;}</span>
+}
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

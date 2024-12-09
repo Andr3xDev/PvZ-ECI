@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PvZExceptions.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PvZ-ECI</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">PvZExceptions.java</span></div><h1>PvZExceptions.java</h1><pre class="source lang-java linenums">package domain;
+
+public class PvZExceptions extends Exception {
+    // Index out of range exceptions
+    public static final String ZOMBIE_OUT_RANGE_EXCEPTION = &quot;Given position is out of range for the zombie&quot;;
+    public static final String PLANT_OUT_RANGE_EXCEPTION = &quot;Given position is out of range for the plant&quot;;
+    public static final String NEGATIVE_COIN_EXCEPTION = &quot;Cannot create a coin with a negative value&quot;;
+
+    // Not enough resources exceptions
+    public static final String NO_BRAINS_EXCEPTION = &quot;Not enough brains to buy the plant&quot;;
+    public static final String NO_SUNS_EXCEPTION = &quot;Not enough suns to buy the plant&quot;;
+
+    // Occupied cell exceptions
+    public static final String EXISTENT_UNIT_EXCEPTION = &quot;Cannot add the unit because there is already a unit in the cell&quot;;
+    public static final String NO_UNIT_EXCEPTION = &quot;Cannot delete the unit because there is no unit in the cell&quot;;
+
+    // Persistent exceptions
+    public static final String SAVE_EXCEPTION = &quot;Cannot save the PvZ map&quot;;
+    public static final String OPEN_EXCEPTION = &quot;Cannot open the PvZ map&quot;;
+
+
+    public PvZExceptions(String message){
+<span class="fc" id="L23">        super(message);</span>
+<span class="fc" id="L24">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

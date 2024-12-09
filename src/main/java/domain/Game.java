@@ -161,22 +161,14 @@ public class Game {
      * Method to get a plant from the board in the given position to added to the board
      */
     public Plant searchPlant(String plant,int posX,int posY){
-        switch (plant){
-            case "peashooter":
-                return new Peashooter(posX,posY,this);
-            case "sunflower":
-                return new Sunflower(posX,posY,this);
-            case "wallnut":
-                return new WallNut(posX,posY,this);
-            case "potatomine":
-                return new PotatoMine(posX,posY,this);
-            case "eciplant":
-                return new ECIPlant(posX,posY,this);
-            default:
-                System.out.println("nonas");
-                break;
-        }
-        return null;
+        return switch (plant) {
+            case "peashooter" -> new Peashooter(posX, posY, this);
+            case "sunflower" -> new Sunflower(posX, posY, this);
+            case "wallnut" -> new WallNut(posX, posY, this);
+            case "potatomine" -> new PotatoMine(posX, posY, this);
+            case "eciplant" -> new ECIPlant(posX, posY, this);
+            default -> null;
+        };
     }
 
 
@@ -184,22 +176,14 @@ public class Game {
      * Method to get a zombie from the board in the given position to added to the board
      */
     public Zombie searchZombie(String zombie,int posY){
-        switch (zombie){
-            case "basic":
-                return new Basic(posY,this);
-            case "brainstein":
-                return new Brainstein(posY,this);
-            case "conehead":
-                return new ConeHead(posY,this);
-            case "buckethead":
-                return new BucketHead(posY,this);
-            case "ecizombie":
-                return new ECIZombie(posY,this);
-            default:
-                System.out.println("nonas");
-                break;
-        }
-        return null;
+        return switch (zombie) {
+            case "basic" -> new Basic(posY, this);
+            case "brainstein" -> new Brainstein(posY, this);
+            case "conehead" -> new ConeHead(posY, this);
+            case "buckethead" -> new BucketHead(posY, this);
+            case "ecizombie" -> new ECIZombie(posY, this);
+            default -> null;
+        };
     }
 
 

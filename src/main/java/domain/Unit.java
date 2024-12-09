@@ -1,7 +1,9 @@
 package domain;
 
+/**
+ * Interface for all units in the game.
+ */
 public interface Unit {
-
 
     int getLife();
     int getDamage();
