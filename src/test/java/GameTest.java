@@ -176,7 +176,7 @@ public class GameTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        assertEquals(125, game.getSuns());
+        assertEquals(175, game.getSuns());
     }
 
     // sunflower functionality
@@ -195,7 +195,7 @@ public class GameTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        assertEquals(125, game.getSuns());
+        assertEquals(150, game.getSuns());
     }
 
     // potatomine functionality

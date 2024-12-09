@@ -445,7 +445,7 @@ public class BoardGUI extends JFrame implements Runnable {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }, 3000, 1000, TimeUnit.MILLISECONDS);
+        }, 0, 1000, TimeUnit.MILLISECONDS);
     }
 
 
