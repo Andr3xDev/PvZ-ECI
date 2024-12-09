@@ -35,7 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project focuses on the use of the Object-Oriented Programming (OOP) paradigm. Using these principles, we developed a graphic representation inspired by the Plants vs. Zombies game. This simulation aims to recreate the interactions between plants and zombies on a board, implementing the game logic through the main pilars of this way to programm. To achieve this, we incorporated various types of plants, zombies, obstacles, and special terrains on the board. These elements work together to help us understand and effectively apply OOP concepts.
+This project focuses on the use of the Object-Oriented Programming (OOP) paradigm. Using these principles, we developed a graphic representation inspired by the Plants vs. Zombies game. This simulation aims to recreate the interactions between plants and zombies on a board, implementing the game logic through the main pilars of this way to programm. To achieve this, we incorporated various types of plants, zombies, obstacles, and special elements on the board. These elements work together to help us understand and effectively apply OOP concepts.
 
 This project was developed as part of the Object-Oriented Programming (POOB) course at the Escuela Colombiana de Ingeniería Julio Garavito (ECI).
 
@@ -77,24 +77,53 @@ Just have a PC :3.
 Some features that we are developing step by step.
 
 Sprints 1: 
-- [ ] Pendiente
-  - [ ] Pendiente
-  - [ ] Pendiente
-- [ ] Pendiente
-  - [ ] Pendiente
-  - [ ] Pendiente
-- [ ] Pendiente
-  - [ ] Pendiente
-  - [ ] Pendiente
+- [x] Planning all proyect
+- [x] Create basic GUI's
+  - [x] Home
+  - [x] Tutorial
+  - [x] Select
+  - [x] Game
+- [x] Decorate GUI's
+  - [x] Music
+  - [x] Backgrounds
 
 Sprints 2:   
-PENDIENTE
+- [x] Create basic domain
+  - [x] Interfaces & abstracts clases
+  - [x] Add basic plants
+  - [x] Add basic zombies
+  - [x] Add other elements
+- [x] Decorate GUI's 2
+  - [x] Buttons and labels style
+  - [x] Improve general style
+- [x] Create board GUI
+  - [x] Add players panels
+  - [x] Add map image and grid
+  - [x] Add info elements
 
 Sprints 3:
-PENDIENTE
+- [x] Add behavior
+  - [x] Zombies
+  - [x] Plants
+  - [x] Other elements
+- [x] Add test and exceptions
+  - [x] Unit test
+  - [x] Jacoco analisis
+  - [x] Add exceptions
+- [ ] Add persistence
+  - [ ] Save games
+  - [ ] Load games
+- [ ] Add players
+  - [ ] IA
+  - [x] Human
 
 Sprints 4:
-PENDIENTE
+- [ ] Improve board GUI elements
+  - [ ] Fluid animations
+  - [ ] Better images
+- [ ] Improve IA behavior
+  - [ ] Dificult 2
+- [ ] General polish
   
 
 
