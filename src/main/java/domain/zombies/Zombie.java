@@ -38,7 +38,6 @@ public abstract class Zombie implements Unit, Runnable {
 
     public void move() throws PvZExceptions {
         if (isActive && positionX > 0) {
-            // Si no hay una planta delante, avanza
             if (!(game.getUnit()[positionX - 1][positionY] instanceof Plant)) {
                 game.getUnit()[positionX][positionY] = null;
                 positionX--;
@@ -50,35 +49,35 @@ public abstract class Zombie implements Unit, Runnable {
     protected void attack() throws PvZExceptions {
         if (positionX > 0 && game.getUnit()[positionX - 1][positionY] instanceof Plant) {
             Plant plant = (Plant) game.getUnit()[positionX - 1][positionY];
-            plant.takeDamage(this.damage); // La planta recibe daño
-            if (plant.getLife() <= 0) {
-                game.deleteUnit(positionX - 1, positionY);
-            }
+            plant.takeDamage(this.damage);
         }
     }
 
     @Override
     public void run() {
-        Thread attackThread = new Thread(() -> {
-            while (isActive) {
-                try {
-                    Thread.sleep(500);
-                    attack();
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                    break;
-                } catch (PvZExceptions e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        });
-
-        attackThread.start();
+//        Thread attackThread = new Thread(() -> {
+//            while (isActive) {
+//                try {
+//                    Thread.sleep(500);
+//                    attack();
+//                } catch (InterruptedException e) {
+//                    Thread.currentThread().interrupt();
+//                    break;
+//                } catch (PvZExceptions e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
+//        });
+//
+//        attackThread.start();
 
         while (isActive) {
+
             try {
                 Thread.sleep(2500);
                 move();
+                attack();
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
@@ -87,7 +86,7 @@ public abstract class Zombie implements Unit, Runnable {
             }
         }
 
-        attackThread.interrupt();
+//        attackThread.interrupt();
     }
 
     @Override

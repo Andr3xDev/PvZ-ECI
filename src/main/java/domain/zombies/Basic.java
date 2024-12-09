@@ -3,7 +3,7 @@ package domain.zombies;
 import domain.Game;
 
 public class Basic extends Zombie {
-    private static final String name = "Basic";
+    private static final String name = "basic";
     public Basic(int y, Game game) {
         super(name);
         this.life = 100;

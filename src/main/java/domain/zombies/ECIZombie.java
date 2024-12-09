@@ -8,7 +8,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class ECIZombie extends Zombie {
-    private static final String name = "ECIZombie";
+    private static final String name = "ecizombie";
     private ScheduledExecutorService scheduler;
     public ECIZombie(int y, Game game) {
         super(name);

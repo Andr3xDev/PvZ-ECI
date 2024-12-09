@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class PotatoMine extends Plant {
     private boolean isActive;
-    private static final String name = "PotatoMine";
+    private static final String name = "potatomine";
     private static final int ACTIVATION_DELAY = 14;
     public PotatoMine(int x, int y, Game game) {
         super(name);

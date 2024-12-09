@@ -351,7 +351,7 @@ public class BoardGUI extends JFrame implements Runnable {
                     public void mouseClicked(java.awt.event.MouseEvent evt) {
                         if (selectedPlant == null) {
                             System.out.println("Select a plant first");
-                        } else if (shovelMode) {
+                        } else if (shovelMode) {       //! missing add shovel
                             boxes[finalI][finalJ].remove();
                         } else {
                             try {
@@ -403,6 +403,11 @@ public class BoardGUI extends JFrame implements Runnable {
     //** Update Elements **//
 
     private void updateZombies() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 1; j < 11; j++) {
+                boxes[i][j].clear();
+            }
+        }
     }
 
     private void updateBullets() {
@@ -430,11 +435,12 @@ public class BoardGUI extends JFrame implements Runnable {
             try {
                 game.updateZombies();
                 updateEconomy();
-                SwingUtilities.invokeLater(this::updateBoard);
+                //SwingUtilities.invokeLater(this::updateBoard);
+                updateBoard();
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }, 0, 500, TimeUnit.MILLISECONDS);
+        }, 3000, 1000, TimeUnit.MILLISECONDS);
     }
 
 
@@ -442,9 +448,9 @@ public class BoardGUI extends JFrame implements Runnable {
      * Updates the board GUI to reflect the current state of the game.
      */
     private void updateBoard() {
+        updateZombies();
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLS; j++) {
-                boxes[i][j].clear();
 
                 // Plants
                 if (game.getPlant(j, i) != null) {
@@ -456,12 +462,6 @@ public class BoardGUI extends JFrame implements Runnable {
                     boxes[i][j].addZombie(game.getZombie(j, i).getName());
                 }
 
-                //game.printBoard();
-            }
-        }
-        for (int i = 0; i < ROWS; i++) {
-            for (int j = 0; j < COLS; j++) {
-                boxes[i][j].revalidate();
                 boxes[i][j].repaint();
             }
         }

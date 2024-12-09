@@ -14,8 +14,6 @@ public class BoardBox extends JButton {
     private final int column;
 
     // Links to the previous and next cells
-    private BoardBox previous;
-    private BoardBox next;
 
     private ArrayList<String> occupants;
     private List<ImageIcon> overlayImages;
@@ -27,8 +25,6 @@ public class BoardBox extends JButton {
 
     public BoardBox(int row, int column) {
         super();
-        previous = null;
-        next = null;
         this.row = row;
         this.column = column;
         currentPlantType = null;
@@ -66,10 +62,6 @@ public class BoardBox extends JButton {
     public void setBackgroundImage(String imagePath) {
         if (imagePath != null) {
             this.backgroundImage = new ImageIcon(imagePath);
-        } else {
-            //System.out.println("Not found");
-            // ! This have to be an exception
-            // ? Why this make the program crash without this?
         }
         repaint();
     }
@@ -82,7 +74,6 @@ public class BoardBox extends JButton {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
-
         if (backgroundImage != null) {
             g2d.drawImage(backgroundImage.getImage(), 0, 0, getWidth(), getHeight(), this);
         }
@@ -146,6 +137,8 @@ public class BoardBox extends JButton {
      * Remove the unit from the box
      */
     public void clear() {
-        this.setIcon(null);
+        this.setBackgroundImage("src/main/resources/plants/null.png");
+        System.out.println(backgroundImage);
+        repaint();
     }
 }

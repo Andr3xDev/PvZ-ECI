@@ -5,7 +5,7 @@ import domain.economy.Brain;
 import domain.Game;
 
 public class Brainstein extends Zombie implements Runnable{
-    private static final String name = "Brainstein";
+    private static final String name = "brainstein";
     private boolean isActive = true;
     public Brainstein(int y, Game game) {
         super(name);
@@ -20,7 +20,7 @@ public class Brainstein extends Zombie implements Runnable{
     public void run() {
         while (isActive) {
             try {
-                Thread.sleep(1000); // Mueve cada 2.5 segundos
+                Thread.sleep(1000); // Mueve cada segundo
                 move();
             } catch (InterruptedException | PvZExceptions e) {
                 Thread.currentThread().interrupt();
@@ -30,7 +30,10 @@ public class Brainstein extends Zombie implements Runnable{
 }
     @Override
     public void move() throws PvZExceptions {
-        if (isActive && positionX > 7){
+        if(this.getLife() <= 0){
+            this.isActive = false;
+        }
+        else if (isActive && positionX > 7){
             game.getUnit()[positionX][positionY] = null;
             positionX--;
             game.getUnit()[positionX][positionY] = this;
