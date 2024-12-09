@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Game.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PvZ-ECI</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Game.java</span></div><h1>Game.java</h1><pre class="source lang-java linenums">package domain;
+
+import domain.economy.Brain;
+import domain.economy.Sun;
+import domain.plants.*;
+import domain.zombies.*;
+
+import java.io.*;
+
+public class Game {
+
+    //* Attributes *//
+
+    private final Unit[][] unit;
+    private int brains;
+    private int suns;
+    private final Bullet[][] bullets;
+<span class="fc" id="L18">    private boolean isActive = true;</span>
+
+
+    //* Constructors *//
+
+    /**
+     * Constructor for the Game, here we initialize the board and the economy of the game
+     */
+<span class="fc" id="L26">    public Game() {</span>
+<span class="fc" id="L27">        bullets = new Bullet[11][5];</span>
+<span class="fc" id="L28">        unit = new Unit[11][5];</span>
+<span class="fc" id="L29">        this.suns = 50;</span>
+<span class="fc" id="L30">        this.brains = 50;</span>
+<span class="fc" id="L31">    }</span>
+
+
+
+    //* Methods *//
+
+    /**
+     * Method to add a plant to the board in the given position.
+     * @param plantName the name of the plant to add
+     * @param posX x position of the plant
+     * @param posY y position of the plant
+     * @throws PvZExceptions if the position is out of range for the plant or if there is already
+     * a unit in the cell or if there are not enough suns to buy the plant
+     */
+    public void addPlant(String plantName, int posX, int posY) throws PvZExceptions {
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (validatePosition(&quot;plant&quot;, posX, posY)) {</span>
+<span class="fc" id="L47">            isPositionEmpty(posX,posY);</span>
+<span class="fc" id="L48">            Plant plant = searchPlant(plantName,posX,posY);</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">            if (plant.getCost() &lt;= this.suns) {</span>
+<span class="fc" id="L50">                unit[posX][posY] = plant;</span>
+<span class="fc" id="L51">                suns -= plant.getCost();</span>
+            }else {
+<span class="fc" id="L53">                plant.die();</span>
+<span class="fc" id="L54">                throw new PvZExceptions(PvZExceptions.NO_SUNS_EXCEPTION);</span>
+            }
+<span class="fc" id="L56">        } else {</span>
+<span class="fc" id="L57">            throw new PvZExceptions(PvZExceptions.PLANT_OUT_RANGE_EXCEPTION);</span>
+        }
+<span class="fc" id="L59">    }</span>
+
+
+    /**
+     * Method to add a zombie to the board in the given position.
+     * @param zombieName the name of the zombie to add
+     * @param posX x position of the zombie
+     * @param posY y position of the zombie
+     * @throws PvZExceptions if the position is out of range for the zombie or if there is already
+     */
+    public void addZombie(String zombieName, int posX, int posY) throws PvZExceptions {
+<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (validatePosition(&quot;zombie&quot;, posX, posY)) {</span>
+<span class="fc" id="L71">            Zombie zombie = searchZombie(zombieName,posY);</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">            if (zombie.getCost() &lt;= this.brains) {</span>
+<span class="fc" id="L73">                unit[posX][posY] = zombie;</span>
+<span class="fc" id="L74">                brains -= zombie.getCost();</span>
+            }else{
+<span class="fc" id="L76">                zombie.die();</span>
+<span class="fc" id="L77">                throw new PvZExceptions(PvZExceptions.NO_BRAINS_EXCEPTION);</span>
+            }
+<span class="fc" id="L79">        } else {</span>
+<span class="fc" id="L80">            throw new PvZExceptions(PvZExceptions.ZOMBIE_OUT_RANGE_EXCEPTION);</span>
+        }
+<span class="fc" id="L82">    }</span>
+
+
+    /**
+     * Method to delete a plant from the board in the given position.
+     * @param posX x position of the plant
+     * @param posY y position of the plant
+     */
+    public void deleteUnit(int posX, int posY) throws PvZExceptions {
+<span class="fc bfc" id="L91" title="All 2 branches covered.">        if (unit[posX][posY] != null){</span>
+<span class="fc" id="L92">            unit[posX][posY] = null;</span>
+        } else {
+<span class="fc" id="L94">            throw new PvZExceptions(PvZExceptions.NO_UNIT_EXCEPTION);</span>
+        }
+<span class="fc" id="L96">    }</span>
+
+
+    /**
+     * Method to add suns to the economy of the game
+     * @param sun Quantity of suns to add
+     */
+    public void addSuns(Sun sun) {
+<span class="fc" id="L104">        this.suns += sun.getValue();</span>
+<span class="fc" id="L105">    }</span>
+
+
+    /**
+     * Method to add brains to the economy of the game
+     * @param brain Quantity of brains to add
+     */
+    public void addBrains(Brain brain) throws PvZExceptions {
+<span class="fc bfc" id="L113" title="All 2 branches covered.">        if (brain.getValue() &lt; 0) {</span>
+<span class="fc" id="L114">            throw new PvZExceptions(PvZExceptions.NEGATIVE_COIN_EXCEPTION);</span>
+        }
+<span class="fc" id="L116">        this.brains += brain.getValue();</span>
+<span class="fc" id="L117">    }</span>
+
+
+    /**
+     * Method to get the bullets in the board
+     * @return matrix of bullets
+     */
+    public Bullet[][] getBullets() {
+<span class="fc" id="L125">        return bullets;</span>
+    }
+
+
+    /**
+     * Method to get the status of the game as a matrix printed in the console
+     */
+    public void printBoard() {
+<span class="fc" id="L133">        System.out.println(&quot;Game Board:&quot;);</span>
+<span class="fc bfc" id="L134" title="All 2 branches covered.">        for (int y = 0; y &lt; 5; y++) {</span>
+<span class="fc bfc" id="L135" title="All 2 branches covered.">            for (int x = 0; x &lt; 11; x++) {</span>
+<span class="fc bfc" id="L136" title="All 2 branches covered.">                if (unit[x][y] != null) {</span>
+<span class="fc" id="L137">                    System.out.print(unit[x][y].getClass().getSimpleName().charAt(0) + &quot; &quot;);</span>
+                } else {
+<span class="fc" id="L139">                    System.out.print(&quot;. &quot;);</span>
+                }
+            }
+<span class="fc" id="L142">            System.out.println();</span>
+        }
+
+<span class="fc" id="L145">        System.out.println(&quot;Bullets:&quot;);</span>
+<span class="fc bfc" id="L146" title="All 2 branches covered.">        for (int y = 0; y &lt; bullets[0].length; y++) {</span>
+<span class="fc bfc" id="L147" title="All 2 branches covered.">            for (int x = 0; x &lt; bullets.length; x++) {</span>
+<span class="fc bfc" id="L148" title="All 2 branches covered.">                if (bullets[x][y] != null) {</span>
+<span class="fc" id="L149">                    System.out.print(&quot;B &quot;);</span>
+                } else {
+<span class="fc" id="L151">                    System.out.print(&quot;. &quot;);</span>
+                }
+            }
+<span class="fc" id="L154">            System.out.println();</span>
+        }
+<span class="fc" id="L156">        System.out.println();</span>
+<span class="fc" id="L157">    }</span>
+
+
+    /**
+     * Method to get a plant from the board in the given position to added to the board
+     */
+    public Plant searchPlant(String plant,int posX,int posY){
+<span class="pc bpc" id="L164" title="1 of 6 branches missed.">        return switch (plant) {</span>
+<span class="fc" id="L165">            case &quot;peashooter&quot; -&gt; new Peashooter(posX, posY, this);</span>
+<span class="fc" id="L166">            case &quot;sunflower&quot; -&gt; new Sunflower(posX, posY, this);</span>
+<span class="fc" id="L167">            case &quot;wallnut&quot; -&gt; new WallNut(posX, posY, this);</span>
+<span class="fc" id="L168">            case &quot;potatomine&quot; -&gt; new PotatoMine(posX, posY, this);</span>
+<span class="fc" id="L169">            case &quot;eciplant&quot; -&gt; new ECIPlant(posX, posY, this);</span>
+<span class="nc" id="L170">            default -&gt; null;</span>
+        };
+    }
+
+
+    /**
+     * Method to get a zombie from the board in the given position to added to the board
+     */
+    public Zombie searchZombie(String zombie,int posY){
+<span class="fc bfc" id="L179" title="All 6 branches covered.">        return switch (zombie) {</span>
+<span class="fc" id="L180">            case &quot;basic&quot; -&gt; new Basic(posY, this);</span>
+<span class="fc" id="L181">            case &quot;brainstein&quot; -&gt; new Brainstein(posY, this);</span>
+<span class="fc" id="L182">            case &quot;conehead&quot; -&gt; new ConeHead(posY, this);</span>
+<span class="fc" id="L183">            case &quot;buckethead&quot; -&gt; new BucketHead(posY, this);</span>
+<span class="fc" id="L184">            case &quot;ecizombie&quot; -&gt; new ECIZombie(posY, this);</span>
+<span class="fc" id="L185">            default -&gt; null;</span>
+        };
+    }
+
+
+    /**
+     * Method to update the game status
+     */
+    public void save(String nameFile)throws PvZExceptions{
+<span class="nc" id="L194">        ObjectOutputStream salida = null;</span>
+        try {
+<span class="nc" id="L196">            salida = new ObjectOutputStream(new FileOutputStream(nameFile));</span>
+<span class="nc" id="L197">            salida.writeObject(this);</span>
+<span class="nc" id="L198">            salida.flush();</span>
+<span class="nc" id="L199">            System.out.println(&quot;Partida guardada con éxito. Ruta: &quot; + new File(nameFile).getAbsolutePath());</span>
+<span class="nc" id="L200">        } catch (IOException e) {</span>
+<span class="nc" id="L201">            e.printStackTrace();</span>
+<span class="nc" id="L202">            throw new PvZExceptions(PvZExceptions.SAVE_EXCEPTION);</span>
+        } finally {
+<span class="nc bnc" id="L204" title="All 2 branches missed.">            if (salida != null) {</span>
+                try {
+<span class="nc" id="L206">                    salida.close();</span>
+<span class="nc" id="L207">                } catch (IOException e) {</span>
+<span class="nc" id="L208">                    e.printStackTrace();</span>
+<span class="nc" id="L209">                }</span>
+            }
+        }
+<span class="nc" id="L212">    }</span>
+
+
+    /**
+     * Method to open a game from a file
+     */
+    public static Game open(String nameFile) throws PvZExceptions{
+<span class="nc" id="L219">        Game partidaCargada = null;</span>
+        try {
+<span class="nc" id="L221">            ObjectInputStream entrada = new ObjectInputStream(new FileInputStream(nameFile));</span>
+<span class="nc" id="L222">            partidaCargada = (Game) entrada.readObject();</span>
+<span class="nc" id="L223">        } catch (IOException | ClassNotFoundException e) {</span>
+<span class="nc" id="L224">            e.printStackTrace();</span>
+<span class="nc" id="L225">            throw new PvZExceptions(PvZExceptions.OPEN_EXCEPTION);</span>
+<span class="nc" id="L226">        }</span>
+<span class="nc" id="L227">        return partidaCargada;</span>
+    }
+
+
+    /**
+     * Method to update the game board for every time unit
+     */
+    public void updateZombies() {
+<span class="fc bfc" id="L235" title="All 2 branches covered.">        for (int i = 0; i &lt; unit.length; i++) {</span>
+<span class="fc bfc" id="L236" title="All 2 branches covered.">            for (int j = 0; j &lt; unit[i].length; j++) {</span>
+<span class="pc bpc" id="L237" title="1 of 4 branches missed.">                if (unit[i][j] instanceof Zombie zombie &amp;&amp; zombie.getLife() &lt;= 0) {</span>
+<span class="nc" id="L238">                    unit[i][j] = null;</span>
+                }
+            }
+        }
+<span class="fc" id="L242">    }</span>
+
+
+    /**
+     * Method to get a unit plant from the board in the given position
+     */
+    public Plant getPlant(int i, int j) {
+<span class="fc" id="L249">        Unit unit = getUnit()[i][j];</span>
+<span class="fc bfc" id="L250" title="All 2 branches covered.">        if (unit instanceof Plant) {</span>
+<span class="fc" id="L251">            return (Plant) unit;</span>
+        }
+<span class="fc" id="L253">        return null;</span>
+    }
+
+
+    /**
+     * Method to get a unit zombie from the board in the given position
+     */
+    public Zombie getZombie(int i, int j) {
+<span class="fc" id="L261">        Unit unit = getUnit()[i][j];</span>
+<span class="fc bfc" id="L262" title="All 2 branches covered.">        if(unit instanceof Zombie) {</span>
+<span class="fc" id="L263">            return (Zombie) unit;</span>
+        }
+<span class="fc" id="L265">        return null;</span>
+    }
+
+
+    /**
+     * Method to validate the position of the unit in the board from the given position
+     * @param unit the unit type to validate
+     * @param posX x position of the unit
+     * @param posY y position of the unit
+     * @return true if the position is valid, false otherwise
+     */
+    private boolean validatePosition(String unit, int posX, int posY) {
+<span class="fc bfc" id="L277" title="All 2 branches covered.">        if (unit.equals(&quot;plant&quot;)) {</span>
+<span class="pc bpc" id="L278" title="1 of 4 branches missed.">            return posX &gt;= 1 &amp;&amp; posX &lt;= 8;</span>
+<span class="pc bpc" id="L279" title="1 of 2 branches missed.">        } else if (unit.equals(&quot;zombie&quot;)) {</span>
+<span class="pc bpc" id="L280" title="1 of 4 branches missed.">            return posX &gt;= 9 &amp;&amp; posX &lt; 11;</span>
+        }
+<span class="nc" id="L282">        return false;</span>
+    }
+
+
+    /**
+     * Method to validate if the position is empty
+     * @param posX x position of the unit
+     * @param posY y position of the unit
+     * @throws PvZExceptions if the position is not empty
+     */
+    private void isPositionEmpty(int posX, int posY) throws PvZExceptions {
+<span class="fc bfc" id="L293" title="All 2 branches covered.">        if (unit[posX][posY] != null) {</span>
+<span class="fc" id="L294">            throw new PvZExceptions(PvZExceptions.EXISTENT_UNIT_EXCEPTION);</span>
+        }
+<span class="fc" id="L296">    }</span>
+
+
+    //* Getters and Setters *//
+
+    public Unit[][] getUnit() {
+<span class="fc" id="L302">        return unit;</span>
+    }
+<span class="fc" id="L304">    public int getSuns(){return this.suns;}</span>
+
+    public int getBrains() {
+<span class="fc" id="L307">        return brains;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

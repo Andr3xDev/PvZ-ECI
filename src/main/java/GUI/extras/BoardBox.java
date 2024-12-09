@@ -138,7 +138,6 @@ public class BoardBox extends JButton {
      */
     public void clear() {
         this.setBackgroundImage("src/main/resources/plants/null.png");
-        System.out.println(backgroundImage);
         repaint();
     }
 }

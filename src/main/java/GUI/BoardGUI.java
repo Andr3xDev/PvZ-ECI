@@ -435,8 +435,8 @@ public class BoardGUI extends JFrame implements Runnable {
             try {
                 game.updateZombies();
                 updateEconomy();
-                //SwingUtilities.invokeLater(this::updateBoard);
-                updateBoard();
+                SwingUtilities.invokeLater(this::updateBoard);
+                //updateBoard();
             } catch (Exception e) {
                 e.printStackTrace();
             }

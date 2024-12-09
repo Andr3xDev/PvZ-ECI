@@ -2,13 +2,14 @@ package domain;
 
 public class Shovel {
     private Game game;
-    private int positionX;
-    private int positionY;
-    public Shovel(Game game, int positionX, int positionY) throws PvZExceptions {
+    public Shovel(Game game) {
         this.game = game;
-        this.positionX = positionX;
-        this.positionY = positionY;
-        this.game.deleteUnit(positionX, positionY);
     }
 
+    public void deletePlant(int positionX, int positionY) throws PvZExceptions {
+        if (this.game.getPlant(positionX, positionY) == null) {
+            throw new PvZExceptions(PvZExceptions.NO_UNIT_EXCEPTION);
+        }
+        this.game.deleteUnit(positionX, positionY);
+    }
 }
