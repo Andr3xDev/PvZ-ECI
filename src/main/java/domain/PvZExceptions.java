@@ -1,5 +1,8 @@
 package domain;
 
+/**
+ * Class that represents the exceptions to the PvZ game.
+ */
 public class PvZExceptions extends Exception {
     // Index out of range exceptions
     public static final String ZOMBIE_OUT_RANGE_EXCEPTION = "Given position is out of range for the zombie";
@@ -19,6 +22,11 @@ public class PvZExceptions extends Exception {
     public static final String OPEN_EXCEPTION = "Cannot open the PvZ map";
 
 
+
+    /**
+     * Constructor of the PvZExceptions class.
+     * @param message String that represents the message of the exception.
+     */
     public PvZExceptions(String message){
         super(message);
     }
