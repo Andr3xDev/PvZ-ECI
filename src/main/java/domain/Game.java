@@ -16,6 +16,7 @@ public class Game {
     private int suns;
     private final Bullet[][] bullets;
     private boolean isActive = true;
+    private final LawnMower[][] lawnMowers;
 
 
     //* Constructors *//
@@ -24,10 +25,12 @@ public class Game {
      * Constructor for the Game, here we initialize the board and the economy of the game
      */
     public Game() {
+        lawnMowers = new LawnMower[11][5];
         bullets = new Bullet[11][5];
         unit = new Unit[11][5];
         this.suns = 50;
         this.brains = 50;
+        initializeLawnMowers();
     }
 
 
@@ -142,11 +145,11 @@ public class Game {
             System.out.println();
         }
 
-        System.out.println("Bullets:");
-        for (int y = 0; y < bullets[0].length; y++) {
-            for (int x = 0; x < bullets.length; x++) {
-                if (bullets[x][y] != null) {
-                    System.out.print("B ");
+        System.out.println("LawnMowers:");
+        for (int y = 0; y < lawnMowers[0].length; y++) {
+            for (int x = 0; x < lawnMowers.length; x++) {
+                if (lawnMowers[x][y] != null) {
+                    System.out.print("L ");
                 } else {
                     System.out.print(". ");
                 }
@@ -294,6 +297,11 @@ public class Game {
             throw new PvZExceptions(PvZExceptions.EXISTENT_UNIT_EXCEPTION);
         }
     }
+    private void initializeLawnMowers(){
+        for (int i = 0; i < 5; i++) {
+            this.lawnMowers[0][i] = new LawnMower(this,i);
+        }
+    }
 
 
     //* Getters and Setters *//
@@ -301,6 +309,7 @@ public class Game {
     public Unit[][] getUnit() {
         return unit;
     }
+    public LawnMower[][] getLawnMowers(){return lawnMowers;}
     public int getSuns(){return this.suns;}
 
     public int getBrains() {
