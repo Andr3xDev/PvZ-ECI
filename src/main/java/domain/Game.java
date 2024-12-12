@@ -22,6 +22,7 @@ public class Game {
     private final boolean isActive = true;
     private final LawnMower[][] lawnMowers;
     private final ArrayList<Player> players;
+    private String gameMode;
 
     //* Constructors *//
 
@@ -30,17 +31,18 @@ public class Game {
      */
     public Game(String gameMode) {
         players = new ArrayList<>();
+        this.gameMode = gameMode;
         lawnMowers = new LawnMower[11][5];
         bullets = new Bullet[11][5];
         unit = new Unit[11][5];
         this.suns = 50;
         this.brains = 50;
-        generateGame(gameMode);
+        generatePlayers(gameMode);
         initializeLawnMowers();
     }
 
 
-    private void generateGame(String gameMode){
+    private void generatePlayers(String gameMode){
         assert players != null;
         switch (gameMode){
             case "pvp" -> {
@@ -51,7 +53,7 @@ public class Game {
                 players.add(new Human());
                 players.add(new Machine());
             }
-            case "AIvsAI" -> {
+            case "AIvAI" -> {
                 players.add(new Machine());
                 players.add(new Machine());
             }
@@ -171,8 +173,8 @@ public class Game {
 
         System.out.println("LawnMowers:");
         for (int y = 0; y < lawnMowers[0].length; y++) {
-            for (int x = 0; x < lawnMowers.length; x++) {
-                if (lawnMowers[x][y] != null) {
+            for (LawnMower[] lawnMower : lawnMowers) {
+                if (lawnMower[y] != null) {
                     System.out.print("L ");
                 } else {
                     System.out.print(". ");
@@ -211,46 +213,6 @@ public class Game {
             case "ecizombie" -> new ECIZombie(posY, this);
             default -> null;
         };
-    }
-
-
-    /**
-     * Method to update the game status
-     */
-    public void save(String nameFile)throws PvZExceptions{
-        ObjectOutputStream exitFile = null;
-        try {
-            exitFile = new ObjectOutputStream(new FileOutputStream(nameFile));
-            exitFile.writeObject(this);
-            exitFile.flush();
-            System.out.println("Game saved successfully. Path: " + new File(nameFile).getAbsolutePath());
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new PvZExceptions(PvZExceptions.SAVE_EXCEPTION);
-        } finally {
-            if (exitFile != null) {
-                try {
-                    exitFile.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-
-    /**
-     * Method to open a game from a file
-     */
-    public static void open(String nameFile) throws PvZExceptions{
-        Game loadGame;
-        try {
-            ObjectInputStream input = new ObjectInputStream(new FileInputStream(nameFile));
-            loadGame = (Game) input.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-            throw new PvZExceptions(PvZExceptions.OPEN_EXCEPTION);
-        }
     }
 
 
@@ -337,5 +299,48 @@ public class Game {
 
     public int getBrains() {
         return brains;
+    }
+
+
+
+    //* Persistence *//
+
+    /**
+     * Method to update the game status
+     */
+    public void save(String nameFile)throws PvZExceptions{
+        ObjectOutputStream exitFile = null;
+        try {
+            exitFile = new ObjectOutputStream(new FileOutputStream(nameFile));
+            exitFile.writeObject(this);
+            exitFile.flush();
+            System.out.println("Game saved successfully. Path: " + new File(nameFile).getAbsolutePath());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new PvZExceptions(PvZExceptions.SAVE_EXCEPTION);
+        } finally {
+            if (exitFile != null) {
+                try {
+                    exitFile.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+
+    /**
+     * Method to open a game from a file
+     */
+    public static void open(String nameFile) throws PvZExceptions{
+        Game loadGame;
+        try {
+            ObjectInputStream input = new ObjectInputStream(new FileInputStream(nameFile));
+            loadGame = (Game) input.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+            throw new PvZExceptions(PvZExceptions.OPEN_EXCEPTION);
+        }
     }
 }

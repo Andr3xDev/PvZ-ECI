@@ -62,6 +62,7 @@ public class BoardGUI extends JFrame implements Runnable {
 
     // Game
     private final Game game;
+    private final GameAPP app;
     private final String gameMode;
     private final BoardBox[][] boxes;
     private boolean shovelMode;
@@ -76,11 +77,12 @@ public class BoardGUI extends JFrame implements Runnable {
      * Constructor, creates the Game's elements and actions.
      */
     public BoardGUI(GameAPP app, String gameMode) {
+        game = new Game(gameMode);
         this.gameMode = gameMode;
+        this.app = app;
         this.boxes = new BoardBox[ROWS][COLS];
         prepareElements();
         prepareActions();
-        game = new Game(gameMode);
         Thread guiThread = new Thread(this);
         guiThread.start();
     }
@@ -97,7 +99,6 @@ public class BoardGUI extends JFrame implements Runnable {
         // Window actions
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        //setUndecorated(true);
 
         // Window properties
         setTitle("POOB vs Zombies");
@@ -106,6 +107,8 @@ public class BoardGUI extends JFrame implements Runnable {
         setLayout(new BorderLayout());
 
         // Prepare all Elements
+        prepareElementsPlayerPlants();
+        prepareElementsPlayerZombies();
         prepareElementsBoard();
         prepareElementsPlayers();
         prepareElementsInfo();
@@ -141,11 +144,12 @@ public class BoardGUI extends JFrame implements Runnable {
      */
     private void prepareElementsPlayers() {
         switch (gameMode) {
-            case "pvp", "AIvAI" -> {
-                prepareElementsPlayerZombies();
-                prepareElementsPlayerPlants();
+            case "pvp" -> {
+                add(zombiesPanel, BorderLayout.EAST);
+                add(plantsPanel, BorderLayout.WEST);
             }
-            case "pvAI" -> prepareElementsPlayerPlants();
+            case "pvAI" -> add(plantsPanel, BorderLayout.WEST);
+            case "AIvAI" -> {System.out.println("AI playing");}
         }
     }
 
@@ -178,8 +182,6 @@ public class BoardGUI extends JFrame implements Runnable {
         eciZombieButton = new SelectButton("src/main/resources/zombies/ecizombie.png");
         zombiesPanel.add(eciZombieButton);
         zombiesPanel.add(new RoundedLabel(": 250"));
-
-        add(zombiesPanel, BorderLayout.EAST);
     }
 
 
@@ -210,8 +212,6 @@ public class BoardGUI extends JFrame implements Runnable {
         eciPlantButton = new SelectButton("src/main/resources/plants/eciplant.png");
         plantsPanel.add(eciPlantButton);
         plantsPanel.add(new RoundedLabel(": 75"));
-
-        add(plantsPanel, BorderLayout.WEST);
     }
 
 
@@ -315,33 +315,28 @@ public class BoardGUI extends JFrame implements Runnable {
      */
     private void prepareActionsMenu() {
         open.addActionListener(
-            new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
+                _ -> {
                     try {
                         OpenAction();
                     } catch (PvZExceptions ex) {
                         throw new RuntimeException(ex);
                     }
                 }
-            }
         );
         save.addActionListener(
-            new ActionListener(){
-                public void actionPerformed(ActionEvent e){
+                _ -> {
                     try {
                         SaveAction();
                     } catch (PvZExceptions ex) {
                         throw new RuntimeException(ex);
                     }
                 }
-            }
         );
         exit.addActionListener(
-            new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    System.exit(0);;
+                _ -> {
+                    app.setVisible(true);
+                    dispose();
                 }
-            }
         );
     }
 

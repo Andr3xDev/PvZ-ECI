@@ -165,9 +165,6 @@ public class SelectGUI extends JPanel {
      */
     private void prepareActions() {
 
-        //! All buttons are creating the same game. Just for testing purposes.
-        //! Change this to create different games when ConfigGUI is implemented.
-
         // P1 vs P2 button
         pvpButton.addActionListener(_ -> {
             BoardGUI board = new BoardGUI(game, "pvp");
@@ -195,6 +192,7 @@ public class SelectGUI extends JPanel {
             cl.show(getParent(), "homePanel");
         });
 
+        // Load button
+        loadButton.addActionListener(_ -> System.out.println("Load button pressed"));
     }
-
 }
