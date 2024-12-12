@@ -3,10 +3,19 @@ package GUI.extras;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Class to create a rounded label. Used to make the GUI look good and represents some elements.
+ */
 public class RoundedLabel extends JLabel {
 
+    // Attributes
     private final int cornerRadius;
 
+
+    /**
+     * Constructor to create a rounded label.
+     * @param text The text of the label.
+     */
     public RoundedLabel(String text) {
         super(text);
         this.cornerRadius = 40;
@@ -19,6 +28,11 @@ public class RoundedLabel extends JLabel {
         setBackground(new Color(252, 250, 227));
     }
 
+
+    /**
+     * Method to paint the label.
+     * @param g The graphics object.
+     */
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -28,6 +42,11 @@ public class RoundedLabel extends JLabel {
         super.paintComponent(g2d);
     }
 
+
+    /**
+     * Method to paint the border of the label.
+     * @param g The graphics object.
+     */
     @Override
     protected void paintBorder(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;

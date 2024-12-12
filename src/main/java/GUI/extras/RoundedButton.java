@@ -3,10 +3,20 @@ package GUI.extras;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Class to create a rounded button used over all GUI to make it look good.
+ */
 public class RoundedButton extends JButton {
 
+    // Attributes
     private final int cornerRadius;
 
+
+    /**
+     * Constructor to create a rounded button.
+     * @param text The text of the button.
+     * @param cornerRadius The corner radius of the button.
+     */
     public RoundedButton(String text, int cornerRadius) {
         super(text);
         this.cornerRadius = cornerRadius;
@@ -21,6 +31,11 @@ public class RoundedButton extends JButton {
         setFont(new Font("Arial", Font.BOLD, 30));
     }
 
+
+    /**
+     * Method to paint the button.
+     * @param g The graphics object.
+     */
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -32,6 +47,11 @@ public class RoundedButton extends JButton {
         super.paintComponent(g2d);
     }
 
+
+    /**
+     * Method to paint the border of the button.
+     * @param g The graphics object.
+     */
     @Override
     protected void paintBorder(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;

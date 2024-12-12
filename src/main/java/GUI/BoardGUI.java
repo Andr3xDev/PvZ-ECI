@@ -50,14 +50,17 @@ public class BoardGUI extends JFrame implements Runnable {
     private SelectButton potatoButton;
     private SelectButton eciPlantButton;
 
+    // Labels
     private JLabel timerLabel;
     private JLabel brainsLabel;
     private JLabel sunsLabel;
 
+    // Menu
     private JMenuItem open;
     private JMenuItem save;
     private JMenuItem exit;
 
+    // Game
     private final Game game;
     private final String gameMode;
     private final BoardBox[][] boxes;
@@ -74,7 +77,6 @@ public class BoardGUI extends JFrame implements Runnable {
      */
     public BoardGUI(GameAPP app, String gameMode) {
         this.gameMode = gameMode;
-        // Game elements
         this.boxes = new BoardBox[ROWS][COLS];
         prepareElements();
         prepareActions();
@@ -407,6 +409,10 @@ public class BoardGUI extends JFrame implements Runnable {
         }
     }
 
+
+    /**
+     * Prepares the actions of the Plant Select Buttons from the panel.
+     */
     private void prepareActionsZombieSelect() {
         peaButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -435,6 +441,10 @@ public class BoardGUI extends JFrame implements Runnable {
         });
     }
 
+
+    /**
+     * Prepares the actions of the Zombie Select Buttons from the panel if the game mode is pvp.
+     */
     private void prepareActionsPlantSelect() {
         basicButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -524,6 +534,9 @@ public class BoardGUI extends JFrame implements Runnable {
 
     //** Update Elements **//
 
+    /**
+     * Updates the zombie elements of the game.
+     */
     private void updateZombies() {
         for (int i = 0; i < 5; i++) {
             for (int j = 1; j < 11; j++) {
@@ -532,9 +545,17 @@ public class BoardGUI extends JFrame implements Runnable {
         }
     }
 
+
+    /**
+     * Updates the bullet elements of the game.
+     */
     private void updateBullets() {
     }
 
+
+    /**
+     * Updates the economy elements of the game.
+     */
     private void updateEconomy() {
         // brains
         int brains = game.getBrains();
@@ -549,6 +570,9 @@ public class BoardGUI extends JFrame implements Runnable {
 
     //** Paint Elements **//
 
+    /**
+     * Paints the elements of the game, because the thread updates and allow the movement.
+     */
     @Override
     public void run() {
         System.out.println("Starting GUI update thread...");
