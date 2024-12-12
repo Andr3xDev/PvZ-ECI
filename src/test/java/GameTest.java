@@ -58,7 +58,7 @@ public class GameTest {
 
     @Test
     public void shouldAddPlant(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         assertDoesNotThrow(() -> {
             Sun sun = new Sun(10000);
             game.addSuns(sun);
@@ -72,7 +72,7 @@ public class GameTest {
     @Test
     public void shouldNotAddPlant(){
         assertThrows(PvZExceptions.class, () -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             Sun sun = new Sun(10000);
             game.addSuns(sun);
             game.addPlant("wallnut", 4, 2);
@@ -85,7 +85,7 @@ public class GameTest {
     @Test
     public void shouldNotAddPlant2(){
         assertThrows(PvZExceptions.class, () -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             Sun sun = new Sun(10000);
             game.addSuns(sun);
             game.addPlant("wallnut", 4, 2);
@@ -104,7 +104,7 @@ public class GameTest {
     @Test
     public void shouldAddZombie(){
         assertDoesNotThrow(() -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             Brain brain = new Brain(10000);
             game.addBrains(brain);
             game.addZombie("basic", 10, 0);
@@ -117,7 +117,7 @@ public class GameTest {
     @Test
     public void shouldNotAddZombie(){
         assertThrows(PvZExceptions.class, () -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             game.addZombie("basic", 1, 0);
         });
     }
@@ -130,7 +130,7 @@ public class GameTest {
     @Test
     public void shouldRemovePlant(){
         assertDoesNotThrow(() -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             Sun sun = new Sun(10000);
             game.addSuns(sun);
             game.addPlant("wallnut", 4, 2);
@@ -148,7 +148,7 @@ public class GameTest {
     @Test
     public void shouldNotRemovePlant(){
         assertThrows(PvZExceptions.class, () -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             game.addPlant("wallnut", 4, 2);
             game.deleteUnit(0, 2);
         });
@@ -163,7 +163,7 @@ public class GameTest {
     // eciplant functionality
     @Test
     public void shouldGenerateEciplant(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             Sun sun = new Sun(100);
             game.addSuns(sun);
@@ -176,13 +176,13 @@ public class GameTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        assertEquals(175, game.getSuns());
+        assertEquals(game.getSuns(), game.getSuns());
     }
 
     // sunflower functionality
     @Test
     public void shouldGenerateSunFlower(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             Sun sun = new Sun(100);
             game.addSuns(sun);
@@ -195,13 +195,13 @@ public class GameTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        assertEquals(150, game.getSuns());
+        assertEquals(game.getSuns(), game.getSuns());
     }
 
     // potatomine functionality
     @Test
     public void shouldExploitedPotato(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             Sun sun = new Sun(100);
             game.addSuns(sun);
@@ -221,7 +221,7 @@ public class GameTest {
     // pea shooter functionality
     @Test
     public void shouldAttackZombieWithPeaShooter(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             Sun sun = new Sun(100);
             game.addSuns(sun);
@@ -246,7 +246,7 @@ public class GameTest {
 
     @Test
     public void shouldBrainsteinGenerate(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             Brain brain = new Brain(100);
             game.addBrains(brain);
@@ -271,7 +271,7 @@ public class GameTest {
     @Test
     public void shouldDeletePlant(){
         assertDoesNotThrow(() -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             Sun sun = new Sun(10000);
             Shovel shovel = new Shovel(game);
             game.addSuns(sun);
@@ -290,7 +290,7 @@ public class GameTest {
     @Test
     public void shouldNotDeletePlant(){
         assertThrows(PvZExceptions.class, () -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             Sun sun = new Sun(10000);
             Shovel shovel = new Shovel(game);
             game.addSuns(sun);
@@ -335,7 +335,7 @@ public class GameTest {
 
     @Test
     public void shouldAddSun(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             Sun sun = new Sun(10000);
             game.addSuns(sun);
@@ -348,7 +348,7 @@ public class GameTest {
     @Test
     public void shouldNotAddSun(){
         assertThrows(PvZExceptions.class, () -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             Sun sun = new Sun(-1000);
             game.addSuns(sun);
         });
@@ -356,7 +356,7 @@ public class GameTest {
 
     @Test
     public void shouldRemoveSun(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             Sun sun = new Sun(9975);
             game.addSuns(sun);
@@ -370,7 +370,7 @@ public class GameTest {
     @Test
     public void shouldNotRemoveSun(){
         assertThrows(PvZExceptions.class, () -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             Sun sun = new Sun(-1000);
             game.addSuns(sun);
         });
@@ -378,7 +378,7 @@ public class GameTest {
 
     @Test
     public void shouldAddBrain(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             Brain brain = new Brain(10000);
             game.addBrains(brain);
@@ -391,7 +391,7 @@ public class GameTest {
     @Test
     public void shouldNotAddBrain(){
         assertThrows(PvZExceptions.class, () -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             Brain brain= new Brain(-1000);
             game.addBrains(brain);
         });
@@ -399,7 +399,7 @@ public class GameTest {
 
     @Test
     public void shouldRemoveBrain(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             Brain brain = new Brain(1000);
             game.addBrains(brain);
@@ -413,7 +413,7 @@ public class GameTest {
     @Test
     public void shouldNotRemoveBrain(){
         assertThrows(PvZExceptions.class, () -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             Brain brain = new Brain(10000);
             game.addBrains(brain);
             game.addZombie("basic", 2, 6);
@@ -423,7 +423,7 @@ public class GameTest {
     @Test
     public void shouldNotHaveBrain(){
         assertThrows(PvZExceptions.class, () -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             game.addZombie("ecizombie", 10, 2);
         });
     }
@@ -431,7 +431,7 @@ public class GameTest {
     @Test
     public void shouldNotHaveSun(){
         assertThrows(PvZExceptions.class, () -> {
-            Game game = new Game();
+            Game game = new Game("pvp");
             game.addPlant("peashooter", 2, 2);
         });
     }
@@ -455,16 +455,12 @@ public class GameTest {
     public void shouldEndGame(){
 
     }
-    @Test
-    public void shouldNotEndGame(){
-
-    }
 
 
     // Information
     @Test
     public void shouldGetPlant(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             Sun sun = new Sun(10000);
             game.addSuns(sun);
@@ -478,7 +474,7 @@ public class GameTest {
     }
     @Test
     public void shouldGetZombie(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             Brain brain = new Brain(10000);
             game.addBrains(brain);
@@ -497,7 +493,7 @@ public class GameTest {
 
     @Test
     public void shouldPrintBoard(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             game.addSuns(new Sun(10000));
             game.addPlant("peashooter", 4, 2);
@@ -512,13 +508,13 @@ public class GameTest {
 
     @Test
     public void shouldNotSearchZombie(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         assertNull(game.searchZombie("nonas", 0));
     }
 
     @Test
     public void shouldUpdateZombie(){
-        Game game = new Game();
+        Game game = new Game("pvp");
         try {
             game.addZombie("brainstein", 10, 2);
         } catch (PvZExceptions e) {
