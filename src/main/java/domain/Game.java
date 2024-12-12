@@ -3,9 +3,13 @@ package domain;
 import domain.economy.Brain;
 import domain.economy.Sun;
 import domain.plants.*;
+import domain.players.Human;
+import domain.players.Machine;
+import domain.players.Player;
 import domain.zombies.*;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class Game {
 
@@ -15,24 +19,44 @@ public class Game {
     private int brains;
     private int suns;
     private final Bullet[][] bullets;
-    private boolean isActive = true;
+    private final boolean isActive = true;
     private final LawnMower[][] lawnMowers;
-
+    private final ArrayList<Player> players;
 
     //* Constructors *//
 
     /**
      * Constructor for the Game, here we initialize the board and the economy of the game
      */
-    public Game() {
+    public Game(String gameMode) {
+        players = new ArrayList<>();
         lawnMowers = new LawnMower[11][5];
         bullets = new Bullet[11][5];
         unit = new Unit[11][5];
         this.suns = 50;
         this.brains = 50;
+        generateGame(gameMode);
         initializeLawnMowers();
     }
 
+
+    private void generateGame(String gameMode){
+        assert players != null;
+        switch (gameMode){
+            case "pvp" -> {
+                players.add(new Human());
+                players.add(new Human());
+            }
+            case "pvAI" -> {
+                players.add(new Human());
+                players.add(new Machine());
+            }
+            case "AIvsAI" -> {
+                players.add(new Machine());
+                players.add(new Machine());
+            }
+        }
+    }
 
 
     //* Methods *//
@@ -194,19 +218,19 @@ public class Game {
      * Method to update the game status
      */
     public void save(String nameFile)throws PvZExceptions{
-        ObjectOutputStream salida = null;
+        ObjectOutputStream exitFile = null;
         try {
-            salida = new ObjectOutputStream(new FileOutputStream(nameFile));
-            salida.writeObject(this);
-            salida.flush();
-            System.out.println("Partida guardada con éxito. Ruta: " + new File(nameFile).getAbsolutePath());
+            exitFile = new ObjectOutputStream(new FileOutputStream(nameFile));
+            exitFile.writeObject(this);
+            exitFile.flush();
+            System.out.println("Game saved successfully. Path: " + new File(nameFile).getAbsolutePath());
         } catch (IOException e) {
             e.printStackTrace();
             throw new PvZExceptions(PvZExceptions.SAVE_EXCEPTION);
         } finally {
-            if (salida != null) {
+            if (exitFile != null) {
                 try {
-                    salida.close();
+                    exitFile.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -218,16 +242,15 @@ public class Game {
     /**
      * Method to open a game from a file
      */
-    public static Game open(String nameFile) throws PvZExceptions{
-        Game partidaCargada = null;
+    public static void open(String nameFile) throws PvZExceptions{
+        Game loadGame;
         try {
-            ObjectInputStream entrada = new ObjectInputStream(new FileInputStream(nameFile));
-            partidaCargada = (Game) entrada.readObject();
+            ObjectInputStream input = new ObjectInputStream(new FileInputStream(nameFile));
+            loadGame = (Game) input.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
             throw new PvZExceptions(PvZExceptions.OPEN_EXCEPTION);
         }
-        return partidaCargada;
     }
 
 
@@ -278,9 +301,9 @@ public class Game {
      */
     private boolean validatePosition(String unit, int posX, int posY) {
         if (unit.equals("plant")) {
-            return posX >= 1 && posX <= 8;
+            return posX >= 1 && posX <= 8 && posY >= 0 && posY <= 4;
         } else if (unit.equals("zombie")) {
-            return posX >= 9 && posX < 11;
+            return posX >= 9 && posX < 11 && posY >= 0 && posY <= 4;
         }
         return false;
     }

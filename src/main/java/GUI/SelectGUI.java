@@ -170,21 +170,21 @@ public class SelectGUI extends JPanel {
 
         // P1 vs P2 button
         pvpButton.addActionListener(_ -> {
-            BoardGUI board = new BoardGUI(game);
+            BoardGUI board = new BoardGUI(game, "pvp");
             board.setVisible(true);
             game.dispose();
         });
 
         // P1 vs AI button
         pvAIButton.addActionListener(_ -> {
-            BoardGUI board = new BoardGUI(game);
+            BoardGUI board = new BoardGUI(game, "pvAI");
             board.setVisible(true);
             game.dispose();
         });
 
         // AI vs AI button
         AIvAIButton.addActionListener(_ -> {
-            BoardGUI board = new BoardGUI(game);
+            BoardGUI board = new BoardGUI(game , "AIvAI");
             board.setVisible(true);
             game.dispose();
         });

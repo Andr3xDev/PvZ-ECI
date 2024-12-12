@@ -12,7 +12,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.IOException;
+import java.util.Objects;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -50,25 +50,17 @@ public class BoardGUI extends JFrame implements Runnable {
     private SelectButton potatoButton;
     private SelectButton eciPlantButton;
 
-    // Labels
-    private JLabel plantPoints;
     private JLabel timerLabel;
-    private JLabel zombiesPoints;
     private JLabel brainsLabel;
     private JLabel sunsLabel;
 
-    // Menu
-    private JMenuBar menuBar;
-    private JMenu menu;
     private JMenuItem open;
     private JMenuItem save;
     private JMenuItem exit;
 
-    // Game elements
-    private GameAPP app;
-    private Game game;
-    private String gameMode;
-    private BoardBox[][] boxes;
+    private final Game game;
+    private final String gameMode;
+    private final BoardBox[][] boxes;
     private boolean shovelMode;
     private String selectedPlant;
     private String selectedZombie;
@@ -80,12 +72,13 @@ public class BoardGUI extends JFrame implements Runnable {
     /**
      * Constructor, creates the Game's elements and actions.
      */
-    public BoardGUI(GameAPP app) {
-        this.app = app;
+    public BoardGUI(GameAPP app, String gameMode) {
+        this.gameMode = gameMode;
+        // Game elements
         this.boxes = new BoardBox[ROWS][COLS];
         prepareElements();
         prepareActions();
-        game = new Game();
+        game = new Game(gameMode);
         Thread guiThread = new Thread(this);
         guiThread.start();
     }
@@ -112,8 +105,7 @@ public class BoardGUI extends JFrame implements Runnable {
 
         // Prepare all Elements
         prepareElementsBoard();
-        prepareElementsPlayerZombies();
-        prepareElementsPlayerPlants();
+        prepareElementsPlayers();
         prepareElementsInfo();
         prepareElementsOthers();
         prepareElementsMowers();
@@ -139,6 +131,20 @@ public class BoardGUI extends JFrame implements Runnable {
                 screenSize.width / 8
         ));
         add(boardPanel, BorderLayout.CENTER);
+    }
+
+
+    /**
+     * Prepares the elements of the Players, like the plants and zombies depending on the game mode.
+     */
+    private void prepareElementsPlayers() {
+        switch (gameMode) {
+            case "pvp", "AIvAI" -> {
+                prepareElementsPlayerZombies();
+                prepareElementsPlayerPlants();
+            }
+            case "pvAI" -> prepareElementsPlayerPlants();
+        }
     }
 
 
@@ -229,9 +235,9 @@ public class BoardGUI extends JFrame implements Runnable {
         infoPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
 
         // Elements
-        plantPoints = new RoundedLabel("Points: ");
+        JLabel plantPoints = new RoundedLabel("Points: ");
         timerLabel = new RoundedLabel("Time: ");
-        zombiesPoints = new RoundedLabel("Points: ");
+        JLabel zombiesPoints = new RoundedLabel("Points: ");
         infoPanel.add(plantPoints);
         infoPanel.add(timerLabel);
         infoPanel.add(zombiesPoints);
@@ -273,8 +279,9 @@ public class BoardGUI extends JFrame implements Runnable {
      * Prepares the elements of the Menu from ESC key.
      */
     private void prepareElementsMenu() {
-        menuBar = new JMenuBar();
-        menu = new JMenu("Menu");
+        // Menu
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menu = new JMenu("Menu");
         save = new JMenuItem("Save");
         open = new JMenuItem("Load");
         exit = new JMenuItem("Exit");
@@ -300,38 +307,49 @@ public class BoardGUI extends JFrame implements Runnable {
         prepareActionsMenu();
     }
 
+
+    /**
+     * Prepares the actions for the buttons of the Menu.
+     */
     private void prepareActionsMenu() {
         open.addActionListener(
-                new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        try {
-                            OpenAction();
-                        } catch (PvZExceptions ex) {
-                            throw new RuntimeException(ex);
-                        }
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    try {
+                        OpenAction();
+                    } catch (PvZExceptions ex) {
+                        throw new RuntimeException(ex);
                     }
-                });
+                }
+            }
+        );
         save.addActionListener(
-                new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        try {
-                            SaveAction();
-                        } catch (PvZExceptions ex) {
-                            throw new RuntimeException(ex);
-                        }
+            new ActionListener(){
+                public void actionPerformed(ActionEvent e){
+                    try {
+                        SaveAction();
+                    } catch (PvZExceptions ex) {
+                        throw new RuntimeException(ex);
                     }
-                });
+                }
+            }
+        );
         exit.addActionListener(
-                new ActionListener(){
-                    public void actionPerformed(ActionEvent e){
-                        ExitAction();
-                    }
-                });
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    System.exit(0);;
+                }
+            }
+        );
+    }
 
-    }
-    private void ExitAction() {
-        System.exit(0);
-    }
+
+    //** Save and Open Actions **//
+
+    /**
+     * Saves the current game state to a file.
+     * @throws PvZExceptions if the game cannot be saved.
+     */
     private void SaveAction() throws PvZExceptions {
         JFileChooser fileChooser = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("PvZ Save Files (*.PvZ)", "PvZ");
@@ -342,17 +360,22 @@ public class BoardGUI extends JFrame implements Runnable {
             File selectedFile = fileChooser.getSelectedFile();
             String filePath = selectedFile.getAbsolutePath();
 
-            // Asegurarse de que el archivo termine con la extensión .PvZ
+            // Extension check
             if (!filePath.endsWith(".PvZ")) {
                 filePath += ".PvZ";
             }
 
-            // Guardar el juego
+            // Save game
             game.save(filePath);
             JOptionPane.showMessageDialog(null, "Game saved: " + filePath);
         }
     }
 
+
+    /**
+     * Opens a game state from a file.
+     * @throws PvZExceptions if the game cannot be opened.
+     */
     private void OpenAction() throws PvZExceptions {
         JFileChooser fileChooser = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("PvZ Save Files (*.PvZ)", "PvZ");
@@ -362,44 +385,29 @@ public class BoardGUI extends JFrame implements Runnable {
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
 
-            // Cargar el juego
-            game.open(selectedFile.getAbsolutePath());
+            // Load Game
+            Game.open(selectedFile.getAbsolutePath());
             JOptionPane.showMessageDialog(null, "Game loaded: " + selectedFile.getName());
         }
     }
-
-
 
 
     /**
      * Prepares the actions of the Select Buttons from the panels.
      */
     private void prepareActionsSelect() {
-        basicButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                selectedZombie = "basic";
-            }
-        });
-        bucketButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                selectedZombie = "buckethead";
-            }
-        });
-        coneButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                selectedZombie = "conehead";
-            }
-        });
-        brainButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                selectedZombie = "brainstein";
-            }
-        });
-        eciZombieButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                selectedZombie = "ecizombie";
-            }
-        });
+        if (Objects.equals(gameMode, "pvp")) {
+            prepareActionsZombieSelect();
+            prepareActionsPlantSelect();
+        } else if (Objects.equals(gameMode, "pvAI")) {
+            prepareActionsPlantSelect();
+        } else if (Objects.equals(gameMode, "AIvAI")) {
+            prepareActionsZombieSelect();
+            prepareActionsPlantSelect();
+        }
+    }
+
+    private void prepareActionsZombieSelect() {
         peaButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 selectedPlant = "peashooter";
@@ -423,6 +431,34 @@ public class BoardGUI extends JFrame implements Runnable {
         eciPlantButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 selectedPlant = "eciplant";
+            }
+        });
+    }
+
+    private void prepareActionsPlantSelect() {
+        basicButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedZombie = "basic";
+            }
+        });
+        bucketButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedZombie = "buckethead";
+            }
+        });
+        coneButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedZombie = "conehead";
+            }
+        });
+        brainButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedZombie = "brainstein";
+            }
+        });
+        eciZombieButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                selectedZombie = "ecizombie";
             }
         });
     }
