@@ -1,8 +1,13 @@
 package domain.plants;
+
 import domain.Game;
 import domain.PvZExceptions;
 import domain.zombies.Zombie;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -12,13 +17,13 @@ import java.util.concurrent.TimeUnit;
  * It is a plant that explodes when a zombie steps on it after a certain amount of time.
  * It costs 25 suns and has 100 life points.
  */
-public class PotatoMine extends Plant {
+public class PotatoMine extends Plant implements Serializable {
 
     // Attributes
     private boolean isActive;
     private static final String name = "potatomine";
     private static final int ACTIVATION_DELAY = 14;
-
+    private transient ScheduledExecutorService scheduler;
 
     // Constructor
 
@@ -39,15 +44,13 @@ public class PotatoMine extends Plant {
         activate();
     }
 
-
     // Methods
 
     /**
      * Activates the PotatoMine after a certain amount of time.
      */
     public void activate() {
-        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-
+        scheduler = Executors.newScheduledThreadPool(1);
         scheduler.schedule(() -> {
             this.isActive = true;
             System.out.println("Activated!");
@@ -81,6 +84,9 @@ public class PotatoMine extends Plant {
     public void die() {
         super.die();
         isActive = false;
+        if (scheduler != null && !scheduler.isShutdown()) {
+            scheduler.shutdownNow();
+        }
     }
 
     /**
@@ -95,5 +101,27 @@ public class PotatoMine extends Plant {
         } else {
             super.takeDamage(dmg);
         }
+    }
+
+    /**
+     * Custom serialization method to handle transient fields.
+     *
+     * @param out the ObjectOutputStream
+     * @throws IOException if an I/O error occurs
+     */
+    private void writeObject(ObjectOutputStream out) throws IOException {
+        out.defaultWriteObject();
+    }
+
+    /**
+     * Custom deserialization method to handle transient fields.
+     *
+     * @param in the ObjectInputStream
+     * @throws IOException if an I/O error occurs
+     * @throws ClassNotFoundException if the class of a serialized object could not be found
+     */
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+        in.defaultReadObject();
+        activate();
     }
 }

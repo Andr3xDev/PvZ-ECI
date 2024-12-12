@@ -1,9 +1,11 @@
 package domain;
 
+import java.io.Serializable;
+
 /**
  * Interface for all units in the game.
  */
-public interface Unit {
+public interface Unit extends Serializable {
 
     int getLife();
     int getDamage();

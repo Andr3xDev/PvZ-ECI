@@ -3,6 +3,7 @@ package domain.zombies;
 import domain.Game;
 import domain.POOmBas;
 
+import java.io.Serializable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -12,11 +13,13 @@ import java.util.concurrent.TimeUnit;
  * It costs 250 sun points, has 200 life points and deals 50 damage points.
  * It's the basic zombie but throws POOmBas.
  */
-public class ECIZombie extends Zombie {
+public class ECIZombie extends Zombie implements Serializable {
 
     // Attributes
     private static final String name = "ecizombie";
-    private ScheduledExecutorService scheduler;
+    private transient ScheduledExecutorService scheduler;
+    private transient Thread bulletThread;  // This is already transient
+
 
 
     // Constructor
@@ -46,7 +49,7 @@ public class ECIZombie extends Zombie {
     @Override
     protected void attack() {
         POOmBas poombas = new POOmBas(this.damage, this.positionX, this.positionY, this.game);
-        Thread bulletThread = new Thread(poombas);
+        bulletThread = new Thread(poombas);
         bulletThread.start();
     }
 

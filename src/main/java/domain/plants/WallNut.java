@@ -2,11 +2,13 @@ package domain.plants;
 
 import domain.Game;
 
+import java.io.Serializable;
+
 /**
  * WallNut is a plant that has 4000 life points. It is a defensive plant.
  * It costs 50 suns and has 4000 life points, does not have any special abilities.
  */
-public class WallNut extends Plant {
+public class WallNut extends Plant implements Serializable {
 
     // Attributes
     private static final String name = "wallnut";

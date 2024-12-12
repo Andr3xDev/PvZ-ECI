@@ -5,7 +5,9 @@ import domain.economy.Sun;
 import domain.plants.*;
 import domain.zombies.Basic;
 
-public class gameTest {
+import java.io.Serializable;
+
+public class gameTest implements Serializable {
     public static void main(String[] args) {
         Test01();
         //Test02();

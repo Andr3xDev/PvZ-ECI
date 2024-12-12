@@ -68,6 +68,8 @@ public class BoardGUI extends JFrame implements Runnable {
     private boolean shovelMode;
     private String selectedPlant;
     private String selectedZombie;
+    private transient Thread guiThread;
+
 
 
 
@@ -83,7 +85,7 @@ public class BoardGUI extends JFrame implements Runnable {
         this.boxes = new BoardBox[ROWS][COLS];
         prepareElements();
         prepareActions();
-        Thread guiThread = new Thread(this);
+        guiThread = new Thread(this);
         guiThread.start();
     }
 

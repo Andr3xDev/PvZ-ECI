@@ -2,11 +2,13 @@ package domain;
 
 import domain.zombies.Zombie;
 
+import java.io.Serializable;
+
 /**
  * Class that represents a Pea bullet
  * It implements the Bullet interface and the Runnable interface
  */
-public class Pea implements Bullet,Runnable {
+public class Pea implements Bullet,Runnable, Serializable {
 
     // Attributes
     private final int damage;

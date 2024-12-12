@@ -2,13 +2,15 @@ package domain;
 
 import domain.plants.Plant;
 
+import java.io.Serializable;
+
 /**
  * Class that represents the POOmBas bullet.
  * It implements the Bullet interface and the Runnable interface.
  * It has the attributes damage, posX, posY, board and isActive.
  * It has the methods run and move.
  */
-public class POOmBas implements Bullet,Runnable{
+public class POOmBas implements Bullet,Runnable, Serializable {
 
     // Attributes
     private int damage;

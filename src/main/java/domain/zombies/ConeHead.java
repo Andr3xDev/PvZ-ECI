@@ -2,12 +2,14 @@ package domain.zombies;
 
 import domain.Game;
 
+import java.io.Serializable;
+
 /**
  * Represents a ConeHead zombie in the game.
  * It costs 125 sun points, has 370 life points and deals 100 damage points.
  * It's the basic zombie with a cone on its head.
  */
-public class ConeHead extends Zombie {
+public class ConeHead extends Zombie implements Serializable {
 
     // Attributes
     private static final String name = "conehead";

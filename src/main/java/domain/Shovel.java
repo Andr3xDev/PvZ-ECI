@@ -1,9 +1,11 @@
 package domain;
 
+import java.io.Serializable;
+
 /**
  * This class is used to delete a plant from the game by the player.
  */
-public class Shovel {
+public class Shovel implements Serializable {
 
     // Attributes
     private final Game game;

@@ -2,11 +2,13 @@ package domain.zombies;
 
 import domain.Game;
 
+import java.io.Serializable;
+
 /**
  * BucketHead is a zombie that has a bucket on its head. It has 1100 life points and deals 100 damage.
  * It costs 200 suns.
  */
-public class BucketHead extends Zombie {
+public class BucketHead extends Zombie implements Serializable {
 
     // Attributes
     private static final String name = "buckethead";

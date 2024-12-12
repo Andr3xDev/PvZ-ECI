@@ -2,12 +2,14 @@ package domain.zombies;
 
 import domain.Game;
 
+import java.io.Serializable;
+
 /**
  * Class to represent a basic zombie.
  * It costs 50 sun points, has 100 life points and does 100 damage points.
  * It moves 1 cell per turn, nothing else.
  */
-public class Basic extends Zombie {
+public class Basic extends Zombie implements Serializable {
 
     // Attributes
     private static final String name = "basic";

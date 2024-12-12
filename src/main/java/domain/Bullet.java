@@ -1,10 +1,12 @@
 package domain;
 
+import java.io.Serializable;
+
 /**
  * Represents a bullet in the game. It's an interface bullet class.
  * It has a position X and a position Y.
  */
-public interface Bullet {
+public interface Bullet extends Serializable {
 
     // Methods
 

@@ -1,4 +1,12 @@
 package domain.players;
 
-public class Human implements Player{
+import domain.Game;
+
+import java.io.Serializable;
+
+public class Human implements Player, Serializable {
+    @Override
+    public void makeMove(Game game) {
+
+    }
 }

@@ -4,15 +4,18 @@ import domain.Game;
 import domain.PvZExceptions;
 import domain.economy.Sun;
 
+import java.io.Serializable;
+
 /**
  * Sunflower is a plant that generates suns every 3 seconds. It is a passive plant.
  * It costs 50 suns and has 300 life points.
  */
-public class Sunflower extends Plant implements Runnable {
+public class Sunflower extends Plant implements Runnable, Serializable {
 
     // Attributes
     private static final String name = "sunflower";
     private boolean isActive = true;
+    private transient Thread thread;
 
 
     // Constructor
@@ -31,7 +34,7 @@ public class Sunflower extends Plant implements Runnable {
         this.positionY = y;
         this.positionX = x;
 
-        Thread thread = new Thread(this);
+        thread = new Thread(this);
         thread.start();
     }
 

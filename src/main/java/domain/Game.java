@@ -51,11 +51,11 @@ public class Game {
             }
             case "pvAI" -> {
                 players.add(new Human());
-                players.add(new Machine());
+                players.add(new Machine(this));
             }
             case "AIvAI" -> {
-                players.add(new Machine());
-                players.add(new Machine());
+                players.add(new Machine(this));
+                players.add(new Machine(this));
             }
         }
     }

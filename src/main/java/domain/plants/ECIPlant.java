@@ -4,16 +4,20 @@ import domain.Game;
 import domain.PvZExceptions;
 import domain.economy.Sun;
 
+import java.io.Serializable;
+
 /**
  * ECIPlant is a plant that generates suns every 3 seconds.
  * It costs 75 suns and has 150 life points.
  * It does not attack zombies or do any move.
  */
-public class ECIPlant extends Plant implements Runnable{
+public class ECIPlant extends Plant implements Runnable, Serializable {
 
     // Attributes
     private static final String name = "eciplant";
     private boolean isActive = true;
+    private transient Thread thread;
+
 
 
     // Constructor
@@ -32,7 +36,7 @@ public class ECIPlant extends Plant implements Runnable{
         this.positionY = y;
         this.positionX = x;
 
-        Thread thread = new Thread(this);
+        thread = new Thread(this);
         thread.start();
     }
 

@@ -3,11 +3,13 @@ package domain.plants;
 import domain.Game;
 import domain.Unit;
 
+import java.io.Serializable;
+
 /**
  * This class represents the Plant class.
  * It is an abstract class that represents all plants in the game.
  */
-public abstract class Plant implements Unit {
+public abstract class Plant implements Unit, Serializable {
 
     // Attributes
     private final String name;

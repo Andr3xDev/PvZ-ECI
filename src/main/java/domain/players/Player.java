@@ -1,4 +1,7 @@
 package domain.players;
 
-public interface Player {
+import domain.Game;
+
+public interface Player{
+    public void makeMove(Game game);
 }

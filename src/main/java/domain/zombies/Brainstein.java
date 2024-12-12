@@ -4,12 +4,14 @@ import domain.PvZExceptions;
 import domain.economy.Brain;
 import domain.Game;
 
+import java.io.Serializable;
+
 /**
  * Class that represents the Brainstein zombie.
  * This costs 50 suns and has 300 life points.
  * It moves until the start of the grass and keep the position generating brains.
  */
-public class Brainstein extends Zombie implements Runnable{
+public class Brainstein extends Zombie implements Runnable, Serializable {
 
     // Attributes
     private static final String name = "brainstein";

@@ -5,12 +5,14 @@ import domain.PvZExceptions;
 import domain.Unit;
 import domain.plants.Plant;
 
+import java.io.Serializable;
+
 /**
  * Represents a zombie in the game.
  * It has a name, life points, damage points, cost, position X, position Y and a game.
  * It's the abstract zombie class.
  */
-public abstract class Zombie implements Unit, Runnable {
+public abstract class Zombie implements Unit, Runnable, Serializable {
 
     // Attributes
     private String name;
@@ -21,6 +23,7 @@ public abstract class Zombie implements Unit, Runnable {
     protected int positionY;
     protected Game game;
     private boolean isActive = true;
+    private transient Thread thread;
 
 
     // Constructor
@@ -32,7 +35,7 @@ public abstract class Zombie implements Unit, Runnable {
     public Zombie(String name) {
         this.name = name;
 
-        Thread thread = new Thread(this);
+        thread = new Thread(this);
         thread.start();
     }
 
