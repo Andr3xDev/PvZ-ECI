@@ -5,6 +5,7 @@ import domain.PvZExceptions;
 import domain.economy.Sun;
 
 import java.io.Serializable;
+import java.util.logging.Logger;
 
 /**
  * ECIPlant is a plant that generates suns every 3 seconds.
@@ -17,6 +18,8 @@ public class ECIPlant extends Plant implements Runnable, Serializable {
     private static final String name = "eciplant";
     private boolean isActive = true;
     private transient Thread thread;
+    private static final Logger logger = Logger.getLogger(Game.class.getName());
+
 
 
 
@@ -50,6 +53,7 @@ public class ECIPlant extends Plant implements Runnable, Serializable {
     public void generateSun () throws PvZExceptions {
         Sun sun = new Sun(50);
         this.game.addSuns(sun);
+        logger.info("sol generado");
     }
 
     /**

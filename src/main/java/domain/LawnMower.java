@@ -2,6 +2,8 @@ package domain;
 
 import domain.zombies.Zombie;
 
+import java.util.logging.Logger;
+
 /**
  * Class that represents the LawnMower object.
  * It is used to kill all the zombies in a row when they touch this.
@@ -15,6 +17,8 @@ public class LawnMower implements Runnable {
     private boolean isActive = false;
     boolean waitingToActivate = false;
     private Thread thread;
+    private static final Logger logger = Logger.getLogger(Game.class.getName());
+
 
     // Constructor
     public LawnMower(Game game, int positionY) {
@@ -31,6 +35,7 @@ public class LawnMower implements Runnable {
      */
     public void activate() {
         isActive = true;
+        logger.info("LawnMower activado en la fila: " + positionY);
     }
 
     /**

@@ -5,6 +5,7 @@ import domain.PvZExceptions;
 import domain.economy.Sun;
 
 import java.io.Serializable;
+import java.util.logging.Logger;
 
 /**
  * Sunflower is a plant that generates suns every 3 seconds. It is a passive plant.
@@ -16,6 +17,8 @@ public class Sunflower extends Plant implements Runnable, Serializable {
     private static final String name = "sunflower";
     private boolean isActive = true;
     private transient Thread thread;
+    private static final Logger logger = Logger.getLogger(Game.class.getName());
+
 
 
     // Constructor
@@ -48,6 +51,7 @@ public class Sunflower extends Plant implements Runnable, Serializable {
     public void generateSun() throws PvZExceptions {
         Sun sun = new Sun(25);
         this.game.addSuns(sun);
+        logger.info("sol generado");
     }
 
     /**

@@ -1,0 +1,262 @@
+dic 12, 2024 2:20:43 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+dic 12, 2024 2:20:43 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:20:44 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 4)
+dic 12, 2024 2:20:44 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 4)
+dic 12, 2024 2:20:45 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 4)
+dic 12, 2024 2:20:45 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: basic
+dic 12, 2024 2:20:45 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:20:46 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+dic 12, 2024 2:20:46 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+dic 12, 2024 2:20:46 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:20:47 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 4)
+dic 12, 2024 2:20:47 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+dic 12, 2024 2:20:47 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:20:48 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 2)
+dic 12, 2024 2:20:48 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 2)
+dic 12, 2024 2:20:48 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:20:49 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 0)
+dic 12, 2024 2:20:49 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+dic 12, 2024 2:20:49 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:20:50 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 2)
+dic 12, 2024 2:20:50 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 2)
+dic 12, 2024 2:20:51 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 0)
+dic 12, 2024 2:20:51 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 0)
+dic 12, 2024 2:20:52 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (8, 0)
+dic 12, 2024 2:20:52 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 0)
+dic 12, 2024 2:20:52 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:20:53 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 4)
+dic 12, 2024 2:20:53 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+dic 12, 2024 2:20:53 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:20:54 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (8, 0)
+dic 12, 2024 2:20:54 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 0)
+dic 12, 2024 2:20:54 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:25:01 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+dic 12, 2024 2:25:01 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 3)
+dic 12, 2024 2:25:10 P. M. domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+dic 12, 2024 2:25:10 P. M. domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 0)
+dic 12, 2024 2:25:15 P. M. domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 4)
+dic 12, 2024 2:25:15 P. M. domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 4)
+dic 12, 2024 2:25:28 P. M. domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (2, 3)
+dic 12, 2024 2:25:28 P. M. domain.Game addPlant
+INFO: Planta añadida exitosamente: peashooter en (2, 3)
+dic 12, 2024 2:25:38 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 1)
+dic 12, 2024 2:25:38 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (10, 1)
+dic 12, 2024 2:25:42 P. M. domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (2, 1)
+dic 12, 2024 2:25:42 P. M. domain.Game addPlant
+INFO: Planta añadida exitosamente: peashooter en (2, 1)
+dic 12, 2024 2:25:43 P. M. domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 1)
+dic 12, 2024 2:25:43 P. M. domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (4, 1)
+dic 12, 2024 2:28:49 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 4)
+dic 12, 2024 2:28:49 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:28:50 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 1)
+dic 12, 2024 2:28:50 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 1)
+dic 12, 2024 2:28:51 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 1)
+dic 12, 2024 2:28:51 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+dic 12, 2024 2:28:51 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:28:52 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 0)
+dic 12, 2024 2:28:52 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+dic 12, 2024 2:28:52 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:28:53 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (8, 1)
+dic 12, 2024 2:28:53 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 1)
+dic 12, 2024 2:28:53 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:28:54 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (8, 1)
+dic 12, 2024 2:28:54 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 1)
+dic 12, 2024 2:28:54 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:28:55 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 4)
+dic 12, 2024 2:28:55 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+dic 12, 2024 2:28:55 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:28:56 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+dic 12, 2024 2:28:56 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+dic 12, 2024 2:28:56 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:28:57 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 2)
+dic 12, 2024 2:28:57 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 2)
+dic 12, 2024 2:28:57 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:28:58 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 0)
+dic 12, 2024 2:28:58 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 0)
+dic 12, 2024 2:28:59 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 1)
+dic 12, 2024 2:28:59 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+dic 12, 2024 2:28:59 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:29:00 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 1)
+dic 12, 2024 2:29:00 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 1)
+dic 12, 2024 2:29:01 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 2)
+dic 12, 2024 2:29:01 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+dic 12, 2024 2:29:01 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 2:29:02 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+dic 12, 2024 2:29:02 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 3)
+dic 12, 2024 2:29:03 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 2)
+dic 12, 2024 2:29:03 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 2)
+dic 12, 2024 2:29:04 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 4)
+dic 12, 2024 2:29:04 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 4)
+dic 12, 2024 2:29:05 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (8, 1)
+dic 12, 2024 2:29:05 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 1)
+dic 12, 2024 2:29:05 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:29:06 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 1)
+dic 12, 2024 2:29:06 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 1)
+dic 12, 2024 2:29:07 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 1)
+dic 12, 2024 2:29:07 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 1)
+dic 12, 2024 2:29:08 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 0)
+dic 12, 2024 2:29:08 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 0)
+dic 12, 2024 2:29:09 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (8, 0)
+dic 12, 2024 2:29:09 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 0)
+dic 12, 2024 2:29:09 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:29:10 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 3)
+dic 12, 2024 2:29:10 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (10, 3)
+dic 12, 2024 2:29:11 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 1)
+dic 12, 2024 2:29:11 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 1)
+dic 12, 2024 2:29:12 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 0)
+dic 12, 2024 2:29:12 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 0)
+dic 12, 2024 2:29:12 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:29:13 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 3)
+dic 12, 2024 2:29:13 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 3)
+dic 12, 2024 2:29:14 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 3)
+dic 12, 2024 2:29:14 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 3)
+dic 12, 2024 2:29:15 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (8, 3)
+dic 12, 2024 2:29:15 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+dic 12, 2024 2:29:15 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:29:16 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (8, 3)
+dic 12, 2024 2:29:16 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+dic 12, 2024 2:29:16 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:29:16 P. M. domain.LawnMower activate
+INFO: LawnMower activado en la fila: 1
+dic 12, 2024 2:29:17 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 4)
+dic 12, 2024 2:29:17 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 4)
+dic 12, 2024 2:29:18 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 4)
+dic 12, 2024 2:29:18 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 4)
+dic 12, 2024 2:29:19 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 2)
+dic 12, 2024 2:29:19 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 2)
+dic 12, 2024 2:29:20 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (8, 4)
+dic 12, 2024 2:29:20 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 4)
+dic 12, 2024 2:29:20 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 2:29:21 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 2)
+dic 12, 2024 2:29:21 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (10, 2)
+dic 12, 2024 2:29:22 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (8, 1)
+dic 12, 2024 2:29:22 P. M. domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 1)
+dic 12, 2024 2:29:22 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie

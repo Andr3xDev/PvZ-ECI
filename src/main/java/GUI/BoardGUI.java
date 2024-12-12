@@ -592,7 +592,6 @@ public class BoardGUI extends JFrame implements Runnable {
      */
     private void updateBoard() {
         updateZombies();
-        game.printBoard();
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLS; j++) {
 

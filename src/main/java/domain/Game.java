@@ -10,6 +10,9 @@ import domain.zombies.*;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class Game {
 
@@ -23,6 +26,8 @@ public class Game {
     private final LawnMower[][] lawnMowers;
     private final ArrayList<Player> players;
     private String gameMode;
+    private static final Logger logger = Logger.getLogger(Game.class.getName());
+
 
     //* Constructors *//
 
@@ -39,6 +44,13 @@ public class Game {
         this.brains = 50;
         generatePlayers(gameMode);
         initializeLawnMowers();
+        try {
+            FileHandler fileHandler = new FileHandler("game.log", true); // true para append
+            fileHandler.setFormatter(new SimpleFormatter());
+            logger.addHandler(fileHandler);
+        } catch (IOException e) {
+            logger.severe("No se pudo configurar el FileHandler para el logger.");
+        }
     }
 
 
@@ -72,18 +84,27 @@ public class Game {
      * a unit in the cell or if there are not enough suns to buy the plant
      */
     public void addPlant(String plantName, int posX, int posY) throws PvZExceptions {
-        if (validatePosition("plant", posX, posY)) {
-            isPositionEmpty(posX,posY);
-            Plant plant = searchPlant(plantName,posX,posY);
-            if (plant.getCost() <= this.suns) {
-                unit[posX][posY] = plant;
-                suns -= plant.getCost();
-            }else {
-                plant.die();
-                throw new PvZExceptions(PvZExceptions.NO_SUNS_EXCEPTION);
+        logger.info("Intentando añadir una planta: " + plantName + " en (" + posX + ", " + posY + ")");
+        try {
+            if (validatePosition("plant", posX, posY)) {
+                isPositionEmpty(posX, posY);
+                Plant plant = searchPlant(plantName, posX, posY);
+                if (plant.getCost() <= this.suns) {
+                    unit[posX][posY] = plant;
+                    suns -= plant.getCost();
+                    logger.info("Planta añadida exitosamente: " + plantName + " en (" + posX + ", " + posY + ")");
+                } else {
+                    logger.warning("No hay suficientes soles para añadir la planta: " + plantName);
+                    plant.die();
+                    throw new PvZExceptions(PvZExceptions.NO_SUNS_EXCEPTION);
+                }
+            } else {
+                logger.warning("Posición inválida para la planta: (" + posX + ", " + posY + ")");
+                throw new PvZExceptions(PvZExceptions.PLANT_OUT_RANGE_EXCEPTION);
             }
-        } else {
-            throw new PvZExceptions(PvZExceptions.PLANT_OUT_RANGE_EXCEPTION);
+        } catch (PvZExceptions e) {
+            logger.severe("Error al añadir planta: " + e.getMessage());
+            throw e;
         }
     }
 
@@ -96,17 +117,26 @@ public class Game {
      * @throws PvZExceptions if the position is out of range for the zombie or if there is already
      */
     public void addZombie(String zombieName, int posX, int posY) throws PvZExceptions {
-        if (validatePosition("zombie", posX, posY)) {
-            Zombie zombie = searchZombie(zombieName,posY);
-            if (zombie.getCost() <= this.brains) {
-                unit[posX][posY] = zombie;
-                brains -= zombie.getCost();
-            }else{
-                zombie.die();
-                throw new PvZExceptions(PvZExceptions.NO_BRAINS_EXCEPTION);
+        logger.info("Intentando añadir un zombie: " + zombieName + " en (" + posX + ", " + posY + ")");
+        try {
+            if (validatePosition("zombie", posX, posY)) {
+                Zombie zombie = searchZombie(zombieName, posY);
+                if (zombie.getCost() <= this.brains) {
+                    unit[posX][posY] = zombie;
+                    brains -= zombie.getCost();
+                    logger.info("Zombie añadido exitosamente: " + zombieName + " en (" + posX + ", " + posY + ")");
+                } else {
+                    zombie.die();
+                    logger.warning("No hay suficientes cerebros para añadir el zombie: " + zombieName);
+                    throw new PvZExceptions(PvZExceptions.NO_BRAINS_EXCEPTION);
+                }
+            } else {
+                logger.warning("Posición inválida para el zombie: (" + posX + ", " + posY + ")");
+                throw new PvZExceptions(PvZExceptions.ZOMBIE_OUT_RANGE_EXCEPTION);
             }
-        } else {
-            throw new PvZExceptions(PvZExceptions.ZOMBIE_OUT_RANGE_EXCEPTION);
+        } catch (PvZExceptions e) {
+            logger.severe("Error al añadir zombie: " + e.getMessage());
+            throw e; // Re-lanzar la excepción para manejarla en el nivel superior
         }
     }
 
@@ -117,10 +147,20 @@ public class Game {
      * @param posY y position of the plant
      */
     public void deleteUnit(int posX, int posY) throws PvZExceptions {
-        if (unit[posX][posY] != null){
-            unit[posX][posY] = null;
-        } else {
-            throw new PvZExceptions(PvZExceptions.NO_UNIT_EXCEPTION);
+        try {
+            if (unit[posX][posY] != null) {
+                unit[posX][posY] = null;
+                logger.info("Unidad eliminada exitosamente en la posición (" + posX + ", " + posY + ")");
+            } else {
+                logger.warning("No hay unidad para eliminar en la posición (" + posX + ", " + posY + ")");
+                throw new PvZExceptions(PvZExceptions.NO_UNIT_EXCEPTION);
+            }
+        } catch (PvZExceptions e) {
+            logger.severe("Error al eliminar unidad: " + e.getMessage());
+            throw e; // Re-lanzar la excepción para que sea manejada a nivel superior
+        } catch (ArrayIndexOutOfBoundsException e) {
+            logger.severe("Posición fuera de los límites del tablero: (" + posX + ", " + posY + ")");
+            throw new PvZExceptions("Posición fuera de los límites del tablero.");
         }
     }
 
