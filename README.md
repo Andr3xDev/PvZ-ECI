@@ -40,7 +40,7 @@ This project focuses on the use of the Object-Oriented Programming (OOP) paradig
 This project was developed as part of the Object-Oriented Programming (POOB) course at the Escuela Colombiana de Ingeniería Julio Garavito (ECI).
 
 > [!TIP]
-> If you want precise information about the different elements and their types, look at the documentation/Informe.md.
+> If you want precise information about the different elements and their types, look at the documentation folder.
 
 </br>
 
@@ -111,19 +111,19 @@ Sprints 3:
   - [x] Jacoco analisis
   - [x] Add exceptions
 - [ ] Add persistence
-  - [ ] Save games
+  - [x] Save games
   - [ ] Load games
-- [ ] Add players
-  - [ ] IA
+- [x] Add players
+  - [x] IA
   - [x] Human
 
 Sprints 4:
 - [ ] Improve board GUI elements
   - [ ] Fluid animations
   - [ ] Better images
-- [ ] Improve IA behavior
-  - [ ] Dificult 2
-- [ ] General polish
+- [x] Improve IA behavior
+  - [x] Dificult 2
+- [x] General polish
   
 
 
