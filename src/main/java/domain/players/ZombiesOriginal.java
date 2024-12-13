@@ -17,15 +17,26 @@ public class ZombiesOriginal extends Machine {
 
     @Override
     public void makeMove(Game game) {
-        if (cantZombies % 5 == 0) {
+        if (cantZombies == 0 || cantZombies % 5 == 0) {
             try {
                 Random rand = new Random();
                 int row = rand.nextInt(5);
                 game.addZombie("brainstein", 10, row);
+                cantZombies++;
             } catch (PvZExceptions e) {
-                throw new RuntimeException(e);
+                System.out.println(e.getMessage());
+            }
+        } else {
+            try {
+                Random rand = new Random();
+                int row = rand.nextInt(5);
+                int column = rand.nextInt(2) + 9;
+                String zombieType = zombieTypes[rand.nextInt(zombieTypes.length)];
+                game.addZombie(zombieType, column, row);
+                cantZombies++;
+            } catch (PvZExceptions e) {
+                System.out.println("Error to put zombie: " + e.getMessage());
             }
         }
-        // Select a random zombie type
     }
 }
