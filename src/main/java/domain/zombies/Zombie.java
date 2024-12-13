@@ -76,6 +76,8 @@ public abstract class Zombie implements Unit, Runnable, Serializable {
                 positionX--;
                 game.getUnit()[positionX][positionY] = this;
             }
+        } else if (isActive && positionX == 0) {
+            game.setGameOver();
         }
     }
 

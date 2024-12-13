@@ -260,3 +260,139 @@ dic 12, 2024 2:29:22 P. M. domain.Game addZombie
 WARNING: Posición inválida para el zombie: (8, 1)
 dic 12, 2024 2:29:22 P. M. domain.Game addZombie
 SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+dic 12, 2024 6:02:07 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+dic 12, 2024 6:02:07 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 3)
+dic 12, 2024 6:02:15 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+dic 12, 2024 6:02:15 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)
+dic 12, 2024 6:02:42 P. M. domain.LawnMower activate
+INFO: LawnMower activado en la fila: 0
+dic 12, 2024 6:02:53 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+dic 12, 2024 6:02:53 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)
+dic 12, 2024 6:02:53 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+dic 12, 2024 6:02:53 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)
+dic 12, 2024 6:03:25 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:26 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:28 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:29 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:32 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:32 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:35 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:35 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:38 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:38 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:41 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:41 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:44 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:44 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:47 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:47 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:50 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:50 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:53 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:53 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:56 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:56 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:59 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:03:59 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:04:02 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:04:02 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:04:05 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 6:04:05 P. M. domain.Game setGameOver
+INFO: Game over
+dic 12, 2024 7:31:35 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+dic 12, 2024 7:31:35 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 3)
+dic 12, 2024 7:31:41 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+dic 12, 2024 7:31:41 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)
+dic 12, 2024 7:31:45 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 1)
+dic 12, 2024 7:31:45 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 1)
+dic 12, 2024 7:31:46 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 2)
+dic 12, 2024 7:31:46 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 2)
+dic 12, 2024 7:32:07 P. M. domain.LawnMower activate
+INFO: LawnMower activado en la fila: 0
+dic 12, 2024 7:32:12 P. M. domain.LawnMower activate
+INFO: LawnMower activado en la fila: 1
+dic 12, 2024 7:32:13 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+dic 12, 2024 7:32:13 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)
+dic 12, 2024 7:32:13 P. M. domain.LawnMower activate
+INFO: LawnMower activado en la fila: 2
+dic 12, 2024 7:32:20 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+dic 12, 2024 7:32:20 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)
+dic 12, 2024 7:39:10 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+dic 12, 2024 7:39:10 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 3)
+dic 12, 2024 7:39:10 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+dic 12, 2024 7:39:10 P. M. domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+dic 12, 2024 7:39:10 P. M. domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+dic 12, 2024 7:39:17 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+dic 12, 2024 7:39:17 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)
+dic 12, 2024 7:39:18 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 1)
+dic 12, 2024 7:39:18 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 1)
+dic 12, 2024 7:39:19 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 2)
+dic 12, 2024 7:39:19 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 2)
+dic 12, 2024 7:39:44 P. M. domain.LawnMower activate
+INFO: LawnMower activado en la fila: 0
+dic 12, 2024 7:39:44 P. M. domain.LawnMower activate
+INFO: LawnMower activado en la fila: 1
+dic 12, 2024 7:39:45 P. M. domain.LawnMower activate
+INFO: LawnMower activado en la fila: 2
+dic 12, 2024 7:39:58 P. M. domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+dic 12, 2024 7:39:58 P. M. domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)

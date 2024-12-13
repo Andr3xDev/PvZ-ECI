@@ -579,12 +579,41 @@ public class BoardGUI extends JFrame implements Runnable {
                 game.updateZombies();
                 updateEconomy();
                 SwingUtilities.invokeLater(this::updateBoard);
-                //updateBoard();
+
+                // Verificar si el juego ha terminado
+                if (game.getGameOver()) {
+                    // Mostrar mensaje de Game Over
+                    scheduler.shutdown();
+                    SwingUtilities.invokeLater(() -> showGameOverDialog());
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }, 0, 1000, TimeUnit.MILLISECONDS);
     }
+
+    /**
+     * Muestra un cuadro de diálogo de "Game Over" con opciones.
+     */
+    private void showGameOverDialog() {
+        int option = JOptionPane.showOptionDialog(
+                this,
+                "Game Over!\n¿Deseas salir del juego?",
+                "Game Over",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                new String[]{"Salir", "Cancelar"},
+                "Salir"
+        );
+
+        // Acción según la opción seleccionada
+        if (option == JOptionPane.YES_OPTION) {
+            app.setVisible(true); // Vuelve a la pantalla principal si es necesario
+            dispose(); // Cierra la ventana actual
+        }
+    }
+
 
 
     /**

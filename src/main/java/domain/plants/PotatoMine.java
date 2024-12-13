@@ -11,6 +11,7 @@ import java.io.Serializable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 /**
  * Represents a PotatoMine in the game.
@@ -24,6 +25,8 @@ public class PotatoMine extends Plant implements Serializable {
     private static final String name = "potatomine";
     private static final int ACTIVATION_DELAY = 14;
     private transient ScheduledExecutorService scheduler;
+    private static final Logger logger = Logger.getLogger(Game.class.getName());
+
 
     // Constructor
 
@@ -53,7 +56,7 @@ public class PotatoMine extends Plant implements Serializable {
         scheduler = Executors.newScheduledThreadPool(1);
         scheduler.schedule(() -> {
             this.isActive = true;
-            System.out.println("Activated!");
+            logger.info("Potato Mine activated!");
             scheduler.shutdown();
         }, ACTIVATION_DELAY, TimeUnit.SECONDS);
     }
@@ -68,7 +71,7 @@ public class PotatoMine extends Plant implements Serializable {
             if (game.getUnit()[zombieX][zombieY] instanceof Zombie) {
                 Zombie zombie = (Zombie) game.getUnit()[zombieX][zombieY];
                 zombie.takeDamage(9999);
-                System.out.println("POW :D");
+                logger.info("PotatoMine exploded :D");
             }
             this.game.deleteUnit(this.positionX, this.positionY);
             this.life = 0;

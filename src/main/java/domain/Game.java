@@ -26,6 +26,7 @@ public class Game {
     private final LawnMower[][] lawnMowers;
     private final ArrayList<Player> players;
     private String gameMode;
+    private boolean gameOver;
     private static final Logger logger = Logger.getLogger(Game.class.getName());
 
 
@@ -37,6 +38,7 @@ public class Game {
     public Game(String gameMode) {
         players = new ArrayList<>();
         this.gameMode = gameMode;
+        this.gameOver = false;
         lawnMowers = new LawnMower[11][5];
         bullets = new Bullet[11][5];
         unit = new Unit[11][5];
@@ -382,5 +384,13 @@ public class Game {
             e.printStackTrace();
             throw new PvZExceptions(PvZExceptions.OPEN_EXCEPTION);
         }
+    }
+
+    public void setGameOver() {
+        this.gameOver = true;
+    }
+
+    public boolean getGameOver() {
+        return this.gameOver;
     }
 }

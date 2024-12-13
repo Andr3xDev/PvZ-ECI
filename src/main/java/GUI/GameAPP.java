@@ -28,28 +28,22 @@ public class GameAPP extends JFrame {
      * It includes the Home Screen, Select Screen, tutorial screen and game screen.
      */
     private void prepareElements() {
-        // Window actions
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
 
-        // Window properties
         setTitle("POOB vs Zombies");
         setSize(screenSize);
         setLocationRelativeTo(null);
 
-        // Panels
         JPanel panels = new JPanel(new CardLayout());
         HomeGUI home = new HomeGUI();
         SelectGUI select = new SelectGUI(this);
         TutorialGUI tutorial = new TutorialGUI();
 
-        // Add Cart Interfaces
 
-        panels.add(home, "homePanel");          // Initial menu
-        panels.add(tutorial, "tutorialPanel");  // Tutorial screen
-        panels.add(select, "selectPanel");      // Select screen
-
-        // Add panels to the frame
+        panels.add(home, "homePanel");
+        panels.add(tutorial, "tutorialPanel");
+        panels.add(select, "selectPanel");
         add(panels);
     }
 
