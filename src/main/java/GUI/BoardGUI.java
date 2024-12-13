@@ -8,6 +8,7 @@ import domain.PvZExceptions;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.xml.parsers.ParserConfigurationException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -78,8 +79,8 @@ public class BoardGUI extends JFrame implements Runnable {
     /**
      * Constructor, creates the Game's elements and actions.
      */
-    public BoardGUI(GameAPP app, String gameMode) {
-        game = new Game(gameMode);
+    public BoardGUI(GameAPP app, String gameMode, int plantLvl, int zombieLvl) {
+        game = new Game(gameMode, plantLvl, zombieLvl);
         this.gameMode = gameMode;
         this.app = app;
         this.boxes = new BoardBox[ROWS][COLS];
@@ -343,66 +344,18 @@ public class BoardGUI extends JFrame implements Runnable {
     }
 
 
-    //** Save and Open Actions **//
-
-    /**
-     * Saves the current game state to a file.
-     * @throws PvZExceptions if the game cannot be saved.
-     */
-    private void SaveAction() throws PvZExceptions {
-        JFileChooser fileChooser = new JFileChooser();
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("PvZ Save Files (*.PvZ)", "PvZ");
-        fileChooser.setFileFilter(filter);
-        int returnVal = fileChooser.showSaveDialog(null);
-
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File selectedFile = fileChooser.getSelectedFile();
-            String filePath = selectedFile.getAbsolutePath();
-
-            // Extension check
-            if (!filePath.endsWith(".PvZ")) {
-                filePath += ".PvZ";
-            }
-
-            // Save game
-            game.save(filePath);
-            JOptionPane.showMessageDialog(null, "Game saved: " + filePath);
-        }
-    }
-
-
-    /**
-     * Opens a game state from a file.
-     * @throws PvZExceptions if the game cannot be opened.
-     */
-    private void OpenAction() throws PvZExceptions {
-        JFileChooser fileChooser = new JFileChooser();
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("PvZ Save Files (*.PvZ)", "PvZ");
-        fileChooser.setFileFilter(filter);
-        int returnVal = fileChooser.showOpenDialog(null);
-
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File selectedFile = fileChooser.getSelectedFile();
-
-            // Load Game
-            Game.open(selectedFile.getAbsolutePath());
-            JOptionPane.showMessageDialog(null, "Game loaded: " + selectedFile.getName());
-        }
-    }
-
-
     /**
      * Prepares the actions of the Select Buttons from the panels.
      */
     private void prepareActionsSelect() {
-        if (Objects.equals(gameMode, "pvp")) {
-            prepareActionsZombieSelect();
-            prepareActionsPlantSelect();
-        } else if (Objects.equals(gameMode, "pvAI")) {
-            prepareActionsPlantSelect();
-        } else if (Objects.equals(gameMode, "AIvAI")) {
-            prepareActionsZombieSelect();
-            prepareActionsPlantSelect();
+        switch (gameMode) {
+            case "pvp", "AIvAI":
+                prepareActionsZombieSelect();
+                prepareActionsPlantSelect();
+                break;
+            case "pvAI":
+                prepareActionsPlantSelect();
+                break;
         }
     }
 
@@ -410,7 +363,7 @@ public class BoardGUI extends JFrame implements Runnable {
     /**
      * Prepares the actions of the Plant Select Buttons from the panel.
      */
-    private void prepareActionsZombieSelect() {
+    private void prepareActionsPlantSelect() {
         peaButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 selectedPlant = "peashooter";
@@ -442,7 +395,7 @@ public class BoardGUI extends JFrame implements Runnable {
     /**
      * Prepares the actions of the Zombie Select Buttons from the panel if the game mode is pvp.
      */
-    private void prepareActionsPlantSelect() {
+    private void prepareActionsZombieSelect() {
         basicButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 selectedZombie = "basic";
@@ -481,18 +434,18 @@ public class BoardGUI extends JFrame implements Runnable {
                 int finalJ = j;
                 boxes[i][j].addMouseListener(new java.awt.event.MouseAdapter() {
                     public void mouseClicked(java.awt.event.MouseEvent evt) {
-                        if (selectedPlant == null) {
-                            System.out.println("Select a plant first");
-                        } else if (shovelMode) {       //! missing add shovel
-                            boxes[finalI][finalJ].remove();
-                        } else {
-                            try {
-                                game.addPlant(selectedPlant, finalJ, finalI);
-                                boxes[finalI][finalJ].addPlant(selectedPlant);
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
+                    if (selectedPlant == null) {
+                        System.out.println("Select a plant first");
+                    } else if (shovelMode) {       //! missing add shovel
+                        boxes[finalI][finalJ].remove();
+                    } else {
+                        try {
+                            game.addPlant(selectedPlant, finalJ, finalI);
+                            boxes[finalI][finalJ].addPlant(selectedPlant);
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
+                    }
                     }
                 });
             }
@@ -510,16 +463,16 @@ public class BoardGUI extends JFrame implements Runnable {
                 int finalJ = j;
                 boxes[i][j].addMouseListener(new java.awt.event.MouseAdapter() {
                     public void mouseClicked(java.awt.event.MouseEvent evt) {
-                        if (selectedZombie == null) {
-                            System.out.println("Select a zombie first");
-                        } else {
-                            try {
-                                game.addZombie(selectedZombie, finalJ, finalI);
-                                boxes[finalI][finalJ].addZombie(selectedZombie);
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
+                    if (selectedZombie == null) {
+                        System.out.println("Select a zombie first");
+                    } else {
+                        try {
+                            game.addZombie(selectedZombie, finalJ, finalI);
+                            boxes[finalI][finalJ].addZombie(selectedZombie);
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
+                    }
                     }
                 });
             }
@@ -606,6 +559,56 @@ public class BoardGUI extends JFrame implements Runnable {
                 }
                 boxes[i][j].repaint();
             }
+        }
+    }
+
+
+
+
+    //** Save and Open Actions **//
+
+    /**
+     * Saves the current game state to a file.
+     * @throws PvZExceptions if the game cannot be saved.
+     */
+    private void SaveAction() throws PvZExceptions {
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("PvZ Save Files (*.PvZ)", "PvZ");
+        fileChooser.setFileFilter(filter);
+        int returnVal = fileChooser.showSaveDialog(null);
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            String filePath = selectedFile.getAbsolutePath();
+
+            // Extension check
+            if (!filePath.endsWith(".PvZ")) {
+                filePath += ".PvZ";
+            }
+
+            // Save game
+            game.save(filePath);
+            JOptionPane.showMessageDialog(null, "Game saved: " + filePath);
+        }
+    }
+
+
+    /**
+     * Opens a game state from a file.
+     * @throws PvZExceptions if the game cannot be opened.
+     */
+    private void OpenAction() throws PvZExceptions {
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("PvZ Save Files (*.PvZ)", "PvZ");
+        fileChooser.setFileFilter(filter);
+        int returnVal = fileChooser.showOpenDialog(null);
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+
+            // Load Game
+            Game.open(selectedFile.getAbsolutePath());
+            JOptionPane.showMessageDialog(null, "Game loaded: " + selectedFile.getName());
         }
     }
 }

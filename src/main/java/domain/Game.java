@@ -3,9 +3,7 @@ package domain;
 import domain.economy.Brain;
 import domain.economy.Sun;
 import domain.plants.*;
-import domain.players.Human;
-import domain.players.Machine;
-import domain.players.Player;
+import domain.players.*;
 import domain.zombies.*;
 
 import java.io.*;
@@ -25,7 +23,6 @@ public class Game {
     private final boolean isActive = true;
     private final LawnMower[][] lawnMowers;
     private final ArrayList<Player> players;
-    private String gameMode;
     private static final Logger logger = Logger.getLogger(Game.class.getName());
 
 
@@ -34,28 +31,27 @@ public class Game {
     /**
      * Constructor for the Game, here we initialize the board and the economy of the game
      */
-    public Game(String gameMode) {
+    public Game(String gameMode, int plantLevel, int zombieLevel) {
         players = new ArrayList<>();
-        this.gameMode = gameMode;
         lawnMowers = new LawnMower[11][5];
         bullets = new Bullet[11][5];
         unit = new Unit[11][5];
         this.suns = 50;
         this.brains = 50;
-        generatePlayers(gameMode);
+        generatePlayers(gameMode, plantLevel, zombieLevel);
         initializeLawnMowers();
-        try {
-            FileHandler fileHandler = new FileHandler("game.log", true); // true para append
-            fileHandler.setFormatter(new SimpleFormatter());
-            logger.addHandler(fileHandler);
-        } catch (IOException e) {
-            logger.severe("No se pudo configurar el FileHandler para el logger.");
-        }
+        setFileHandler();
+        System.out.println(players);
     }
 
 
-    private void generatePlayers(String gameMode){
-        assert players != null;
+    /**
+     * Method to generate the players of the game depending on the game mode and the level of the players
+     * @param gameMode the game mode to play, pvp, pvAI or AIvAI
+     * @param plantLevel the level of the plant player
+     * @param zombieLevel the level of the zombie player
+     */
+    private void generatePlayers(String gameMode, int plantLevel, int zombieLevel) {
         switch (gameMode){
             case "pvp" -> {
                 players.add(new Human());
@@ -63,14 +59,32 @@ public class Game {
             }
             case "pvAI" -> {
                 players.add(new Human());
-                players.add(new Machine(this,"zombie"));
+                selectDifficulty(zombieLevel, 2);
             }
             case "AIvAI" -> {
-                players.add(new Machine(this,"plant"));
-                players.add(new Machine(this,"zombie"));
+                selectDifficulty(plantLevel, 1);
+                selectDifficulty(zombieLevel, 2);
             }
         }
     }
+
+
+    /**
+     * Method to select the difficulty of the AI player
+     * @param level the level of the AI player, 1 for easy and 2 for hard
+     * @param player the player to add the AI, 1 for plants and 2 for zombies
+     */
+    private void selectDifficulty(int level, int player){
+        if (player == 2){
+            if (level == 1) players.add(new ZombiesOriginal(this));
+            else players.add(new ZombiesStrategic(this));
+        } else {
+            if (level == 1) players.add(new PlantsIntelligent(this));
+            else players.add(new PlantsStrategic(this));
+        }
+    }
+
+
 
 
     //* Methods *//
@@ -136,7 +150,7 @@ public class Game {
             }
         } catch (PvZExceptions e) {
             logger.severe("Error al añadir zombie: " + e.getMessage());
-            throw e; // Re-lanzar la excepción para manejarla en el nivel superior
+            throw e;
         }
     }
 
@@ -322,11 +336,17 @@ public class Game {
             throw new PvZExceptions(PvZExceptions.EXISTENT_UNIT_EXCEPTION);
         }
     }
+
+
+    /**
+     * Method to initialize the lawn mowers in the board
+     */
     private void initializeLawnMowers(){
         for (int i = 0; i < 5; i++) {
             this.lawnMowers[0][i] = new LawnMower(this,i);
         }
     }
+
 
 
     //* Getters and Setters *//
@@ -339,6 +359,23 @@ public class Game {
 
     public int getBrains() {
         return brains;
+    }
+
+
+
+    //* Logger *//
+
+    /**
+     * Method to set the file handler to the logger
+     */
+    private void setFileHandler() {
+        try {
+            FileHandler fileHandler = new FileHandler("game.log", true);
+            fileHandler.setFormatter(new SimpleFormatter());
+            logger.addHandler(fileHandler);
+        } catch (IOException e) {
+            logger.severe("FileHandler to logger didn't found");
+        }
     }
 
 
