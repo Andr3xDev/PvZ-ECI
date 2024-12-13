@@ -17,7 +17,7 @@ public class gameTest implements Serializable {
         //Test06();
     }
     public static void Test01(){
-        Game game = new Game("pvp");
+        Game game = new Game("pvp", 1, 1);
         try {
             game.addPlant("wallnut",4,2);
             game.addPlant("peashooter", 0, 2);
@@ -42,7 +42,7 @@ public class gameTest implements Serializable {
         game.printBoard();
     }
     public static void Test02(){
-        Game game = new Game("pvp");
+        Game game = new Game("pvp", 1, 1);
         try {
             game.addPlant("sunflower",0,2);
         } catch (PvZExceptions e) {
@@ -63,7 +63,7 @@ public class gameTest implements Serializable {
         System.out.println(game.getSuns());
     }
     public static void Test03() {
-        Game game = new Game("pvp");
+        Game game = new Game("pvp", 1, 1);
         try {
             Sun sun = new Sun(25);
             game.addSuns(sun);
@@ -84,7 +84,7 @@ public class gameTest implements Serializable {
         System.out.println(game.getSuns());
 }
     public static void Test04(){
-        Game game = new Game("pvp");
+        Game game = new Game("pvp", 1, 1);
         try {
             game.addPlant("potatomine",0,0);
             game.addZombie("basic",11, 0);
@@ -108,7 +108,7 @@ public class gameTest implements Serializable {
         game.printBoard();
     }
     public static void Test05(){
-        Game game = new Game("pvp");
+        Game game = new Game("pvp", 1, 1);
         try {
             Brain brain = new Brain(150);
             game.addBrains(brain);
@@ -133,7 +133,7 @@ public class gameTest implements Serializable {
         game.printBoard();
     }
     public static void Test06(){
-        Game game = new Game("pvp");
+        Game game = new Game("pvp", 1, 1);
         try {
             game.addZombie("brainstein",11, 0);
         } catch (PvZExceptions e) {

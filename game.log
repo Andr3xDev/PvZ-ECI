@@ -260,3 +260,2021 @@ dic 12, 2024 2:29:22 P. M. domain.Game addZombie
 WARNING: Posición inválida para el zombie: (8, 1)
 dic 12, 2024 2:29:22 P. M. domain.Game addZombie
 SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 2:42:52 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 3)
+Dec 12, 2024 2:42:52 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (0, 1)
+Dec 12, 2024 2:42:52 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 1)
+Dec 12, 2024 2:42:52 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 3)
+Dec 12, 2024 2:42:52 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 2:42:53 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 4)
+Dec 12, 2024 2:42:53 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (2, 4)
+Dec 12, 2024 2:42:53 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 3)
+Dec 12, 2024 2:42:53 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 2:42:53 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 2:42:54 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (1, 4)
+Dec 12, 2024 2:42:54 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 12, 2024 2:42:54 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 2:42:54 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 1)
+Dec 12, 2024 2:42:54 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 12, 2024 2:42:54 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 2:42:55 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (0, 3)
+Dec 12, 2024 2:42:55 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 3)
+Dec 12, 2024 2:42:55 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 2:42:55 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 3)
+Dec 12, 2024 2:42:55 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 2:42:55 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 2:42:56 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (0, 1)
+Dec 12, 2024 2:42:56 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 1)
+Dec 12, 2024 2:42:56 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 2:42:56 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (8, 4)
+Dec 12, 2024 2:42:56 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 4)
+Dec 12, 2024 2:42:56 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 2:42:57 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (3, 1)
+Dec 12, 2024 2:42:57 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 12, 2024 2:42:57 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 2:42:57 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (8, 2)
+Dec 12, 2024 2:42:57 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 2)
+Dec 12, 2024 2:42:57 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 2:42:58 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (0, 2)
+Dec 12, 2024 2:42:58 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 2)
+Dec 12, 2024 2:42:58 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 2:42:58 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 3)
+Dec 12, 2024 2:42:58 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 12, 2024 2:42:58 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 2:42:59 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 4)
+Dec 12, 2024 2:42:59 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 2:42:59 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 0)
+Dec 12, 2024 2:42:59 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 0)
+Dec 12, 2024 2:43:00 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 3)
+Dec 12, 2024 2:43:00 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 12, 2024 2:43:00 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 2:43:00 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 2)
+Dec 12, 2024 2:43:00 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 2)
+Dec 12, 2024 2:43:00 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 2:43:01 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (1, 0)
+Dec 12, 2024 2:43:01 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 12, 2024 2:43:01 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 2:43:01 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 4)
+Dec 12, 2024 2:43:01 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 4)
+Dec 12, 2024 2:43:02 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (0, 4)
+Dec 12, 2024 2:43:02 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 4)
+Dec 12, 2024 2:43:02 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 2:43:02 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 3)
+Dec 12, 2024 2:43:02 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 2:43:02 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 2:43:03 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (3, 3)
+Dec 12, 2024 2:43:03 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: peashooter
+Dec 12, 2024 2:43:03 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 4)
+Dec 12, 2024 2:43:03 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 2:43:03 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 4)
+Dec 12, 2024 2:43:04 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (0, 3)
+Dec 12, 2024 2:43:04 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 1)
+Dec 12, 2024 2:43:04 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 3)
+Dec 12, 2024 2:43:04 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 1)
+Dec 12, 2024 2:43:04 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 2:43:05 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 1)
+Dec 12, 2024 2:43:05 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (1, 3)
+Dec 12, 2024 2:43:05 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 12, 2024 2:43:05 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 2:43:05 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 12, 2024 2:43:05 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 2:43:06 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (1, 2)
+Dec 12, 2024 2:43:06 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (8, 2)
+Dec 12, 2024 2:43:06 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 12, 2024 2:43:06 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 2)
+Dec 12, 2024 2:43:06 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 2:43:06 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 2:43:07 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 1)
+Dec 12, 2024 2:43:07 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (3, 1)
+Dec 12, 2024 2:43:07 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 1)
+Dec 12, 2024 2:43:07 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 12, 2024 2:43:07 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 2:43:08 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 0)
+Dec 12, 2024 2:43:08 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 0)
+Dec 12, 2024 2:43:08 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 3)
+Dec 12, 2024 2:43:08 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 12, 2024 2:43:08 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 2:43:09 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 4)
+Dec 12, 2024 2:43:09 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 4)
+Dec 12, 2024 2:43:09 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (0, 0)
+Dec 12, 2024 2:43:09 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 0)
+Dec 12, 2024 2:43:09 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 2:43:10 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (8, 3)
+Dec 12, 2024 2:43:10 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+Dec 12, 2024 2:43:10 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 2:43:10 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (0, 3)
+Dec 12, 2024 2:43:10 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 3)
+Dec 12, 2024 2:43:10 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 2:43:11 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 12, 2024 2:43:11 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 2)
+Dec 12, 2024 2:43:11 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (0, 0)
+Dec 12, 2024 2:43:11 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 0)
+Dec 12, 2024 2:43:11 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 2:43:37 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 12, 2024 2:43:37 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 2)
+Dec 12, 2024 2:43:37 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 2:43:39 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 2)
+Dec 12, 2024 2:43:39 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 2)
+Dec 12, 2024 2:43:40 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 2:43:43 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 2:43:43 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 2)
+Dec 12, 2024 2:43:43 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 12, 2024 2:43:43 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 2:43:44 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 2)
+Dec 12, 2024 2:43:44 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 12, 2024 2:43:44 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 2:43:45 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 3)
+Dec 12, 2024 2:43:45 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 12, 2024 2:43:45 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 2:43:46 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 2:43:46 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 4)
+Dec 12, 2024 2:43:46 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 2:43:46 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 2:43:47 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 4)
+Dec 12, 2024 2:43:47 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 4)
+Dec 12, 2024 2:43:48 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 1)
+Dec 12, 2024 2:43:48 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 2:43:48 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 2:43:49 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:12:51 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 1)
+Dec 12, 2024 3:12:51 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 1)
+Dec 12, 2024 3:12:51 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:12:53 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 1)
+Dec 12, 2024 3:12:53 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 1)
+Dec 12, 2024 3:12:54 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:12:57 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:00 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:00 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (2, 1)
+Dec 12, 2024 3:13:00 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: peashooter en (2, 1)
+Dec 12, 2024 3:13:03 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:06 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:09 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:12 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 2)
+Dec 12, 2024 3:13:12 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 12, 2024 3:13:12 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:13:12 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:12 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 12, 2024 3:13:12 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 12, 2024 3:13:12 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:13:13 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 1)
+Dec 12, 2024 3:13:13 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 12, 2024 3:13:13 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:13:15 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:18 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:21 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:24 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:27 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:30 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:33 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:36 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:39 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:42 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:45 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:48 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:51 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:54 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:13:57 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:00 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:03 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:06 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:09 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:12 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:15 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:18 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:21 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:24 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:27 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:30 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:33 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:36 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:39 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:42 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:45 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:48 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:51 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:54 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:14:57 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:00 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:03 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:06 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:09 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:12 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:15 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:18 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:21 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:24 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:27 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:30 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:33 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:36 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:39 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:42 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:45 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:45 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 1)
+Dec 12, 2024 3:15:45 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 1)
+Dec 12, 2024 3:15:46 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 1)
+Dec 12, 2024 3:15:46 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 1)
+Dec 12, 2024 3:15:48 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:51 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:53 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 3)
+Dec 12, 2024 3:15:53 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 3)
+Dec 12, 2024 3:15:53 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 3)
+Dec 12, 2024 3:15:53 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 3)
+Dec 12, 2024 3:15:53 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 4)
+Dec 12, 2024 3:15:53 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 4)
+Dec 12, 2024 3:15:54 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 4)
+Dec 12, 2024 3:15:54 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 4)
+Dec 12, 2024 3:15:54 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:15:54 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 2)
+Dec 12, 2024 3:15:54 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 2)
+Dec 12, 2024 3:15:54 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 2)
+Dec 12, 2024 3:15:54 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 2)
+Dec 12, 2024 3:15:55 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 1)
+Dec 12, 2024 3:15:55 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 1)
+Dec 12, 2024 3:15:55 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 1)
+Dec 12, 2024 3:15:55 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 1)
+Dec 12, 2024 3:15:55 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 0)
+Dec 12, 2024 3:15:55 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 0)
+Dec 12, 2024 3:15:56 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 0)
+Dec 12, 2024 3:15:56 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 0)
+Dec 12, 2024 3:15:57 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:16:00 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:16:03 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:16:03 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 3)
+Dec 12, 2024 3:16:03 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 3)
+Dec 12, 2024 3:16:03 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 2)
+Dec 12, 2024 3:16:03 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 2)
+Dec 12, 2024 3:16:04 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 4)
+Dec 12, 2024 3:16:04 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 4)
+Dec 12, 2024 3:16:04 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 4)
+Dec 12, 2024 3:16:04 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 4)
+Dec 12, 2024 3:16:04 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 3)
+Dec 12, 2024 3:16:04 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 3)
+Dec 12, 2024 3:16:05 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 2)
+Dec 12, 2024 3:16:05 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 2)
+Dec 12, 2024 3:16:05 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 1)
+Dec 12, 2024 3:16:05 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 1)
+Dec 12, 2024 3:16:05 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 0)
+Dec 12, 2024 3:16:05 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 0)
+Dec 12, 2024 3:16:06 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 0)
+Dec 12, 2024 3:16:06 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 0)
+Dec 12, 2024 3:16:06 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (8, 0)
+Dec 12, 2024 3:16:06 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: peashooter en (8, 0)
+Dec 12, 2024 3:16:07 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (8, 1)
+Dec 12, 2024 3:16:07 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: peashooter en (8, 1)
+Dec 12, 2024 3:16:07 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (8, 4)
+Dec 12, 2024 3:16:07 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: peashooter en (8, 4)
+Dec 12, 2024 3:16:08 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (8, 2)
+Dec 12, 2024 3:16:08 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: peashooter en (8, 2)
+Dec 12, 2024 3:16:08 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (8, 3)
+Dec 12, 2024 3:16:08 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: peashooter en (8, 3)
+Dec 12, 2024 3:16:19 PM domain.LawnMower activate
+INFO: LawnMower activado en la fila: 3
+Dec 12, 2024 3:16:20 PM domain.LawnMower activate
+INFO: LawnMower activado en la fila: 4
+Dec 12, 2024 3:16:21 PM domain.LawnMower activate
+INFO: LawnMower activado en la fila: 2
+Dec 12, 2024 3:16:22 PM domain.LawnMower activate
+INFO: LawnMower activado en la fila: 0
+Dec 12, 2024 3:53:04 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 2)
+Dec 12, 2024 3:53:04 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (1, 3)
+Dec 12, 2024 3:53:04 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:05 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 12, 2024 3:53:05 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 1)
+Dec 12, 2024 3:53:05 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 12, 2024 3:53:05 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:05 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 3:53:05 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 3:53:05 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:06 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 12, 2024 3:53:06 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 3)
+Dec 12, 2024 3:53:06 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 12, 2024 3:53:06 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:06 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 3:53:06 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 12, 2024 3:53:06 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:07 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (3, 2)
+Dec 12, 2024 3:53:07 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 12, 2024 3:53:07 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:07 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 2)
+Dec 12, 2024 3:53:07 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 3:53:07 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 3:53:07 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:08 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 1)
+Dec 12, 2024 3:53:08 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 4)
+Dec 12, 2024 3:53:08 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (2, 1)
+Dec 12, 2024 3:53:08 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 4)
+Dec 12, 2024 3:53:09 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 3)
+Dec 12, 2024 3:53:09 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (8, 1)
+Dec 12, 2024 3:53:09 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:09 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 1)
+Dec 12, 2024 3:53:09 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:10 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (0, 2)
+Dec 12, 2024 3:53:10 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 1)
+Dec 12, 2024 3:53:10 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 2)
+Dec 12, 2024 3:53:10 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 12, 2024 3:53:10 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:10 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:11 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (3, 3)
+Dec 12, 2024 3:53:11 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 0)
+Dec 12, 2024 3:53:11 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 12, 2024 3:53:11 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:11 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 12, 2024 3:53:11 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 3:53:11 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:12 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 2)
+Dec 12, 2024 3:53:12 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 4)
+Dec 12, 2024 3:53:12 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (3, 2)
+Dec 12, 2024 3:53:12 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 3:53:12 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:13 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 0)
+Dec 12, 2024 3:53:13 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 4)
+Dec 12, 2024 3:53:13 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (3, 0)
+Dec 12, 2024 3:53:13 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 12, 2024 3:53:13 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:14 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 3)
+Dec 12, 2024 3:53:14 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 12, 2024 3:53:14 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:14 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 3:53:14 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (8, 2)
+Dec 12, 2024 3:53:14 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 2)
+Dec 12, 2024 3:53:14 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:15 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 3)
+Dec 12, 2024 3:53:15 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 12, 2024 3:53:15 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:15 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 3:53:15 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 1)
+Dec 12, 2024 3:53:15 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 1)
+Dec 12, 2024 3:53:15 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:16 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (1, 0)
+Dec 12, 2024 3:53:16 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 1)
+Dec 12, 2024 3:53:16 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (10, 1)
+Dec 12, 2024 3:53:16 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (1, 0)
+Dec 12, 2024 3:53:17 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 1)
+Dec 12, 2024 3:53:17 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (1, 1)
+Dec 12, 2024 3:53:17 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (1, 1)
+Dec 12, 2024 3:53:17 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 1)
+Dec 12, 2024 3:53:18 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 2)
+Dec 12, 2024 3:53:18 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 0)
+Dec 12, 2024 3:53:18 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 12, 2024 3:53:18 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:18 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 3:53:18 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 0)
+Dec 12, 2024 3:53:19 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 2)
+Dec 12, 2024 3:53:19 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (8, 0)
+Dec 12, 2024 3:53:19 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 0)
+Dec 12, 2024 3:53:19 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:19 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (1, 2)
+Dec 12, 2024 3:53:19 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:20 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+Dec 12, 2024 3:53:20 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (3, 3)
+Dec 12, 2024 3:53:20 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)
+Dec 12, 2024 3:53:20 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 12, 2024 3:53:20 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 3:53:21 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 0)
+Dec 12, 2024 3:53:21 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (0, 2)
+Dec 12, 2024 3:53:21 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 2)
+Dec 12, 2024 3:53:21 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:21 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 0)
+Dec 12, 2024 3:53:22 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 1)
+Dec 12, 2024 3:53:22 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 1)
+Dec 12, 2024 3:53:22 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:22 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:22 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (1, 3)
+Dec 12, 2024 3:53:22 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:22 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 3)
+Dec 12, 2024 3:53:22 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 12, 2024 3:53:22 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:23 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (0, 4)
+Dec 12, 2024 3:53:23 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 4)
+Dec 12, 2024 3:53:23 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:23 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 0)
+Dec 12, 2024 3:53:23 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 0)
+Dec 12, 2024 3:53:24 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (0, 2)
+Dec 12, 2024 3:53:24 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 2)
+Dec 12, 2024 3:53:24 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:24 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 4)
+Dec 12, 2024 3:53:24 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 12, 2024 3:53:24 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:25 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 1)
+Dec 12, 2024 3:53:25 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 1)
+Dec 12, 2024 3:53:25 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:25 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:25 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (3, 4)
+Dec 12, 2024 3:53:25 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: peashooter en (3, 4)
+Dec 12, 2024 3:53:25 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 2)
+Dec 12, 2024 3:53:25 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 12, 2024 3:53:25 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:26 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (1, 3)
+Dec 12, 2024 3:53:26 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:26 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 1)
+Dec 12, 2024 3:53:26 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 1)
+Dec 12, 2024 3:53:26 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:27 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 3)
+Dec 12, 2024 3:53:27 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:27 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 1)
+Dec 12, 2024 3:53:27 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 1)
+Dec 12, 2024 3:53:28 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:28 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:28 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (0, 2)
+Dec 12, 2024 3:53:28 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 2)
+Dec 12, 2024 3:53:28 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:28 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 1)
+Dec 12, 2024 3:53:28 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 1)
+Dec 12, 2024 3:53:29 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (0, 3)
+Dec 12, 2024 3:53:29 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 3)
+Dec 12, 2024 3:53:29 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:29 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 4)
+Dec 12, 2024 3:53:29 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 4)
+Dec 12, 2024 3:53:30 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (0, 3)
+Dec 12, 2024 3:53:30 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 2)
+Dec 12, 2024 3:53:30 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 3)
+Dec 12, 2024 3:53:30 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 2)
+Dec 12, 2024 3:53:30 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:31 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 12, 2024 3:53:31 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 2)
+Dec 12, 2024 3:53:31 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:31 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:31 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 12, 2024 3:53:31 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (3, 0)
+Dec 12, 2024 3:53:31 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:31 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 2)
+Dec 12, 2024 3:53:32 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 3)
+Dec 12, 2024 3:53:32 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 3)
+Dec 12, 2024 3:53:32 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+Dec 12, 2024 3:53:32 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:32 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (2, 3)
+Dec 12, 2024 3:53:32 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:33 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 12, 2024 3:53:33 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (0, 2)
+Dec 12, 2024 3:53:33 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 2)
+Dec 12, 2024 3:53:33 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:33 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 2)
+Dec 12, 2024 3:53:34 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:34 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:34 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (3, 1)
+Dec 12, 2024 3:53:34 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (8, 0)
+Dec 12, 2024 3:53:34 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 0)
+Dec 12, 2024 3:53:34 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:34 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: peashooter en (3, 1)
+Dec 12, 2024 3:53:35 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:35 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 1)
+Dec 12, 2024 3:53:35 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (0, 0)
+Dec 12, 2024 3:53:35 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 1)
+Dec 12, 2024 3:53:35 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 0)
+Dec 12, 2024 3:53:35 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:36 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (8, 4)
+Dec 12, 2024 3:53:36 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 2)
+Dec 12, 2024 3:53:36 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 4)
+Dec 12, 2024 3:53:36 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:36 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (2, 2)
+Dec 12, 2024 3:53:36 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:37 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:37 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (8, 0)
+Dec 12, 2024 3:53:37 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 0)
+Dec 12, 2024 3:53:37 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:37 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:37 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (3, 1)
+Dec 12, 2024 3:53:37 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:37 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 12, 2024 3:53:37 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 2)
+Dec 12, 2024 3:53:38 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 2)
+Dec 12, 2024 3:53:38 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 2)
+Dec 12, 2024 3:53:38 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:38 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 1)
+Dec 12, 2024 3:53:38 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:38 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (8, 3)
+Dec 12, 2024 3:53:38 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+Dec 12, 2024 3:53:38 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:39 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (8, 1)
+Dec 12, 2024 3:53:39 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 1)
+Dec 12, 2024 3:53:39 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:39 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:39 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (3, 2)
+Dec 12, 2024 3:53:39 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:39 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 2)
+Dec 12, 2024 3:53:39 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (10, 2)
+Dec 12, 2024 3:53:40 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:40 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 2)
+Dec 12, 2024 3:53:40 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 3:53:40 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:40 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:40 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (3, 4)
+Dec 12, 2024 3:53:40 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:40 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 4)
+Dec 12, 2024 3:53:40 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (10, 4)
+Dec 12, 2024 3:53:41 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 0)
+Dec 12, 2024 3:53:41 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 3:53:41 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:41 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:41 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 0)
+Dec 12, 2024 3:53:41 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (2, 0)
+Dec 12, 2024 3:53:41 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:41 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 2)
+Dec 12, 2024 3:53:41 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 2)
+Dec 12, 2024 3:53:42 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (8, 2)
+Dec 12, 2024 3:53:42 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 2)
+Dec 12, 2024 3:53:42 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:42 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:42 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (2, 4)
+Dec 12, 2024 3:53:42 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (2, 4)
+Dec 12, 2024 3:53:42 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (8, 0)
+Dec 12, 2024 3:53:42 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 0)
+Dec 12, 2024 3:53:42 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:43 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:43 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 3)
+Dec 12, 2024 3:53:43 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+Dec 12, 2024 3:53:43 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:43 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:43 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (1, 0)
+Dec 12, 2024 3:53:43 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:43 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 4)
+Dec 12, 2024 3:53:43 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 4)
+Dec 12, 2024 3:53:44 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+Dec 12, 2024 3:53:44 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 12, 2024 3:53:44 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:44 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:44 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:44 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (3, 1)
+Dec 12, 2024 3:53:44 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:44 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (8, 3)
+Dec 12, 2024 3:53:44 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+Dec 12, 2024 3:53:44 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:45 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 3)
+Dec 12, 2024 3:53:45 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 12, 2024 3:53:45 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:45 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:45 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 4)
+Dec 12, 2024 3:53:45 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:45 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 4)
+Dec 12, 2024 3:53:45 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 4)
+Dec 12, 2024 3:53:45 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:46 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:46 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 4)
+Dec 12, 2024 3:53:46 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 12, 2024 3:53:46 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:46 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:46 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 4)
+Dec 12, 2024 3:53:46 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (1, 4)
+Dec 12, 2024 3:53:46 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:46 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (8, 2)
+Dec 12, 2024 3:53:46 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 2)
+Dec 12, 2024 3:53:46 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:47 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 4)
+Dec 12, 2024 3:53:47 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: basic
+Dec 12, 2024 3:53:47 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:47 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:47 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:47 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (0, 2)
+Dec 12, 2024 3:53:47 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 2)
+Dec 12, 2024 3:53:47 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:47 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 3)
+Dec 12, 2024 3:53:47 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+Dec 12, 2024 3:53:47 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:48 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 3)
+Dec 12, 2024 3:53:48 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 12, 2024 3:53:48 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:48 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:48 PM domain.Game addPlant
+INFO: Intentando añadir una planta: peashooter en (3, 1)
+Dec 12, 2024 3:53:48 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:48 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 3)
+Dec 12, 2024 3:53:48 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 3)
+Dec 12, 2024 3:53:49 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:49 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 3)
+Dec 12, 2024 3:53:49 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 12, 2024 3:53:49 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:49 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:49 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:49 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (3, 1)
+Dec 12, 2024 3:53:49 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:49 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 0)
+Dec 12, 2024 3:53:49 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 0)
+Dec 12, 2024 3:53:50 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 1)
+Dec 12, 2024 3:53:50 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 3:53:50 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:50 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:50 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:50 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 3)
+Dec 12, 2024 3:53:50 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:50 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 3)
+Dec 12, 2024 3:53:50 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+Dec 12, 2024 3:53:50 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:51 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 4)
+Dec 12, 2024 3:53:51 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 4)
+Dec 12, 2024 3:53:51 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:51 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (0, 2)
+Dec 12, 2024 3:53:51 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 2)
+Dec 12, 2024 3:53:51 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:51 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 0)
+Dec 12, 2024 3:53:51 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 0)
+Dec 12, 2024 3:53:52 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:52 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 2)
+Dec 12, 2024 3:53:52 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 2)
+Dec 12, 2024 3:53:52 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:52 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:52 PM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (0, 3)
+Dec 12, 2024 3:53:52 PM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 3)
+Dec 12, 2024 3:53:52 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 12, 2024 3:53:52 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (8, 1)
+Dec 12, 2024 3:53:52 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 1)
+Dec 12, 2024 3:53:52 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:53:53 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 1)
+Dec 12, 2024 3:53:53 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 12, 2024 3:53:53 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 3:53:53 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:53 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 3:53:53 PM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (1, 2)
+Dec 12, 2024 3:53:53 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 12, 2024 3:53:53 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (8, 4)
+Dec 12, 2024 3:53:53 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 4)
+Dec 12, 2024 3:53:53 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:58:57 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (8, 3)
+Dec 12, 2024 3:58:57 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+Dec 12, 2024 3:58:57 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:58:58 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (8, 3)
+Dec 12, 2024 3:58:58 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+Dec 12, 2024 3:58:58 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:58:59 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 3)
+Dec 12, 2024 3:58:59 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 3)
+Dec 12, 2024 3:58:59 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:59:00 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (8, 2)
+Dec 12, 2024 3:59:00 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 2)
+Dec 12, 2024 3:59:00 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:59:01 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (8, 0)
+Dec 12, 2024 3:59:01 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 0)
+Dec 12, 2024 3:59:01 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 3:59:02 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+Dec 12, 2024 3:59:02 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 3)
+Dec 12, 2024 3:59:03 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 4)
+Dec 12, 2024 3:59:03 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 12, 2024 3:59:03 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 6:11:20 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 1)
+Dec 12, 2024 6:11:20 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 1)
+Dec 12, 2024 6:11:22 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 1)
+Dec 12, 2024 6:11:22 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 1)
+Dec 12, 2024 6:11:22 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 6:11:25 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 6:13:54 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (8, 0)
+Dec 12, 2024 6:13:54 PM domain.Game addZombie
+WARNING: Posición inválida para el zombie: (8, 0)
+Dec 12, 2024 6:13:54 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Given position is out of range for the zombie
+Dec 12, 2024 6:13:55 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 4)
+Dec 12, 2024 6:13:55 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 12, 2024 6:13:55 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 6:13:56 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+Dec 12, 2024 6:13:56 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)
+Dec 12, 2024 6:13:57 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 4)
+Dec 12, 2024 6:13:57 PM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 12, 2024 6:13:57 PM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 12, 2024 7:16:52 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 1)
+Dec 12, 2024 7:16:52 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 1)
+Dec 12, 2024 7:16:52 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:16:54 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 1)
+Dec 12, 2024 7:16:54 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 1)
+Dec 12, 2024 7:16:55 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:16:58 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:17:01 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:23 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 1)
+Dec 12, 2024 7:20:23 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 1)
+Dec 12, 2024 7:20:23 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:26 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:29 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:32 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 12, 2024 7:20:32 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 2)
+Dec 12, 2024 7:20:32 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:32 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:35 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:35 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:35 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 3)
+Dec 12, 2024 7:20:35 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (1, 3)
+Dec 12, 2024 7:20:35 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:36 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 4)
+Dec 12, 2024 7:20:36 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (1, 4)
+Dec 12, 2024 7:20:36 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:37 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 12, 2024 7:20:37 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (1, 0)
+Dec 12, 2024 7:20:37 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:37 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 0)
+Dec 12, 2024 7:20:37 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 12, 2024 7:20:37 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 7:20:38 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 0)
+Dec 12, 2024 7:20:38 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 12, 2024 7:20:38 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:38 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 7:20:38 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:38 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:38 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:38 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 0)
+Dec 12, 2024 7:20:38 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (2, 0)
+Dec 12, 2024 7:20:38 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:39 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:39 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 1)
+Dec 12, 2024 7:20:39 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (2, 1)
+Dec 12, 2024 7:20:39 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:39 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 2)
+Dec 12, 2024 7:20:39 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (2, 2)
+Dec 12, 2024 7:20:39 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:40 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:40 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 3)
+Dec 12, 2024 7:20:40 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (2, 3)
+Dec 12, 2024 7:20:40 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:40 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (2, 4)
+Dec 12, 2024 7:20:40 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (2, 4)
+Dec 12, 2024 7:20:40 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:41 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (3, 0)
+Dec 12, 2024 7:20:41 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (3, 0)
+Dec 12, 2024 7:20:41 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:41 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:41 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:41 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (3, 1)
+Dec 12, 2024 7:20:41 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (3, 1)
+Dec 12, 2024 7:20:41 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:41 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:41 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:41 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (3, 2)
+Dec 12, 2024 7:20:41 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (3, 2)
+Dec 12, 2024 7:20:41 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:42 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:42 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:42 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (3, 3)
+Dec 12, 2024 7:20:42 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (3, 3)
+Dec 12, 2024 7:20:42 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:42 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:42 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (3, 4)
+Dec 12, 2024 7:20:42 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (3, 4)
+Dec 12, 2024 7:20:42 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:43 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:43 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:43 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (4, 0)
+Dec 12, 2024 7:20:43 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (4, 0)
+Dec 12, 2024 7:20:43 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:43 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:43 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (4, 1)
+Dec 12, 2024 7:20:43 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (4, 1)
+Dec 12, 2024 7:20:43 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:44 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:44 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (4, 2)
+Dec 12, 2024 7:20:44 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (4, 2)
+Dec 12, 2024 7:20:44 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:44 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:44 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:44 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:44 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (4, 3)
+Dec 12, 2024 7:20:44 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (4, 3)
+Dec 12, 2024 7:20:44 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:44 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:44 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:44 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:45 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (4, 4)
+Dec 12, 2024 7:20:45 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (4, 4)
+Dec 12, 2024 7:20:45 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:45 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:45 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:45 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:45 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:45 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:46 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:46 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:46 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:46 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:46 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:47 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:47 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:47 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:47 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:47 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:47 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:47 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:47 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:47 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:48 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:48 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:48 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:48 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:48 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:48 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:49 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:49 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:49 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:49 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:49 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:50 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:50 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:50 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:50 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:50 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:50 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:50 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:50 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:50 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:51 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:51 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:51 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:51 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:51 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:51 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:52 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:52 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:52 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:52 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:52 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:53 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:53 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:53 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:53 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:53 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:53 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:53 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:53 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:53 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:54 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:54 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:54 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:54 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:54 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:54 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:55 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:55 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:55 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:55 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:55 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:56 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:56 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:56 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:56 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:56 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:56 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:56 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:56 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:56 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:57 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:57 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:57 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:57 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:57 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:57 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:58 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:58 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:58 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:58 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:58 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:59 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:59 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:59 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:59 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:59 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:59 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:59 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:59 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:20:59 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:00 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:00 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:00 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (8, 0)
+Dec 12, 2024 7:21:00 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (8, 0)
+Dec 12, 2024 7:21:00 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:00 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:00 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:00 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (8, 1)
+Dec 12, 2024 7:21:00 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (8, 1)
+Dec 12, 2024 7:21:00 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:00 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:00 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:00 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (8, 2)
+Dec 12, 2024 7:21:00 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (8, 2)
+Dec 12, 2024 7:21:00 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:01 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:01 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:01 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:01 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (8, 3)
+Dec 12, 2024 7:21:01 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (8, 3)
+Dec 12, 2024 7:21:01 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:01 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:01 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:01 PM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (8, 4)
+Dec 12, 2024 7:21:01 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: eciplant en (8, 4)
+Dec 12, 2024 7:21:01 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:02 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:02 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:02 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:02 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:02 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:02 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:02 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:02 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:02 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:03 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:03 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:03 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:03 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:03 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:03 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:03 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:03 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:03 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:04 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:04 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:04 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:04 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:04 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:04 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:04 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:05 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:05 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:05 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:05 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:05 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:05 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:05 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:05 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:05 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:06 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:06 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:06 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:06 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:06 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:06 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:06 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:06 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:06 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:07 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:07 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:07 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:07 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:07 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:07 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:07 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:08 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:08 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:08 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:08 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:08 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:08 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:08 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:08 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:08 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:09 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:09 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:09 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:09 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:09 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:09 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:09 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:09 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:09 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:10 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:10 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:10 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:10 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:10 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:10 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:10 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:11 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:11 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:11 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:11 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:11 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:11 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:11 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:11 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:11 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:12 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:12 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:12 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:12 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:12 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:12 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:12 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:12 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:12 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:13 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:13 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:13 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:13 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:13 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:13 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:21:13 PM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 12, 2024 7:22:00 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 1)
+Dec 12, 2024 7:22:00 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 1)
+Dec 12, 2024 7:22:00 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:22:01 PM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 1)
+Dec 12, 2024 7:22:01 PM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 1)
+Dec 12, 2024 7:22:03 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:22:06 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:22:08 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 1)
+Dec 12, 2024 7:22:08 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 1)
+Dec 12, 2024 7:22:08 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:22:09 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:22:09 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 12, 2024 7:22:09 PM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 12, 2024 7:22:09 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:22:09 PM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 12, 2024 7:22:10 PM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 12, 2024 7:22:10 PM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 2)
+Dec 12, 2024 7:22:10 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:22:11 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:22:12 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:22:13 PM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 12, 2024 7:22:14 PM domain.plants.Sunflower generateSun
+INFO: sol generado
