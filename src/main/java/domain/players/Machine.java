@@ -8,21 +8,22 @@ import java.util.Random;
 
 public abstract class Machine implements Player, Serializable, Runnable {
 
-    private boolean isActive = true;
+    private boolean isActive;
     private Game game;
     private String role;
 
     public Machine(Game game) {
         this.game = game;
+        this.isActive = true;
+        Thread thread = new Thread(this);
+        thread.start();
     }
-
-    public abstract void makeMove(Game game);
 
     public void run() {
         while (isActive) {
             try {
-                makeMove(game);
                 Thread.sleep(1000);
+                makeMove(game);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;

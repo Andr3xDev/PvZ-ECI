@@ -2,6 +2,7 @@ package GUI;
 
 import GUI.extras.BackgroundImage;
 import GUI.extras.RoundedButton;
+import GUI.extras.RoundedLabel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,13 +32,25 @@ public class SelectGUI extends JPanel {
     private JPanel AIvAIPanel;
 
     // Action buttons
-    protected RoundedButton backButton;
-    protected RoundedButton loadButton;
+    private RoundedButton backButton;
+    private RoundedButton loadButton;
 
     // Buttons
-    protected RoundedButton pvpButton;
-    protected RoundedButton pvAIButton;
-    protected RoundedButton AIvAIButton;
+    private RoundedButton pvpButton;
+    private RoundedButton pvAIButton;
+    private RoundedButton AIvAIButton;
+
+    // Difficult buttons
+    private RoundedButton easyButton1;
+    private RoundedButton mediumButton1;
+    private RoundedButton easyButton2;
+    private RoundedButton mediumButton2;
+    private RoundedButton easyButton3;
+    private RoundedButton mediumButton3;
+
+    private int difficulty1 = 0;
+    private int difficulty2 = 0;
+    private int difficulty3 = 0;
 
 
 
@@ -88,9 +101,9 @@ public class SelectGUI extends JPanel {
         optionsPanel.setBounds(150, (int) (screenSize.height/2.5), screenSize.width - 300, screenSize.height/3);
 
         // Panels
-        pvpPanel = new JPanel();
-        pvAIPanel = new JPanel();
-        AIvAIPanel = new JPanel();
+        pvpPanel = new JPanel(new FlowLayout());
+        pvAIPanel = new JPanel(new GridLayout(3, 1, 0, 10));
+        AIvAIPanel = new JPanel(new BorderLayout());
 
         // Set panels properties
         pvpPanel.setBackground(new Color(2, 0, 51, 200));
@@ -113,9 +126,19 @@ public class SelectGUI extends JPanel {
     private void prepareElementsSelect() {
         // Buttons
         pvpButton = new RoundedButton("P1 vs P2", 35);
+        pvpButton.setBackground(new Color(203, 225, 192));
         pvAIButton = new RoundedButton("P1 vs AI", 35);
+        pvAIButton.setBackground(new Color(203, 225, 192));
         AIvAIButton = new RoundedButton("AI vs AI", 35);
+        AIvAIButton.setBackground(new Color(203, 225, 192));
 
+        // Difficult buttons
+        easyButton1 = new RoundedButton("Easy", 35);
+        mediumButton1 = new RoundedButton("Medium", 35);
+        easyButton2 = new RoundedButton("Easy", 35);
+        mediumButton2 = new RoundedButton("Medium", 35);
+        easyButton3 = new RoundedButton("Easy", 35);
+        mediumButton3 = new RoundedButton("Medium", 35);
         // Set buttons properties
         pvpButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
         pvAIButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
@@ -123,8 +146,22 @@ public class SelectGUI extends JPanel {
 
         // Add buttons to the panel
         pvpPanel.add(pvpButton);
+
         pvAIPanel.add(pvAIButton);
-        AIvAIPanel.add(AIvAIButton);
+        pvAIPanel.add(easyButton1);
+        pvAIPanel.add(mediumButton1);
+
+        AIvAIPanel.add(AIvAIButton, BorderLayout.NORTH);
+
+        JPanel easyPanel = new JPanel(new GridLayout(2, 3, 0, 0));
+        easyPanel.add(new RoundedLabel("Zombie:"));
+        easyPanel.add(easyButton2);
+        easyPanel.add(mediumButton2);
+        easyPanel.add(new RoundedLabel("Plant:"));
+        easyPanel.add(easyButton3);
+        easyPanel.add(mediumButton3);
+
+        AIvAIPanel.add(easyPanel, BorderLayout.CENTER);
     }
 
 
@@ -165,28 +202,43 @@ public class SelectGUI extends JPanel {
      */
     private void prepareActions() {
 
-        //! missing difficult buttons
-
         // P1 vs P2 button
         pvpButton.addActionListener(_ -> {
-            BoardGUI board = new BoardGUI(game, "pvp", 1, 1);
+            BoardGUI board = new BoardGUI(game, "pvp", 1, difficulty1);
             board.setVisible(true);
             game.dispose();
         });
 
         // P1 vs AI button
         pvAIButton.addActionListener(_ -> {
-            BoardGUI board = new BoardGUI(game, "pvAI", 1, 1);
-            board.setVisible(true);
-            game.dispose();
+            if (difficulty1 != 0) {
+                BoardGUI board = new BoardGUI(game, "pvAI", 1, difficulty1);
+                board.setVisible(true);
+                game.dispose();
+            }
         });
 
         // AI vs AI button
         AIvAIButton.addActionListener(_ -> {
-            BoardGUI board = new BoardGUI(game , "AIvAI", 1, 1);
-            board.setVisible(true);
-            game.dispose();
+            if (difficulty2 != 0 && difficulty3 != 0) {
+                BoardGUI board = new BoardGUI(game , "AIvAI", difficulty3, difficulty2);
+                board.setVisible(true);
+                game.dispose();
+            }
         });
+
+        easyButton1.addActionListener(_ -> setDifficulty(1));
+
+        mediumButton1.addActionListener(_ -> setDifficulty(2));
+
+        easyButton2.addActionListener(_ -> setDifficulty2(1));
+
+        mediumButton2.addActionListener(_ -> setDifficulty2(2));
+
+        easyButton3.addActionListener(_ -> setDifficulty3(1));
+
+        mediumButton3.addActionListener(_ -> setDifficulty3(2));
+
 
         // Back button
         backButton.addActionListener(_ -> {
@@ -196,5 +248,57 @@ public class SelectGUI extends JPanel {
 
         // Load button
         loadButton.addActionListener(_ -> System.out.println("Load button pressed"));
+    }
+
+
+
+    /**
+     * Method to set the difficulty of the IA. only for PvAI.
+     * @param difficulty The difficulty of the IA.
+     */
+    private void setDifficulty(int difficulty) {
+        if (difficulty == 1) {
+            easyButton1.setBackground(new Color(219, 255, 0, 234));
+            mediumButton1.setBackground(new Color(252, 250, 227));
+            difficulty1 = 1;
+        } else {
+            easyButton1.setBackground(new Color(252, 250, 227));
+            mediumButton1.setBackground(new Color(219, 255, 0, 234));
+            difficulty1 = 2;
+        }
+    }
+
+
+    /**
+     * Method to set the plants difficulty of the AIvAI.
+     * @param difficulty The difficulty to set.
+     */
+    private void setDifficulty2(int difficulty) {
+        if (difficulty == 1) {
+            easyButton2.setBackground(new Color(219, 255, 0, 234));
+            mediumButton2.setBackground(new Color(252, 250, 227));
+            difficulty2 = 1;
+        } else {
+            easyButton2.setBackground(new Color(252, 250, 227));
+            mediumButton2.setBackground(new Color(219, 255, 0, 234));
+            difficulty2 = 2;
+        }
+    }
+
+
+    /**
+     * Method to set the zombies difficulty of the AIvAI.
+     * @param difficulty The difficulty to set.
+     */
+    private void setDifficulty3(int difficulty) {
+        if (difficulty == 1) {
+            easyButton3.setBackground(new Color(219, 255, 0, 234));
+            mediumButton3.setBackground(new Color(252, 250, 227));
+            difficulty3 = 1;
+        } else {
+            easyButton3.setBackground(new Color(252, 250, 227));
+            mediumButton3.setBackground(new Color(219, 255, 0, 234));
+            difficulty3 = 2;
+        }
     }
 }

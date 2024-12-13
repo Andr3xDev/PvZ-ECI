@@ -8,12 +8,10 @@ import domain.PvZExceptions;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.xml.parsers.ParserConfigurationException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.util.Objects;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -69,7 +67,7 @@ public class BoardGUI extends JFrame implements Runnable {
     private boolean shovelMode;
     private String selectedPlant;
     private String selectedZombie;
-    private transient Thread guiThread;
+    private final transient Thread guiThread;
 
 
 
@@ -152,7 +150,7 @@ public class BoardGUI extends JFrame implements Runnable {
                 add(plantsPanel, BorderLayout.WEST);
             }
             case "pvAI" -> add(plantsPanel, BorderLayout.WEST);
-            case "AIvAI" -> {System.out.println("AI playing");}
+            case "AIvAI" -> System.out.println("AI playing");
         }
     }
 
@@ -337,6 +335,7 @@ public class BoardGUI extends JFrame implements Runnable {
         );
         exit.addActionListener(
                 _ -> {
+                    guiThread.interrupt();
                     app.setVisible(true);
                     dispose();
                 }
@@ -532,11 +531,37 @@ public class BoardGUI extends JFrame implements Runnable {
                 game.updateZombies();
                 updateEconomy();
                 SwingUtilities.invokeLater(this::updateBoard);
-                //updateBoard();
+
+                if (game.getGameOver()) {
+                    scheduler.shutdown();
+                    SwingUtilities.invokeLater(this::showGameOverDialog);
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }, 0, 1000, TimeUnit.MILLISECONDS);
+    }
+
+
+    /**
+     * Shows a dialog when the game is over.
+     */
+    private void showGameOverDialog() {
+        int option = JOptionPane.showOptionDialog(
+                this,
+                "Game Over!\nDo you want exit?",
+                "Game Over",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                new String[]{"Exit", "Cancel"},
+                "Exit"
+        );
+
+        if (option == JOptionPane.YES_OPTION) {
+            app.setVisible(true);
+            dispose();
+        }
     }
 
 
