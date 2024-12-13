@@ -22,6 +22,7 @@ public class Game {
     private final Bullet[][] bullets;
     private final boolean isActive = true;
     private final LawnMower[][] lawnMowers;
+    private boolean gameOver;
     private final ArrayList<Player> players;
     private static final Logger logger = Logger.getLogger(Game.class.getName());
 
@@ -38,6 +39,7 @@ public class Game {
         unit = new Unit[11][5];
         this.suns = 50;
         this.brains = 50;
+        this.gameOver = false;
         generatePlayers(gameMode, plantLevel, zombieLevel);
         initializeLawnMowers();
         setFileHandler();
@@ -360,7 +362,13 @@ public class Game {
     public int getBrains() {
         return brains;
     }
+    public void setGameOver() {
+        this.gameOver = true;
+    }
 
+    public boolean getGameOver() {
+        return this.gameOver;
+    }
 
 
     //* Logger *//

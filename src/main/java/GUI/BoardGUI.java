@@ -532,11 +532,37 @@ public class BoardGUI extends JFrame implements Runnable {
                 game.updateZombies();
                 updateEconomy();
                 SwingUtilities.invokeLater(this::updateBoard);
-                //updateBoard();
+
+                if (game.getGameOver()) {
+                    scheduler.shutdown();
+                    SwingUtilities.invokeLater(() -> showGameOverDialog());
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }, 0, 1000, TimeUnit.MILLISECONDS);
+    }
+
+
+    /**
+     * Shows a dialog when the game is over.
+     */
+    private void showGameOverDialog() {
+        int option = JOptionPane.showOptionDialog(
+                this,
+                "Game Over!\nDo you want exit?",
+                "Game Over",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                new String[]{"Exit", "Cancel"},
+                "Exit"
+        );
+
+        if (option == JOptionPane.YES_OPTION) {
+            app.setVisible(true);
+            dispose();
+        }
     }
 
 
