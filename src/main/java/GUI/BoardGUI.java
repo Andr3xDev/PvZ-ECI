@@ -49,6 +49,8 @@ public class BoardGUI extends JFrame implements Runnable {
     private SelectButton potatoButton;
     private SelectButton eciPlantButton;
 
+    private RoundedButton shovelButton;
+
     // Labels
     private JLabel timerLabel;
     private JLabel brainsLabel;
@@ -68,6 +70,8 @@ public class BoardGUI extends JFrame implements Runnable {
     private String selectedPlant;
     private String selectedZombie;
     private final transient Thread guiThread;
+    private final int plantLvl;
+    private final int zombieLvl;
 
 
 
@@ -78,6 +82,8 @@ public class BoardGUI extends JFrame implements Runnable {
      * Constructor, creates the Game's elements and actions.
      */
     public BoardGUI(GameAPP app, String gameMode, int plantLvl, int zombieLvl) {
+        this.plantLvl = plantLvl;
+        this.zombieLvl = zombieLvl;
         game = new Game(gameMode, plantLvl, zombieLvl);
         this.gameMode = gameMode;
         this.app = app;
@@ -238,18 +244,57 @@ public class BoardGUI extends JFrame implements Runnable {
         infoPanel.setBorder(BorderFactory.createLineBorder(new Color(2, 0, 51), 8));
 
         // Elements
-        JLabel plantPoints = new RoundedLabel("Points: ");
         timerLabel = new RoundedLabel("Time: ");
-        JLabel zombiesPoints = new RoundedLabel("Points: ");
-        infoPanel.add(plantPoints);
-        infoPanel.add(timerLabel);
-        infoPanel.add(zombiesPoints);
 
+        prepareElementsLabels();
         prepareElementsTimer();
 
         add(infoPanel, BorderLayout.NORTH);
     }
 
+
+    /**
+     * Prepares the labels of the game, like the points and the timer.
+     */
+    private void prepareElementsLabels() {
+        switch (gameMode) {
+            case "pvp":
+                shovelButton = new RoundedButton("Shovel: OFF", 35);
+                shovelButton.setBackground(new Color(141, 0, 0, 200));
+                shovelButton.setForeground(Color.WHITE);
+                infoPanel.add(shovelButton);
+                timerLabel = new RoundedLabel("Time: ");
+                infoPanel.add(timerLabel);
+                break;
+            case "pvAI":
+                RoundedButton shovelButton = new RoundedButton("Shovel: OFF", 35);
+                shovelButton.setBackground(new Color(141, 0, 0, 200));
+                shovelButton.setForeground(Color.WHITE);
+                infoPanel.add(shovelButton);
+                timerLabel = new RoundedLabel("Time: ");
+                infoPanel.add(timerLabel);
+                JLabel zombieDifficult = new RoundedLabel(putDifficult(zombieLvl));
+                infoPanel.add(zombieDifficult);
+                break;
+            case "AIvAI":
+                JLabel plantDifficult = new RoundedLabel(putDifficult(plantLvl));
+                infoPanel.add(plantDifficult);
+                timerLabel = new RoundedLabel("Time: ");
+                infoPanel.add(timerLabel);
+                JLabel zombieDifficult2 = new RoundedLabel(putDifficult(zombieLvl));
+                infoPanel.add(zombieDifficult2);
+                break;
+        }
+    }
+
+    private String putDifficult(int difficult) {
+        String diff = "";
+        switch (difficult) {
+            case 1 -> diff = "Difficult: Easy";
+            case 2 -> diff = "Difficult: Medium";
+        }
+        return diff;
+    }
 
     /**
      * Prepares the timer of the game. It changes depending on the game. Also updates the brains and suns.
@@ -388,6 +433,13 @@ public class BoardGUI extends JFrame implements Runnable {
                 selectedPlant = "eciplant";
             }
         });
+        shovelButton.addActionListener(
+                _ -> {
+                    shovelMode = !shovelMode;
+                    shovelButton.setText("Shovel: " + (shovelMode ? "ON" : "OFF"));
+                    shovelButton.setBackground(shovelMode ? new Color(40, 117, 0, 200) : new Color(141, 0, 0, 200));
+                }
+        );
     }
 
 
@@ -435,8 +487,13 @@ public class BoardGUI extends JFrame implements Runnable {
                     public void mouseClicked(java.awt.event.MouseEvent evt) {
                     if (selectedPlant == null) {
                         System.out.println("Select a plant first");
-                    } else if (shovelMode) {       //! missing add shovel
-                        boxes[finalI][finalJ].remove();
+                    } else if (shovelMode) {
+                        try {
+                            game.deleteUnit(finalJ, finalI);
+                            boxes[finalI][finalJ].remove();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     } else {
                         try {
                             game.addPlant(selectedPlant, finalJ, finalI);

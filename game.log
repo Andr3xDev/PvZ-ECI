@@ -1,0 +1,2184 @@
+Dec 15, 2024 1:34:19 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 1:34:19 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 0)
+Dec 15, 2024 1:34:19 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 1:34:19 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 2)
+Dec 15, 2024 1:34:19 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:20 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 1:34:20 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 15, 2024 1:34:20 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 1:34:20 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 1)
+Dec 15, 2024 1:34:20 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 15, 2024 1:34:20 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:20 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 1:34:21 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 1:34:21 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 15, 2024 1:34:21 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 1:34:22 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 1:34:22 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 15, 2024 1:34:22 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 1:34:22 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 1:34:22 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 0)
+Dec 15, 2024 1:34:22 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:22 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:23 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 1:34:23 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 15, 2024 1:34:23 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 1:34:24 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 1:34:24 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 0)
+Dec 15, 2024 1:34:25 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 4)
+Dec 15, 2024 1:34:25 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 4)
+Dec 15, 2024 1:34:25 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:25 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:26 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 1)
+Dec 15, 2024 1:34:26 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 1)
+Dec 15, 2024 1:34:26 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:26 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 0)
+Dec 15, 2024 1:34:26 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 0)
+Dec 15, 2024 1:34:26 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 0)
+Dec 15, 2024 1:34:26 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 0)
+Dec 15, 2024 1:34:26 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:26 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 1)
+Dec 15, 2024 1:34:26 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (3, 1)
+Dec 15, 2024 1:34:26 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:27 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 1:34:27 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 0)
+Dec 15, 2024 1:34:27 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 0)
+Dec 15, 2024 1:34:27 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 15, 2024 1:34:27 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:27 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 1:34:27 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 1)
+Dec 15, 2024 1:34:27 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 1)
+Dec 15, 2024 1:34:27 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:28 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 2)
+Dec 15, 2024 1:34:28 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 2)
+Dec 15, 2024 1:34:28 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:28 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 0)
+Dec 15, 2024 1:34:28 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (3, 0)
+Dec 15, 2024 1:34:28 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:28 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:29 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (4, 0)
+Dec 15, 2024 1:34:29 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (4, 0)
+Dec 15, 2024 1:34:29 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:29 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:29 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 0)
+Dec 15, 2024 1:34:29 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 0)
+Dec 15, 2024 1:34:29 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (4, 1)
+Dec 15, 2024 1:34:29 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (4, 1)
+Dec 15, 2024 1:34:29 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:29 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:29 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 1:34:29 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 1:34:29 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:30 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 2)
+Dec 15, 2024 1:34:30 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 2)
+Dec 15, 2024 1:34:30 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:30 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 0)
+Dec 15, 2024 1:34:30 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 0)
+Dec 15, 2024 1:34:30 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 2)
+Dec 15, 2024 1:34:30 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (3, 2)
+Dec 15, 2024 1:34:30 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:30 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:30 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (4, 2)
+Dec 15, 2024 1:34:30 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (4, 2)
+Dec 15, 2024 1:34:30 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:31 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 1:34:31 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 0)
+Dec 15, 2024 1:34:31 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 3)
+Dec 15, 2024 1:34:31 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 15, 2024 1:34:31 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:31 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 1:34:31 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:31 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:31 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 3)
+Dec 15, 2024 1:34:31 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 3)
+Dec 15, 2024 1:34:31 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:31 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:32 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:32 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 3)
+Dec 15, 2024 1:34:32 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 3)
+Dec 15, 2024 1:34:32 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:32 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:32 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 0)
+Dec 15, 2024 1:34:32 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 0)
+Dec 15, 2024 1:34:32 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:32 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 3)
+Dec 15, 2024 1:34:32 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (3, 3)
+Dec 15, 2024 1:34:32 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:32 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:32 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 4)
+Dec 15, 2024 1:34:32 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 4)
+Dec 15, 2024 1:34:32 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:32 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:33 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:33 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 4)
+Dec 15, 2024 1:34:33 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 4)
+Dec 15, 2024 1:34:33 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:33 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 0)
+Dec 15, 2024 1:34:33 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 0)
+Dec 15, 2024 1:34:33 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 4)
+Dec 15, 2024 1:34:33 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (3, 4)
+Dec 15, 2024 1:34:33 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:33 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:33 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (4, 4)
+Dec 15, 2024 1:34:33 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (4, 4)
+Dec 15, 2024 1:34:33 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:33 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:33 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:34 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 0)
+Dec 15, 2024 1:34:34 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 0)
+Dec 15, 2024 1:34:34 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (4, 3)
+Dec 15, 2024 1:34:34 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (4, 3)
+Dec 15, 2024 1:34:34 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:34 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:34 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:34 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (5, 4)
+Dec 15, 2024 1:34:34 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (5, 4)
+Dec 15, 2024 1:34:34 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:34 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:34 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:35 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:35 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (5, 3)
+Dec 15, 2024 1:34:35 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (5, 3)
+Dec 15, 2024 1:34:35 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:35 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:35 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:35 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 1:34:35 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 0)
+Dec 15, 2024 1:34:35 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:35 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (5, 2)
+Dec 15, 2024 1:34:35 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (5, 2)
+Dec 15, 2024 1:34:35 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:35 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:35 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:35 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (5, 1)
+Dec 15, 2024 1:34:35 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (5, 1)
+Dec 15, 2024 1:34:35 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:35 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:35 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:36 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:36 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:36 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 0)
+Dec 15, 2024 1:34:36 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 0)
+Dec 15, 2024 1:34:36 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:36 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:36 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (5, 0)
+Dec 15, 2024 1:34:36 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (5, 0)
+Dec 15, 2024 1:34:36 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:36 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:36 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:36 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:37 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (5, 0)
+Dec 15, 2024 1:34:37 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 1:34:37 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 0)
+Dec 15, 2024 1:34:37 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 0)
+Dec 15, 2024 1:34:37 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 1:34:37 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:48:06 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+Dec 15, 2024 2:48:06 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 3)
+Dec 15, 2024 2:48:07 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 1)
+Dec 15, 2024 2:48:07 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 15, 2024 2:48:07 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:48:08 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 4)
+Dec 15, 2024 2:48:08 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 15, 2024 2:48:08 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:48:09 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 2)
+Dec 15, 2024 2:48:09 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 15, 2024 2:48:09 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:48:36 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 15, 2024 2:48:36 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 2)
+Dec 15, 2024 2:48:37 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 1)
+Dec 15, 2024 2:48:37 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: basic
+Dec 15, 2024 2:48:37 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:48:38 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 2)
+Dec 15, 2024 2:48:38 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: basic
+Dec 15, 2024 2:48:38 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:48:39 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 1)
+Dec 15, 2024 2:48:39 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 15, 2024 2:48:39 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:48:40 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 0)
+Dec 15, 2024 2:48:40 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 15, 2024 2:48:40 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:48:41 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 1)
+Dec 15, 2024 2:48:41 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 1)
+Dec 15, 2024 2:48:42 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 4)
+Dec 15, 2024 2:48:42 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: basic
+Dec 15, 2024 2:48:42 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:48:43 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 1)
+Dec 15, 2024 2:48:43 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 1)
+Dec 15, 2024 2:48:44 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 4)
+Dec 15, 2024 2:48:44 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 15, 2024 2:48:44 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:48:45 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 1)
+Dec 15, 2024 2:48:45 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 15, 2024 2:48:45 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:48:46 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 4)
+Dec 15, 2024 2:48:46 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 4)
+Dec 15, 2024 2:49:44 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 1)
+Dec 15, 2024 2:49:44 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 1)
+Dec 15, 2024 2:49:45 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 2)
+Dec 15, 2024 2:49:45 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 15, 2024 2:49:45 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:49:46 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 2)
+Dec 15, 2024 2:49:46 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 15, 2024 2:49:46 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:49:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (0, 0)
+Dec 15, 2024 2:49:47 AM domain.Game addPlant
+WARNING: Posición inválida para la planta: (0, 0)
+Dec 15, 2024 2:49:47 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Given position is out of range for the plant
+Dec 15, 2024 2:49:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 1)
+Dec 15, 2024 2:49:47 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 1)
+Dec 15, 2024 2:49:47 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:49:47 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 2)
+Dec 15, 2024 2:49:47 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 15, 2024 2:49:47 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:49:48 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:49:48 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:49:48 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 15, 2024 2:49:48 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:49:48 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 0)
+Dec 15, 2024 2:49:48 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: basic
+Dec 15, 2024 2:49:48 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:49:49 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 1)
+Dec 15, 2024 2:49:49 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 15, 2024 2:49:49 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:40 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 15, 2024 2:51:40 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 2)
+Dec 15, 2024 2:51:41 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 0)
+Dec 15, 2024 2:51:41 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 15, 2024 2:51:41 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:42 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 2)
+Dec 15, 2024 2:51:42 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: basic
+Dec 15, 2024 2:51:42 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:43 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 1)
+Dec 15, 2024 2:51:43 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 15, 2024 2:51:43 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:44 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 1)
+Dec 15, 2024 2:51:44 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: basic
+Dec 15, 2024 2:51:44 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:45 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 2)
+Dec 15, 2024 2:51:45 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 15, 2024 2:51:45 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:46 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 2)
+Dec 15, 2024 2:51:46 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (10, 2)
+Dec 15, 2024 2:51:47 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 3)
+Dec 15, 2024 2:51:47 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 3)
+Dec 15, 2024 2:51:47 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 1)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:51:47 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 1)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 1)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 1)
+Dec 15, 2024 2:51:47 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 3)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 15, 2024 2:51:47 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 4)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 0)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (3, 0)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 1)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 2)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 3)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 4)
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:47 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:48 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 4)
+Dec 15, 2024 2:51:48 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 4)
+Dec 15, 2024 2:51:48 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 4)
+Dec 15, 2024 2:51:48 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 15, 2024 2:51:48 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 15, 2024 2:51:48 AM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 2)
+Dec 15, 2024 2:51:48 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 3)
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 15, 2024 2:51:48 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 4)
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 4)
+Dec 15, 2024 2:51:48 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 0)
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 1)
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 2)
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 3)
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 4)
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:48 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:49 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 4)
+Dec 15, 2024 2:51:49 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 4)
+Dec 15, 2024 2:51:49 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 4)
+Dec 15, 2024 2:51:49 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 15, 2024 2:51:49 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: eciplant
+Dec 15, 2024 2:51:49 AM domain.plants.ECIPlant generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 3)
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 3)
+Dec 15, 2024 2:51:49 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 4)
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 0)
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (5, 0)
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 1)
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (5, 1)
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 2)
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 3)
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 4)
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:51:49 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:50 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 4)
+Dec 15, 2024 2:51:50 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 4)
+Dec 15, 2024 2:51:50 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:50 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 4)
+Dec 15, 2024 2:51:50 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 15, 2024 2:51:50 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 15, 2024 2:51:50 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 3)
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 4)
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 0)
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (4, 0)
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 1)
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 2)
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 3)
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 4)
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:50 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:51 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 2)
+Dec 15, 2024 2:51:51 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 15, 2024 2:51:51 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:51 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+Dec 15, 2024 2:51:51 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: brainstein
+Dec 15, 2024 2:51:51 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:51 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:51 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 0)
+Dec 15, 2024 2:51:51 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 3)
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 4)
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 0)
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (6, 0)
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 1)
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 2)
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 3)
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 4)
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:51:51 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:52 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 0)
+Dec 15, 2024 2:51:52 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 15, 2024 2:51:52 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:52 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 1)
+Dec 15, 2024 2:51:52 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 15, 2024 2:51:52 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:52 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:52 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:51:52 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:52 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:51:52 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:52 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 3)
+Dec 15, 2024 2:51:52 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:52 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 4)
+Dec 15, 2024 2:51:52 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:52 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 2)
+Dec 15, 2024 2:51:53 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (5, 2)
+Dec 15, 2024 2:51:53 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 3)
+Dec 15, 2024 2:51:53 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:51:53 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:53 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 4)
+Dec 15, 2024 2:51:53 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:51:53 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:53 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 3)
+Dec 15, 2024 2:51:53 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 3)
+Dec 15, 2024 2:51:53 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:53 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 1)
+Dec 15, 2024 2:51:53 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 1)
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 3)
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 4)
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (5, 3)
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (5, 4)
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:54 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:54 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 1)
+Dec 15, 2024 2:51:54 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 1)
+Dec 15, 2024 2:51:54 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 4)
+Dec 15, 2024 2:51:54 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 15, 2024 2:51:54 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:54 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:54 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:54 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 2)
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 3)
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 4)
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 3)
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (5, 3)
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 4)
+Dec 15, 2024 2:51:55 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (5, 4)
+Dec 15, 2024 2:51:55 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 2)
+Dec 15, 2024 2:51:55 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 2)
+Dec 15, 2024 2:51:55 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 0)
+Dec 15, 2024 2:51:55 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: conehead
+Dec 15, 2024 2:51:55 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:55 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 3)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 4)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (8, 0)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (8, 0)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (8, 1)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (8, 2)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (8, 2)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (8, 3)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (8, 3)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (8, 4)
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:51:56 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:56 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 1)
+Dec 15, 2024 2:51:56 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: buckethead
+Dec 15, 2024 2:51:56 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:56 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:56 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 1)
+Dec 15, 2024 2:51:56 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 1)
+Dec 15, 2024 2:51:57 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:51:57 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:57 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 2)
+Dec 15, 2024 2:51:57 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:57 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 3)
+Dec 15, 2024 2:51:57 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:57 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 4)
+Dec 15, 2024 2:51:57 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:57 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 2)
+Dec 15, 2024 2:51:57 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 2)
+Dec 15, 2024 2:51:57 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 0)
+Dec 15, 2024 2:51:57 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 15, 2024 2:51:57 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:51:57 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:57 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:57 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 3)
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 4)
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 1)
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (3, 1)
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 2)
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (3, 2)
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 3)
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 4)
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:58 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:58 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 15, 2024 2:51:58 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 2)
+Dec 15, 2024 2:51:58 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 2)
+Dec 15, 2024 2:51:58 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 2)
+Dec 15, 2024 2:51:58 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 2)
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 4)
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 3)
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (3, 4)
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:51:59 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:51:59 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 2)
+Dec 15, 2024 2:51:59 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 2)
+Dec 15, 2024 2:51:59 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:51:59 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 4)
+Dec 15, 2024 2:51:59 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 15, 2024 2:51:59 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:52:00 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:00 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:00 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:52:00 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:00 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 4)
+Dec 15, 2024 2:52:00 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:00 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 3)
+Dec 15, 2024 2:52:00 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 3)
+Dec 15, 2024 2:52:00 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 4)
+Dec 15, 2024 2:52:00 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 4)
+Dec 15, 2024 2:52:00 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:00 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:00 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 2)
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 4)
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 0)
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (7, 0)
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 1)
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 2)
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (7, 2)
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 3)
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 4)
+Dec 15, 2024 2:52:01 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (7, 4)
+Dec 15, 2024 2:52:01 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 1)
+Dec 15, 2024 2:52:01 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (10, 1)
+Dec 15, 2024 2:52:01 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 4)
+Dec 15, 2024 2:52:01 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 4)
+Dec 15, 2024 2:52:01 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 2)
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 4)
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 1)
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (6, 1)
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 2)
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (6, 2)
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 3)
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (6, 3)
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 4)
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:52:02 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:02 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 4)
+Dec 15, 2024 2:52:02 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 15, 2024 2:52:02 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:52:02 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:02 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 2)
+Dec 15, 2024 2:52:02 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 2)
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 4)
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 1)
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 2)
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 3)
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 4)
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:03 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:03 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 3)
+Dec 15, 2024 2:52:03 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (10, 3)
+Dec 15, 2024 2:52:03 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 4)
+Dec 15, 2024 2:52:03 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:03 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 4)
+Dec 15, 2024 2:52:03 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:03 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 2)
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 4)
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 1)
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (4, 1)
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 2)
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (4, 2)
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 3)
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 4)
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:04 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:04 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 1)
+Dec 15, 2024 2:52:04 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 1)
+Dec 15, 2024 2:52:04 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 2)
+Dec 15, 2024 2:52:04 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: ecizombie
+Dec 15, 2024 2:52:04 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:52:04 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:05 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:05 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:05 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 2)
+Dec 15, 2024 2:52:05 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:05 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 3)
+Dec 15, 2024 2:52:05 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:05 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:05 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 4)
+Dec 15, 2024 2:52:05 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:05 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:05 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 15, 2024 2:52:05 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 2)
+Dec 15, 2024 2:52:05 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:05 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 2)
+Dec 15, 2024 2:52:05 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (10, 2)
+Dec 15, 2024 2:52:06 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:06 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:06 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:52:06 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:06 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (5, 4)
+Dec 15, 2024 2:52:06 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (5, 4)
+Dec 15, 2024 2:52:06 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 2)
+Dec 15, 2024 2:52:06 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 2)
+Dec 15, 2024 2:52:06 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:06 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:06 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 4)
+Dec 15, 2024 2:52:06 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 4)
+Dec 15, 2024 2:52:06 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:07 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:07 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:07 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 2)
+Dec 15, 2024 2:52:07 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:07 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (8, 1)
+Dec 15, 2024 2:52:07 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (8, 1)
+Dec 15, 2024 2:52:07 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (8, 2)
+Dec 15, 2024 2:52:07 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:07 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (8, 4)
+Dec 15, 2024 2:52:07 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:07 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 1)
+Dec 15, 2024 2:52:07 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (10, 1)
+Dec 15, 2024 2:52:07 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 2:52:07 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 0)
+Dec 15, 2024 2:52:07 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:08 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:08 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:08 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 2)
+Dec 15, 2024 2:52:08 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:08 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (8, 2)
+Dec 15, 2024 2:52:08 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (8, 2)
+Dec 15, 2024 2:52:08 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (8, 4)
+Dec 15, 2024 2:52:08 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:08 AM domain.Game deleteUnit
+INFO: Unidad eliminada exitosamente en la posición (5, 1)
+Dec 15, 2024 2:52:08 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 0)
+Dec 15, 2024 2:52:08 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 0)
+Dec 15, 2024 2:52:08 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:08 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 1)
+Dec 15, 2024 2:52:08 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 1)
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 0)
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (2, 0)
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 1)
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 2)
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 3)
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 4)
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:09 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:09 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 15, 2024 2:52:09 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 2)
+Dec 15, 2024 2:52:09 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:09 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:09 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 1)
+Dec 15, 2024 2:52:09 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (10, 1)
+Dec 15, 2024 2:52:09 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 2)
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 1)
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (2, 1)
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 2)
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (2, 2)
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 3)
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 4)
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:10 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:10 AM domain.Game deleteUnit
+INFO: Unidad eliminada exitosamente en la posición (5, 2)
+Dec 15, 2024 2:52:10 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 4)
+Dec 15, 2024 2:52:10 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 4)
+Dec 15, 2024 2:52:10 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 4)
+Dec 15, 2024 2:52:10 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 4)
+Dec 15, 2024 2:52:10 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 0)
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 1)
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (7, 1)
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 2)
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 3)
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 4)
+Dec 15, 2024 2:52:11 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:11 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 1)
+Dec 15, 2024 2:52:11 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 1)
+Dec 15, 2024 2:52:11 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:11 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (9, 3)
+Dec 15, 2024 2:52:11 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (9, 3)
+Dec 15, 2024 2:52:12 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:12 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:12 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 1)
+Dec 15, 2024 2:52:12 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (5, 1)
+Dec 15, 2024 2:52:12 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 2)
+Dec 15, 2024 2:52:12 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: potatomine
+Dec 15, 2024 2:52:12 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:12 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+Dec 15, 2024 2:52:12 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)
+Dec 15, 2024 2:52:12 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:12 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:12 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 2)
+Dec 15, 2024 2:52:12 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 2)
+Dec 15, 2024 2:52:12 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:13 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:13 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:13 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 2)
+Dec 15, 2024 2:52:13 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (5, 2)
+Dec 15, 2024 2:52:13 AM domain.LawnMower activate
+INFO: LawnMower activado en la fila: 2
+Dec 15, 2024 2:52:13 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 3)
+Dec 15, 2024 2:52:13 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 3)
+Dec 15, 2024 2:52:13 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 0)
+Dec 15, 2024 2:52:13 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 0)
+Dec 15, 2024 2:52:13 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:14 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:14 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:14 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 1)
+Dec 15, 2024 2:52:14 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (6, 1)
+Dec 15, 2024 2:52:14 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 2)
+Dec 15, 2024 2:52:14 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (6, 2)
+Dec 15, 2024 2:52:14 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 4)
+Dec 15, 2024 2:52:14 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:14 AM domain.LawnMower activate
+INFO: LawnMower activado en la fila: 3
+Dec 15, 2024 2:52:14 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+Dec 15, 2024 2:52:14 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 3)
+Dec 15, 2024 2:52:14 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:14 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 4)
+Dec 15, 2024 2:52:14 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 4)
+Dec 15, 2024 2:52:15 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:15 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:15 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 2)
+Dec 15, 2024 2:52:15 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (6, 2)
+Dec 15, 2024 2:52:15 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 4)
+Dec 15, 2024 2:52:15 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:15 AM domain.LawnMower activate
+INFO: LawnMower activado en la fila: 4
+Dec 15, 2024 2:52:15 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 2)
+Dec 15, 2024 2:52:15 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (10, 2)
+Dec 15, 2024 2:52:15 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:15 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:15 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 3)
+Dec 15, 2024 2:52:15 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 3)
+Dec 15, 2024 2:52:15 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 0)
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 1)
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (7, 1)
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 2)
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 3)
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 4)
+Dec 15, 2024 2:52:16 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:16 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+Dec 15, 2024 2:52:16 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 3)
+Dec 15, 2024 2:52:16 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:16 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 4)
+Dec 15, 2024 2:52:16 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 4)
+Dec 15, 2024 2:52:17 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:17 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:17 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 3)
+Dec 15, 2024 2:52:17 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (2, 3)
+Dec 15, 2024 2:52:17 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (2, 4)
+Dec 15, 2024 2:52:17 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (2, 4)
+Dec 15, 2024 2:52:17 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 1)
+Dec 15, 2024 2:52:17 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 1)
+Dec 15, 2024 2:52:17 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:17 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+Dec 15, 2024 2:52:17 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 3)
+Dec 15, 2024 2:52:18 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:18 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:18 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 3)
+Dec 15, 2024 2:52:18 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:18 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:18 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 4)
+Dec 15, 2024 2:52:18 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:18 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:18 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 4)
+Dec 15, 2024 2:52:18 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 4)
+Dec 15, 2024 2:52:18 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:18 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:18 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 0)
+Dec 15, 2024 2:52:18 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (10, 0)
+Dec 15, 2024 2:52:18 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:19 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:19 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:19 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (5, 2)
+Dec 15, 2024 2:52:19 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (5, 2)
+Dec 15, 2024 2:52:19 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 3)
+Dec 15, 2024 2:52:19 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 3)
+Dec 15, 2024 2:52:19 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:19 AM domain.Game deleteUnit
+INFO: Unidad eliminada exitosamente en la posición (6, 3)
+Dec 15, 2024 2:52:19 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 3)
+Dec 15, 2024 2:52:19 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 3)
+Dec 15, 2024 2:52:20 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:20 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:20 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 3)
+Dec 15, 2024 2:52:20 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (4, 3)
+Dec 15, 2024 2:52:20 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 4)
+Dec 15, 2024 2:52:20 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: wallnut
+Dec 15, 2024 2:52:20 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 2:52:20 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 3)
+Dec 15, 2024 2:52:20 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 3)
+Dec 15, 2024 2:52:20 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:20 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 3)
+Dec 15, 2024 2:52:20 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 3)
+Dec 15, 2024 2:52:21 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:21 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:21 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (4, 4)
+Dec 15, 2024 2:52:21 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (4, 4)
+Dec 15, 2024 2:52:21 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (10, 2)
+Dec 15, 2024 2:52:21 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (10, 2)
+Dec 15, 2024 2:52:21 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:21 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:21 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 4)
+Dec 15, 2024 2:52:21 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 4)
+Dec 15, 2024 2:52:21 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:22 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:22 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:22 AM domain.Game deleteUnit
+INFO: Unidad eliminada exitosamente en la posición (6, 0)
+Dec 15, 2024 2:52:22 AM domain.Game deleteUnit
+INFO: Unidad eliminada exitosamente en la posición (5, 3)
+Dec 15, 2024 2:52:22 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 1)
+Dec 15, 2024 2:52:22 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 1)
+Dec 15, 2024 2:52:22 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:22 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 2:52:22 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 0)
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 0)
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (6, 0)
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 1)
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 2)
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 3)
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (6, 3)
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (6, 4)
+Dec 15, 2024 2:52:23 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:23 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (9, 1)
+Dec 15, 2024 2:52:23 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (9, 1)
+Dec 15, 2024 2:52:23 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:23 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: conehead en (9, 2)
+Dec 15, 2024 2:52:23 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: conehead en (9, 2)
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 0)
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (7, 0)
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 1)
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (7, 1)
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 2)
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (7, 2)
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 3)
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 4)
+Dec 15, 2024 2:52:24 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:24 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 0)
+Dec 15, 2024 2:52:24 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 0)
+Dec 15, 2024 2:52:24 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:24 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:24 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 4)
+Dec 15, 2024 2:52:24 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 4)
+Dec 15, 2024 2:52:24 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:25 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:25 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:25 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 1)
+Dec 15, 2024 2:52:25 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:25 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (5, 3)
+Dec 15, 2024 2:52:25 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: potatomine en (5, 3)
+Dec 15, 2024 2:52:25 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 3)
+Dec 15, 2024 2:52:25 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 3)
+Dec 15, 2024 2:52:25 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:25 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 0)
+Dec 15, 2024 2:52:25 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 0)
+Dec 15, 2024 2:52:26 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:26 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:26 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 0)
+Dec 15, 2024 2:52:26 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:26 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 3)
+Dec 15, 2024 2:52:26 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:26 AM domain.Game addPlant
+INFO: Intentando añadir una planta: potatomine en (7, 4)
+Dec 15, 2024 2:52:26 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:26 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 1)
+Dec 15, 2024 2:52:26 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (9, 1)
+Dec 15, 2024 2:52:26 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:26 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (9, 0)
+Dec 15, 2024 2:52:26 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (9, 0)
+Dec 15, 2024 2:52:27 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 0)
+Dec 15, 2024 2:52:27 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:27 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (5, 1)
+Dec 15, 2024 2:52:27 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:27 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (5, 3)
+Dec 15, 2024 2:52:27 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: wallnut en (5, 3)
+Dec 15, 2024 2:52:27 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: buckethead en (10, 1)
+Dec 15, 2024 2:52:27 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: buckethead en (10, 1)
+Dec 15, 2024 2:52:27 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:27 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:27 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: brainstein en (10, 4)
+Dec 15, 2024 2:52:27 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: brainstein en (10, 4)
+Dec 15, 2024 2:52:27 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:52:28 AM domain.Game addPlant
+INFO: Intentando añadir una planta: eciplant en (1, 0)
+Dec 15, 2024 2:52:28 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:28 AM domain.Game addPlant
+INFO: Intentando añadir una planta: wallnut en (5, 1)
+Dec 15, 2024 2:52:28 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 2:52:28 AM domain.LawnMower activate
+INFO: LawnMower activado en la fila: 1
+Dec 15, 2024 2:52:28 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: ecizombie en (10, 0)
+Dec 15, 2024 2:52:28 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: ecizombie en (10, 0)
+Dec 15, 2024 2:53:55 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (1, 1)
+Dec 15, 2024 2:53:55 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (1, 1)
+Dec 15, 2024 2:53:55 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:53:56 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (10, 1)
+Dec 15, 2024 2:53:56 AM domain.Game addZombie
+INFO: Zombie añadido exitosamente: basic en (10, 1)
+Dec 15, 2024 2:53:57 AM domain.Game addZombie
+INFO: Intentando añadir un zombie: basic en (9, 2)
+Dec 15, 2024 2:53:57 AM domain.Game addZombie
+WARNING: No hay suficientes cerebros para añadir el zombie: basic
+Dec 15, 2024 2:53:57 AM domain.Game addZombie
+SEVERE: Error al añadir zombie: Not enough brains to buy the plant
+Dec 15, 2024 2:53:58 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 2:59:14 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 1)
+Dec 15, 2024 2:59:14 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 1)
+Dec 15, 2024 2:59:14 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:01 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 2)
+Dec 15, 2024 3:03:01 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 2)
+Dec 15, 2024 3:03:01 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:03 AM domain.Game deleteUnit
+INFO: Unidad eliminada exitosamente en la posición (2, 2)
+Dec 15, 2024 3:03:04 AM domain.Game deleteUnit
+WARNING: No hay unidad para eliminar en la posición (2, 2)
+Dec 15, 2024 3:03:04 AM domain.Game deleteUnit
+SEVERE: Error al eliminar unidad: Cannot delete the unit because there is no unit in the cell
+Dec 15, 2024 3:03:04 AM domain.Game deleteUnit
+WARNING: No hay unidad para eliminar en la posición (2, 2)
+Dec 15, 2024 3:03:04 AM domain.Game deleteUnit
+SEVERE: Error al eliminar unidad: Cannot delete the unit because there is no unit in the cell
+Dec 15, 2024 3:03:04 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:07 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:09 AM domain.Game deleteUnit
+WARNING: No hay unidad para eliminar en la posición (2, 1)
+Dec 15, 2024 3:03:09 AM domain.Game deleteUnit
+SEVERE: Error al eliminar unidad: Cannot delete the unit because there is no unit in the cell
+Dec 15, 2024 3:03:09 AM domain.Game deleteUnit
+WARNING: No hay unidad para eliminar en la posición (2, 1)
+Dec 15, 2024 3:03:09 AM domain.Game deleteUnit
+SEVERE: Error al eliminar unidad: Cannot delete the unit because there is no unit in the cell
+Dec 15, 2024 3:03:09 AM domain.Game deleteUnit
+WARNING: No hay unidad para eliminar en la posición (2, 2)
+Dec 15, 2024 3:03:09 AM domain.Game deleteUnit
+SEVERE: Error al eliminar unidad: Cannot delete the unit because there is no unit in the cell
+Dec 15, 2024 3:03:09 AM domain.Game deleteUnit
+WARNING: No hay unidad para eliminar en la posición (2, 2)
+Dec 15, 2024 3:03:09 AM domain.Game deleteUnit
+SEVERE: Error al eliminar unidad: Cannot delete the unit because there is no unit in the cell
+Dec 15, 2024 3:03:10 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:12 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 2)
+Dec 15, 2024 3:03:12 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (3, 2)
+Dec 15, 2024 3:03:12 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:12 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 2)
+Dec 15, 2024 3:03:12 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 3:03:13 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 1)
+Dec 15, 2024 3:03:13 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (3, 1)
+Dec 15, 2024 3:03:13 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:13 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 1)
+Dec 15, 2024 3:03:13 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 1)
+Dec 15, 2024 3:03:13 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:13 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:14 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 2)
+Dec 15, 2024 3:03:14 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Cannot add the unit because there is already a unit in the cell
+Dec 15, 2024 3:03:14 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 2)
+Dec 15, 2024 3:03:14 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 2)
+Dec 15, 2024 3:03:14 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:14 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 3)
+Dec 15, 2024 3:03:14 AM domain.Game addPlant
+WARNING: No hay suficientes soles para añadir la planta: sunflower
+Dec 15, 2024 3:03:14 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:14 AM domain.Game addPlant
+SEVERE: Error al añadir planta: Not enough suns to buy the plant
+Dec 15, 2024 3:03:15 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:15 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 3)
+Dec 15, 2024 3:03:15 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (3, 3)
+Dec 15, 2024 3:03:15 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:16 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:16 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 3)
+Dec 15, 2024 3:03:16 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 3)
+Dec 15, 2024 3:03:16 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:16 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:16 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:16 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (2, 4)
+Dec 15, 2024 3:03:16 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (2, 4)
+Dec 15, 2024 3:03:16 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:16 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (3, 4)
+Dec 15, 2024 3:03:16 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (3, 4)
+Dec 15, 2024 3:03:16 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:17 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (4, 4)
+Dec 15, 2024 3:03:17 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (4, 4)
+Dec 15, 2024 3:03:17 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:17 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:17 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (4, 2)
+Dec 15, 2024 3:03:17 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (4, 2)
+Dec 15, 2024 3:03:17 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:18 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:18 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:18 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (4, 3)
+Dec 15, 2024 3:03:18 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (4, 3)
+Dec 15, 2024 3:03:18 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:18 AM domain.Game addPlant
+INFO: Intentando añadir una planta: sunflower en (4, 1)
+Dec 15, 2024 3:03:18 AM domain.Game addPlant
+INFO: Planta añadida exitosamente: sunflower en (4, 1)
+Dec 15, 2024 3:03:18 AM domain.plants.Sunflower generateSun
+INFO: sol generado
+Dec 15, 2024 3:03:19 AM domain.plants.Sunflower generateSun
+INFO: sol generado
