@@ -61,7 +61,7 @@
 <br>
 
 ## GUI components
-*Descripción de los componentes gráficos.*
+Para los componentes gráficos se utilizó una clase controladora con un cardlayout que nos permite pasar de interfaz en interfaz sin inconvenientes y con una gran calidad de código y rendimiento. Además, todos los componentes son creados desde el mismo Swing para evitar incompatibilidades y asegurar una adaptación constante a todos los dispositivos en que se ejecute el juego. Además, el uso de clases distinguidas para la variedad de elementos personalizados, nos ayuda a mantener una estética sólida sin necesidad de sacrificar patrones de diseño y calidad de codigo.
 
 <br>
 
