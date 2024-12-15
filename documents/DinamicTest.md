@@ -44,11 +44,22 @@ a mantener un estándar de calidad en el proyecto. Muy importante tener en cuent
 <br>
 
 ### Analisis del informe
-Los resultados de cobertura arrojados por JaCoCo indican que se alcanzó un porcentaje de cobertura general del XX%. A nivel de línea,
-mientras que la cobertura de ramas fue del XX%. Estas métricas nos permiten identificar las áreas del código que no fueron ejercitadas 
+Los resultados de cobertura arrojados por JaCoCo indican que se alcanzó un porcentaje de cobertura general del 94% a nivel de línea,
+mientras que la cobertura de ramas fue del 87%. Estas métricas nos permiten identificar las áreas del código que no fueron ejercitadas 
 durante las pruebas y, por lo tanto, requieren revisión adicional.
 
-![Errores generales](/documents/Screenshots/DTJ1.png)
+![Errores generales](/documents/Screenshots/covert1.png)
+
+Tras un pequeño análisis, fuimos capaces de identificar pequeñas falencias en el código que nos evitarían probarlo como es debido. Sin embargo, al revisar más en profundidad, encontramos errores como los siguientes: fragmentos de código que nunca se podían probar, pero que sin estos eran necesarios para que el código corriera de forma correcta, pues al fin y al cabo prevenían errores inesperados en el caso que ocurrían.
+
+
+![Errores generales](/documents/Screenshots/covert2.png)
+
+Asi mismo, lo que nos baja la cobertura general, son los métodos que por razones de tiempo no alcanzaron a ser completamente funcionales (fueron los de persistencia más que nada). Por lo que las pruebas quedan con resultados como los que se pueden ver a continuación.
+
+![Errores generales](/documents/Screenshots/covert3.png)
+
+<br>
 
 ## Conclusión
 Tras el corto análisis que pudimos realizar, podemos decir que nuestro código resulto con una gran cobertura de toda la capa de dominio. 
