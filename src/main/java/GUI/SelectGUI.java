@@ -139,6 +139,12 @@ public final class SelectGUI extends JPanel {
         mediumButton2 = new RoundedButton("Medium", 35);
         easyButton3 = new RoundedButton("Easy", 35);
         mediumButton3 = new RoundedButton("Medium", 35);
+
+        easyButton2.setFont(new Font("Arial", Font.BOLD, 20));
+        easyButton3.setFont(new Font("Arial", Font.BOLD, 20));
+        mediumButton2.setFont(new Font("Arial", Font.BOLD, 15));
+        mediumButton3.setFont(new Font("Arial", Font.BOLD, 15));
+
         // Set buttons properties
         pvpButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
         pvAIButton.setPreferredSize(new Dimension(buttonsWSize, buttonsHSize));
