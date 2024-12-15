@@ -2,16 +2,33 @@
 
 import domain.Game;
 
-public class BucketHead extends Zombie {
+import java.io.Serializable;
+
+/**
+ * BucketHead is a zombie that has a bucket on its head. It has 1100 life points and deals 100 damage.
+ * It costs 200 suns.
+ */
+public class BucketHead extends Zombie implements Serializable {
+
+    // Attributes
     private static final String name = &quot;buckethead&quot;;
+
+
+    // Constructor
+
+    /**
+     * Constructor of the BucketHead class.
+     * @param y y-coordinate of the zombie.
+     * @param game Game object.
+     */
     public BucketHead(int y, Game game) {
-<span class="fc" id="L8">        super(name);</span>
-<span class="fc" id="L9">        this.life = 1100;</span>
-<span class="fc" id="L10">        this.damage = 100;</span>
-<span class="fc" id="L11">        this.cost = 200;</span>
-<span class="fc" id="L12">        this.game = game;</span>
-<span class="fc" id="L13">        this.positionY = y;</span>
-<span class="fc" id="L14">        this.positionX = 10;</span>
-<span class="fc" id="L15">    }</span>
+<span class="fc" id="L25">        super(name);</span>
+<span class="fc" id="L26">        this.life = 1100;</span>
+<span class="fc" id="L27">        this.damage = 100;</span>
+<span class="fc" id="L28">        this.cost = 200;</span>
+<span class="fc" id="L29">        this.game = game;</span>
+<span class="fc" id="L30">        this.positionY = y;</span>
+<span class="fc" id="L31">        this.positionX = 10;</span>
+<span class="fc" id="L32">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

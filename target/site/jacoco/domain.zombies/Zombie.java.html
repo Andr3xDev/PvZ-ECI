@@ -5,7 +5,16 @@ import domain.PvZExceptions;
 import domain.Unit;
 import domain.plants.Plant;
 
-public abstract class Zombie implements Unit, Runnable {
+import java.io.Serializable;
+
+/**
+ * Represents a zombie in the game.
+ * It has a name, life points, damage points, cost, position X, position Y and a game.
+ * It's the abstract zombie class.
+ */
+public abstract class Zombie implements Unit, Runnable, Serializable {
+
+    // Attributes
     private String name;
     protected int life;
     protected int damage;
@@ -13,100 +22,130 @@ public abstract class Zombie implements Unit, Runnable {
     protected int positionX;
     protected int positionY;
     protected Game game;
-<span class="fc" id="L16">    private boolean isActive = true;</span>
+<span class="fc" id="L25">    private boolean isActive = true;</span>
+    private transient Thread thread;
 
-<span class="fc" id="L18">    public Zombie(String name) {</span>
-<span class="fc" id="L19">        this.name = name;</span>
 
-<span class="fc" id="L21">        Thread thread = new Thread(this);</span>
-<span class="fc" id="L22">        thread.start();</span>
-<span class="fc" id="L23">    }</span>
+    // Constructor
 
+    /**
+     * Constructor of the Zombie class.
+     * @param name The name of the zombie.
+     */
+<span class="fc" id="L35">    public Zombie(String name) {</span>
+<span class="fc" id="L36">        this.name = name;</span>
+
+<span class="fc" id="L38">        thread = new Thread(this);</span>
+<span class="fc" id="L39">        thread.start();</span>
+<span class="fc" id="L40">    }</span>
+
+
+    // Methods
+
+    /**
+     * Makes the zombie die. It sets the zombie as inactive and removes it from the game.
+     */
     @Override
     public void die() {
-<span class="fc" id="L27">        this.game.getUnit()[positionX][positionY] = null;</span>
-<span class="fc" id="L28">        this.isActive = false;</span>
-<span class="fc" id="L29">    }</span>
+<span class="fc" id="L50">        this.game.getUnit()[positionX][positionY] = null;</span>
+<span class="fc" id="L51">        this.isActive = false;</span>
+<span class="fc" id="L52">    }</span>
 
+    /**
+     * Makes the zombie take damage. It decreases the life points of the zombie.
+     * If the life points are less than or equal to 0, the zombie dies.
+     * @param dmg The damage points to take.
+     */
     @Override
     public void takeDamage(int dmg) {
-<span class="fc" id="L33">        this.life -= dmg;</span>
-<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        if (this.life &lt;= 0) {</span>
-<span class="fc" id="L35">            this.die();</span>
+<span class="fc" id="L61">        this.life -= dmg;</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        if (this.life &lt;= 0) {</span>
+<span class="fc" id="L63">            this.die();</span>
         }
-<span class="fc" id="L37">    }</span>
+<span class="fc" id="L65">    }</span>
 
+    /**
+     * Makes the zombie move. It moves the zombie to the left.
+     * If there is a plant in front of the zombie, the zombie attacks it.
+     * @throws PvZExceptions If the zombie can't move.
+     */
     public void move() throws PvZExceptions {
-<span class="pc bpc" id="L40" title="1 of 4 branches missed.">        if (isActive &amp;&amp; positionX &gt; 0) {</span>
-<span class="pc bpc" id="L41" title="1 of 2 branches missed.">            if (!(game.getUnit()[positionX - 1][positionY] instanceof Plant)) {</span>
-<span class="fc" id="L42">                game.getUnit()[positionX][positionY] = null;</span>
-<span class="fc" id="L43">                positionX--;</span>
-<span class="fc" id="L44">                game.getUnit()[positionX][positionY] = this;</span>
+<span class="fc bfc" id="L73" title="All 4 branches covered.">        if (isActive &amp;&amp; positionX &gt; 0) {</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">            if (!(game.getUnit()[positionX - 1][positionY] instanceof Plant)) {</span>
+<span class="fc" id="L75">                game.getUnit()[positionX][positionY] = null;</span>
+<span class="fc" id="L76">                positionX--;</span>
+<span class="fc" id="L77">                game.getUnit()[positionX][positionY] = this;</span>
             }
+<span class="pc bpc" id="L79" title="1 of 4 branches missed.">        } else if (isActive &amp;&amp; positionX == 0) {</span>
+<span class="fc" id="L80">            game.setGameOver();</span>
         }
-<span class="fc" id="L47">    }</span>
+<span class="fc" id="L82">    }</span>
 
+    /**
+     * Makes the zombie attack. It attacks the plant in front of the zombie.
+     * If there is a plant in front of the zombie, the plant takes damage.
+     * @throws PvZExceptions If the zombie can't attack.
+     */
     protected void attack() throws PvZExceptions {
-<span class="pc bpc" id="L50" title="1 of 4 branches missed.">        if (positionX &gt; 0 &amp;&amp; game.getUnit()[positionX - 1][positionY] instanceof Plant) {</span>
-<span class="fc" id="L51">            Plant plant = (Plant) game.getUnit()[positionX - 1][positionY];</span>
-<span class="fc" id="L52">            plant.takeDamage(this.damage);</span>
+<span class="fc bfc" id="L90" title="All 4 branches covered.">        if (positionX &gt; 0 &amp;&amp; game.getUnit()[positionX - 1][positionY] instanceof Plant) {</span>
+<span class="fc" id="L91">            Plant plant = (Plant) game.getUnit()[positionX - 1][positionY];</span>
+<span class="fc" id="L92">            plant.takeDamage(this.damage);</span>
         }
-<span class="fc" id="L54">    }</span>
+<span class="fc" id="L94">    }</span>
 
+    /**
+     * This method create the thead. It makes the zombie move and attack.
+     * It sleeps 2.5 seconds between each move and attack.
+     * It sleeps 0.5 seconds after each attack.
+     */
     @Override
     public void run() {
-//        Thread attackThread = new Thread(() -&gt; {
-//            while (isActive) {
-//                try {
-//                    Thread.sleep(500);
-//                    attack();
-//                } catch (InterruptedException e) {
-//                    Thread.currentThread().interrupt();
-//                    break;
-//                } catch (PvZExceptions e) {
-//                    throw new RuntimeException(e);
-//                }
-//            }
-//        });
-//
-//        attackThread.start();
-
-<span class="fc bfc" id="L74" title="All 2 branches covered.">        while (isActive) {</span>
-
+<span class="fc bfc" id="L103" title="All 2 branches covered.">        while (isActive) {</span>
             try {
-<span class="fc" id="L77">                Thread.sleep(2500);</span>
-<span class="fc" id="L78">                move();</span>
-<span class="fc" id="L79">                attack();</span>
-<span class="fc" id="L80">                Thread.sleep(500);</span>
-<span class="nc" id="L81">            } catch (InterruptedException e) {</span>
-<span class="nc" id="L82">                Thread.currentThread().interrupt();</span>
-<span class="nc" id="L83">                break;</span>
-<span class="nc" id="L84">            } catch (PvZExceptions e) {</span>
-<span class="nc" id="L85">                throw new RuntimeException(e);</span>
-<span class="fc" id="L86">            }</span>
+<span class="fc" id="L105">                Thread.sleep(2500);</span>
+<span class="fc" id="L106">                move();</span>
+<span class="fc" id="L107">                attack();</span>
+<span class="fc" id="L108">                Thread.sleep(500);</span>
+<span class="nc" id="L109">            } catch (InterruptedException e) {</span>
+<span class="nc" id="L110">                Thread.currentThread().interrupt();</span>
+<span class="nc" id="L111">                break;</span>
+<span class="nc" id="L112">            } catch (PvZExceptions e) {</span>
+<span class="nc" id="L113">                throw new RuntimeException(e);</span>
+<span class="fc" id="L114">            }</span>
         }
+<span class="fc" id="L116">    }</span>
 
-//        attackThread.interrupt();
-<span class="fc" id="L90">    }</span>
-
+    /**
+     * Gets the position X of the zombie.
+     * @return The position X of the zombie.
+     */
     @Override
     public int getLife() {
-<span class="fc" id="L94">        return this.life;</span>
+<span class="fc" id="L124">        return this.life;</span>
     }
 
+    /**
+     * Gets the damage the zombie.
+     * @return The damage from the zombie.
+     */
     @Override
     public int getDamage() {
-<span class="fc" id="L99">        return this.damage;</span>
+<span class="fc" id="L133">        return this.damage;</span>
     }
 
+    /**
+     * Gets the cost of the zombie.
+     * @return The cost of the zombie.
+     */
     @Override
     public int getCost() {
-<span class="fc" id="L104">        return this.cost;</span>
+<span class="fc" id="L142">        return this.cost;</span>
     }
 
-<span class="fc" id="L107">    public String getName(){return this.name;}</span>
+    /**
+     * Gets the name of the zombie.
+     * @return The name of the zombie.
+     */
+<span class="fc" id="L149">    public String getName(){return this.name;}</span>
 }
-
-
-
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

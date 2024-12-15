@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: GameTest
 -------------------------------------------------------------------------------
-Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.14 s -- in GameTest
+Tests run: 41, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 162.4 s -- in GameTest

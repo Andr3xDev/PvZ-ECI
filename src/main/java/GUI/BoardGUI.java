@@ -265,9 +265,10 @@ public class BoardGUI extends JFrame implements Runnable {
                 infoPanel.add(shovelButton);
                 timerLabel = new RoundedLabel("Time: ");
                 infoPanel.add(timerLabel);
+                prepareActionsShovel();
                 break;
             case "pvAI":
-                RoundedButton shovelButton = new RoundedButton("Shovel: OFF", 35);
+                shovelButton = new RoundedButton("Shovel: OFF", 35);
                 shovelButton.setBackground(new Color(141, 0, 0, 200));
                 shovelButton.setForeground(Color.WHITE);
                 infoPanel.add(shovelButton);
@@ -275,6 +276,7 @@ public class BoardGUI extends JFrame implements Runnable {
                 infoPanel.add(timerLabel);
                 JLabel zombieDifficult = new RoundedLabel(putDifficult(zombieLvl));
                 infoPanel.add(zombieDifficult);
+                prepareActionsShovel();
                 break;
             case "AIvAI":
                 JLabel plantDifficult = new RoundedLabel(putDifficult(plantLvl));
@@ -287,6 +289,12 @@ public class BoardGUI extends JFrame implements Runnable {
         }
     }
 
+
+    /**
+     * Puts the difficult of the game in the label.
+     * @param difficult the difficult of the game.
+     * @return the string of the difficult.
+     */
     private String putDifficult(int difficult) {
         String diff = "";
         switch (difficult) {
@@ -433,6 +441,13 @@ public class BoardGUI extends JFrame implements Runnable {
                 selectedPlant = "eciplant";
             }
         });
+    }
+
+
+    /**
+     * Prepares the actions of the Shovel Button from the panel.
+     */
+    private void prepareActionsShovel() {
         shovelButton.addActionListener(
                 _ -> {
                     shovelMode = !shovelMode;
@@ -441,7 +456,6 @@ public class BoardGUI extends JFrame implements Runnable {
                 }
         );
     }
-
 
     /**
      * Prepares the actions of the Zombie Select Buttons from the panel if the game mode is pvp.

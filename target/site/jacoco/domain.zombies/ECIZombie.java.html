@@ -3,45 +3,80 @@
 import domain.Game;
 import domain.POOmBas;
 
+import java.io.Serializable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class ECIZombie extends Zombie {
+/**
+ * Represents a ECIZombie zombie in the game.
+ * It costs 250 sun points, has 200 life points and deals 50 damage points.
+ * It's the basic zombie but throws POOmBas.
+ */
+public class ECIZombie extends Zombie implements Serializable {
+
+    // Attributes
     private static final String name = &quot;ecizombie&quot;;
-    private ScheduledExecutorService scheduler;
+    private transient ScheduledExecutorService scheduler;
+    private transient Thread bulletThread;  // This is already transient
+
+
+
+    // Constructor
+
+    /**
+     * Constructor of the ECIZombie class.
+     * @param y The position Y of the zombie.
+     * @param game The game where the zombie belongs.
+     */
     public ECIZombie(int y, Game game) {
-<span class="fc" id="L14">        super(name);</span>
-<span class="fc" id="L15">        this.life = 200;</span>
-<span class="fc" id="L16">        this.damage = 50;</span>
-<span class="fc" id="L17">        this.cost = 250;</span>
-<span class="fc" id="L18">        this.game = game;</span>
-<span class="fc" id="L19">        this.positionY = y;</span>
-<span class="fc" id="L20">        this.positionX = 10;</span>
-<span class="fc" id="L21">        startShooting();</span>
-<span class="fc" id="L22">    }</span>
+<span class="fc" id="L33">        super(name);</span>
+<span class="fc" id="L34">        this.life = 200;</span>
+<span class="fc" id="L35">        this.damage = 50;</span>
+<span class="fc" id="L36">        this.cost = 250;</span>
+<span class="fc" id="L37">        this.game = game;</span>
+<span class="fc" id="L38">        this.positionY = y;</span>
+<span class="fc" id="L39">        this.positionX = 10;</span>
+<span class="fc" id="L40">        startShooting();</span>
+<span class="fc" id="L41">    }</span>
+
+
+    // Methods
+
+    /**
+     * Makes the zombie attack. It throws a POOmBas to the plants every 1.5 seconds.
+     */
     @Override
     protected void attack() {
-<span class="fc" id="L25">        POOmBas poombas = new POOmBas(this.damage, this.positionX, this.positionY, this.game);</span>
-<span class="fc" id="L26">        Thread bulletThread = new Thread(poombas);</span>
-<span class="fc" id="L27">        bulletThread.start();</span>
-<span class="fc" id="L28">    }</span>
+<span class="fc" id="L51">        POOmBas poombas = new POOmBas(this.damage, this.positionX, this.positionY, this.game);</span>
+<span class="fc" id="L52">        bulletThread = new Thread(poombas);</span>
+<span class="fc" id="L53">        bulletThread.start();</span>
+<span class="fc" id="L54">    }</span>
 
+    /**
+     * Starts the shooting of the zombie when its created.
+     */
     private void startShooting() {
-<span class="fc" id="L31">        scheduler = Executors.newSingleThreadScheduledExecutor();</span>
-<span class="fc" id="L32">        scheduler.scheduleAtFixedRate(this::attack, 0, 1500, TimeUnit.MILLISECONDS);</span>
-<span class="fc" id="L33">    }</span>
+<span class="fc" id="L60">        scheduler = Executors.newSingleThreadScheduledExecutor();</span>
+<span class="fc" id="L61">        scheduler.scheduleAtFixedRate(this::attack, 0, 1500, TimeUnit.MILLISECONDS);</span>
+<span class="fc" id="L62">    }</span>
 
+    /**
+     * Stops the shooting of the zombie when it dies.
+     */
     public void stopShooting() {
-<span class="pc bpc" id="L36" title="2 of 4 branches missed.">        if (scheduler != null &amp;&amp; !scheduler.isShutdown()) {</span>
-<span class="fc" id="L37">            scheduler.shutdownNow();</span>
+<span class="pc bpc" id="L68" title="2 of 4 branches missed.">        if (scheduler != null &amp;&amp; !scheduler.isShutdown()) {</span>
+<span class="fc" id="L69">            scheduler.shutdownNow();</span>
         }
-<span class="fc" id="L39">    }</span>
+<span class="fc" id="L71">    }</span>
 
+    /**
+     * This method is called when the zombie dies. It stops the shooting of the zombie.
+     */
     @Override
     public void die() {
-<span class="fc" id="L43">        super.die();</span>
-<span class="fc" id="L44">        stopShooting();</span>
-<span class="fc" id="L45">    }</span>
+<span class="fc" id="L78">        super.die();</span>
+<span class="fc" id="L79">        stopShooting();</span>
+<span class="fc" id="L80">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

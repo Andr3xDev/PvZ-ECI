@@ -1,61 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PotatoMine.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PvZ-ECI</a> &gt; <a href="index.source.html" class="el_package">domain.plants</a> &gt; <span class="el_source">PotatoMine.java</span></div><h1>PotatoMine.java</h1><pre class="source lang-java linenums">package domain.plants;
+
 import domain.Game;
 import domain.PvZExceptions;
 import domain.zombies.Zombie;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class PotatoMine extends Plant {
+/**
+ * Represents a PotatoMine in the game.
+ * It is a plant that explodes when a zombie steps on it after a certain amount of time.
+ * It costs 25 suns and has 100 life points.
+ */
+public class PotatoMine extends Plant implements Serializable {
+
+    // Attributes
     private boolean isActive;
     private static final String name = &quot;potatomine&quot;;
     private static final int ACTIVATION_DELAY = 14;
-    public PotatoMine(int x, int y, Game game) {
-<span class="fc" id="L15">        super(name);</span>
-<span class="fc" id="L16">        this.life = 100;</span>
-<span class="fc" id="L17">        this.cost = 25;</span>
-<span class="fc" id="L18">        this.game = game;</span>
-<span class="fc" id="L19">        this.positionY = y;</span>
-<span class="fc" id="L20">        this.positionX = x;</span>
-<span class="fc" id="L21">        this.isActive = false;</span>
-<span class="fc" id="L22">        activate();</span>
-<span class="fc" id="L23">    }</span>
-    public void activate() {
-<span class="fc" id="L25">        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);</span>
+    private transient ScheduledExecutorService scheduler;
 
-<span class="fc" id="L27">        scheduler.schedule(() -&gt; {</span>
-<span class="fc" id="L28">            this.isActive = true;</span>
-<span class="fc" id="L29">            System.out.println(&quot;tamo activo papi&quot;);</span>
-<span class="fc" id="L30">            scheduler.shutdown();</span>
-<span class="fc" id="L31">        }, ACTIVATION_DELAY, TimeUnit.SECONDS);</span>
-<span class="fc" id="L32">    }</span>
+    // Constructor
+
+    /**
+     * Creates a PotatoMine in the specified coordinates.
+     * @param x the x-coordinate of the plant.
+     * @param y the y-coordinate of the plant.
+     * @param game the game where the plant belongs.
+     */
+    public PotatoMine(int x, int y, Game game) {
+<span class="fc" id="L37">        super(name);</span>
+<span class="fc" id="L38">        this.life = 100;</span>
+<span class="fc" id="L39">        this.cost = 25;</span>
+<span class="fc" id="L40">        this.game = game;</span>
+<span class="fc" id="L41">        this.positionY = y;</span>
+<span class="fc" id="L42">        this.positionX = x;</span>
+<span class="fc" id="L43">        this.isActive = false;</span>
+<span class="fc" id="L44">        activate();</span>
+<span class="fc" id="L45">    }</span>
+
+    // Methods
+
+    /**
+     * Activates the PotatoMine after a certain amount of time.
+     */
+    public void activate() {
+<span class="fc" id="L53">        scheduler = Executors.newScheduledThreadPool(1);</span>
+<span class="fc" id="L54">        scheduler.schedule(() -&gt; {</span>
+<span class="fc" id="L55">            this.isActive = true;</span>
+<span class="fc" id="L56">            System.out.println(&quot;Activated!&quot;);</span>
+<span class="fc" id="L57">            scheduler.shutdown();</span>
+<span class="fc" id="L58">        }, ACTIVATION_DELAY, TimeUnit.SECONDS);</span>
+<span class="fc" id="L59">    }</span>
+
+    /**
+     * Explodes the PotatoMine, killing the zombie in the specified coordinates.
+     * @param zombieX the x-coordinate of the zombie.
+     * @param zombieY the y-coordinate of the zombie.
+     */
     public void explode(int zombieX, int zombieY) {
         try {
-<span class="nc bnc" id="L35" title="All 2 branches missed.">            if (game.getUnit()[zombieX][zombieY] instanceof Zombie) {</span>
-<span class="nc" id="L36">                Zombie zombie = (Zombie) game.getUnit()[zombieX][zombieY];</span>
-<span class="nc" id="L37">                zombie.takeDamage(9999);</span>
-<span class="nc" id="L38">                System.out.println(&quot;POW :D&quot;);</span>
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">            if (game.getUnit()[zombieX][zombieY] instanceof Zombie) {</span>
+<span class="fc" id="L69">                Zombie zombie = (Zombie) game.getUnit()[zombieX][zombieY];</span>
+<span class="fc" id="L70">                zombie.takeDamage(9999);</span>
+<span class="fc" id="L71">                System.out.println(&quot;POW :D&quot;);</span>
             }
-<span class="nc" id="L40">            this.game.deleteUnit(this.positionX, this.positionY);</span>
-<span class="nc" id="L41">            this.life = 0;</span>
-<span class="nc" id="L42">        } catch (PvZExceptions e) {</span>
-<span class="nc" id="L43">            System.out.println(e.getMessage());</span>
-<span class="nc" id="L44">        }</span>
-<span class="nc" id="L45">    }</span>
+<span class="fc" id="L73">            this.game.deleteUnit(this.positionX, this.positionY);</span>
+<span class="fc" id="L74">            this.life = 0;</span>
+<span class="nc" id="L75">        } catch (PvZExceptions e) {</span>
+<span class="nc" id="L76">            System.out.println(e.getMessage());</span>
+<span class="fc" id="L77">        }</span>
+<span class="fc" id="L78">    }</span>
 
+    /**
+     * This method is called when the PotatoMine dies.
+     */
     @Override
     public void die() {
-<span class="fc" id="L49">        super.die();</span>
-<span class="fc" id="L50">        isActive = false;</span>
-<span class="fc" id="L51">    }</span>
+<span class="fc" id="L85">        super.die();</span>
+<span class="fc" id="L86">        isActive = false;</span>
+<span class="pc bpc" id="L87" title="2 of 4 branches missed.">        if (scheduler != null &amp;&amp; !scheduler.isShutdown()) {</span>
+<span class="fc" id="L88">            scheduler.shutdownNow();</span>
+        }
+<span class="fc" id="L90">    }</span>
+
+    /**
+     * This method is called when the PotatoMine takes damage.
+     * If the PotatoMine is active, it explodes.
+     * @param dmg the amount of damage taken.
+     */
     @Override
     public void takeDamage(int dmg) {
-<span class="pc bpc" id="L54" title="1 of 2 branches missed.">        if (isActive) {</span>
-<span class="nc" id="L55">            explode(positionX + 1, positionY);</span>
+<span class="fc bfc" id="L99" title="All 2 branches covered.">        if (isActive) {</span>
+<span class="fc" id="L100">            explode(positionX + 1, positionY);</span>
         } else {
-<span class="fc" id="L57">            super.takeDamage(dmg);</span>
+<span class="fc" id="L102">            super.takeDamage(dmg);</span>
         }
-<span class="fc" id="L59">    }</span>
+<span class="fc" id="L104">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

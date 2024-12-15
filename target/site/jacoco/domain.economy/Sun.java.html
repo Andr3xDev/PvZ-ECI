@@ -2,18 +2,32 @@
 
 import domain.PvZExceptions;
 
+/**
+ * Sun class that represents the currency of the game.
+ * It implements the Coin interface.
+ * It has a value attribute that represents the amount of suns.
+ */
 public class Sun implements Coin{
-    private int value;
+    private final int value;
 
-<span class="fc" id="L8">    public Sun(int value) throws PvZExceptions {</span>
-<span class="fc bfc" id="L9" title="All 2 branches covered.">        if (value &lt; 0) {</span>
-<span class="fc" id="L10">            throw new PvZExceptions(PvZExceptions.NEGATIVE_COIN_EXCEPTION);</span>
+    /**
+     * Constructor of the Sun class.
+     * @param value The amount of suns.
+     * @throws PvZExceptions If the value is negative.
+     */
+<span class="fc" id="L18">    public Sun(int value) throws PvZExceptions {</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        if (value &lt; 0) {</span>
+<span class="fc" id="L20">            throw new PvZExceptions(PvZExceptions.NEGATIVE_COIN_EXCEPTION);</span>
         }
-<span class="fc" id="L12">        this.value = value;</span>
-<span class="fc" id="L13">    }</span>
+<span class="fc" id="L22">        this.value = value;</span>
+<span class="fc" id="L23">    }</span>
 
+    /**
+     * Getter for the value of the suns.
+     * @return The value of the suns.
+     */
     public int getValue() {
-<span class="fc" id="L16">        return value;</span>
+<span class="fc" id="L30">        return value;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -4,40 +4,82 @@ import domain.Game;
 import domain.PvZExceptions;
 import domain.economy.Sun;
 
-public class ECIPlant extends Plant implements Runnable{
-    private static final String name = &quot;eciplant&quot;;
-<span class="fc" id="L9">    private boolean isActive = true;</span>
-    public ECIPlant(int x, int y, Game game) {
-<span class="fc" id="L11">        super(name);</span>
-<span class="fc" id="L12">        this.life = 150;</span>
-<span class="fc" id="L13">        this.cost = 75;</span>
-<span class="fc" id="L14">        this.game = game;</span>
-<span class="fc" id="L15">        this.positionY = y;</span>
-<span class="fc" id="L16">        this.positionX = x;</span>
+import java.io.Serializable;
+import java.util.logging.Logger;
 
-<span class="fc" id="L18">        Thread thread = new Thread(this);</span>
-<span class="fc" id="L19">        thread.start();</span>
-<span class="fc" id="L20">    }</span>
+/**
+ * ECIPlant is a plant that generates suns every 3 seconds.
+ * It costs 75 suns and has 150 life points.
+ * It does not attack zombies or do any move.
+ */
+public class ECIPlant extends Plant implements Runnable, Serializable {
+
+    // Attributes
+    private static final String name = &quot;eciplant&quot;;
+<span class="fc" id="L19">    private boolean isActive = true;</span>
+    private transient Thread thread;
+<span class="fc" id="L21">    private static final Logger logger = Logger.getLogger(Game.class.getName());</span>
+
+
+
+
+    // Constructor
+
+    /**
+     * Constructor of the ECIPlant class.
+     * @param x x-coordinate of the plant.
+     * @param y y-coordinate of the plant.
+     * @param game Game where the plant is.
+     */
+    public ECIPlant(int x, int y, Game game) {
+<span class="fc" id="L35">        super(name);</span>
+<span class="fc" id="L36">        this.life = 150;</span>
+<span class="fc" id="L37">        this.cost = 75;</span>
+<span class="fc" id="L38">        this.game = game;</span>
+<span class="fc" id="L39">        this.positionY = y;</span>
+<span class="fc" id="L40">        this.positionX = x;</span>
+
+<span class="fc" id="L42">        thread = new Thread(this);</span>
+<span class="fc" id="L43">        thread.start();</span>
+<span class="fc" id="L44">    }</span>
+
+
+    // Methods
+
+    /**
+     * Generates a sun and adds it to the game.
+     * @throws PvZExceptions if the sun cannot be added to the game.
+     */
     public void generateSun () throws PvZExceptions {
-<span class="fc" id="L22">        Sun sun = new Sun(50);</span>
-<span class="fc" id="L23">        this.game.addSuns(sun);</span>
-<span class="fc" id="L24">    }</span>
+<span class="fc" id="L54">        Sun sun = new Sun(50);</span>
+<span class="fc" id="L55">        this.game.addSuns(sun);</span>
+<span class="fc" id="L56">        logger.info(&quot;sol generado&quot;);</span>
+<span class="fc" id="L57">    }</span>
+
+    /**
+     * Thread that generates suns every 3 seconds.
+     * If the plant dies, the thread stops.
+     */
     @Override
     public void run() {
-<span class="fc bfc" id="L27" title="All 2 branches covered.">        while (isActive) {</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        while (isActive) {</span>
             try {
-<span class="fc" id="L29">                generateSun();</span>
-<span class="fc" id="L30">                Thread.sleep(3000);</span>
-<span class="nc" id="L31">            } catch (InterruptedException | PvZExceptions e) {</span>
-<span class="nc" id="L32">                Thread.currentThread().interrupt();</span>
-<span class="nc" id="L33">                break;</span>
-<span class="fc" id="L34">            }</span>
+<span class="fc" id="L67">                generateSun();</span>
+<span class="fc" id="L68">                Thread.sleep(3000);</span>
+<span class="nc" id="L69">            } catch (InterruptedException | PvZExceptions e) {</span>
+<span class="nc" id="L70">                Thread.currentThread().interrupt();</span>
+<span class="nc" id="L71">                break;</span>
+<span class="fc" id="L72">            }</span>
         }
-<span class="fc" id="L36">    };</span>
+<span class="fc" id="L74">    }</span>
+
+    /**
+     * This method is called when the plant dies. It stops the thread and disable the plant.
+     */
     @Override
     public void die() {
-<span class="fc" id="L39">        super.die();</span>
-<span class="fc" id="L40">        isActive = false;</span>
-<span class="fc" id="L41">    }</span>
+<span class="fc" id="L81">        super.die();</span>
+<span class="fc" id="L82">        isActive = false;</span>
+<span class="fc" id="L83">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

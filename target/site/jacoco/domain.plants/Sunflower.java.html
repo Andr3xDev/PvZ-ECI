@@ -4,47 +4,81 @@ import domain.Game;
 import domain.PvZExceptions;
 import domain.economy.Sun;
 
-public class Sunflower extends Plant implements Runnable {
+import java.io.Serializable;
+import java.util.logging.Logger;
+
+/**
+ * Sunflower is a plant that generates suns every 3 seconds. It is a passive plant.
+ * It costs 50 suns and has 300 life points.
+ */
+public class Sunflower extends Plant implements Runnable, Serializable {
+
+    // Attributes
     private static final String name = &quot;sunflower&quot;;
-<span class="fc" id="L9">    private boolean isActive = true;</span>
+<span class="fc" id="L18">    private boolean isActive = true;</span>
+    private transient Thread thread;
+<span class="fc" id="L20">    private static final Logger logger = Logger.getLogger(Game.class.getName());</span>
 
+
+
+    // Constructor
+
+    /**
+     * Constructor of the Sunflower class.
+     * @param x x-coordinate of the plant.
+     * @param y y-coordinate of the plant.
+     * @param game Game object.
+     */
     public Sunflower(int x, int y, Game game) {
-<span class="fc" id="L12">        super(name);</span>
-<span class="fc" id="L13">        this.life = 300;</span>
-<span class="fc" id="L14">        this.cost = 50;</span>
-<span class="fc" id="L15">        this.game = game;</span>
-<span class="fc" id="L16">        this.positionY = y;</span>
-<span class="fc" id="L17">        this.positionX = x;</span>
+<span class="fc" id="L33">        super(name);</span>
+<span class="fc" id="L34">        this.life = 300;</span>
+<span class="fc" id="L35">        this.cost = 50;</span>
+<span class="fc" id="L36">        this.game = game;</span>
+<span class="fc" id="L37">        this.positionY = y;</span>
+<span class="fc" id="L38">        this.positionX = x;</span>
 
-<span class="fc" id="L19">        Thread thread = new Thread(this);</span>
-<span class="fc" id="L20">        thread.start();</span>
-<span class="fc" id="L21">    }</span>
+<span class="fc" id="L40">        thread = new Thread(this);</span>
+<span class="fc" id="L41">        thread.start();</span>
+<span class="fc" id="L42">    }</span>
 
+
+    // Methods
+
+    /**
+     * Generates a sun and adds it to the list of suns in the game.
+     * @throws PvZExceptions if the sun cannot be generated.
+     */
     public void generateSun() throws PvZExceptions {
-<span class="fc" id="L24">        Sun sun = new Sun(25);</span>
-<span class="fc" id="L25">        this.game.addSuns(sun);</span>
-<span class="fc" id="L26">    }</span>
+<span class="fc" id="L52">        Sun sun = new Sun(25);</span>
+<span class="fc" id="L53">        this.game.addSuns(sun);</span>
+<span class="fc" id="L54">        logger.info(&quot;sol generado&quot;);</span>
+<span class="fc" id="L55">    }</span>
 
+    /**
+     * This is the thread that generates suns every 3 seconds.
+     */
     @Override
     public void run() {
-<span class="fc bfc" id="L30" title="All 2 branches covered.">        while (isActive) {</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        while (isActive) {</span>
             try {
-<span class="fc" id="L32">                generateSun();</span>
-<span class="fc" id="L33">                Thread.sleep(3000);</span>
-<span class="nc" id="L34">            } catch (InterruptedException e) {</span>
-<span class="nc" id="L35">                Thread.currentThread().interrupt();</span>
-<span class="nc" id="L36">                break;</span>
-<span class="nc" id="L37">            } catch (PvZExceptions e) {</span>
-<span class="nc" id="L38">                throw new RuntimeException(e);</span>
-<span class="fc" id="L39">            }</span>
+<span class="fc" id="L64">                generateSun();</span>
+<span class="fc" id="L65">                Thread.sleep(3000);</span>
+<span class="nc" id="L66">            } catch (InterruptedException e) {</span>
+<span class="nc" id="L67">                Thread.currentThread().interrupt();</span>
+<span class="nc" id="L68">                break;</span>
+<span class="nc" id="L69">            } catch (PvZExceptions e) {</span>
+<span class="nc" id="L70">                throw new RuntimeException(e);</span>
+<span class="fc" id="L71">            }</span>
         }
-<span class="fc" id="L41">    }</span>
+<span class="fc" id="L73">    }</span>
 
+    /**
+     * This method is called when the plant dies, disable the plant.
+     */
     @Override
     public void die() {
-<span class="fc" id="L45">        super.die();</span>
-<span class="fc" id="L46">        isActive = false;</span>
-<span class="fc" id="L47">    }</span>
+<span class="fc" id="L80">        super.die();</span>
+<span class="fc" id="L81">        isActive = false;</span>
+<span class="fc" id="L82">    }</span>
 }
-
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

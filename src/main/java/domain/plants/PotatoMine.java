@@ -102,26 +102,4 @@ public class PotatoMine extends Plant implements Serializable {
             super.takeDamage(dmg);
         }
     }
-
-    /**
-     * Custom serialization method to handle transient fields.
-     *
-     * @param out the ObjectOutputStream
-     * @throws IOException if an I/O error occurs
-     */
-    private void writeObject(ObjectOutputStream out) throws IOException {
-        out.defaultWriteObject();
-    }
-
-    /**
-     * Custom deserialization method to handle transient fields.
-     *
-     * @param in the ObjectInputStream
-     * @throws IOException if an I/O error occurs
-     * @throws ClassNotFoundException if the class of a serialized object could not be found
-     */
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-        in.defaultReadObject();
-        activate();
-    }
 }

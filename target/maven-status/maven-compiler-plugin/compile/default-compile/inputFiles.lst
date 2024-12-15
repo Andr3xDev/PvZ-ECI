@@ -7,13 +7,13 @@
 /home/andr3xc/dev/PvZ-ECI/src/main/java/GUI/extras/BackgroundSound.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/GUI/extras/BoardBox.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/GUI/extras/BoardConf.java
-/home/andr3xc/dev/PvZ-ECI/src/main/java/GUI/extras/MenuGame.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/GUI/extras/RoundedButton.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/GUI/extras/RoundedLabel.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/GUI/extras/SelectButton.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/Bullet.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/Game.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/LawnMower.java
+/home/andr3xc/dev/PvZ-ECI/src/main/java/domain/LoggerConf.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/POOmBas.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/Pea.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/PvZExceptions.java
@@ -31,7 +31,11 @@
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/plants/WallNut.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/players/Human.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/players/Machine.java
+/home/andr3xc/dev/PvZ-ECI/src/main/java/domain/players/PlantsIntelligent.java
+/home/andr3xc/dev/PvZ-ECI/src/main/java/domain/players/PlantsStrategic.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/players/Player.java
+/home/andr3xc/dev/PvZ-ECI/src/main/java/domain/players/ZombiesOriginal.java
+/home/andr3xc/dev/PvZ-ECI/src/main/java/domain/players/ZombiesStrategic.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/zombies/Basic.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/zombies/Brainstein.java
 /home/andr3xc/dev/PvZ-ECI/src/main/java/domain/zombies/BucketHead.java

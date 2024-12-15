@@ -2,15 +2,33 @@
 
 import domain.Game;
 
-public class WallNut extends Plant {
+import java.io.Serializable;
+
+/**
+ * WallNut is a plant that has 4000 life points. It is a defensive plant.
+ * It costs 50 suns and has 4000 life points, does not have any special abilities.
+ */
+public class WallNut extends Plant implements Serializable {
+
+    // Attributes
     private static final String name = &quot;wallnut&quot;;
+
+
+    // Constructor
+
+    /**
+     * Constructor of the WallNut class.
+     * @param x x-coordinate of the plant.
+     * @param y y-coordinate of the plant.
+     * @param game Game object.
+     */
     public WallNut(int x, int y, Game game) {
-<span class="fc" id="L8">        super(name);</span>
-<span class="fc" id="L9">        this.life = 4000;</span>
-<span class="fc" id="L10">        this.cost = 50;</span>
-<span class="fc" id="L11">        this.game = game;</span>
-<span class="fc" id="L12">        this.positionY = y;</span>
-<span class="fc" id="L13">        this.positionX = x;</span>
-<span class="fc" id="L14">    }</span>
+<span class="fc" id="L26">        super(name);</span>
+<span class="fc" id="L27">        this.life = 4000;</span>
+<span class="fc" id="L28">        this.cost = 50;</span>
+<span class="fc" id="L29">        this.game = game;</span>
+<span class="fc" id="L30">        this.positionY = y;</span>
+<span class="fc" id="L31">        this.positionX = x;</span>
+<span class="fc" id="L32">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

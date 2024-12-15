@@ -2,17 +2,34 @@
 
 import domain.Game;
 
-public class Basic extends Zombie {
-    private static final String name = &quot;basic&quot;;
-    public Basic(int y, Game game) {
-<span class="fc" id="L8">        super(name);</span>
-<span class="fc" id="L9">        this.life = 100;</span>
-<span class="fc" id="L10">        this.damage = 100;</span>
-<span class="fc" id="L11">        this.cost = 50;</span>
-<span class="fc" id="L12">        this.game = game;</span>
-<span class="fc" id="L13">        this.positionY = y;</span>
-<span class="fc" id="L14">        this.positionX = 10;</span>
-<span class="fc" id="L15">    }</span>
+import java.io.Serializable;
 
+/**
+ * Class to represent a basic zombie.
+ * It costs 50 sun points, has 100 life points and does 100 damage points.
+ * It moves 1 cell per turn, nothing else.
+ */
+public class Basic extends Zombie implements Serializable {
+
+    // Attributes
+    private static final String name = &quot;basic&quot;;
+
+
+    // Constructor
+
+    /**
+     * Constructor of the basic zombie.
+     * @param y The initial position of the zombie.
+     * @param game The game where the zombie is going to be in.
+     */
+    public Basic(int y, Game game) {
+<span class="fc" id="L26">        super(name);</span>
+<span class="fc" id="L27">        this.life = 100;</span>
+<span class="fc" id="L28">        this.damage = 100;</span>
+<span class="fc" id="L29">        this.cost = 50;</span>
+<span class="fc" id="L30">        this.game = game;</span>
+<span class="fc" id="L31">        this.positionY = y;</span>
+<span class="fc" id="L32">        this.positionX = 10;</span>
+<span class="fc" id="L33">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

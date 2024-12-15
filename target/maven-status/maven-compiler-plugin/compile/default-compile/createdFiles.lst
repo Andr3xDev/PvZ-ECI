@@ -1,10 +1,11 @@
 GUI/extras/RoundedLabel.class
+domain/LoggerConf.class
 domain/Pea.class
 domain/Game.class
 GUI/extras/SelectButton.class
-GUI/extras/MenuGame.class
 domain/zombies/BucketHead.class
 GUI/BoardGUI$12.class
+domain/players/ZombiesStrategic.class
 GUI/BoardGUI$4.class
 domain/LawnMower.class
 domain/gameTest.class
@@ -25,10 +26,12 @@ GUI/BoardGUI$7.class
 domain/players/Player.class
 GUI/BoardGUI$9.class
 domain/zombies/ECIZombie.class
+domain/players/ZombiesOriginal.class
 GUI/HomeGUI.class
 GUI/BoardGUI.class
 GUI/BoardGUI$6.class
 GUI/TutorialGUI.class
+domain/players/PlantsIntelligent.class
 GUI/extras/BackgroundSound.class
 domain/zombies/Brainstein.class
 domain/plants/WallNut.class
@@ -44,6 +47,7 @@ domain/economy/Sun.class
 domain/zombies/Zombie.class
 domain/plants/ECIPlant.class
 domain/economy/Brain.class
+domain/LoggerConf$1.class
 domain/zombies/Basic.class
 GUI/BoardGUI$10.class
 GUI/extras/BoardBox.class
@@ -51,3 +55,4 @@ domain/economy/Coin.class
 GUI/BoardGUI$5.class
 GUI/SelectGUI.class
 GUI/BoardGUI$2.class
+domain/players/PlantsStrategic.class
