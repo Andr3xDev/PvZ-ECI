@@ -6,7 +6,7 @@ import java.awt.*;
 /**
  * Class to create a rounded button used over all GUI to make it look good.
  */
-public class RoundedButton extends JButton {
+public final class RoundedButton extends JButton {
 
     // Attributes
     private final int cornerRadius;

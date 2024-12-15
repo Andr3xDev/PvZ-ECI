@@ -4,9 +4,6 @@ import domain.Game;
 import domain.PvZExceptions;
 import domain.zombies.Zombie;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -17,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * It is a plant that explodes when a zombie steps on it after a certain amount of time.
  * It costs 25 suns and has 100 life points.
  */
-public class PotatoMine extends Plant implements Serializable {
+public final class PotatoMine extends Plant implements Serializable {
 
     // Attributes
     private boolean isActive;
@@ -65,9 +62,7 @@ public class PotatoMine extends Plant implements Serializable {
      */
     public void explode(int zombieX, int zombieY) {
         try {
-            if (game.getUnit()[zombieX][zombieY] instanceof Zombie) {
-                Zombie zombie = (Zombie) game.getUnit()[zombieX][zombieY];
-                zombie.takeDamage(9999);
+            if (game.getUnit()[zombieX][zombieY] instanceof Zombie zombie) {
                 System.out.println("POW :D");
             }
             this.game.deleteUnit(this.positionX, this.positionY);

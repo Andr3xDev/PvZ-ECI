@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 public class gameTest implements Serializable {
     public static void main(String[] args) {
-        Test01();
+        //Test01();
         //Test02();
         //Test03();
         //Test04();

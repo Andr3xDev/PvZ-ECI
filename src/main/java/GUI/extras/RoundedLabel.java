@@ -6,7 +6,7 @@ import java.awt.*;
 /**
  * Class to create a rounded label. Used to make the GUI look good and represents some elements.
  */
-public class RoundedLabel extends JLabel {
+public final class RoundedLabel extends JLabel {
 
     // Attributes
     private final int cornerRadius;

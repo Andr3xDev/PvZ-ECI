@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Game.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PvZ-ECI</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Game.java</span></div><h1>Game.java</h1><pre class="source lang-java linenums">package domain;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Game.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PvZ-ECI</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Game.java</span></div><h1>Game.java</h1><pre class="source lang-java linenums">package domain;
 
 import domain.economy.Brain;
 import domain.economy.Sun;
@@ -20,11 +20,10 @@ public class Game {
     private int brains;
     private int suns;
     private final Bullet[][] bullets;
-<span class="fc" id="L23">    private final boolean isActive = true;</span>
     private final LawnMower[][] lawnMowers;
     private boolean gameOver;
     private final ArrayList&lt;Player&gt; players;
-<span class="fc" id="L27">    private static final Logger logger = Logger.getLogger(Game.class.getName());</span>
+<span class="fc" id="L26">    private static final Logger logger = Logger.getLogger(Game.class.getName());</span>
 
 
     //* Constructors *//
@@ -32,19 +31,19 @@ public class Game {
     /**
      * Constructor for the Game, here we initialize the board and the economy of the game
      */
-<span class="fc" id="L35">    public Game(String gameMode, int plantLevel, int zombieLevel) {</span>
-<span class="fc" id="L36">        players = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L37">        lawnMowers = new LawnMower[11][5];</span>
-<span class="fc" id="L38">        bullets = new Bullet[11][5];</span>
-<span class="fc" id="L39">        unit = new Unit[11][5];</span>
-<span class="fc" id="L40">        this.suns = 50;</span>
-<span class="fc" id="L41">        this.brains = 50;</span>
-<span class="fc" id="L42">        this.gameOver = false;</span>
-<span class="fc" id="L43">        generatePlayers(gameMode, plantLevel, zombieLevel);</span>
-<span class="fc" id="L44">        initializeLawnMowers();</span>
-<span class="fc" id="L45">        setFileHandler();</span>
-<span class="fc" id="L46">        System.out.println(players);</span>
-<span class="fc" id="L47">    }</span>
+<span class="fc" id="L34">    public Game(String gameMode, int plantLevel, int zombieLevel) {</span>
+<span class="fc" id="L35">        players = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L36">        lawnMowers = new LawnMower[11][5];</span>
+<span class="fc" id="L37">        bullets = new Bullet[11][5];</span>
+<span class="fc" id="L38">        unit = new Unit[11][5];</span>
+<span class="fc" id="L39">        this.suns = 50;</span>
+<span class="fc" id="L40">        this.brains = 50;</span>
+<span class="fc" id="L41">        this.gameOver = false;</span>
+<span class="fc" id="L42">        generatePlayers(gameMode, plantLevel, zombieLevel);</span>
+<span class="fc" id="L43">        initializeLawnMowers();</span>
+<span class="fc" id="L44">        setFileHandler();</span>
+<span class="fc" id="L45">        System.out.println(players);</span>
+<span class="fc" id="L46">    }</span>
 
 
     /**
@@ -54,21 +53,21 @@ public class Game {
      * @param zombieLevel the level of the zombie player
      */
     private void generatePlayers(String gameMode, int plantLevel, int zombieLevel) {
-<span class="pc bpc" id="L57" title="1 of 4 branches missed.">        switch (gameMode){</span>
+<span class="pc bpc" id="L56" title="1 of 4 branches missed.">        switch (gameMode){</span>
             case &quot;pvp&quot; -&gt; {
+<span class="fc" id="L58">                players.add(new Human());</span>
 <span class="fc" id="L59">                players.add(new Human());</span>
-<span class="fc" id="L60">                players.add(new Human());</span>
-<span class="fc" id="L61">            }</span>
+<span class="fc" id="L60">            }</span>
             case &quot;pvAI&quot; -&gt; {
-<span class="fc" id="L63">                players.add(new Human());</span>
-<span class="fc" id="L64">                selectDifficulty(zombieLevel, 2);</span>
-<span class="fc" id="L65">            }</span>
+<span class="fc" id="L62">                players.add(new Human());</span>
+<span class="fc" id="L63">                selectDifficulty(zombieLevel, 2);</span>
+<span class="fc" id="L64">            }</span>
             case &quot;AIvAI&quot; -&gt; {
-<span class="fc" id="L67">                selectDifficulty(plantLevel, 1);</span>
-<span class="fc" id="L68">                selectDifficulty(zombieLevel, 2);</span>
+<span class="fc" id="L66">                selectDifficulty(plantLevel, 1);</span>
+<span class="fc" id="L67">                selectDifficulty(zombieLevel, 2);</span>
             }
         }
-<span class="fc" id="L71">    }</span>
+<span class="fc" id="L70">    }</span>
 
 
     /**
@@ -77,14 +76,14 @@ public class Game {
      * @param player the player to add the AI, 1 for plants and 2 for zombies
      */
     private void selectDifficulty(int level, int player){
-<span class="fc bfc" id="L80" title="All 2 branches covered.">        if (player == 2){</span>
-<span class="fc bfc" id="L81" title="All 2 branches covered.">            if (level == 1) players.add(new ZombiesOriginal(this));</span>
-<span class="fc" id="L82">            else players.add(new ZombiesStrategic(this));</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        if (player == 2){</span>
+<span class="fc bfc" id="L80" title="All 2 branches covered.">            if (level == 1) players.add(new ZombiesOriginal(this));</span>
+<span class="fc" id="L81">            else players.add(new ZombiesStrategic(this));</span>
         } else {
-<span class="fc bfc" id="L84" title="All 2 branches covered.">            if (level == 1) players.add(new PlantsIntelligent(this));</span>
-<span class="fc" id="L85">            else players.add(new PlantsStrategic(this));</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">            if (level == 1) players.add(new PlantsIntelligent(this));</span>
+<span class="fc" id="L84">            else players.add(new PlantsStrategic(this));</span>
         }
-<span class="fc" id="L87">    }</span>
+<span class="fc" id="L86">    }</span>
 
 
 
@@ -100,29 +99,29 @@ public class Game {
      * a unit in the cell or if there are not enough suns to buy the plant
      */
     public void addPlant(String plantName, int posX, int posY) throws PvZExceptions {
-<span class="fc" id="L103">        logger.info(&quot;Intentando añadir una planta: &quot; + plantName + &quot; en (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
+<span class="fc" id="L102">        logger.info(&quot;Intentando añadir una planta: &quot; + plantName + &quot; en (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
         try {
-<span class="fc bfc" id="L105" title="All 2 branches covered.">            if (validatePosition(&quot;plant&quot;, posX, posY)) {</span>
-<span class="fc" id="L106">                isPositionEmpty(posX, posY);</span>
-<span class="fc" id="L107">                Plant plant = searchPlant(plantName, posX, posY);</span>
-<span class="fc bfc" id="L108" title="All 2 branches covered.">                if (plant.getCost() &lt;= this.suns) {</span>
-<span class="fc" id="L109">                    unit[posX][posY] = plant;</span>
-<span class="fc" id="L110">                    suns -= plant.getCost();</span>
-<span class="fc" id="L111">                    logger.info(&quot;Planta añadida exitosamente: &quot; + plantName + &quot; en (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">            if (validatePosition(&quot;plant&quot;, posX, posY)) {</span>
+<span class="fc" id="L105">                isPositionEmpty(posX, posY);</span>
+<span class="fc" id="L106">                Plant plant = searchPlant(plantName, posX, posY);</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">                if (plant.getCost() &lt;= this.suns) {</span>
+<span class="fc" id="L108">                    unit[posX][posY] = plant;</span>
+<span class="fc" id="L109">                    suns -= plant.getCost();</span>
+<span class="fc" id="L110">                    logger.info(&quot;Planta añadida exitosamente: &quot; + plantName + &quot; en (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
                 } else {
-<span class="fc" id="L113">                    logger.warning(&quot;No hay suficientes soles para añadir la planta: &quot; + plantName);</span>
-<span class="fc" id="L114">                    plant.die();</span>
-<span class="fc" id="L115">                    throw new PvZExceptions(PvZExceptions.NO_SUNS_EXCEPTION);</span>
+<span class="fc" id="L112">                    logger.warning(&quot;No hay suficientes soles para añadir la planta: &quot; + plantName);</span>
+<span class="fc" id="L113">                    plant.die();</span>
+<span class="fc" id="L114">                    throw new PvZExceptions(PvZExceptions.NO_SUNS_EXCEPTION);</span>
                 }
-<span class="fc" id="L117">            } else {</span>
-<span class="fc" id="L118">                logger.warning(&quot;Posición inválida para la planta: (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
-<span class="fc" id="L119">                throw new PvZExceptions(PvZExceptions.PLANT_OUT_RANGE_EXCEPTION);</span>
+<span class="fc" id="L116">            } else {</span>
+<span class="fc" id="L117">                logger.warning(&quot;Posición inválida para la planta: (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
+<span class="fc" id="L118">                throw new PvZExceptions(PvZExceptions.PLANT_OUT_RANGE_EXCEPTION);</span>
             }
-<span class="fc" id="L121">        } catch (PvZExceptions e) {</span>
-<span class="fc" id="L122">            logger.severe(&quot;Error al añadir planta: &quot; + e.getMessage());</span>
-<span class="fc" id="L123">            throw e;</span>
-<span class="fc" id="L124">        }</span>
-<span class="fc" id="L125">    }</span>
+<span class="fc" id="L120">        } catch (PvZExceptions e) {</span>
+<span class="fc" id="L121">            logger.severe(&quot;Error al añadir planta: &quot; + e.getMessage());</span>
+<span class="fc" id="L122">            throw e;</span>
+<span class="fc" id="L123">        }</span>
+<span class="fc" id="L124">    }</span>
 
 
     /**
@@ -133,28 +132,28 @@ public class Game {
      * @throws PvZExceptions if the position is out of range for the zombie or if there is already
      */
     public void addZombie(String zombieName, int posX, int posY) throws PvZExceptions {
-<span class="fc" id="L136">        logger.info(&quot;Intentando añadir un zombie: &quot; + zombieName + &quot; en (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
+<span class="fc" id="L135">        logger.info(&quot;Intentando añadir un zombie: &quot; + zombieName + &quot; en (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
         try {
-<span class="fc bfc" id="L138" title="All 2 branches covered.">            if (validatePosition(&quot;zombie&quot;, posX, posY)) {</span>
-<span class="fc" id="L139">                Zombie zombie = searchZombie(zombieName, posY);</span>
-<span class="fc bfc" id="L140" title="All 2 branches covered.">                if (zombie.getCost() &lt;= this.brains) {</span>
-<span class="fc" id="L141">                    unit[posX][posY] = zombie;</span>
-<span class="fc" id="L142">                    brains -= zombie.getCost();</span>
-<span class="fc" id="L143">                    logger.info(&quot;Zombie añadido exitosamente: &quot; + zombieName + &quot; en (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
+<span class="fc bfc" id="L137" title="All 2 branches covered.">            if (validatePosition(&quot;zombie&quot;, posX, posY)) {</span>
+<span class="fc" id="L138">                Zombie zombie = searchZombie(zombieName, posY);</span>
+<span class="fc bfc" id="L139" title="All 2 branches covered.">                if (zombie.getCost() &lt;= this.brains) {</span>
+<span class="fc" id="L140">                    unit[posX][posY] = zombie;</span>
+<span class="fc" id="L141">                    brains -= zombie.getCost();</span>
+<span class="fc" id="L142">                    logger.info(&quot;Zombie añadido exitosamente: &quot; + zombieName + &quot; en (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
                 } else {
-<span class="fc" id="L145">                    zombie.die();</span>
-<span class="fc" id="L146">                    logger.warning(&quot;No hay suficientes cerebros para añadir el zombie: &quot; + zombieName);</span>
-<span class="fc" id="L147">                    throw new PvZExceptions(PvZExceptions.NO_BRAINS_EXCEPTION);</span>
+<span class="fc" id="L144">                    zombie.die();</span>
+<span class="fc" id="L145">                    logger.warning(&quot;No hay suficientes cerebros para añadir el zombie: &quot; + zombieName);</span>
+<span class="fc" id="L146">                    throw new PvZExceptions(PvZExceptions.NO_BRAINS_EXCEPTION);</span>
                 }
-<span class="fc" id="L149">            } else {</span>
-<span class="fc" id="L150">                logger.warning(&quot;Posición inválida para el zombie: (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
-<span class="fc" id="L151">                throw new PvZExceptions(PvZExceptions.ZOMBIE_OUT_RANGE_EXCEPTION);</span>
+<span class="fc" id="L148">            } else {</span>
+<span class="fc" id="L149">                logger.warning(&quot;Posición inválida para el zombie: (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
+<span class="fc" id="L150">                throw new PvZExceptions(PvZExceptions.ZOMBIE_OUT_RANGE_EXCEPTION);</span>
             }
-<span class="fc" id="L153">        } catch (PvZExceptions e) {</span>
-<span class="fc" id="L154">            logger.severe(&quot;Error al añadir zombie: &quot; + e.getMessage());</span>
-<span class="fc" id="L155">            throw e;</span>
-<span class="fc" id="L156">        }</span>
-<span class="fc" id="L157">    }</span>
+<span class="fc" id="L152">        } catch (PvZExceptions e) {</span>
+<span class="fc" id="L153">            logger.severe(&quot;Error al añadir zombie: &quot; + e.getMessage());</span>
+<span class="fc" id="L154">            throw e;</span>
+<span class="fc" id="L155">        }</span>
+<span class="fc" id="L156">    }</span>
 
 
     /**
@@ -164,21 +163,21 @@ public class Game {
      */
     public void deleteUnit(int posX, int posY) throws PvZExceptions {
         try {
-<span class="fc bfc" id="L167" title="All 2 branches covered.">            if (unit[posX][posY] != null) {</span>
-<span class="fc" id="L168">                unit[posX][posY] = null;</span>
-<span class="fc" id="L169">                logger.info(&quot;Unidad eliminada exitosamente en la posición (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
+<span class="fc bfc" id="L166" title="All 2 branches covered.">            if (unit[posX][posY] != null) {</span>
+<span class="fc" id="L167">                unit[posX][posY] = null;</span>
+<span class="fc" id="L168">                logger.info(&quot;Unidad eliminada exitosamente en la posición (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
             } else {
-<span class="fc" id="L171">                logger.warning(&quot;No hay unidad para eliminar en la posición (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
-<span class="fc" id="L172">                throw new PvZExceptions(PvZExceptions.NO_UNIT_EXCEPTION);</span>
+<span class="fc" id="L170">                logger.warning(&quot;No hay unidad para eliminar en la posición (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
+<span class="fc" id="L171">                throw new PvZExceptions(PvZExceptions.NO_UNIT_EXCEPTION);</span>
             }
-<span class="fc" id="L174">        } catch (PvZExceptions e) {</span>
-<span class="fc" id="L175">            logger.severe(&quot;Error al eliminar unidad: &quot; + e.getMessage());</span>
-<span class="fc" id="L176">            throw e; // Re-lanzar la excepción para que sea manejada a nivel superior</span>
-<span class="nc" id="L177">        } catch (ArrayIndexOutOfBoundsException e) {</span>
-<span class="nc" id="L178">            logger.severe(&quot;Posición fuera de los límites del tablero: (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
-<span class="nc" id="L179">            throw new PvZExceptions(&quot;Posición fuera de los límites del tablero.&quot;);</span>
-<span class="fc" id="L180">        }</span>
-<span class="fc" id="L181">    }</span>
+<span class="fc" id="L173">        } catch (PvZExceptions e) {</span>
+<span class="fc" id="L174">            logger.severe(&quot;Error al eliminar unidad: &quot; + e.getMessage());</span>
+<span class="fc" id="L175">            throw e; // Re-lanzar la excepción para que sea manejada a nivel superior</span>
+<span class="nc" id="L176">        } catch (ArrayIndexOutOfBoundsException e) {</span>
+<span class="nc" id="L177">            logger.severe(&quot;Posición fuera de los límites del tablero: (&quot; + posX + &quot;, &quot; + posY + &quot;)&quot;);</span>
+<span class="nc" id="L178">            throw new PvZExceptions(&quot;Posición fuera de los límites del tablero.&quot;);</span>
+<span class="fc" id="L179">        }</span>
+<span class="fc" id="L180">    }</span>
 
 
     /**
@@ -186,8 +185,8 @@ public class Game {
      * @param sun Quantity of suns to add
      */
     public void addSuns(Sun sun) {
-<span class="fc" id="L189">        this.suns += sun.getValue();</span>
-<span class="fc" id="L190">    }</span>
+<span class="fc" id="L188">        this.suns += sun.getValue();</span>
+<span class="fc" id="L189">    }</span>
 
 
     /**
@@ -195,11 +194,11 @@ public class Game {
      * @param brain Quantity of brains to add
      */
     public void addBrains(Brain brain) throws PvZExceptions {
-<span class="pc bpc" id="L198" title="1 of 2 branches missed.">        if (brain.getValue() &lt; 0) {</span>
-<span class="nc" id="L199">            throw new PvZExceptions(PvZExceptions.NEGATIVE_COIN_EXCEPTION);</span>
+<span class="pc bpc" id="L197" title="1 of 2 branches missed.">        if (brain.getValue() &lt; 0) {</span>
+<span class="nc" id="L198">            throw new PvZExceptions(PvZExceptions.NEGATIVE_COIN_EXCEPTION);</span>
         }
-<span class="fc" id="L201">        this.brains += brain.getValue();</span>
-<span class="fc" id="L202">    }</span>
+<span class="fc" id="L200">        this.brains += brain.getValue();</span>
+<span class="fc" id="L201">    }</span>
 
 
     /**
@@ -207,7 +206,7 @@ public class Game {
      * @return matrix of bullets
      */
     public Bullet[][] getBullets() {
-<span class="fc" id="L210">        return bullets;</span>
+<span class="fc" id="L209">        return bullets;</span>
     }
 
 
@@ -215,44 +214,44 @@ public class Game {
      * Method to get the status of the game as a matrix printed in the console
      */
     public void printBoard() {
-<span class="fc" id="L218">        System.out.println(&quot;Game Board:&quot;);</span>
-<span class="fc bfc" id="L219" title="All 2 branches covered.">        for (int y = 0; y &lt; 5; y++) {</span>
-<span class="fc bfc" id="L220" title="All 2 branches covered.">            for (int x = 0; x &lt; 11; x++) {</span>
-<span class="fc bfc" id="L221" title="All 2 branches covered.">                if (unit[x][y] != null) {</span>
-<span class="fc" id="L222">                    System.out.print(unit[x][y].getClass().getSimpleName().charAt(0) + &quot; &quot;);</span>
+<span class="fc" id="L217">        System.out.println(&quot;Game Board:&quot;);</span>
+<span class="fc bfc" id="L218" title="All 2 branches covered.">        for (int y = 0; y &lt; 5; y++) {</span>
+<span class="fc bfc" id="L219" title="All 2 branches covered.">            for (int x = 0; x &lt; 11; x++) {</span>
+<span class="fc bfc" id="L220" title="All 2 branches covered.">                if (unit[x][y] != null) {</span>
+<span class="fc" id="L221">                    System.out.print(unit[x][y].getClass().getSimpleName().charAt(0) + &quot; &quot;);</span>
                 } else {
-<span class="fc" id="L224">                    System.out.print(&quot;. &quot;);</span>
+<span class="fc" id="L223">                    System.out.print(&quot;. &quot;);</span>
                 }
             }
-<span class="fc" id="L227">            System.out.println();</span>
+<span class="fc" id="L226">            System.out.println();</span>
         }
 
-<span class="fc" id="L230">        System.out.println(&quot;LawnMowers:&quot;);</span>
-<span class="fc bfc" id="L231" title="All 2 branches covered.">        for (int y = 0; y &lt; lawnMowers[0].length; y++) {</span>
-<span class="fc bfc" id="L232" title="All 2 branches covered.">            for (LawnMower[] lawnMower : lawnMowers) {</span>
-<span class="fc bfc" id="L233" title="All 2 branches covered.">                if (lawnMower[y] != null) {</span>
-<span class="fc" id="L234">                    System.out.print(&quot;L &quot;);</span>
+<span class="fc" id="L229">        System.out.println(&quot;LawnMowers:&quot;);</span>
+<span class="fc bfc" id="L230" title="All 2 branches covered.">        for (int y = 0; y &lt; lawnMowers[0].length; y++) {</span>
+<span class="fc bfc" id="L231" title="All 2 branches covered.">            for (LawnMower[] lawnMower : lawnMowers) {</span>
+<span class="fc bfc" id="L232" title="All 2 branches covered.">                if (lawnMower[y] != null) {</span>
+<span class="fc" id="L233">                    System.out.print(&quot;L &quot;);</span>
                 } else {
-<span class="fc" id="L236">                    System.out.print(&quot;. &quot;);</span>
+<span class="fc" id="L235">                    System.out.print(&quot;. &quot;);</span>
                 }
             }
-<span class="fc" id="L239">            System.out.println();</span>
+<span class="fc" id="L238">            System.out.println();</span>
         }
-<span class="fc" id="L241">        System.out.println();</span>
-<span class="fc" id="L242">    }</span>
+<span class="fc" id="L240">        System.out.println();</span>
+<span class="fc" id="L241">    }</span>
 
 
     /**
      * Method to get a plant from the board in the given position to added to the board
      */
     public Plant searchPlant(String plant,int posX,int posY){
-<span class="pc bpc" id="L249" title="1 of 6 branches missed.">        return switch (plant) {</span>
-<span class="fc" id="L250">            case &quot;peashooter&quot; -&gt; new Peashooter(posX, posY, this);</span>
-<span class="fc" id="L251">            case &quot;sunflower&quot; -&gt; new Sunflower(posX, posY, this);</span>
-<span class="fc" id="L252">            case &quot;wallnut&quot; -&gt; new WallNut(posX, posY, this);</span>
-<span class="fc" id="L253">            case &quot;potatomine&quot; -&gt; new PotatoMine(posX, posY, this);</span>
-<span class="fc" id="L254">            case &quot;eciplant&quot; -&gt; new ECIPlant(posX, posY, this);</span>
-<span class="nc" id="L255">            default -&gt; null;</span>
+<span class="pc bpc" id="L248" title="1 of 6 branches missed.">        return switch (plant) {</span>
+<span class="fc" id="L249">            case &quot;peashooter&quot; -&gt; new Peashooter(posX, posY, this);</span>
+<span class="fc" id="L250">            case &quot;sunflower&quot; -&gt; new Sunflower(posX, posY, this);</span>
+<span class="fc" id="L251">            case &quot;wallnut&quot; -&gt; new WallNut(posX, posY, this);</span>
+<span class="fc" id="L252">            case &quot;potatomine&quot; -&gt; new PotatoMine(posX, posY, this);</span>
+<span class="fc" id="L253">            case &quot;eciplant&quot; -&gt; new ECIPlant(posX, posY, this);</span>
+<span class="nc" id="L254">            default -&gt; null;</span>
         };
     }
 
@@ -261,13 +260,13 @@ public class Game {
      * Method to get a zombie from the board in the given position to added to the board
      */
     public Zombie searchZombie(String zombie,int posY){
-<span class="fc bfc" id="L264" title="All 6 branches covered.">        return switch (zombie) {</span>
-<span class="fc" id="L265">            case &quot;basic&quot; -&gt; new Basic(posY, this);</span>
-<span class="fc" id="L266">            case &quot;brainstein&quot; -&gt; new Brainstein(posY, this);</span>
-<span class="fc" id="L267">            case &quot;conehead&quot; -&gt; new ConeHead(posY, this);</span>
-<span class="fc" id="L268">            case &quot;buckethead&quot; -&gt; new BucketHead(posY, this);</span>
-<span class="fc" id="L269">            case &quot;ecizombie&quot; -&gt; new ECIZombie(posY, this);</span>
-<span class="fc" id="L270">            default -&gt; null;</span>
+<span class="fc bfc" id="L263" title="All 6 branches covered.">        return switch (zombie) {</span>
+<span class="fc" id="L264">            case &quot;basic&quot; -&gt; new Basic(posY, this);</span>
+<span class="fc" id="L265">            case &quot;brainstein&quot; -&gt; new Brainstein(posY, this);</span>
+<span class="fc" id="L266">            case &quot;conehead&quot; -&gt; new ConeHead(posY, this);</span>
+<span class="fc" id="L267">            case &quot;buckethead&quot; -&gt; new BucketHead(posY, this);</span>
+<span class="fc" id="L268">            case &quot;ecizombie&quot; -&gt; new ECIZombie(posY, this);</span>
+<span class="fc" id="L269">            default -&gt; null;</span>
         };
     }
 
@@ -276,25 +275,25 @@ public class Game {
      * Method to update the game board for every time unit
      */
     public void updateZombies() {
-<span class="fc bfc" id="L279" title="All 2 branches covered.">        for (int i = 0; i &lt; unit.length; i++) {</span>
-<span class="fc bfc" id="L280" title="All 2 branches covered.">            for (int j = 0; j &lt; unit[i].length; j++) {</span>
-<span class="pc bpc" id="L281" title="1 of 4 branches missed.">                if (unit[i][j] instanceof Zombie zombie &amp;&amp; zombie.getLife() &lt;= 0) {</span>
-<span class="nc" id="L282">                    unit[i][j] = null;</span>
+<span class="fc bfc" id="L278" title="All 2 branches covered.">        for (int i = 0; i &lt; unit.length; i++) {</span>
+<span class="fc bfc" id="L279" title="All 2 branches covered.">            for (int j = 0; j &lt; unit[i].length; j++) {</span>
+<span class="pc bpc" id="L280" title="1 of 4 branches missed.">                if (unit[i][j] instanceof Zombie zombie &amp;&amp; zombie.getLife() &lt;= 0) {</span>
+<span class="nc" id="L281">                    unit[i][j] = null;</span>
                 }
             }
         }
-<span class="fc" id="L286">    }</span>
+<span class="fc" id="L285">    }</span>
 
 
     /**
      * Method to get a unit plant from the board in the given position
      */
     public Plant getPlant(int i, int j) {
-<span class="fc" id="L293">        Unit unit = getUnit()[i][j];</span>
-<span class="fc bfc" id="L294" title="All 2 branches covered.">        if (unit instanceof Plant) {</span>
-<span class="fc" id="L295">            return (Plant) unit;</span>
+<span class="fc" id="L292">        Unit unit = getUnit()[i][j];</span>
+<span class="fc bfc" id="L293" title="All 2 branches covered.">        if (unit instanceof Plant) {</span>
+<span class="fc" id="L294">            return (Plant) unit;</span>
         }
-<span class="fc" id="L297">        return null;</span>
+<span class="fc" id="L296">        return null;</span>
     }
 
 
@@ -302,11 +301,11 @@ public class Game {
      * Method to get a unit zombie from the board in the given position
      */
     public Zombie getZombie(int i, int j) {
-<span class="fc" id="L305">        Unit unit = getUnit()[i][j];</span>
-<span class="fc bfc" id="L306" title="All 2 branches covered.">        if(unit instanceof Zombie) {</span>
-<span class="fc" id="L307">            return (Zombie) unit;</span>
+<span class="fc" id="L304">        Unit unit = getUnit()[i][j];</span>
+<span class="fc bfc" id="L305" title="All 2 branches covered.">        if(unit instanceof Zombie) {</span>
+<span class="fc" id="L306">            return (Zombie) unit;</span>
         }
-<span class="fc" id="L309">        return null;</span>
+<span class="fc" id="L308">        return null;</span>
     }
 
 
@@ -318,12 +317,12 @@ public class Game {
      * @return true if the position is valid, false otherwise
      */
     private boolean validatePosition(String unit, int posX, int posY) {
-<span class="fc bfc" id="L321" title="All 2 branches covered.">        if (unit.equals(&quot;plant&quot;)) {</span>
-<span class="pc bpc" id="L322" title="3 of 8 branches missed.">            return posX &gt;= 1 &amp;&amp; posX &lt;= 8 &amp;&amp; posY &gt;= 0 &amp;&amp; posY &lt;= 4;</span>
-<span class="pc bpc" id="L323" title="1 of 2 branches missed.">        } else if (unit.equals(&quot;zombie&quot;)) {</span>
-<span class="pc bpc" id="L324" title="3 of 8 branches missed.">            return posX &gt;= 9 &amp;&amp; posX &lt; 11 &amp;&amp; posY &gt;= 0 &amp;&amp; posY &lt;= 4;</span>
+<span class="fc bfc" id="L320" title="All 2 branches covered.">        if (unit.equals(&quot;plant&quot;)) {</span>
+<span class="pc bpc" id="L321" title="3 of 8 branches missed.">            return posX &gt;= 1 &amp;&amp; posX &lt;= 8 &amp;&amp; posY &gt;= 0 &amp;&amp; posY &lt;= 4;</span>
+<span class="pc bpc" id="L322" title="1 of 2 branches missed.">        } else if (unit.equals(&quot;zombie&quot;)) {</span>
+<span class="pc bpc" id="L323" title="3 of 8 branches missed.">            return posX &gt;= 9 &amp;&amp; posX &lt; 11 &amp;&amp; posY &gt;= 0 &amp;&amp; posY &lt;= 4;</span>
         }
-<span class="nc" id="L326">        return false;</span>
+<span class="nc" id="L325">        return false;</span>
     }
 
 
@@ -334,40 +333,40 @@ public class Game {
      * @throws PvZExceptions if the position is not empty
      */
     private void isPositionEmpty(int posX, int posY) throws PvZExceptions {
-<span class="fc bfc" id="L337" title="All 2 branches covered.">        if (unit[posX][posY] != null) {</span>
-<span class="fc" id="L338">            throw new PvZExceptions(PvZExceptions.EXISTENT_UNIT_EXCEPTION);</span>
+<span class="fc bfc" id="L336" title="All 2 branches covered.">        if (unit[posX][posY] != null) {</span>
+<span class="fc" id="L337">            throw new PvZExceptions(PvZExceptions.EXISTENT_UNIT_EXCEPTION);</span>
         }
-<span class="fc" id="L340">    }</span>
+<span class="fc" id="L339">    }</span>
 
 
     /**
      * Method to initialize the lawn mowers in the board
      */
     private void initializeLawnMowers(){
-<span class="fc bfc" id="L347" title="All 2 branches covered.">        for (int i = 0; i &lt; 5; i++) {</span>
-<span class="fc" id="L348">            this.lawnMowers[0][i] = new LawnMower(this,i);</span>
+<span class="fc bfc" id="L346" title="All 2 branches covered.">        for (int i = 0; i &lt; 5; i++) {</span>
+<span class="fc" id="L347">            this.lawnMowers[0][i] = new LawnMower(this,i);</span>
         }
-<span class="fc" id="L350">    }</span>
+<span class="fc" id="L349">    }</span>
 
 
 
     //* Getters and Setters *//
 
     public Unit[][] getUnit() {
-<span class="fc" id="L357">        return unit;</span>
+<span class="fc" id="L356">        return unit;</span>
     }
-<span class="fc" id="L359">    public LawnMower[][] getLawnMowers(){return lawnMowers;}</span>
-<span class="fc" id="L360">    public int getSuns(){return this.suns;}</span>
+<span class="fc" id="L358">    public LawnMower[][] getLawnMowers(){return lawnMowers;}</span>
+<span class="fc" id="L359">    public int getSuns(){return this.suns;}</span>
 
     public int getBrains() {
-<span class="fc" id="L363">        return brains;</span>
+<span class="fc" id="L362">        return brains;</span>
     }
     public void setGameOver() {
-<span class="fc" id="L366">        this.gameOver = true;</span>
-<span class="fc" id="L367">    }</span>
+<span class="fc" id="L365">        this.gameOver = true;</span>
+<span class="fc" id="L366">    }</span>
 
     public boolean getGameOver() {
-<span class="fc" id="L370">        return this.gameOver;</span>
+<span class="fc" id="L369">        return this.gameOver;</span>
     }
 
 
@@ -378,13 +377,13 @@ public class Game {
      */
     private void setFileHandler() {
         try {
-<span class="fc" id="L381">            FileHandler fileHandler = new FileHandler(&quot;game.log&quot;, true);</span>
-<span class="fc" id="L382">            fileHandler.setFormatter(new SimpleFormatter());</span>
-<span class="fc" id="L383">            logger.addHandler(fileHandler);</span>
-<span class="nc" id="L384">        } catch (IOException e) {</span>
-<span class="nc" id="L385">            logger.severe(&quot;FileHandler to logger didn't found&quot;);</span>
-<span class="fc" id="L386">        }</span>
-<span class="fc" id="L387">    }</span>
+<span class="fc" id="L380">            FileHandler fileHandler = new FileHandler(&quot;game.log&quot;, true);</span>
+<span class="fc" id="L381">            fileHandler.setFormatter(new SimpleFormatter());</span>
+<span class="fc" id="L382">            logger.addHandler(fileHandler);</span>
+<span class="nc" id="L383">        } catch (IOException e) {</span>
+<span class="nc" id="L384">            logger.severe(&quot;FileHandler to logger didn't found&quot;);</span>
+<span class="fc" id="L385">        }</span>
+<span class="fc" id="L386">    }</span>
 
 
 
@@ -394,39 +393,38 @@ public class Game {
      * Method to update the game status
      */
     public void save(String nameFile)throws PvZExceptions{
-<span class="fc" id="L397">        ObjectOutputStream exitFile = null;</span>
+<span class="fc" id="L396">        ObjectOutputStream exitFile = null;</span>
         try {
-<span class="fc" id="L399">            exitFile = new ObjectOutputStream(new FileOutputStream(nameFile));</span>
-<span class="nc" id="L400">            exitFile.writeObject(this);</span>
-<span class="nc" id="L401">            exitFile.flush();</span>
-<span class="nc" id="L402">            System.out.println(&quot;Game saved successfully. Path: &quot; + new File(nameFile).getAbsolutePath());</span>
-<span class="fc" id="L403">        } catch (IOException e) {</span>
-<span class="fc" id="L404">            e.printStackTrace();</span>
-<span class="fc" id="L405">            throw new PvZExceptions(PvZExceptions.SAVE_EXCEPTION);</span>
+<span class="fc" id="L398">            exitFile = new ObjectOutputStream(new FileOutputStream(nameFile));</span>
+<span class="nc" id="L399">            exitFile.writeObject(this);</span>
+<span class="nc" id="L400">            exitFile.flush();</span>
+<span class="nc" id="L401">            System.out.println(&quot;Game saved successfully. Path: &quot; + new File(nameFile).getAbsolutePath());</span>
+<span class="fc" id="L402">        } catch (IOException e) {</span>
+<span class="fc" id="L403">            e.printStackTrace();</span>
+<span class="fc" id="L404">            throw new PvZExceptions(PvZExceptions.SAVE_EXCEPTION);</span>
         } finally {
-<span class="pc bpc" id="L407" title="1 of 2 branches missed.">            if (exitFile != null) {</span>
+<span class="pc bpc" id="L406" title="1 of 2 branches missed.">            if (exitFile != null) {</span>
                 try {
-<span class="fc" id="L409">                    exitFile.close();</span>
-<span class="nc" id="L410">                } catch (IOException e) {</span>
-<span class="nc" id="L411">                    e.printStackTrace();</span>
-<span class="fc" id="L412">                }</span>
+<span class="fc" id="L408">                    exitFile.close();</span>
+<span class="nc" id="L409">                } catch (IOException e) {</span>
+<span class="nc" id="L410">                    e.printStackTrace();</span>
+<span class="fc" id="L411">                }</span>
             }
         }
-<span class="nc" id="L415">    }</span>
+<span class="nc" id="L414">    }</span>
 
 
     /**
      * Method to open a game from a file
      */
     public static void open(String nameFile) throws PvZExceptions{
-        Game loadGame;
         try {
-<span class="fc" id="L424">            ObjectInputStream input = new ObjectInputStream(new FileInputStream(nameFile));</span>
-<span class="nc" id="L425">            loadGame = (Game) input.readObject();</span>
-<span class="fc" id="L426">        } catch (IOException | ClassNotFoundException e) {</span>
-<span class="fc" id="L427">            e.printStackTrace();</span>
-<span class="fc" id="L428">            throw new PvZExceptions(PvZExceptions.OPEN_EXCEPTION);</span>
-<span class="nc" id="L429">        }</span>
-<span class="nc" id="L430">    }</span>
+<span class="fc" id="L422">            ObjectInputStream input = new ObjectInputStream(new FileInputStream(nameFile));</span>
+<span class="nc" id="L423">            Game loadGame = (Game) input.readObject();</span>
+<span class="fc" id="L424">        } catch (IOException | ClassNotFoundException e) {</span>
+<span class="fc" id="L425">            e.printStackTrace();</span>
+<span class="fc" id="L426">            throw new PvZExceptions(PvZExceptions.OPEN_EXCEPTION);</span>
+<span class="nc" id="L427">        }</span>
+<span class="nc" id="L428">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

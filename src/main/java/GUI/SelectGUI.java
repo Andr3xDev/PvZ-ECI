@@ -15,7 +15,7 @@ import java.awt.*;
  * 3. IA vs IA
  * Also can go back to the main menu or continue to the game settings.
  */
-public class SelectGUI extends JPanel {
+public final class SelectGUI extends JPanel {
 
     //** Attributes **//
 

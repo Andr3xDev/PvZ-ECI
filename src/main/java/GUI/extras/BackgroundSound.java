@@ -7,7 +7,7 @@ import java.io.FileInputStream;
 /**
  * Class to set a background sound to the game.
  */
-public class BackgroundSound {
+public final class BackgroundSound {
 
     /**
      * Constructor to set the background sound to the game.

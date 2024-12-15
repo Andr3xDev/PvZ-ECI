@@ -20,7 +20,6 @@ public class Game {
     private int brains;
     private int suns;
     private final Bullet[][] bullets;
-    private final boolean isActive = true;
     private final LawnMower[][] lawnMowers;
     private boolean gameOver;
     private final ArrayList<Player> players;
@@ -419,10 +418,9 @@ public class Game {
      * Method to open a game from a file
      */
     public static void open(String nameFile) throws PvZExceptions{
-        Game loadGame;
         try {
             ObjectInputStream input = new ObjectInputStream(new FileInputStream(nameFile));
-            loadGame = (Game) input.readObject();
+            Game loadGame = (Game) input.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
             throw new PvZExceptions(PvZExceptions.OPEN_EXCEPTION);

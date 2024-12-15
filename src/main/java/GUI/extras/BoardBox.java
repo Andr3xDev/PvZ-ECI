@@ -2,21 +2,14 @@ package GUI.extras;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 
-public class BoardBox extends JButton {
+public final class BoardBox extends JButton {
 
     //** Attributes **//
 
-    private final int row;
-    private final int column;
-
     // Links to the previous and next cells
 
-    private ArrayList<String> occupants;
-    private List<ImageIcon> overlayImages;
     private ImageIcon backgroundImage;
     private String currentPlantType;
 
@@ -25,19 +18,10 @@ public class BoardBox extends JButton {
 
     public BoardBox(int row, int column) {
         super();
-        this.row = row;
-        this.column = column;
         currentPlantType = null;
         setContentAreaFilled(false);
     }
 
-    public int getRow() {
-        return row;
-    }
-
-    public int getColumn() {
-        return column;
-    }
 
     /**
      * Set the initial mower image to the cell

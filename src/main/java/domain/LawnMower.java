@@ -11,11 +11,10 @@ import java.util.logging.Logger;
 public class LawnMower implements Runnable {
 
     // Attributes
-    private Game game;
-    private int positionY;
+    private final Game game;
+    private final int positionY;
     private int positionX = 0;
     private boolean isActive = false;
-    boolean waitingToActivate = false;
     private Thread thread;
     private static final Logger logger = Logger.getLogger(Game.class.getName());
 

@@ -13,7 +13,7 @@ import java.awt.*;
  * Class that represents the Home GUI of the game. It contains the main menu of the game.
  * This is the first screen that the player sees when the game starts.
  */
-public class HomeGUI extends JPanel {
+public final class HomeGUI extends JPanel {
 
     //** Attributes **//
 
@@ -25,8 +25,8 @@ public class HomeGUI extends JPanel {
 
     // Buttons of the main menu
     private JPanel buttonPanel;
-    protected JButton playButton;
-    protected JButton tutorialButton;
+    private JButton playButton;
+    private JButton tutorialButton;
     private JButton exitButton;
 
 

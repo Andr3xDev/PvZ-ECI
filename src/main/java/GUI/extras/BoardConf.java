@@ -6,7 +6,7 @@ import java.awt.*;
 /**
  * Class to set a background image to a JPanel and imitate the same size as the JPanel as a background image.
  */
-public class BoardConf extends JPanel {
+public final class BoardConf extends JPanel {
     // Attributes
     private final Image backgroundImage;
 

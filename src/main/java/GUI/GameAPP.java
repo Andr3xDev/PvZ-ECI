@@ -7,7 +7,7 @@ import java.awt.*;
  * Class that represents the Game GUI.
  * This class is the main class of the game, it contains all the elements of the game.
  */
-public class GameAPP extends JFrame {
+public final class GameAPP extends JFrame {
 
     //** Attributes **//
 

@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
  * Class that represents the Game's Board GUI. It contains all the elements of the game, such as
  * the plants, zombies, bullets, etc.
  */
-public class BoardGUI extends JFrame implements Runnable {
+public final class BoardGUI extends JFrame implements Runnable {
 
     //** Attributes **//
 
@@ -564,14 +564,6 @@ public class BoardGUI extends JFrame implements Runnable {
             }
         }
     }
-
-
-    /**
-     * Updates the bullet elements of the game.
-     */
-    private void updateBullets() {
-    }
-
 
     /**
      * Updates the economy elements of the game.

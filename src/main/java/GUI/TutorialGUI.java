@@ -12,7 +12,7 @@ import java.awt.*;
  * Class that represents the Tutorial GUI of the game. It contains basic information of the game,
  * like how to play, the rules and controls.
  */
-public class TutorialGUI extends JPanel {
+public final class TutorialGUI extends JPanel {
 
     //** Attributes **//
 
@@ -21,7 +21,7 @@ public class TutorialGUI extends JPanel {
 
     // Elements
     private JPanel infoPanel;
-    protected RoundedButton backButton;
+    private RoundedButton backButton;
 
 
 

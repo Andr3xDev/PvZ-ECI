@@ -6,12 +6,11 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import javax.swing.border.LineBorder;
 
 /**
  * Class to set a button with an image.
  */
-public class SelectButton extends JButton {
+public final class SelectButton extends JButton {
 
     // Attributes
     private BufferedImage image;
