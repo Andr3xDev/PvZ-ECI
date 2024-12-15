@@ -1,5 +1,4 @@
 GUI/extras/RoundedLabel.class
-domain/LoggerConf.class
 domain/Pea.class
 domain/Game.class
 GUI/extras/SelectButton.class
@@ -47,7 +46,6 @@ domain/economy/Sun.class
 domain/zombies/Zombie.class
 domain/plants/ECIPlant.class
 domain/economy/Brain.class
-domain/LoggerConf$1.class
 domain/zombies/Basic.class
 GUI/BoardGUI$10.class
 GUI/extras/BoardBox.class

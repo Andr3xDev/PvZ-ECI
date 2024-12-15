@@ -2,9 +2,7 @@ GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_
 PvZ-ECI,domain.economy,Brain,0,16,0,2,0,6,0,3,0,2
 PvZ-ECI,domain.economy,Sun,0,16,0,2,0,6,0,3,0,2
 PvZ-ECI,domain,Game,53,744,12,72,18,159,12,63,0,28
-PvZ-ECI,domain,LoggerConf,25,0,0,0,8,0,2,0,2,0
 PvZ-ECI,domain,PvZExceptions,0,4,0,0,0,2,0,1,0,1
-PvZ-ECI,domain,LoggerConf.new SimpleFormatter() {...},25,0,0,0,5,0,2,0,2,0
 PvZ-ECI,domain,POOmBas,35,103,2,8,7,22,2,6,0,3
 PvZ-ECI,domain,Pea,4,136,2,8,2,27,2,6,0,3
 PvZ-ECI,domain,LawnMower,6,174,3,17,3,43,4,14,1,7

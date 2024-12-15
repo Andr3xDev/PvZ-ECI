@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ZombiesStrategic.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PvZ-ECI</a> &gt; <a href="index.source.html" class="el_package">domain.players</a> &gt; <span class="el_source">ZombiesStrategic.java</span></div><h1>ZombiesStrategic.java</h1><pre class="source lang-java linenums">package domain.players;
+
+import domain.Game;
+import domain.PvZExceptions;
+
+import java.util.Random;
+
+/**
+ * Class that represents the original zombies player machine, it drops zombies strategically in the game
+ */
+public class ZombiesStrategic extends Machine {
+
+    //** Attributes **//
+
+<span class="fc" id="L15">    private final String[] zombieTypes = {&quot;basic&quot;, &quot;conehead&quot;, &quot;buckethead&quot;};</span>
+    private int cantZombies;
+    private Game game;
+    private int attackPoint;
+
+
+    //** Constructor **//
+
+    /**
+     * Constructor of the strategic zombies player machine
+     * @param game Game where the player is going to play
+     */
+    public ZombiesStrategic(Game game) {
+<span class="fc" id="L28">        super(game);</span>
+<span class="fc" id="L29">        this.cantZombies = 0;</span>
+<span class="fc" id="L30">        this.game = game;</span>
+<span class="fc" id="L31">        this.attackPoint = new Random().nextInt(5);</span>
+<span class="fc" id="L32">    }</span>
+
+    @Override
+    public void makeMove(Game game) {
+<span class="fc bfc" id="L36" title="All 4 branches covered.">        if (cantZombies &lt; 2 || cantZombies % 4 == 0) {</span>
+            try {
+<span class="fc" id="L38">                int row = scanWeakness();</span>
+<span class="fc" id="L39">                game.addZombie(&quot;brainstein&quot;, 10, row);</span>
+<span class="fc" id="L40">                cantZombies++;</span>
+<span class="fc" id="L41">            } catch (PvZExceptions e) {</span>
+<span class="fc" id="L42">                System.out.println(e.getMessage());</span>
+<span class="fc" id="L43">            }</span>
+        } else {
+            try {
+<span class="fc bfc" id="L46" title="All 2 branches covered.">                if (this.game.getBrains() &gt; 400) {</span>
+<span class="fc" id="L47">                    attack();</span>
+                } else {
+<span class="fc" id="L49">                    Random rand = new Random();</span>
+<span class="fc" id="L50">                    int row = rand.nextInt(5);</span>
+<span class="fc" id="L51">                    int column = rand.nextInt(2) + 9;</span>
+<span class="fc" id="L52">                    game.addZombie(&quot;basic&quot;, column, row);</span>
+<span class="fc" id="L53">                    cantZombies++;</span>
+                }
+<span class="nc" id="L55">            } catch (PvZExceptions e) {</span>
+<span class="nc" id="L56">                System.out.println(&quot;Error to put zombie: &quot; + e.getMessage());</span>
+<span class="fc" id="L57">            }</span>
+        }
+<span class="fc" id="L59">    }</span>
+
+
+    //** Methods **//
+
+    private int scanWeakness() {
+<span class="fc" id="L65">        int rowWithFewestZombies = -1;</span>
+<span class="fc" id="L66">        int fewestZombiesCount = Integer.MAX_VALUE;</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        for (int i = 0; i &lt; 10; i++) {</span>
+<span class="fc" id="L68">            int plantCount = 0;</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">            for (int j = 0; j &lt; 5; j++) {</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">                if (this.game.getPlant(i,j) != null) {</span>
+<span class="fc" id="L71">                    plantCount++;</span>
+                }
+            }
+<span class="fc bfc" id="L74" title="All 2 branches covered.">            if (plantCount &lt; fewestZombiesCount) {</span>
+<span class="fc" id="L75">                fewestZombiesCount = plantCount;</span>
+<span class="fc" id="L76">                rowWithFewestZombies = i;</span>
+            }
+        }
+<span class="fc" id="L79">        return rowWithFewestZombies;</span>
+    }
+
+
+    private void attack() {
+        try {
+<span class="fc" id="L85">            Random rand = new Random();</span>
+<span class="fc" id="L86">            String zombieType = zombieTypes[rand.nextInt(zombieTypes.length)];</span>
+<span class="fc" id="L87">            game.addZombie(zombieType, 9, attackPoint);</span>
+<span class="fc" id="L88">            cantZombies++;</span>
+<span class="nc" id="L89">        } catch (PvZExceptions e) {</span>
+<span class="nc" id="L90">            System.out.println(&quot;Error to put zombie: &quot; + e.getMessage());</span>
+<span class="fc" id="L91">        }</span>
+<span class="fc" id="L92">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

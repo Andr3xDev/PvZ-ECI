@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ZombiesOriginal.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">PvZ-ECI</a> &gt; <a href="index.source.html" class="el_package">domain.players</a> &gt; <span class="el_source">ZombiesOriginal.java</span></div><h1>ZombiesOriginal.java</h1><pre class="source lang-java linenums">package domain.players;
+
+import domain.Game;
+import domain.PvZExceptions;
+
+import java.util.Random;
+
+/**
+ * Class that represents the original zombies player machine, it only drops zombies randomly in the game
+ */
+public class ZombiesOriginal extends Machine {
+
+    //** Attributes **//
+
+<span class="fc" id="L15">    private final String[] zombieTypes = {&quot;basic&quot;, &quot;conehead&quot;, &quot;buckethead&quot;, &quot;brainstein&quot;, &quot;ecizombie&quot;};</span>
+    private int cantZombies;
+
+
+    //** Constructor **//
+
+    /**
+     * Constructor of the original zombies player machine
+     * @param game Game where the player is going to play
+     */
+    public ZombiesOriginal(Game game) {
+<span class="fc" id="L26">        super(game);</span>
+<span class="fc" id="L27">        cantZombies = 0;</span>
+<span class="fc" id="L28">    }</span>
+
+
+    /**
+     * Method that makes a move in the game, it drops zombies randomly in the game
+     * @param game Game where the player is going to play
+     */
+    @Override
+    public void makeMove(Game game) {
+<span class="fc bfc" id="L37" title="All 4 branches covered.">        if (cantZombies == 0 || cantZombies % 5 == 0) {</span>
+            try {
+<span class="fc" id="L39">                Random rand = new Random();</span>
+<span class="fc" id="L40">                int row = rand.nextInt(5);</span>
+<span class="fc" id="L41">                game.addZombie(&quot;brainstein&quot;, 10, row);</span>
+<span class="fc" id="L42">                cantZombies++;</span>
+<span class="nc" id="L43">            } catch (PvZExceptions e) {</span>
+<span class="nc" id="L44">                System.out.println(e.getMessage());</span>
+<span class="pc" id="L45">            }</span>
+        } else {
+            try {
+<span class="fc" id="L48">                Random rand = new Random();</span>
+<span class="fc" id="L49">                int row = rand.nextInt(5);</span>
+<span class="fc" id="L50">                int column = rand.nextInt(2) + 9;</span>
+<span class="fc" id="L51">                String zombieType = zombieTypes[rand.nextInt(zombieTypes.length)];</span>
+<span class="fc" id="L52">                game.addZombie(zombieType, column, row);</span>
+<span class="fc" id="L53">                cantZombies++;</span>
+<span class="fc" id="L54">            } catch (PvZExceptions e) {</span>
+<span class="fc" id="L55">                System.out.println(&quot;Error to put zombie: &quot; + e.getMessage());</span>
+<span class="fc" id="L56">            }</span>
+        }
+<span class="fc" id="L58">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
