@@ -43,14 +43,23 @@ análisis de calidad del código de manera automática en el flujo de trabajo de
 <br>
 
 ### Analisis del informe
-AL abrir el archivo que nos permte tener una visualizaicion grafica mejorada, logramos ver que
+Al abrir el archivo que nos permite tener una visualización gráfica mejorada, logramos ver que nos arrojó múltiples instancias del mismo fallo crítico  en muchas clases. Este se identificaba con el error `ConstructorCallsOverridiableMethod`. Este  se dispara cuando detecta una muy mala práctica de programación y diseño de visibilidad de clases y elementos.
+
+![Codigo malo](/documents/Screenshots/pmd1.png)
+![Codigo malo](/documents/Screenshots/pmd2.png)
+
+Si investigamos el problema en la wiki de PMD con la implementación de Maven, podemos ver que este ocurre al dejar la opción de que en algún momento, si se llega a heredar la clase, pueda sobrecargar o sobreescribir métodos esenciales para la representación visual. De este modo,  se considera mala práctica al arriesgar la seguridad y la estabilidad del producto final.
+
+![Codigo malo](/documents/Screenshots/pmd3.png)
+
+Para solucionar este único problema, simplemente se restringieron las clases con el atributo `final`. De este modo, aseguramos que al no poderse heredar no hay posibilidades de que algo pueda realizar alguna acción de recarga o sobre escritura de los métodos existentes de la GUI. Tras ese cambio en todas las clases marcadas, se volvió a generar el informe, obteniendo resultados más que satisfactorios, pues no hubo errores de ningún tipo.
+
+![Codigo malo](/documents/Screenshots/pmd4.png)
 
 
-Sin embargo, en nuestro caso decidimos ver exactamente
-que linea mandaba el error, encontrando lo siguiente:
+Además, si realizamos el análisis con base en la herramienta de análisis estático de IntelliJ, logramos ver que tampoco tenemos errores más allá de las recomendaciones que nos otorga en sentido de diccionario y mejorar aspectos como el logg.
 
-![Codigo malo](/documents/Screenshots/PMDC.png)
-
+![Codigo malo](/documents/Screenshots/pmd5.png)
 
 
 
